@@ -1,0 +1,17 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore build output
+dist/
+build/
+
+# Ignore IDE settings
+.vscode/
