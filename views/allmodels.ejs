@@ -22,7 +22,21 @@
     </header>
 
     <main id="main">
+
       <form action="/submit" method="POST">
+        
+        <div class="form-controls">
+          <label for="email">Enter your email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="yourname@example.com"
+          />
+          <button type="submit">Subscribe</button>
+        </div>
+
         <table>
           <thead>
             <tr>
@@ -56,26 +70,17 @@
             </tr>
             <% }) %>
           </tbody>
+
         </table>
 
-        <div class="form-controls">
-          <label for="email">Enter your email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="yourname@example.com"
-          />
-          <button type="submit">Subscribe</button>
-        </div>
       </form>
+
     </main>
 
     <footer id="footer">
-      Created by Orz
+      
       <a href="https://github.com/orzcode" target="_blank"
-        ><i class="fa-brands fa-github"></i
+        >Created by Orz <i class="fa-brands fa-github"></i
       ></a>
     </footer>
   </body>

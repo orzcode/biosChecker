@@ -5,14 +5,13 @@
 
   color-scheme: light dark;
   color: whitesmoke;
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --header: #48b8da;
+  --header: #318b2e;
   --main: #202020;
   /* --highlighted: #22334B; */
 }
@@ -22,7 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid black; */
+  outline: 1px solid rgb(142, 53, 53);
 }
 html {
   font-size: 62.5%;
@@ -38,21 +37,17 @@ body {
   /* FONTSIZE - Adding the 0.4 is for responsivity */
 }
 button {
-  border-radius: 1rem;
-  outline: 1px solid black;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  background-color: var(--header);
+  border-radius: 8px;
+  border: none;
+  padding: 0.2rem 0.4rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #000000;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  filter: brightness(1.1);
 }
 /* ----------------------------------------- */
 html {
@@ -70,28 +65,55 @@ h1 {
 #main {
   background-color: var(--main);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #footer {
   width: 100%;
   text-align: center;
   /* filter: drop-shadow(0px 0px 4px rgb(var(--header))); */
 }
-a, a:visited {    
-    text-decoration: none;
-	color:initial;
+a,
+a:visited {
+  text-decoration: none;
+  color: initial;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.fa-brands {
+.fa-brands, .fa-sharp {
   color: whitesmoke;
+  font-size: 75%;
+}
+/* ----------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
 }
 /* ----------------------------------------- */
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
+  border-left: 2px solid var(--header);
+  border-right: 2px solid var(--header);
 }
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+th,
+td {
+  border-top: 2px solid var(--header);
+  border-bottom: 2px solid var(--header);
+  padding: 8px;
+  text-align: center;
 }
 th {
-    background-color: #185263;
+  background-color: var(--header);
+}
+.form-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
