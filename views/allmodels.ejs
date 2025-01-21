@@ -24,7 +24,7 @@
     <main id="main">
 
       <form action="/submit" method="POST">
-        
+        <!-- Form for email subscription -->
         <div class="form-controls">
           <label for="email">Enter your email:</label>
           <input
@@ -37,7 +37,38 @@
           <button type="submit">Subscribe</button>
         </div>
 
-        <table>
+        <!-- Socket selection filters -->
+        <div class="filterGroup">
+          <fieldset class="socket-filters">
+            <legend>AMD</legend>
+            <div>
+              <label for="am4">
+                <input type="checkbox" id="am4" class="socket-checkbox" value="AM4" />
+                AM4
+              </label>
+              <label for="am5">
+                <input type="checkbox" id="am5" class="socket-checkbox" value="AM5" />
+                AM5
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="socket-filters">
+            <legend>Intel</legend>
+            <div>
+              <label for="1700">
+                <input type="checkbox" id="1700" class="socket-checkbox" value="1700" />
+                LGA 1700
+              </label>
+              <label for="1851">
+                <input type="checkbox" id="1851" class="socket-checkbox" value="1851" />
+                LGA 1851
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Table for motherboards -->
+        <table id="motherboard-table">
           <thead>
             <tr>
               <th>Select</th>
@@ -50,15 +81,9 @@
           </thead>
           <tbody>
             <% motherboards.forEach((mobo) => { %>
-            <tr>
+            <tr data-socket="<%= mobo.socket %>">
               <td>
-                <!-- Use radio buttons for selection -->
-                <input
-                  type="radio"
-                  name="selectedMobo"
-                  value="<%= mobo.model %>"
-                  required
-                />
+                <input type="checkbox" class="mobo-checkbox" name="selectedMobo" value="<%= mobo.model %>" />
               </td>
               <td><%= mobo.model %></td>
               <td><%= mobo.maker %></td>
@@ -70,7 +95,6 @@
             </tr>
             <% }) %>
           </tbody>
-
         </table>
 
       </form>
@@ -78,10 +102,11 @@
     </main>
 
     <footer id="footer">
-      
-      <a href="https://github.com/orzcode" target="_blank"
-        >Created by Orz <i class="fa-brands fa-github"></i
-      ></a>
+      <a href="https://github.com/orzcode" target="_blank">
+        Created by Orz <i class="fa-brands fa-github"></i>
+      </a>
     </footer>
+
+    <script src="/js/allmodels.js"></script>
   </body>
 </html>
