@@ -14,6 +14,12 @@
   --header: #318b2e;
   --main: #202020;
   /* --highlighted: #22334B; */
+
+  --1851: #003366;
+  --AM5: #660000;
+
+  --1700: color-mix(in srgb, var(--1851) 70%, transparent);
+  --AM4: color-mix(in srgb, var(--AM5) 70%, transparent);
 }
 *,
 *::before,
@@ -120,7 +126,18 @@ th {
   align-items: center;
   gap: 1rem;
 }
-
+[data-socket="1851"] {
+  background-color: var(--1851);
+}
+[data-socket="1700"] {
+  background-color: var(--1700);
+}
+[data-socket="AM5"] {
+  background-color: var(--AM5);
+}
+[data-socket="AM4"] {
+  background-color: var(--AM4);
+}
 /* ----------------------------------------- */
 .filterGroup {
   display: flex;
