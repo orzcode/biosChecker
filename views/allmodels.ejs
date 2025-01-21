@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bios Update Checker for ASRock</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto|Lato"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Motherboard Selection</h1>
+    </header>
+
+    <main id="main">
+      <form action="/submit" method="POST">
+        <table>
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Model</th>
+              <th>Maker</th>
+              <th>Socket</th>
+              <th>Link</th>
+              <th>BIOS Page</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% motherboards.forEach((mobo) => { %>
+            <tr>
+              <td>
+                <!-- Use radio buttons for single selection -->
+                <input
+                  type="radio"
+                  name="selectedMobo"
+                  value="<%= mobo.model %>"
+                  required
+                />
+              </td>
+              <td><%= mobo.model %></td>
+              <td><%= mobo.maker %></td>
+              <td><%= mobo.socket %></td>
+              <td><a href="<%= mobo.link %>" target="_blank">Details <i class="fa-sharp fa-solid fa-link"></i></a></td>
+              <td>
+                <a href="<%= mobo.biosPageLink %>" target="_blank">BIOS Page <i class="fa-sharp fa-solid fa-link"></i></a>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+
+        <div class="form-controls">
+          <label for="email">Enter your email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="yourname@example.com"
+          />
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+    </main>
+
+    <footer id="footer">
+      Created by Orz
+      <a href="https://github.com/orzcode" target="_blank"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+    </footer>
+  </body>
+</html>

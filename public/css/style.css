@@ -1,0 +1,97 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: whitesmoke;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --header: #48b8da;
+  --main: #202020;
+  /* --highlighted: #22334B; */
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+html {
+  font-size: 62.5%;
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  caret-color: transparent;
+}
+body {
+  font-size: 2rem;
+  /* font-size: calc(1.5rem + 0.4vw); */
+  /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
+  /* FONTSIZE - Adding the 0.4 is for responsivity */
+}
+button {
+  border-radius: 1rem;
+  outline: 1px solid black;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #000000;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+/* ----------------------------------------- */
+html {
+  background-color: var(--main);
+  color: whitesmoke;
+}
+#header {
+  text-align: center;
+  margin: auto;
+}
+h1 {
+  filter: drop-shadow(1px 1px 1px black);
+  font-size: clamp(3.3rem, 5vw, 4.5rem);
+}
+#main {
+  background-color: var(--main);
+  width: 100%;
+}
+#footer {
+  width: 100%;
+  text-align: center;
+  /* filter: drop-shadow(0px 0px 4px rgb(var(--header))); */
+}
+a, a:visited {    
+    text-decoration: none;
+	color:initial;
+}
+.fa-brands {
+  color: whitesmoke;
+}
+/* ----------------------------------------- */
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #185263;
+}
