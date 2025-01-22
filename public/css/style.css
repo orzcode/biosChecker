@@ -11,15 +11,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --header: #318b2e;
+  /* --header: #85c226; */
+  --header: #6b9b1d;
   --main: #202020;
-  /* --highlighted: #22334B; */
+
+  /* --1851: #015cb5;
+  --AM5: #ed1c24; */
 
   --1851: #003366;
   --AM5: #660000;
 
-  --1700: color-mix(in srgb, var(--1851) 70%, transparent);
-  --AM4: color-mix(in srgb, var(--AM5) 70%, transparent);
+  --1700: color-mix(in srgb, var(--1851) 60%, transparent);
+  --AM4: color-mix(in srgb, var(--AM5) 60%, transparent);
 }
 *,
 *::before,
@@ -109,6 +112,9 @@ table {
   border-collapse: collapse;
   border-left: 2px solid var(--header);
   border-right: 2px solid var(--header);
+
+  /* outline: 2px solid var(--header);
+  border-radius: 1rem; */
 }
 th,
 td {
