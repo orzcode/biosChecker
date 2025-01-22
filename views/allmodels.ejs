@@ -81,16 +81,16 @@
           </thead>
           <tbody>
             <% motherboards.forEach((mobo) => { %>
-            <tr data-socket="<%= mobo.socket %>">
+            <tr data-row="<%= mobo.socket %>">
               <td>
                 <input type="checkbox" class="mobo-checkbox" name="selectedMobo" value="<%= mobo.model %>" />
               </td>
-              <td><%= mobo.model %></td>
-              <td><%= mobo.maker %></td>
-              <td><%= mobo.socket %></td>
-              <td><a href="<%= mobo.link %>" target="_blank">Details <i class="fa-sharp fa-solid fa-link"></i></a></td>
+              <td data-cell="model"><%= mobo.model %></td>
+              <td data-cell="maker"><%= mobo.maker %></td>
+              <td data-cell="socket"><%= mobo.socket %></td>
+              <td><a data-cell="link" href="<%= mobo.link %>" target="_blank">Details <i class="fa-sharp fa-solid fa-link"></i></a></td>
               <td>
-                <a href="<%= mobo.biosPageLink %>" target="_blank">BIOS Page <i class="fa-sharp fa-solid fa-link"></i></a>
+                <a data-cell="link" href="<%= mobo.biosPageLink %>" target="_blank">BIOSes <i class="fa-sharp fa-solid fa-link"></i></a>
               </td>
             </tr>
             <% }) %>

@@ -126,17 +126,32 @@ th {
   align-items: center;
   gap: 1rem;
 }
-[data-socket="1851"] {
+[data-row="1851"] {
   background-color: var(--1851);
 }
-[data-socket="1700"] {
+[data-row="1700"] {
   background-color: var(--1700);
 }
-[data-socket="AM5"] {
+[data-row="AM5"] {
   background-color: var(--AM5);
 }
-[data-socket="AM4"] {
+[data-row="AM4"] {
   background-color: var(--AM4);
+}
+
+[data-cell="model"] {
+  width: 33ch;
+}
+[data-cell="maker"] {
+  width: 5ch;
+}
+[data-cell="socket"] {
+  width: 4ch;
+}
+
+[data-cell="link"] {
+  display: flex;
+  flex-wrap: wrap;
 }
 /* ----------------------------------------- */
 .filterGroup {

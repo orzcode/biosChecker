@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		.map((checkbox) => checkbox.value); // Get selected socket values
   
 	  tableRows.forEach((row) => {
-		const socketType = row.getAttribute('data-socket'); // Get socket type from each row's data attribute
+		const socketType = row.getAttribute('data-row'); // Get socket type from each row's data attribute
   
 		// Check if the row matches the selected socket
 		if (selectedSockets.length === 0 || selectedSockets.includes(socketType)) {
