@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Bios Update Notifier for ASRock</title>
+    <title>ASRock BIOS Notifier</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
@@ -18,12 +18,11 @@
   </head>
   <body>
     <header id="header">
-      <img src="/images/biosimg.png">
+      <img src="/images/biosimg.png" />
       <h1>Bios Update Notifier</h1>
     </header>
 
     <main id="main">
-
       <form action="/submit" method="POST">
         <!-- Form for email subscription -->
         <div class="form-controls">
@@ -44,11 +43,21 @@
             <legend>AMD</legend>
             <div class="label-group">
               <label for="am4">
-                <input type="checkbox" id="am4" class="socket-checkbox" value="AM4" />
+                <input
+                  type="checkbox"
+                  id="am4"
+                  class="socket-checkbox"
+                  value="AM4"
+                />
                 AM4
               </label>
               <label for="am5">
-                <input type="checkbox" id="am5" class="socket-checkbox" value="AM5" />
+                <input
+                  type="checkbox"
+                  id="am5"
+                  class="socket-checkbox"
+                  value="AM5"
+                />
                 AM5
               </label>
             </div>
@@ -57,11 +66,21 @@
             <legend>Intel</legend>
             <div class="label-group">
               <label for="1700">
-                <input type="checkbox" id="1700" class="socket-checkbox" value="1700" />
+                <input
+                  type="checkbox"
+                  id="1700"
+                  class="socket-checkbox"
+                  value="1700"
+                />
                 LGA 1700
               </label>
               <label for="1851">
-                <input type="checkbox" id="1851" class="socket-checkbox" value="1851" />
+                <input
+                  type="checkbox"
+                  id="1851"
+                  class="socket-checkbox"
+                  value="1851"
+                />
                 LGA 1851
               </label>
             </div>
@@ -84,22 +103,31 @@
             <% motherboards.forEach((mobo) => { %>
             <tr data-row="<%= mobo.socket %>">
               <td>
-                <input type="checkbox" class="mobo-checkbox" name="selectedMobo" value="<%= mobo.model %>" />
+                <input
+                  type="checkbox"
+                  class="mobo-checkbox"
+                  name="selectedMobo"
+                  value="<%= mobo.model %>"
+                />
               </td>
               <td data-cell="model"><%= mobo.model %></td>
               <td data-cell="maker"><%= mobo.maker %></td>
               <td data-cell="socket"><%= mobo.socket %></td>
-              <td><a data-cell="link" href="<%= mobo.link %>" target="_blank">Details <i class="fa-sharp fa-solid fa-link"></i></a></td>
               <td>
-                <a data-cell="link" href="<%= mobo.biospage %>" target="_blank">BIOSes <i class="fa-sharp fa-solid fa-link"></i></a>
+                <a data-cell="link" href="<%= mobo.link %>" target="_blank"
+                  >Details <i class="fa-sharp fa-solid fa-link"></i
+                ></a>
+              </td>
+              <td>
+                <a data-cell="link" href="<%= mobo.biospage %>" target="_blank"
+                  >BIOSes <i class="fa-sharp fa-solid fa-link"></i
+                ></a>
               </td>
             </tr>
             <% }) %>
           </tbody>
         </table>
-
       </form>
-
     </main>
 
     <footer id="footer">
