@@ -1,5 +1,6 @@
 [
   {
+    "id": "mobo_m67e80es3n8dxj",
     "model": "Z890 Taichi AQUA",
     "maker": "Intel",
     "socket": "1851",
@@ -7,6 +8,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html"
   },
   {
+    "id": "mobo_m67e80esmkto6m",
     "model": "Z890 Taichi OCF",
     "maker": "Intel",
     "socket": "1851",
@@ -14,6 +16,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html"
   },
   {
+    "id": "mobo_m67e80es99dybe",
     "model": "Z890 Taichi",
     "maker": "Intel",
     "socket": "1851",
@@ -21,6 +24,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esu16unb",
     "model": "Z890 Taichi Lite",
     "maker": "Intel",
     "socket": "1851",
@@ -28,6 +32,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html"
   },
   {
+    "id": "mobo_m67e80eskjjkm7",
     "model": "Z890 Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -35,6 +40,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es67kxhz",
     "model": "Z890 Pro RS WiFi White",
     "maker": "Intel",
     "socket": "1851",
@@ -42,6 +48,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html"
   },
   {
+    "id": "mobo_m67e80esglf6mh",
     "model": "Z890 Pro RS WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -49,6 +56,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esy65c9w",
     "model": "Z890 Pro RS",
     "maker": "Intel",
     "socket": "1851",
@@ -56,6 +64,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esd20ot4",
     "model": "Z890 Pro-A WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -63,6 +72,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es2cwqv3",
     "model": "Z890 Pro-A",
     "maker": "Intel",
     "socket": "1851",
@@ -70,6 +80,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80esv4yinf",
     "model": "Z890 Nova WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -77,6 +88,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es581ogd",
     "model": "Z890 LiveMixer WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -84,6 +96,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eswf1fio",
     "model": "Z890 Riptide WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -91,6 +104,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eslnwbva",
     "model": "Z890 Lightning WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -98,6 +112,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esfsp5oy",
     "model": "Z890M Riptide WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -105,6 +120,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esv2j718",
     "model": "Z890I Nova WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -112,6 +128,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es41tow6",
     "model": "B860 Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -119,6 +136,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esfymdog",
     "model": "B860 Pro RS WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -126,6 +144,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es5qqt9b",
     "model": "B860 Pro RS",
     "maker": "Intel",
     "socket": "1851",
@@ -133,6 +152,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esiydgf4",
     "model": "B860 Pro-A WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -140,6 +160,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esvrpauf",
     "model": "B860 Pro-A",
     "maker": "Intel",
     "socket": "1851",
@@ -147,6 +168,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80esf8e07d",
     "model": "B860 LiveMixer WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -154,6 +176,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es9rn7d5",
     "model": "B860 Lightning WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -161,6 +184,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esellmy4",
     "model": "B860M Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -168,6 +192,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esaqtf3w",
     "model": "B860M Pro RS WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -175,6 +200,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es66tvit",
     "model": "B860M Pro RS",
     "maker": "Intel",
     "socket": "1851",
@@ -182,6 +208,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80essvy99f",
     "model": "B860M Pro-A WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -189,6 +216,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eswdpnk6",
     "model": "B860M Pro-A",
     "maker": "Intel",
     "socket": "1851",
@@ -196,6 +224,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80esdywus0",
     "model": "B860M LiveMixer WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -203,6 +232,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es2ltsva",
     "model": "B860M Lightning WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -210,6 +240,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es8815ks",
     "model": "B860M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -217,6 +248,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eszdl57c",
     "model": "B860M-X",
     "maker": "Intel",
     "socket": "1851",
@@ -224,6 +256,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html"
   },
   {
+    "id": "mobo_m67e80esj9pi9q",
     "model": "B860M-H2",
     "maker": "Intel",
     "socket": "1851",
@@ -231,6 +264,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html"
   },
   {
+    "id": "mobo_m67e80es09dym1",
     "model": "B860I Lightning WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -238,6 +272,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esv1abfo",
     "model": "B860I WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -245,6 +280,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esgzec87",
     "model": "H810M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
@@ -252,6 +288,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es0n758h",
     "model": "H810M-X",
     "maker": "Intel",
     "socket": "1851",
@@ -259,6 +296,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html"
   },
   {
+    "id": "mobo_m67e80es218cqf",
     "model": "Z790 Taichi Carrara",
     "maker": "Intel",
     "socket": "1700",
@@ -266,6 +304,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html"
   },
   {
+    "id": "mobo_m67e80esomgl3e",
     "model": "Z790 Taichi",
     "maker": "Intel",
     "socket": "1700",
@@ -273,6 +312,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esmf84sk",
     "model": "Z790 Taichi Lite",
     "maker": "Intel",
     "socket": "1700",
@@ -280,6 +320,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html"
   },
   {
+    "id": "mobo_m67e80estrvlz0",
     "model": "Z790 LiveMixer",
     "maker": "Intel",
     "socket": "1700",
@@ -287,6 +328,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html"
   },
   {
+    "id": "mobo_m67e80esxcts0c",
     "model": "Z790 Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -294,6 +336,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esffmju8",
     "model": "Z790 Pro RS WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -301,6 +344,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esjpw2vl",
     "model": "Z790 Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -308,6 +352,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esvo3t4i",
     "model": "Z790 Pro RS/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -315,6 +360,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RSD4/bios.html"
   },
   {
+    "id": "mobo_m67e80es8nwp6r",
     "model": "Z790 Nova WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -322,6 +368,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es4rfarw",
     "model": "Z790 Riptide WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -329,6 +376,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80est5frra",
     "model": "Z790 PG Riptide",
     "maker": "Intel",
     "socket": "1700",
@@ -336,6 +384,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80es3lpfdz",
     "model": "Z790 PG SONIC",
     "maker": "Intel",
     "socket": "1700",
@@ -343,6 +392,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG%20SONIC/bios.html"
   },
   {
+    "id": "mobo_m67e80esb1q4op",
     "model": "Z790 PG Lightning",
     "maker": "Intel",
     "socket": "1700",
@@ -350,6 +400,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG%20Lightning/bios.html"
   },
   {
+    "id": "mobo_m67e80es9vvymh",
     "model": "Z790 Lightning WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -357,6 +408,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esqbcspt",
     "model": "Z790 PG Lightning/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -364,6 +416,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG%20LightningD4/bios.html"
   },
   {
+    "id": "mobo_m67e80esfzfx1s",
     "model": "Z790M PG Lightning/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -371,6 +424,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790M%20PG%20LightningD4/bios.html"
   },
   {
+    "id": "mobo_m67e80espwfqnq",
     "model": "Z790I Lightning WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -378,6 +432,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esjk2l7p",
     "model": "Z790 PG-ITX/TB4",
     "maker": "Intel",
     "socket": "1700",
@@ -385,6 +440,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG-ITXTB4/bios.html"
   },
   {
+    "id": "mobo_m67e80esexd45e",
     "model": "Z790M-ITX WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -392,6 +448,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es7xxtja",
     "model": "B760 Pro RS WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -399,6 +456,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eszbo9rv",
     "model": "B760 Pro RS WiFi White",
     "maker": "Intel",
     "socket": "1700",
@@ -406,6 +464,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi%20White/bios.html"
   },
   {
+    "id": "mobo_m67e80esfbj2bn",
     "model": "B760 Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -413,6 +472,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es09azx3",
     "model": "B760 Pro RS/D4 WiFi White",
     "maker": "Intel",
     "socket": "1700",
@@ -420,6 +480,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White/bios.html"
   },
   {
+    "id": "mobo_m67e80esitvfnc",
     "model": "B760 Pro RS/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -427,6 +488,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esfxcoh6",
     "model": "B760 Pro RS/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -434,6 +496,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4/bios.html"
   },
   {
+    "id": "mobo_m67e80es56xz82",
     "model": "B760M PG SONIC WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -441,6 +504,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esgk5tg9",
     "model": "B760M PG Riptide WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -448,6 +512,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esaso55e",
     "model": "B760M PG Riptide",
     "maker": "Intel",
     "socket": "1700",
@@ -455,6 +520,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80eszn3t75",
     "model": "B760M PG Lightning",
     "maker": "Intel",
     "socket": "1700",
@@ -462,6 +528,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html"
   },
   {
+    "id": "mobo_m67e80esouk0zy",
     "model": "B760M PG Lightning WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -469,6 +536,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esu8eroj",
     "model": "B760M PG Lightning/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -476,6 +544,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html"
   },
   {
+    "id": "mobo_m67e80eszzzni7",
     "model": "B760I Lightning WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -483,6 +552,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es9v1oo2",
     "model": "B760M Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -490,6 +560,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esg16p1q",
     "model": "B760M Pro RS WiFi White",
     "maker": "Intel",
     "socket": "1700",
@@ -497,6 +568,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi%20White/bios.html"
   },
   {
+    "id": "mobo_m67e80es8wnix0",
     "model": "B760M Pro RS WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -504,6 +576,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esurw7cx",
     "model": "B760M Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -511,6 +584,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es4tlw4g",
     "model": "B760M Pro RS/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -518,6 +592,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esi3w8l6",
     "model": "B760M Pro RS/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -525,6 +600,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4/bios.html"
   },
   {
+    "id": "mobo_m67e80esauivml",
     "model": "B760M Pro-A WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -532,6 +608,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esv4u4dd",
     "model": "B760M Pro-A",
     "maker": "Intel",
     "socket": "1700",
@@ -539,6 +616,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80essxk75i",
     "model": "B760M Pro-A/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -546,6 +624,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esa5sgyf",
     "model": "B760M Pro-A/D4",
     "maker": "Intel",
     "socket": "1700",
@@ -553,6 +632,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4/bios.html"
   },
   {
+    "id": "mobo_m67e80esv3ecix",
     "model": "B760M-HDVP",
     "maker": "Intel",
     "socket": "1700",
@@ -560,6 +640,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html"
   },
   {
+    "id": "mobo_m67e80esvejfst",
     "model": "B760M-HDV/M.2 D4",
     "maker": "Intel",
     "socket": "1700",
@@ -567,6 +648,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2%20D4/bios.html"
   },
   {
+    "id": "mobo_m67e80espsmfxp",
     "model": "B760M-HDV/M.2",
     "maker": "Intel",
     "socket": "1700",
@@ -574,6 +656,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esq8exn4",
     "model": "B760M-H2/M.2",
     "maker": "Intel",
     "socket": "1700",
@@ -581,6 +664,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html"
   },
   {
+    "id": "mobo_m67e80es6eilkt",
     "model": "B760M-H/M.2",
     "maker": "Intel",
     "socket": "1700",
@@ -588,6 +672,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esv5kc2x",
     "model": "B760M-ITX/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
@@ -595,6 +680,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-ITXD4%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80escb1gc2",
     "model": "Z690 AQUA OC",
     "maker": "Intel",
     "socket": "1700",
@@ -602,6 +688,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20AQUA%20OC/bios.html"
   },
   {
+    "id": "mobo_m67e80esr7dxgf",
     "model": "Z690 AQUA",
     "maker": "Intel",
     "socket": "1700",
@@ -609,6 +696,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20AQUA/bios.html"
   },
   {
+    "id": "mobo_m67e80esveesm0",
     "model": "Z690 Taichi Razer Edition",
     "maker": "Intel",
     "socket": "1700",
@@ -616,6 +704,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition/bios.html"
   },
   {
+    "id": "mobo_m67e80es7kxnl9",
     "model": "Z690 Taichi",
     "maker": "Intel",
     "socket": "1700",
@@ -623,6 +712,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80eshwnofj",
     "model": "Z690 Extreme WiFi 6E",
     "maker": "Intel",
     "socket": "1700",
@@ -630,6 +720,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E/bios.html"
   },
   {
+    "id": "mobo_m67e80eswgdakm",
     "model": "Z690 Extreme",
     "maker": "Intel",
     "socket": "1700",
@@ -637,6 +728,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme/bios.html"
   },
   {
+    "id": "mobo_m67e80es5i4hcp",
     "model": "Z690 Steel Legend WiFi 6E/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -644,6 +736,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html"
   },
   {
+    "id": "mobo_m67e80es1uo60j",
     "model": "Z690 Steel Legend WiFi 6E",
     "maker": "Intel",
     "socket": "1700",
@@ -651,6 +744,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206E/bios.html"
   },
   {
+    "id": "mobo_m67e80es7cjr4e",
     "model": "Z690 Steel Legend/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -658,6 +752,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20LegendD5/bios.html"
   },
   {
+    "id": "mobo_m67e80esl3ivjz",
     "model": "Z690 Steel Legend",
     "maker": "Intel",
     "socket": "1700",
@@ -665,6 +760,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80es31fgwe",
     "model": "Z690 PG Velocita",
     "maker": "Intel",
     "socket": "1700",
@@ -672,6 +768,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20PG%20Velocita/bios.html"
   },
   {
+    "id": "mobo_m67e80eswx1wwp",
     "model": "Z690 PG Riptide",
     "maker": "Intel",
     "socket": "1700",
@@ -679,6 +776,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80esvnyaxb",
     "model": "Z690 Phantom Gaming 4/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -686,6 +784,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Phantom%20Gaming%204D5/bios.html"
   },
   {
+    "id": "mobo_m67e80es6lgkxk",
     "model": "Z690 Phantom Gaming 4",
     "maker": "Intel",
     "socket": "1700",
@@ -693,6 +792,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80eslly97y",
     "model": "Z690 Phantom Gaming-ITX/TB4",
     "maker": "Intel",
     "socket": "1700",
@@ -700,6 +800,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Phantom%20Gaming-ITXTB4/bios.html"
   },
   {
+    "id": "mobo_m67e80eszemz8g",
     "model": "Z690M PG Riptide/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -707,6 +808,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690M%20PG%20RiptideD5/bios.html"
   },
   {
+    "id": "mobo_m67e80esql09uy",
     "model": "Z690M Phantom Gaming 4",
     "maker": "Intel",
     "socket": "1700",
@@ -714,6 +816,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690M%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80esw5xs49",
     "model": "Z690 Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -721,6 +824,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esvtkpgs",
     "model": "Z690M-ITX/ax",
     "maker": "Intel",
     "socket": "1700",
@@ -728,6 +832,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690M-ITXax/bios.html"
   },
   {
+    "id": "mobo_m67e80esizrzlj",
     "model": "H670 Steel Legend",
     "maker": "Intel",
     "socket": "1700",
@@ -735,6 +840,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H670%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esqgnfhi",
     "model": "H670 PG Riptide",
     "maker": "Intel",
     "socket": "1700",
@@ -742,6 +848,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H670%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80esyac7fb",
     "model": "H670M Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -749,6 +856,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80eslbtjpp",
     "model": "H670M-ITX/ax",
     "maker": "Intel",
     "socket": "1700",
@@ -756,6 +864,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax/bios.html"
   },
   {
+    "id": "mobo_m67e80eshiz0xh",
     "model": "H670M-ITX/ax R2.0",
     "maker": "Intel",
     "socket": "1700",
@@ -763,6 +872,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80es7nwpvk",
     "model": "B660 Steel Legend",
     "maker": "Intel",
     "socket": "1700",
@@ -770,6 +880,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80es09xssc",
     "model": "Q670M vPro",
     "maker": "Intel",
     "socket": "1700",
@@ -777,6 +888,7 @@
     "biospage": "https://www.asrock.com/mb/intel/Q670M%20vPro/bios.html"
   },
   {
+    "id": "mobo_m67e80es7um5wo",
     "model": "B660 Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -784,6 +896,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es144u3r",
     "model": "B660M Steel Legend",
     "maker": "Intel",
     "socket": "1700",
@@ -791,6 +904,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80es4etn6z",
     "model": "B660M PG Riptide",
     "maker": "Intel",
     "socket": "1700",
@@ -798,6 +912,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80esbzx108",
     "model": "B660M Pro RS/ax",
     "maker": "Intel",
     "socket": "1700",
@@ -805,6 +920,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RSax/bios.html"
   },
   {
+    "id": "mobo_m67e80esnyzjtu",
     "model": "B660M Pro RS/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -812,6 +928,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RSD5/bios.html"
   },
   {
+    "id": "mobo_m67e80estmg1hm",
     "model": "B660M Pro RS",
     "maker": "Intel",
     "socket": "1700",
@@ -819,6 +936,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esj90bs1",
     "model": "B660M Phantom Gaming 4",
     "maker": "Intel",
     "socket": "1700",
@@ -826,6 +944,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80esdocj4i",
     "model": "B660M-HDVP/D5 R2.0",
     "maker": "Intel",
     "socket": "1700",
@@ -833,6 +952,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esinkpjn",
     "model": "B660M-HDVP/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -840,6 +960,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5/bios.html"
   },
   {
+    "id": "mobo_m67e80es4yrya0",
     "model": "B660M-HDV",
     "maker": "Intel",
     "socket": "1700",
@@ -847,6 +968,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80es4v8uv6",
     "model": "B660M-ITX/ac",
     "maker": "Intel",
     "socket": "1700",
@@ -854,6 +976,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80es2a8e0l",
     "model": "B660M-ITX/eDP",
     "maker": "Intel",
     "socket": "1700",
@@ -861,6 +984,7 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html"
   },
   {
+    "id": "mobo_m67e80esrb8o0o",
     "model": "H610M-HDVP/D5 R2.0",
     "maker": "Intel",
     "socket": "1700",
@@ -868,6 +992,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80estel4d9",
     "model": "H610M-HDVP/D5",
     "maker": "Intel",
     "socket": "1700",
@@ -875,6 +1000,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5/bios.html"
   },
   {
+    "id": "mobo_m67e80esviabt4",
     "model": "H610M-H2/M.2 D5",
     "maker": "Intel",
     "socket": "1700",
@@ -882,6 +1008,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2%20D5/bios.html"
   },
   {
+    "id": "mobo_m67e80esdtbbei",
     "model": "H610M-HDV/M.2+ D5",
     "maker": "Intel",
     "socket": "1700",
@@ -889,6 +1016,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2+%20D5/bios.html"
   },
   {
+    "id": "mobo_m67e80eszqtsw1",
     "model": "H610M-HDV/M.2 R2.0",
     "maker": "Intel",
     "socket": "1700",
@@ -896,6 +1024,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80estcufti",
     "model": "H610M-HDV/M.2",
     "maker": "Intel",
     "socket": "1700",
@@ -903,6 +1032,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esd6lk6b",
     "model": "H610M-HDV",
     "maker": "Intel",
     "socket": "1700",
@@ -910,6 +1040,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80esj9jtzj",
     "model": "H610M-H2/M.2",
     "maker": "Intel",
     "socket": "1700",
@@ -917,6 +1048,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esns260v",
     "model": "H610M-HVS/M.2 R2.0",
     "maker": "Intel",
     "socket": "1700",
@@ -924,6 +1056,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esc93gge",
     "model": "H610M-HVS",
     "maker": "Intel",
     "socket": "1700",
@@ -931,6 +1064,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVS/bios.html"
   },
   {
+    "id": "mobo_m67e80esaatfs0",
     "model": "H610M/ac",
     "maker": "Intel",
     "socket": "1700",
@@ -938,6 +1072,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610Mac/bios.html"
   },
   {
+    "id": "mobo_m67e80es9znfzc",
     "model": "H610M-ITX/ac",
     "maker": "Intel",
     "socket": "1700",
@@ -945,6 +1080,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80es9vcl2w",
     "model": "H610M-ITX/eDP",
     "maker": "Intel",
     "socket": "1700",
@@ -952,6 +1088,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html"
   },
   {
+    "id": "mobo_m67e80es5hm030",
     "model": "H610M-X D5",
     "maker": "Intel",
     "socket": "1700",
@@ -959,6 +1096,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html"
   },
   {
+    "id": "mobo_m67e80esqn4ejq",
     "model": "H610TM-ITX",
     "maker": "Intel",
     "socket": "1700",
@@ -966,6 +1104,7 @@
     "biospage": "https://www.asrock.com/mb/intel/H610TM-ITX/bios.html"
   },
   {
+    "id": "mobo_m67e80es1gj9wl",
     "model": "X870E Taichi",
     "maker": "AMD",
     "socket": "AM5",
@@ -973,6 +1112,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80eskc4zf2",
     "model": "X870E Taichi Lite",
     "maker": "AMD",
     "socket": "AM5",
@@ -980,6 +1120,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html"
   },
   {
+    "id": "mobo_m67e80es1z9ywj",
     "model": "X870 Steel Legend WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -987,6 +1128,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esmffjnb",
     "model": "X870 Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -994,6 +1136,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esxgbuwe",
     "model": "X870 Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1001,6 +1144,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es42iy2g",
     "model": "X870E Nova WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1008,6 +1152,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80ess25km4",
     "model": "X870 Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1015,6 +1160,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esi2m3ai",
     "model": "B850 Steel Legend WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1022,6 +1168,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eshvlq0m",
     "model": "B850 LiveMixer WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1029,6 +1176,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esoa8rrs",
     "model": "B850 Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1036,6 +1184,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es20eflq",
     "model": "B850 Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1043,6 +1192,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esiqvnir",
     "model": "B850 Pro-A WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1050,6 +1200,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esra3tfi",
     "model": "B850 Pro-A",
     "maker": "AMD",
     "socket": "AM5",
@@ -1057,6 +1208,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80esmbx12v",
     "model": "B850 Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1064,6 +1216,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esnzj5n3",
     "model": "B850M Steel Legend WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1071,6 +1224,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esewuae1",
     "model": "B850M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1078,6 +1232,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80espofukm",
     "model": "B850M Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1085,6 +1240,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esyjbwue",
     "model": "B850M Pro-A WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1092,6 +1248,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esgd2npj",
     "model": "B850M Pro-A",
     "maker": "AMD",
     "socket": "AM5",
@@ -1099,6 +1256,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A/bios.html"
   },
   {
+    "id": "mobo_m67e80esq53r2z",
     "model": "B850M Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1106,6 +1264,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eshjixuv",
     "model": "B850I Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1113,6 +1272,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esmsvw6y",
     "model": "B850M-X WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1120,6 +1280,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M-X%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esek2cdv",
     "model": "B850M-X",
     "maker": "AMD",
     "socket": "AM5",
@@ -1127,6 +1288,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M-X/bios.html"
   },
   {
+    "id": "mobo_m67e80esf09h1z",
     "model": "X670E Taichi Carrara",
     "maker": "AMD",
     "socket": "AM5",
@@ -1134,6 +1296,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html"
   },
   {
+    "id": "mobo_m67e80esvv8247",
     "model": "X670E Taichi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1141,6 +1304,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esrm3aju",
     "model": "X670E Steel Legend",
     "maker": "AMD",
     "socket": "AM5",
@@ -1148,6 +1312,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esnu2wzr",
     "model": "X670E PG Lightning",
     "maker": "AMD",
     "socket": "AM5",
@@ -1155,6 +1320,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20PG%20Lightning/bios.html"
   },
   {
+    "id": "mobo_m67e80es9crtb2",
     "model": "X670E Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1162,6 +1328,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es2okeqy",
     "model": "B650E Taichi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1169,6 +1336,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80es54to1y",
     "model": "B650E Taichi Lite",
     "maker": "AMD",
     "socket": "AM5",
@@ -1176,6 +1344,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html"
   },
   {
+    "id": "mobo_m67e80estzhywt",
     "model": "B650E Steel Legend WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1183,6 +1352,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eswljfm3",
     "model": "B650E PG Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1190,6 +1360,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20PG%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es01wx8k",
     "model": "B650E PG-ITX WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1197,6 +1368,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20PG-ITX%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esh9m3r4",
     "model": "B650 LiveMixer",
     "maker": "AMD",
     "socket": "AM5",
@@ -1204,6 +1376,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html"
   },
   {
+    "id": "mobo_m67e80esjbv5r9",
     "model": "B650 Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1211,6 +1384,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esnprm1o",
     "model": "B650 Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1218,6 +1392,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esxue24b",
     "model": "B650 Steel Legend WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1225,6 +1400,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esv5ptjt",
     "model": "B650 PG Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1232,6 +1408,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80escutrti",
     "model": "B650 PG Lightning",
     "maker": "AMD",
     "socket": "AM5",
@@ -1239,6 +1416,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20PG%20Lightning/bios.html"
   },
   {
+    "id": "mobo_m67e80esewoo2m",
     "model": "B650M PG Riptide WiFi White",
     "maker": "AMD",
     "socket": "AM5",
@@ -1246,6 +1424,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html"
   },
   {
+    "id": "mobo_m67e80eskvaj44",
     "model": "B650M PG Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1253,6 +1432,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esyvculj",
     "model": "B650M PG Riptide",
     "maker": "AMD",
     "socket": "AM5",
@@ -1260,6 +1440,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80espf3jsk",
     "model": "B650M PG Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1267,6 +1448,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80eseldqe6",
     "model": "B650M PG Lightning",
     "maker": "AMD",
     "socket": "AM5",
@@ -1274,6 +1456,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html"
   },
   {
+    "id": "mobo_m67e80ess0it02",
     "model": "B650I Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1281,6 +1464,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esf6fyid",
     "model": "B650M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1288,6 +1472,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80esme94yp",
     "model": "B650M Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1295,6 +1480,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80ess5p904",
     "model": "B650M-HDV/M.2",
     "maker": "AMD",
     "socket": "AM5",
@@ -1302,6 +1488,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esu6h2fj",
     "model": "B650M-H/M.2+ WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1309,6 +1496,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es871wbd",
     "model": "B650M-H/M.2+",
     "maker": "AMD",
     "socket": "AM5",
@@ -1316,6 +1504,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+/bios.html"
   },
   {
+    "id": "mobo_m67e80esw1jvsi",
     "model": "A620M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1323,6 +1512,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es2g3445",
     "model": "A620M Pro RS",
     "maker": "AMD",
     "socket": "AM5",
@@ -1330,6 +1520,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80esvcnnmh",
     "model": "A620M-HDV/M.2+",
     "maker": "AMD",
     "socket": "AM5",
@@ -1337,6 +1528,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html"
   },
   {
+    "id": "mobo_m67e80esjix44r",
     "model": "A620M-HDV/M.2",
     "maker": "AMD",
     "socket": "AM5",
@@ -1344,6 +1536,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html"
   },
   {
+    "id": "mobo_m67e80esnkfq94",
     "model": "A620M-HDVP",
     "maker": "AMD",
     "socket": "AM5",
@@ -1351,6 +1544,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html"
   },
   {
+    "id": "mobo_m67e80esjotkvk",
     "model": "A620I Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
@@ -1358,6 +1552,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80ese5f5wa",
     "model": "X600TM-ITX",
     "maker": "AMD",
     "socket": "AM5",
@@ -1365,6 +1560,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X600TM-ITX/bios.html"
   },
   {
+    "id": "mobo_m67e80es50nu1c",
     "model": "X570 AQUA",
     "maker": "AMD",
     "socket": "AM4",
@@ -1372,6 +1568,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20AQUA/bios.html"
   },
   {
+    "id": "mobo_m67e80eskhru6w",
     "model": "X570 Creator",
     "maker": "AMD",
     "socket": "AM4",
@@ -1379,6 +1576,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Creator/bios.html"
   },
   {
+    "id": "mobo_m67e80es68s7an",
     "model": "X570 Taichi Razer Edition",
     "maker": "AMD",
     "socket": "AM4",
@@ -1386,6 +1584,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Taichi%20Razer%20Edition/bios.html"
   },
   {
+    "id": "mobo_m67e80espla6ve",
     "model": "X570 Taichi",
     "maker": "AMD",
     "socket": "AM4",
@@ -1393,6 +1592,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80es4fa2q9",
     "model": "X570 Extreme4 WiFi ax",
     "maker": "AMD",
     "socket": "AM4",
@@ -1400,6 +1600,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Extreme4%20WiFi%20ax/bios.html"
   },
   {
+    "id": "mobo_m67e80esgxyjrd",
     "model": "X570 Extreme4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1407,6 +1608,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Extreme4/bios.html"
   },
   {
+    "id": "mobo_m67e80es4a334j",
     "model": "X570 Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1414,6 +1616,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esu4ecfm",
     "model": "X570M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1421,6 +1624,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80es93fjbm",
     "model": "X570 Steel Legend WiFi ax",
     "maker": "AMD",
     "socket": "AM4",
@@ -1428,6 +1632,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Steel%20Legend%20WiFi%20ax/bios.html"
   },
   {
+    "id": "mobo_m67e80esg0k1y8",
     "model": "X570 Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
@@ -1435,6 +1640,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esrbeg97",
     "model": "X570 PG Velocita",
     "maker": "AMD",
     "socket": "AM4",
@@ -1442,6 +1648,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20PG%20Velocita/bios.html"
   },
   {
+    "id": "mobo_m67e80esfpf6gq",
     "model": "X570S PG Riptide",
     "maker": "AMD",
     "socket": "AM4",
@@ -1449,6 +1656,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80es9nqm2z",
     "model": "X570 Phantom Gaming X",
     "maker": "AMD",
     "socket": "AM4",
@@ -1456,6 +1664,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Phantom%20Gaming%20X/bios.html"
   },
   {
+    "id": "mobo_m67e80es6xsq5n",
     "model": "X570 Phantom Gaming 4 WiFi ax",
     "maker": "AMD",
     "socket": "AM4",
@@ -1463,6 +1672,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html"
   },
   {
+    "id": "mobo_m67e80esqnif3o",
     "model": "X570 Phantom Gaming 4S",
     "maker": "AMD",
     "socket": "AM4",
@@ -1470,6 +1680,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html"
   },
   {
+    "id": "mobo_m67e80eslkauyi",
     "model": "X570 Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1477,6 +1688,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80es36bhjj",
     "model": "X570 Phantom Gaming-ITX/TB3",
     "maker": "AMD",
     "socket": "AM4",
@@ -1484,6 +1696,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html"
   },
   {
+    "id": "mobo_m67e80es09tiv5",
     "model": "B550 Taichi Razer Edition",
     "maker": "AMD",
     "socket": "AM4",
@@ -1491,6 +1704,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition/bios.html"
   },
   {
+    "id": "mobo_m67e80esw85909",
     "model": "B550 Taichi",
     "maker": "AMD",
     "socket": "AM4",
@@ -1498,6 +1712,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esupng0e",
     "model": "B550 Extreme4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1505,6 +1720,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Extreme4/bios.html"
   },
   {
+    "id": "mobo_m67e80esj8vsy8",
     "model": "B550 Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
@@ -1512,6 +1728,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80eslw9t73",
     "model": "B550 Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1519,6 +1736,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esis15oy",
     "model": "B550 PG Velocita",
     "maker": "AMD",
     "socket": "AM4",
@@ -1526,6 +1744,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20PG%20Velocita/bios.html"
   },
   {
+    "id": "mobo_m67e80esevuqke",
     "model": "B550 PG Riptide",
     "maker": "AMD",
     "socket": "AM4",
@@ -1533,6 +1752,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80esjte4nt",
     "model": "B550 Phantom Gaming 4/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1540,6 +1760,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Phantom%20Gaming%204ac/bios.html"
   },
   {
+    "id": "mobo_m67e80es5ki9u8",
     "model": "B550 Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1547,6 +1768,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80eslurjh2",
     "model": "B550 Phantom Gaming-ITX/ax",
     "maker": "AMD",
     "socket": "AM4",
@@ -1554,6 +1776,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Phantom%20Gaming-ITXax/bios.html"
   },
   {
+    "id": "mobo_m67e80es2tsfbj",
     "model": "B550M Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
@@ -1561,6 +1784,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esvdbu8g",
     "model": "B550M PG Riptide",
     "maker": "AMD",
     "socket": "AM4",
@@ -1568,6 +1792,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20PG%20Riptide/bios.html"
   },
   {
+    "id": "mobo_m67e80esgtt1ve",
     "model": "B550M Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1575,6 +1800,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80essgi785",
     "model": "B550M Pro RS",
     "maker": "AMD",
     "socket": "AM4",
@@ -1582,6 +1808,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html"
   },
   {
+    "id": "mobo_m67e80es5rp1ie",
     "model": "B550M Pro SE",
     "maker": "AMD",
     "socket": "AM4",
@@ -1589,6 +1816,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html"
   },
   {
+    "id": "mobo_m67e80esn6fvdq",
     "model": "B550M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1596,6 +1824,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80es2jouju",
     "model": "B550M/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1603,6 +1832,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550Mac/bios.html"
   },
   {
+    "id": "mobo_m67e80esoyj20f",
     "model": "B550M WiFi SE",
     "maker": "AMD",
     "socket": "AM4",
@@ -1610,6 +1840,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html"
   },
   {
+    "id": "mobo_m67e80esrk9spo",
     "model": "B550M WiFi",
     "maker": "AMD",
     "socket": "AM4",
@@ -1617,6 +1848,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html"
   },
   {
+    "id": "mobo_m67e80es6bb5c2",
     "model": "B550M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -1624,6 +1856,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80es5r2amc",
     "model": "B550M-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1631,6 +1864,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80esgxoa9x",
     "model": "B550M-HVS SE",
     "maker": "AMD",
     "socket": "AM4",
@@ -1638,6 +1872,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M-HVS%20SE/bios.html"
   },
   {
+    "id": "mobo_m67e80esw7vus0",
     "model": "A520M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1645,6 +1880,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esioqhz6",
     "model": "A520M Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1652,6 +1888,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M%20Phantom%20Gaming%204/bios.html"
   },
   {
+    "id": "mobo_m67e80esg54k2b",
     "model": "A520M-HVS",
     "maker": "AMD",
     "socket": "AM4",
@@ -1659,6 +1896,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html"
   },
   {
+    "id": "mobo_m67e80es5xh7th",
     "model": "A520M-HDVP/DASH",
     "maker": "AMD",
     "socket": "AM4",
@@ -1666,6 +1904,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVPDASH/bios.html"
   },
   {
+    "id": "mobo_m67e80esz6jnh1",
     "model": "A520M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -1673,6 +1912,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80esljni1u",
     "model": "A520M-HDVP",
     "maker": "AMD",
     "socket": "AM4",
@@ -1680,6 +1920,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html"
   },
   {
+    "id": "mobo_m67e80esmzeusw",
     "model": "A520M-HDVP R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1687,6 +1928,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esk5lsdn",
     "model": "A520M/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1694,6 +1936,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html"
   },
   {
+    "id": "mobo_m67e80es7wxnww",
     "model": "A520M-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1701,6 +1944,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80esdl8law",
     "model": "X470 Taichi Ultimate",
     "maker": "AMD",
     "socket": "AM4",
@@ -1708,6 +1952,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi%20Ultimate/bios.html"
   },
   {
+    "id": "mobo_m67e80eshr94g0",
     "model": "X470 Taichi",
     "maker": "AMD",
     "socket": "AM4",
@@ -1715,6 +1960,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esnuc9lr",
     "model": "X470 Master SLI/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1722,6 +1968,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html"
   },
   {
+    "id": "mobo_m67e80esy80upn",
     "model": "X470 Master SLI",
     "maker": "AMD",
     "socket": "AM4",
@@ -1729,6 +1976,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html"
   },
   {
+    "id": "mobo_m67e80es162kk7",
     "model": "Fatal1ty X470 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1736,6 +1984,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4/bios.html"
   },
   {
+    "id": "mobo_m67e80eswe678z",
     "model": "Fatal1ty X470 Gaming-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1743,6 +1992,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80es9zr7sp",
     "model": "B450 Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
@@ -1750,6 +2000,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esnzsafg",
     "model": "B450M Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
@@ -1757,6 +2008,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios.html"
   },
   {
+    "id": "mobo_m67e80esuk2h8r",
     "model": "Fatal1ty B450 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1764,6 +2016,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming%20K4/bios.html"
   },
   {
+    "id": "mobo_m67e80esbopmsi",
     "model": "Fatal1ty B450 Gaming-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1771,6 +2024,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80esi8bgyv",
     "model": "B450 Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1778,6 +2032,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80eskdqr6n",
     "model": "B450 Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1785,6 +2040,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esqt6nkp",
     "model": "B450M Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1792,6 +2048,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esgvb0xa",
     "model": "B450M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1799,6 +2056,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esfgzkn2",
     "model": "B450M/ac R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1806,6 +2064,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450Mac%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80es5v6abf",
     "model": "B450M/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1813,6 +2072,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450Mac/bios.html"
   },
   {
+    "id": "mobo_m67e80esvrqmd6",
     "model": "B450M Pro4-F",
     "maker": "AMD",
     "socket": "AM4",
@@ -1820,6 +2080,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F/bios.html"
   },
   {
+    "id": "mobo_m67e80escms9op",
     "model": "B450M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1827,6 +2088,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esn9h8e0",
     "model": "B450M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -1834,6 +2096,7 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80esbibpd6",
     "model": "X370 Taichi",
     "maker": "AMD",
     "socket": "AM4",
@@ -1841,6 +2104,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370%20Taichi/bios.html"
   },
   {
+    "id": "mobo_m67e80esng76us",
     "model": "X370 Killer SLI/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1848,6 +2112,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLIac/bios.html"
   },
   {
+    "id": "mobo_m67e80es2tdt67",
     "model": "X370 Killer SLI",
     "maker": "AMD",
     "socket": "AM4",
@@ -1855,6 +2120,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLI/bios.html"
   },
   {
+    "id": "mobo_m67e80es4w2zap",
     "model": "X370 Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1862,6 +2128,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esmp8m3m",
     "model": "X370 Pro BTC+",
     "maker": "AMD",
     "socket": "AM4",
@@ -1869,6 +2136,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370%20Pro%20BTC+/bios.html"
   },
   {
+    "id": "mobo_m67e80es1x8kbg",
     "model": "Fatal1ty X370 Professional Gaming",
     "maker": "AMD",
     "socket": "AM4",
@@ -1876,6 +2144,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming/bios.html"
   },
   {
+    "id": "mobo_m67e80esvsz23o",
     "model": "Fatal1ty X370 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1883,6 +2152,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20K4/bios.html"
   },
   {
+    "id": "mobo_m67e80escnwmcp",
     "model": "Fatal1ty X370 Gaming X",
     "maker": "AMD",
     "socket": "AM4",
@@ -1890,6 +2160,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20X/bios.html"
   },
   {
+    "id": "mobo_m67e80eslkv5zq",
     "model": "Fatal1ty X370 Gaming-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -1897,6 +2168,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80es2he58d",
     "model": "X370M Pro4-F",
     "maker": "AMD",
     "socket": "AM4",
@@ -1904,6 +2176,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4-F/bios.html"
   },
   {
+    "id": "mobo_m67e80es6o54yc",
     "model": "X370M Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1911,6 +2184,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esholwln",
     "model": "X370M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1918,6 +2192,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80eshgna5b",
     "model": "X370M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1925,6 +2200,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M-HDV%20R4.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esuvl8eu",
     "model": "X370M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -1932,6 +2208,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80es6lp6rc",
     "model": "X370M",
     "maker": "AMD",
     "socket": "AM4",
@@ -1939,6 +2216,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M/bios.html"
   },
   {
+    "id": "mobo_m67e80esk6z4xr",
     "model": "AB350 Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1946,6 +2224,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esqah1wq",
     "model": "AB350M Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1953,6 +2232,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esjjnsb6",
     "model": "AB350M Pro4-F",
     "maker": "AMD",
     "socket": "AM4",
@@ -1960,6 +2240,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4-F/bios.html"
   },
   {
+    "id": "mobo_m67e80es1ytlkk",
     "model": "AB350M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -1967,6 +2248,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esc72tz7",
     "model": "AB350M Pro4/DASH",
     "maker": "AMD",
     "socket": "AM4",
@@ -1974,6 +2256,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4DASH/bios.html"
   },
   {
+    "id": "mobo_m67e80es66le9d",
     "model": "AB350M",
     "maker": "AMD",
     "socket": "AM4",
@@ -1981,6 +2264,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M/bios.html"
   },
   {
+    "id": "mobo_m67e80esh4v3ho",
     "model": "AB350M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1988,6 +2272,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html"
   },
   {
+    "id": "mobo_m67e80eswrwjug",
     "model": "AB350M-HDV R3.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -1995,6 +2280,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R3.0/bios.html"
   },
   {
+    "id": "mobo_m67e80eswahnqj",
     "model": "AB350M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -2002,6 +2288,7 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80espib39f",
     "model": "Fatal1ty AB350 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
@@ -2009,6 +2296,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html"
   },
   {
+    "id": "mobo_m67e80esav7lgt",
     "model": "Fatal1ty AB350 Gaming-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
@@ -2016,6 +2304,7 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html"
   },
   {
+    "id": "mobo_m67e80es729lfc",
     "model": "A320M Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -2023,6 +2312,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4%20R2.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esyjwvrs",
     "model": "A320M Pro4-F",
     "maker": "AMD",
     "socket": "AM4",
@@ -2030,6 +2320,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4-F/bios.html"
   },
   {
+    "id": "mobo_m67e80esiqjv9h",
     "model": "A320M Pro4",
     "maker": "AMD",
     "socket": "AM4",
@@ -2037,6 +2328,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4/bios.html"
   },
   {
+    "id": "mobo_m67e80esiuirem",
     "model": "A320M",
     "maker": "AMD",
     "socket": "AM4",
@@ -2044,6 +2336,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M/bios.html"
   },
   {
+    "id": "mobo_m67e80es10sxlm",
     "model": "A320M-DVS R4.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -2051,6 +2344,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R4.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esimb7m8",
     "model": "A320M-DVS R3.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -2058,6 +2352,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R3.0/bios.html"
   },
   {
+    "id": "mobo_m67e80est9ty2w",
     "model": "A320M-DGS",
     "maker": "AMD",
     "socket": "AM4",
@@ -2065,6 +2360,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-DGS/bios.html"
   },
   {
+    "id": "mobo_m67e80es0z8vsa",
     "model": "A320M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -2072,6 +2368,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R4.0/bios.html"
   },
   {
+    "id": "mobo_m67e80esttr1c1",
     "model": "A320M-HDV R3.0",
     "maker": "AMD",
     "socket": "AM4",
@@ -2079,6 +2376,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html"
   },
   {
+    "id": "mobo_m67e80espb8wo7",
     "model": "A320M-HDV",
     "maker": "AMD",
     "socket": "AM4",
@@ -2086,6 +2384,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV/bios.html"
   },
   {
+    "id": "mobo_m67e80es4u5utz",
     "model": "A320M-ITX",
     "maker": "AMD",
     "socket": "AM4",
@@ -2093,6 +2392,7 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-ITX/bios.html"
   },
   {
+    "id": "mobo_m67e80eslhwmuj",
     "model": "X300TM-ITX",
     "maker": "AMD",
     "socket": "AM4",
@@ -2100,6 +2400,7 @@
     "biospage": "https://www.asrock.com/mb/amd/X300TM-ITX/bios.html"
   },
   {
+    "id": "mobo_m67e80esvxvdo4",
     "model": "X300M-STX",
     "maker": "AMD",
     "socket": "AM4",

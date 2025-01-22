@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
 
+import { generateUniqueId } from "./uuid.js"
+
 import fs from "fs";
 
 export async function scrapeMotherboards() {
@@ -43,6 +45,8 @@ export async function scrapeMotherboards() {
               : "AMD";
             const modelName = model[0];
             const socketType = model[1];
+            const uniqueId = generateUniqueId('mobo_');
+            
             const link = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
               .replace(/\s/g, "%20")
               .replace(/\//g, "")}`;
@@ -51,6 +55,7 @@ export async function scrapeMotherboards() {
               .replace(/\//g, "")}/bios.html`;
 
             return {
+              id: uniqueId,
               model: modelName,
               maker: maker,
               socket: socketType,
