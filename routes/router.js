@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 router.get('/', (req, res) => {
   // Read the JSON file
-  const filePath = path.join(__dirname, '../public/models.json');
+  const filePath = path.join(__dirname, '../public/data/models.json');
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading models.json:', err);
