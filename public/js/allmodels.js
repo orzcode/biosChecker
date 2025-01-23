@@ -1,3 +1,5 @@
+// This script is used to filter the table based on the selected checkboxes
+//
 document.addEventListener("DOMContentLoaded", function () {
 	const checkboxes = document.querySelectorAll('.socket-checkbox');
 	const tableRows = document.querySelectorAll('#motherboard-table tbody tr'); // all the rows in the table

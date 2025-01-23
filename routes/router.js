@@ -7,8 +7,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-//router.get("/", (req, res) => res.send("Hello, world!"));
+import { addOrUpdateUser } from "../public/js/userService.js";
 
+//router.get("/", (req, res) => res.send("Hello, world!"));
 
 router.get('/', (req, res) => {
   // Read the JSON file
@@ -26,6 +27,18 @@ router.get('/', (req, res) => {
     // Render the EJS template with the parsed data
     res.render('allmodels', { motherboards });
   });
+});
+
+router.post("/submit", (req, res) => {
+  const { email, selectedMobo } = req.body;
+  
+  if (!email || !selectedMobo) {
+    return res.status(400).send("Missing email or motherboard selection");
+  }
+
+  addOrUpdateUser(email, selectedMobo);
+
+  res.redirect("/");
 });
 
 

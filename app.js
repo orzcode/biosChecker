@@ -11,6 +11,12 @@ app.set("views", path.join(path.resolve(), "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
+// Middleware to parse URL-encoded bodies (for form submissions)
+app.use(express.urlencoded({ extended: true }));
+
+// Middleware to parse JSON (if you're sending JSON data)
+app.use(express.json());
+
 import router from "./routes/router.js";
 
 app.use("/", router);
