@@ -124,7 +124,7 @@ th,
 td {
   border-top: 2px solid var(--header);
   border-bottom: 2px solid var(--header);
-  padding: 8px;
+  padding: 7px;
   text-align: center;
 }
 th {
@@ -147,6 +147,12 @@ th {
 }
 [data-row="AM4"] {
   background-color: var(--AM4);
+}
+.legendIntel {
+  color: #0065ca;
+}
+.legendAMD {
+  color: #c60000;
 }
 
 [data-cell="model"] {
