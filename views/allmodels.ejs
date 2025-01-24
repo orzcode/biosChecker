@@ -34,7 +34,12 @@
             required
             placeholder="yourname@example.com"
           />
-          <!-- <input type="hidden" name="motherboardId" value="mobo_123456" /> -->
+          <!--     <input
+      type="text"
+      id="mobo-validation"
+      required
+      style="position: absolute; left: -9999px;"
+    /> -->
           <button type="submit">Subscribe</button>
         </div>
 
@@ -105,10 +110,12 @@
             <tr data-row="<%= mobo.socket %>">
               <td>
                 <input
-                  type="checkbox"
+                  type="radio"
+                  required
                   class="mobo-checkbox"
                   name="selectedMobo"
                   value="<%= mobo.model %>"
+                  title="Select this motherboard"
                 />
               </td>
               <td data-cell="model"><%= mobo.model %></td>
