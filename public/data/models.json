@@ -85,7 +85,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv282gxg6",
@@ -101,7 +101,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2wfo7ob",
@@ -109,7 +109,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2wndyez",
@@ -117,7 +117,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2rylnqg",
@@ -125,7 +125,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2tjc3b0",
@@ -181,7 +181,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2nin551",
@@ -237,7 +237,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2q1pm0f",
@@ -269,7 +269,7 @@
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2xbr8z8",
@@ -365,7 +365,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv25iuhy4",
@@ -373,7 +373,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2ivawbl",
@@ -405,7 +405,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2ond8ma",
@@ -429,7 +429,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2xdehra",
@@ -501,7 +501,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2q8vyo6",
@@ -509,7 +509,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2d2bopx",
@@ -517,7 +517,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html"
   },
   {
     "id": "mobo_m68rfcv2vjk4cs",
@@ -525,7 +525,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html"
   },
   {
     "id": "mobo_m68rfcv2980jww",
@@ -533,7 +533,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv294tlmh",
@@ -541,7 +541,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html"
   },
   {
     "id": "mobo_m68rfcv27wsvci",
@@ -549,7 +549,7 @@
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2h95ukl",
@@ -1149,7 +1149,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv21xnr3n",
@@ -1157,7 +1157,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2vyygh2",
@@ -1213,7 +1213,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv228ywjr",
@@ -1261,7 +1261,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M%20Riptide%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Riptide%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B850M%20Riptide%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2ze3t5f",
@@ -1269,7 +1269,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2xp0dt8",
@@ -1405,7 +1405,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2zuq7qu",
@@ -1421,7 +1421,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html"
   },
   {
     "id": "mobo_m68rfcv28zviww",
@@ -1445,7 +1445,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2rpj9cl",
@@ -1453,7 +1453,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html"
   },
   {
     "id": "mobo_m68rfcv2fnno8h",
@@ -1461,7 +1461,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2vb4mg3",
@@ -1549,7 +1549,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620I%20Lightning%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
@@ -2005,7 +2005,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios.html"
+    "biospage": "https://pg.asrock.com/mb/amd/B450M%20Steel%20Legend/bios.html"
   },
   {
     "id": "mobo_m68rfcv26mj62w",
