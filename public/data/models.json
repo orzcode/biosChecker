@@ -472,20 +472,20 @@
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS/bios.html"
   },
   {
-    "id": "mobo_m68rfcv2jse42i",
-    "model": "B760 Pro RS/D4 WiFi White",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White/bios.html"
-  },
-  {
     "id": "mobo_m68rfcv21qggv5",
     "model": "B760 Pro RS/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html"
+  },
+  {
+    "id": "mobo_m68rfcv2jse42i",
+    "model": "B760 Pro RS/D4 WiFi White",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White/bios.html"
   },
   {
     "id": "mobo_m68rfcv26db2x6",
@@ -1032,20 +1032,20 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html"
   },
   {
-    "id": "mobo_m68rfcv2o5c5z8",
-    "model": "H610M-HDV",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDV",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html"
-  },
-  {
     "id": "mobo_m68rfcv2ka6t2o",
     "model": "H610M-H2/M.2",
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-H2M.2",
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html"
+  },
+  {
+    "id": "mobo_m68rfcv2o5c5z8",
+    "model": "H610M-HDV",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDV",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html"
   },
   {
     "id": "mobo_m68rfcv2egct3a",
@@ -1088,20 +1088,20 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html"
   },
   {
-    "id": "mobo_m68rfcv2lbwni8",
-    "model": "H610M-X D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-X%20D5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html"
-  },
-  {
     "id": "mobo_m68rfcv2xgryhk",
     "model": "H610TM-ITX",
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610TM-ITX",
     "biospage": "https://www.asrock.com/mb/intel/H610TM-ITX/bios.html"
+  },
+  {
+    "id": "mobo_m68rfcv2lbwni8",
+    "model": "H610M-X D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html"
   },
   {
     "id": "mobo_m68rfcv22lddrk",
