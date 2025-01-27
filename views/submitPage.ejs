@@ -29,6 +29,9 @@
           You will get notified when a new BIOS update is available for:
           <span><strong><%= selectedMobo %></strong>.</span>
         </p>
+        
+        <% const trimmedImgLink = selectedMobo.replace(/\//g, ""); %>
+        <img src="https://www.asrock.com/mb/photo/<%= trimmedImgLink %>.png" alt="BIOS" />
 
         <% if (previousMobo) { %>
         <p>
