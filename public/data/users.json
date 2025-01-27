@@ -1,21 +1,20 @@
 [
   {
-    "id": "user_m68v3u6xhl0rkw",
-    "email": "yodahump@gmail.com",
-    "mobos": [
-      "Z890 Taichi",
-      "Z890 Pro RS WiFi",
-      "B860M Lightning WiFi"
-    ],
+    "id": "dummy",
+    "email": "dummy",
+    "mobo": "dummy",
     "lastContacted": null
   },
   {
-    "id": "user_m6a8dauu11v530",
-    "email": "benulations@gmail.com",
-    "mobos": [
-      "Z890 Taichi",
-      "Z890 Pro-A WiFi"
-    ],
+    "id": "user_m6fl1y8o6e8z1m",
+    "email": "yodahump@gmail.com",
+    "mobo": "Z890 Taichi Lite",
+    "lastContacted": null
+  },
+  {
+    "id": "user_m6fm2j4ynxpmz6",
+    "email": "joe@fuefert.com",
+    "mobo": "Z890 Taichi",
     "lastContacted": null
   }
 ]

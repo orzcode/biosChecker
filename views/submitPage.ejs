@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ASRock BIOS Notifier</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto|Lato"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  </head>
+  <body>
+    <header id="header">
+      <img src="/images/biosimg.png" />
+    </header>
+
+    <main id="main">
+      <div class="submissionDetails">
+
+        <h1>Signup Successful</h1>
+        <p>
+          You will get notified when a new BIOS update is available for:
+          <span><strong><%= selectedMobo %></strong>.</span>
+        </p>
+
+        <% if (previousMobo) { %>
+        <p>
+          (Previously you were signed up for: <strong><%= previousMobo %></strong>).
+        </p>
+        <% } %>
+
+        <button onclick="window.location.href='/'">Return to Home Page</button>
+
+        <form action="/unsubscribe" method="POST">
+          <input type="hidden" name="email" value="<%= email %>">
+          <button type="submit">Unsubscribe</button>
+        </form>
+
+      </div>
+    </main>
+
+    <footer id="footer">
+      <a href="https://github.com/orzcode" target="_blank">
+        Created by Orz <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+  </body>
+</html>

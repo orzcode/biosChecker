@@ -17,19 +17,26 @@ export function saveUsers(users) {
   fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
 }
 
+//this is what happens when the user hits submit
 export function addOrUpdateUser(email, mobo) {
   let users = getUsers();
 
   let user = users.find((u) => u.email === email);
   if (user) {
-    if (!user.mobos.includes(mobo)) {
-      user.mobos.push(mobo);
-    }
+    // if (!user.mobos.includes(mobo)) {
+    //   user.mobos.push(mobo);
+    // }
+    //old code, to add multiple mobos
+
+    user.mobo = mobo;
+    //adds or overwrites mobo choice
+    
   } else {
+    //generates a new user since they don't exist
     user = {
       id: generateUniqueId("user_"),
       email,
-      mobos: [mobo],
+      mobo,
       lastContacted: null,
     };
     users.push(user);
