@@ -247,7 +247,7 @@ fieldset {
   transform: rotate(45deg);
 }
 /* ----------------------------------------- */
-.submissionDetails, .unsubscribeDetails, .errorDetails {
+.buttonsDiv, .submissionDetails, .unsubscribeDetails, .errorDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,5 +263,6 @@ fieldset {
   max-width: 300px;
 }
 .unsub {
-  filter:grayscale(40%);
+  filter:grayscale(10%) opacity(0.9);
+
 }
