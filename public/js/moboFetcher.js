@@ -82,7 +82,10 @@ export async function scrapeMotherboards() {
         socket: socketType,
         link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName.replace(/\s/g, "%20").replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
+        heldVersion: null,
       });
+
+      //^insert func there to dynamically get latest ver
 
       console.log(`Processed: ${modelName}, BIOS Page: ${biosPage || "Not found"}`);
 

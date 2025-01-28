@@ -5,6 +5,7 @@ import path from "path";
 // Use import.meta.url to get the directory name in an ES module
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const usersFile = path.resolve(__dirname, "../data/users.json");
+const modelsFile = path.resolve(__dirname, "../data/models.json");
 
 export function getUsers() {
   if (fs.existsSync(usersFile)) {
@@ -20,12 +21,17 @@ export function saveUsers(users) {
 //this is what happens when the user hits submit
 export function addOrUpdateUser(email, mobo) {
   let users = getUsers();
-
   let user = users.find((u) => u.email === email);
+
+  let models = JSON.parse(fs.readFileSync(modelsFile, "utf8"));
+  let model = models.find((model) => model.name === mobo);
+  let latestVersion = model ? model.heldVersion : null;
+
   if (user) {
     // if (!user.mobos.includes(mobo)) {
     //   user.mobos.push(mobo);
     // }
+    //
     //old code, to add multiple mobos
 
     user.mobo = mobo;
@@ -37,6 +43,7 @@ export function addOrUpdateUser(email, mobo) {
       id: generateUniqueId("user_"),
       email,
       mobo,
+      givenVersion: latestVersion,
       lastContacted: null,
     };
     users.push(user);
