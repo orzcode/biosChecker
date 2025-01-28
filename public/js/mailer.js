@@ -2,6 +2,8 @@ import { Resend } from "resend";
 
 const resend = new Resend("test");
 
+// <domain>/unsubscribe?email=test@test.com
+
 const useremail = "user.email"
 
 const biospageLink = "www.google.com";

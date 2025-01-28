@@ -50,8 +50,10 @@ router.post("/submit", (req, res) => {
   });
 });
 
-router.post("/unsubscribe", (req, res) => {
-  const { email } = req.query;
+
+//handles both form 'POST' and link-based 'GET' requests
+router.all("/unsubscribe", (req, res) => {
+  const email = req.method === "POST" ? req.body.email : req.query.email;
 
   if (!email) {
     return res.status(400).render("error", { 
@@ -79,6 +81,7 @@ router.post("/unsubscribe", (req, res) => {
   // Render the unsubscribe confirmation view
   res.render("unsubscribe", { email: removedUser.email });
 });
+
 
 
 export default router;

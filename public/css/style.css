@@ -262,3 +262,6 @@ fieldset {
   border-radius: 1rem;
   max-width: 300px;
 }
+.unsub {
+  filter:grayscale(40%);
+}
