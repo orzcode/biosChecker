@@ -52,16 +52,23 @@ router.post("/submit", (req, res) => {
 
 router.post("/unsubscribe", (req, res) => {
   const { email } = req.query;
+
+  if (!email) {
+    return res.status(400).render("error", { 
+      message: "Missing email address.", 
+      title: "Error 400" 
+    });
+  }
+
   let users = getUsers();
   const userIndex = users.findIndex((u) => u.email === email);
 
-  // if (!email) {
-  //   return res.status(400).send("Missing email address.");
-  // }
-  
-  // if (userIndex === -1) {
-  //   return res.status(404).send("User not found.");
-  // }
+  if (userIndex === -1) {
+    return res.status(404).render("error", { 
+      message: "User not found.", 
+      title: "Error 404" 
+    });
+  }
 
   // Remove the user
   const [removedUser] = users.splice(userIndex, 1);

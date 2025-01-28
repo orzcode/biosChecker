@@ -24,27 +24,29 @@
     <main id="main">
       <div class="submissionDetails">
 
-        <h1>Signup Successful</h1>
+        <!-- <h1>Signup Successful</h1> -->
         <p>
           You will get notified when a new BIOS update is available for:
-          <span><strong><%= selectedMobo %></strong>.</span>
         </p>
+        <p><strong><%= selectedMobo %></strong>.</p>
         
+
         <% const trimmedImgLink = selectedMobo.replace(/\//g, ""); %>
-        <img src="https://www.asrock.com/mb/photo/<%= trimmedImgLink %>.png" alt="BIOS" />
+        <img class="moboThumb" src="https://www.asrock.com/mb/photo/<%= trimmedImgLink %>.png" alt="Selected Motherboard" />
 
         <% if (previousMobo) { %>
-        <p>
+        <em>
           (Previously you were signed up for: <strong><%= previousMobo %></strong>).
-        </p>
+        </em>
         <% } %>
 
-        <button onclick="window.location.href='/'">Return to Home Page</button>
-
-        <form action="/unsubscribe" method="POST">
-          <input type="hidden" name="email" value="<%= email %>">
-          <button type="submit">Unsubscribe</button>
-        </form>
+        <div class="buttonsDiv">
+          <button onclick="window.location.href='/'">Return to Main</button>
+          <form action="/unsubscribe" method="POST">
+            <input type="hidden" name="email" value="<%= email %>">
+            <button type="submit">Unsubscribe</button>
+          </form>
+        </div>
 
       </div>
     </main>

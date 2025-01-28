@@ -22,16 +22,13 @@
     </header>
 
     <main id="main">
-      <div class="unsubscribeDetails">
-        <!-- <h1>Unsubscribed Successfully</h1> -->
-        <p>
-          <strong><%= email %></strong>
-        </p>
-        <p>Unsubscribed from email notifications</p>
-        <button onclick="window.location.href='/'" class="button">
-          Return to Main
-        </button>
-      </div>
+			<div class="errorDetails">
+				<p><strong><%= title %></strong></p>
+				<p><%= message %></p>
+				<button onclick="window.location.href='/'" class="button">
+					Return to Main
+				  </button>
+			</div>
     </main>
 
     <footer id="footer">
@@ -39,5 +36,4 @@
         Created by Orz <i class="fa-brands fa-github"></i>
       </a>
     </footer>
-  </body>
 </html>
