@@ -100,10 +100,13 @@
               <th>BIOS Page</th>
             </tr>
           </thead>
-          <tbody>
+            <tbody>
             <% motherboards.forEach((mobo) => { %>
-            <tr data-row="<%= mobo.socket %>">
-              <td>
+              <!-- limit to non-PG items -->
+              <% if (mobo.biospage.startsWith('https://www')) { %>
+              <!-- limit to non-PG items -->
+              <tr data-row="<%= mobo.socket %>">
+                <td>
                 <input
                   type="radio"
                   required
@@ -112,23 +115,24 @@
                   value="<%= mobo.model %>"
                   title="Select this motherboard"
                 />
-              </td>
-              <td data-cell="model"><%= mobo.model %></td>
-              <td data-cell="maker"><%= mobo.maker %></td>
-              <td data-cell="socket"><%= mobo.socket %></td>
-              <td>
+                </td>
+                <td data-cell="model"><%= mobo.model %></td>
+                <td data-cell="maker"><%= mobo.maker %></td>
+                <td data-cell="socket"><%= mobo.socket %></td>
+                <td>
                 <a data-cell="link" href="<%= mobo.link %>" target="_blank"
                   >Details <i class="fa-sharp fa-solid fa-link"></i
                 ></a>
-              </td>
-              <td>
+                </td>
+                <td>
                 <a data-cell="link" href="<%= mobo.biospage %>" target="_blank"
                   >BIOSes <i class="fa-sharp fa-solid fa-link"></i
                 ></a>
-              </td>
-            </tr>
+                </td>
+              </tr>
+              <% } %>
             <% }) %>
-          </tbody>
+            </tbody>
         </table>
       </form>
     </main>
