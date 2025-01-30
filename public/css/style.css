@@ -50,8 +50,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-
 }
 button {
   background-color: var(--header);
@@ -80,6 +78,14 @@ html {
 h1 {
   filter: drop-shadow(1px 1px 1px black);
   font-size: clamp(2rem, 4vw, 4rem);
+}
+.blurb{
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 #main {
   background-color: var(--main);
