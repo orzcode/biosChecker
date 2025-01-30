@@ -24,7 +24,7 @@ export function addOrUpdateUser(email, mobo) {
   let user = users.find((u) => u.email === email);
 
   let models = JSON.parse(fs.readFileSync(modelsFile, "utf8"));
-  let model = models.find((model) => model.name === mobo);
+  let model = models.find((model) => model.model === mobo);
   let latestVersion = model ? model.heldVersion : null;
 
   if (user) {
