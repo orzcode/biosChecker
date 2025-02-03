@@ -1,7 +1,6 @@
 import { Resend } from "resend";
 
-const andj3 = j3;
-const resend = new Resend("re_EoW1HEpe_HNC4zqjdGRXMWKYzQDshDZ");
+const resend = new Resend(process.env.RESENDKI);
 
 export async function mailer(userObject, modelsObject) {
   const user = userObject;

@@ -21,7 +21,6 @@ router.get("/", (req, res) => {
 
     // Parse the JSON data
     const motherboards = JSON.parse(data);
-
     // Render the EJS template with the parsed data
     res.render("allmodels", { motherboards });
   });
