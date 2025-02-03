@@ -3,16 +3,15 @@ import { Resend } from "resend";
 const andj3 = j3;
 const resend = new Resend("re_EoW1HEpe_HNC4zqjdGRXMWKYzQDshDZ");
 
-// <domain>/unsubscribe?email=test@test.com
-
 export async function mailer(userObject, modelsObject) {
   const user = userObject;
   const models = modelsObject;
 
   const projectLink = "/";
+  //change this to the actual project link
 
+  // <domain>/unsubscribe?email=test@test.com
   const unsubLink = `${projectLink}/unsubscribe?email=${user.email}`;
-
 
   const { data, error } = await resend.emails.send({
     from: "ASRock Bios Notifier <onboarding@resend.dev>",
@@ -26,4 +25,3 @@ export async function mailer(userObject, modelsObject) {
   }
   console.log({ data });
 }
-

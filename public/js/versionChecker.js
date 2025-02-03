@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
-import * as cheerio from "cheerio";
+import * as cheerio from "cheerio"
+
+import notifyUsers from "./notifyChecker.js";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const modelsFile = path.resolve(__dirname, "../data/models.json");
@@ -88,7 +90,12 @@ async function updateModels() {
   // Save updated models.json
   fs.writeFileSync(modelsFile, JSON.stringify(mobos, null, 2));
   console.log("models.json updated.");
+  
+  console.log("BIOS version checks complete - proceeding to notifycheck");
+  // Notify users of any updates
+  notifyUsers();
 }
 
 updateModels();
-//scrapeBIOSVersion("https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/index.asp#BIOS");
+//  for testing PG
+// scrapeBIOSVersion("https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/index.asp#BIOS");

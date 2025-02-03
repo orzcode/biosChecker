@@ -8,13 +8,6 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const modelsFile = path.resolve(__dirname, "../data/models.json");
 const usersFile = path.resolve(__dirname, "../data/users.json");
 
-// Helper function to send an email (mock for now)
-async function sendEmail(email, subject, body) {
-  console.log(`Sending email to: ${email}`);
-  console.log(`Subject: ${subject}`);
-  console.log(`Body:\n${body}`);
-  // In a real-world case, you'd use a library like nodemailer or an API like SendGrid
-}
 
 async function notifyUsers() {
   try {
