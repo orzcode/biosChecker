@@ -1,6 +1,7 @@
 import fs from "fs";
 import { generateUniqueId } from "./uuid.js";
 import path from "path";
+import sql from './db.js';
 
 // Use import.meta.url to get the directory name in an ES module
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
@@ -28,15 +29,8 @@ export function addOrUpdateUser(email, mobo) {
   let latestVersion = model ? model.heldVersion : null;
 
   if (user) {
-    // if (!user.mobos.includes(mobo)) {
-    //   user.mobos.push(mobo);
-    // }
-    //
-    //old code, to add multiple mobos
-
     user.mobo = mobo;
-    //adds or overwrites mobo choice
-    
+    //adds or overwrites mobo choice    
   } else {
     //generates a new user since they don't exist
     user = {
@@ -44,7 +38,7 @@ export function addOrUpdateUser(email, mobo) {
       email,
       mobo,
       givenVersion: latestVersion,
-      lastContacted: null,
+      lastContacted: new Date().toISOString(), //or null
     };
     users.push(user);
   }

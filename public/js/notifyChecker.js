@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 
+import sql from './db.js';
 import { mailer } from "./mailer.js";
 
 // Paths to data files
@@ -47,20 +48,7 @@ async function notifyUsers() {
 		////////////////
 
         // Update lastContacted timestamp
-        const date = new Date();
-        const hours = date.getHours();
-        const minutes = date.getMinutes().toString().padStart(2, "0");
-        const ampm = hours >= 12 ? "PM" : "AM";
-        const formattedHours = (hours % 12 || 12).toString().padStart(2, "0");
-        const formattedDate = `${date.getDate().toString().padStart(2, "0")}-${(
-          date.getMonth() + 1
-        )
-          .toString()
-          .padStart(
-            2,
-            "0"
-          )}-${date.getFullYear()}-${formattedHours}:${minutes}${ampm}`;
-        user.lastContacted = formattedDate;
+        user.lastContacted = new Date().toISOString();
 
         //update user version if successful
         user.givenVersion = mobo.heldVersion;
