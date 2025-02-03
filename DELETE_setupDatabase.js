@@ -10,38 +10,46 @@ const sql = postgres({
   ssl: 'require',
 });
 
-async function setupDatabase() {
+// Path to models.json
+//const __dirname = path.dirname(new URL(import.meta.url).pathname);
+//const modelsFile = path.resolve(__dirname, "../public/data/models.json");
+
+async function setupModels() {
   try {
-    // Step 1: Create the table
+    // Step 1: Create the models table
     await sql`
-      CREATE TABLE IF NOT EXISTS users (
+      CREATE TABLE IF NOT EXISTS models (
         id TEXT PRIMARY KEY,
-        email TEXT NOT NULL,
-        mobo TEXT NOT NULL,
-        givenVersion TEXT NOT NULL,
-        lastContacted TIMESTAMP
+        model TEXT NOT NULL,
+        maker TEXT NOT NULL,
+        socket TEXT NOT NULL,
+        link TEXT NOT NULL,
+        biospage TEXT NOT NULL,
+        heldVersion TEXT
       )
     `;
-    console.log('Table created or already exists.');
+    console.log("Models table created or already exists.");
+    await sql`
+    ALTER TABLE models ALTER COLUMN heldVersion DROP NOT NULL
+  `;
+    // Step 2: Read models.json
+    const modelsData = JSON.parse(await fs.readFile('./public/data/models.json', 'utf-8'));
 
-    // Step 2: Read users.json
-    const usersData = JSON.parse(await fs.readFile('./public/data/users.json', 'utf-8'));
-
-    // Step 3: Insert data into the database
-    for (const user of usersData) {
+    // Step 3: Insert data into the models table
+    for (const model of modelsData) {
       await sql`
-        INSERT INTO users (id, email, mobo, givenVersion, lastContacted)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenVersion}, ${user.lastContacted})
+        INSERT INTO models (id, model, maker, socket, link, biospage, heldVersion)
+        VALUES (${model.id}, ${model.model}, ${model.maker}, ${model.socket}, ${model.link}, ${model.biospage}, ${model.heldVersion})
         ON CONFLICT (id) DO NOTHING
       `;
     }
-    console.log('Data inserted successfully.');
+    console.log("Models data inserted successfully.");
 
     // Close the database connection
     await sql.end();
   } catch (error) {
-    console.error('Error setting up the database:', error);
+    console.error("Error setting up the models table:", error);
   }
 }
 
-setupDatabase();
+setupModels();

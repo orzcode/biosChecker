@@ -20,4 +20,16 @@ async function viewUsers() {
   }
 }
 
+async function viewModels() {
+  try {
+    const models = await sql`SELECT * FROM models`;
+    console.log('Models in the database:', models);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  } finally {
+    await sql.end();
+  }
+}
+
 viewUsers();
+viewModels();
