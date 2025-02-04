@@ -1,12 +1,8 @@
-import fs from "fs";
-import path from "path";
 import fetch from "node-fetch";
-import * as cheerio from "cheerio"
+import * as cheerio from "cheerio";
 
 import notifyUsers from "./notifyChecker.js";
-
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-const modelsFile = path.resolve(__dirname, "../data/models.json");
+import { getMobos, saveMobos } from "./sqlServices.js";
 
 // Helper function to add a delay
 function delay(ms) {
@@ -28,8 +24,6 @@ async function scrapeBIOSVersion(url) {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-	//console.log(html) //this is the html of the page
-
     const rawVersion = $("tbody tr:first-child td:first-child").html()?.trim();
     if (!rawVersion) {
       throw new Error("Version number not found.");
@@ -50,7 +44,8 @@ async function scrapeBIOSVersion(url) {
 }
 
 async function updateModels() {
-  const mobos = JSON.parse(fs.readFileSync(modelsFile, "utf8"));
+  const mobos = await getMobos();
+  const updatedMobos = [];
 
   for (const mobo of mobos) {
     const { model, biospage, heldVersion } = mobo;
@@ -79,6 +74,7 @@ async function updateModels() {
       console.log(
         `Updating ${model} from ${heldVersion || "none"} to ${fullVersion}`
       );
+      updatedMobos.push(mobo); // Add to updated mobos list
     } else {
       console.log(`No update needed for ${model}.`);
     }
@@ -87,15 +83,18 @@ async function updateModels() {
     await delay(1000); // Delay for 1000 milliseconds (1 second)
   }
 
-  // Save updated models.json
-  fs.writeFileSync(modelsFile, JSON.stringify(mobos, null, 2));
-  console.log("models.json updated.");
-  
-  console.log("BIOS version checks complete - proceeding to notifycheck");
-  // Notify users of any updates
-  notifyUsers();
+  // Save updated models db
+  try {
+    await saveMobos(updatedMobos);
+    console.log("models db updated.");
+    
+    console.log("BIOS version checks complete - proceeding to notifycheck");
+    
+    // Notify users of any updates
+    notifyUsers();
+  } catch (error) {
+    console.error("Failed to save updated mobos:", error);
+  }
 }
 
 updateModels();
-//  for testing PG
-// scrapeBIOSVersion("https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/index.asp#BIOS");

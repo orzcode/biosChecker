@@ -1,16 +1,18 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
 import { generateUniqueId } from "./uuid.js";
-import fs from "fs";
+import { getMobos, saveMobos } from "./sqlServices.js";
 
 //script to fetch motherboard data from ASRock website
+//run this casually, as it just checks for newly released models, not bioses
+
 //AND it checks the bios page for www or pg
+
 //this renders pgupdater.js useless, generally
-
-const modelsFilePath = "../data/models.json";
-
 async function checkBiosPage(maker, modelName) {
-  const baseLink = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName.replace(/\s/g, "%20").replace(/\//g, "")}/bios.html`;
+  const baseLink = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
+    .replace(/\s/g, "%20")
+    .replace(/\//g, "")}/bios.html`;
 
   for (const subdomain of ["www", "pg"]) {
     const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`);
@@ -20,7 +22,10 @@ async function checkBiosPage(maker, modelName) {
         return testUrl; // Return the working URL
       }
     } catch (error) {
-      console.log(`Error checking BIOS page for ${modelName} with ${subdomain}:`, error);
+      console.log(
+        `Error checking BIOS page for ${modelName} with ${subdomain}:`,
+        error
+      );
     }
   }
   return null; // Return null if both fail
@@ -38,7 +43,6 @@ export async function scrapeMotherboards() {
     const body = await response.text();
 
     const $ = cheerio.load(body);
-
     const scriptContent = $("script")
       .map((i, el) => $(el).html())
       .get()
@@ -52,15 +56,17 @@ export async function scrapeMotherboards() {
     const jsonString = scriptContent.split("allmodels=")[1].split("];")[0] + "]";
     const sanitizedJsonString = jsonString.trim().replace(/'/g, '"');
 
-    let existingModels = [];
-    if (fs.existsSync(modelsFilePath)) {
-      existingModels = JSON.parse(fs.readFileSync(modelsFilePath, "utf8"));
+    let allmodels;
+    try {
+      allmodels = JSON.parse(sanitizedJsonString);
+    } catch (error) {
+      console.error("Failed to parse allmodels JSON:", error);
+      return;
     }
 
-    const allmodels = JSON.parse(sanitizedJsonString);
     const relevantSockets = ["1700", "1851", "am4", "am5"];
-
-    const filteredModels = [];
+    const existingModels = await getMobos(); // Fetch existing models from the database
+    const newOrUpdatedModels = []; // Only save these models
 
     for (const model of allmodels) {
       if (!relevantSockets.includes(model[1].toLowerCase())) continue;
@@ -68,38 +74,50 @@ export async function scrapeMotherboards() {
       const maker = model[2].toLowerCase().includes("intel") ? "Intel" : "AMD";
       const modelName = model[0];
       const socketType = model[1];
-
-      // Check if the model already exists and reuse its ID
       const existingEntry = existingModels.find((m) => m.model === modelName);
-      const uniqueId = existingEntry ? existingEntry.id : generateUniqueId("mobo_");
 
       const biosPage = await checkBiosPage(maker, modelName);
-
-      filteredModels.push({
-        id: uniqueId,
+      const newEntry = {
+        id: existingEntry ? existingEntry.id : generateUniqueId("mobo_"),
         model: modelName,
         maker: maker,
         socket: socketType,
         link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName.replace(/\s/g, "%20").replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
-        heldVersion: null,
-      });
+        heldVersion: existingEntry ? existingEntry.heldVersion : null,
+      };
 
-      //^insert func there to dynamically get latest ver
+      // Only save the model if it's new or has changes
+      if (
+        !existingEntry || // New entry
+        existingEntry.biospage !== newEntry.biospage || // BIOS page changed
+        existingEntry.link !== newEntry.link || // Link changed
+        existingEntry.maker !== newEntry.maker || // Maker changed (unlikely)
+        existingEntry.socket !== newEntry.socket // Socket changed (unlikely)
+      ) {
+        newOrUpdatedModels.push(newEntry);
+      }
 
-      console.log(`Processed: ${modelName}, BIOS Page: ${biosPage || "Not found"}`);
+      console.log(
+        `Processed: ${modelName}, BIOS Page: ${biosPage || "Not found"}, ${
+          existingEntry ? "Updated" : "New"
+        }`
+      );
 
       // Add a 1-second delay between each motherboard check
       await delay(1000);
     }
 
-    fs.writeFileSync(modelsFilePath, JSON.stringify(filteredModels, null, 2));
-    console.log("Checked existing data, and removed old or updated new. Saved to models.json");
-
-    return filteredModels;
+    if (newOrUpdatedModels.length > 0) {
+      await saveMobos(newOrUpdatedModels);
+      console.log("Saved new or updated models to the database.");
+    } else {
+      console.log("No new or updated models found. Database remains unchanged.");
+    }
   } catch (error) {
     console.error("Error scraping motherboards:", error);
   }
 }
+
 
 scrapeMotherboards();

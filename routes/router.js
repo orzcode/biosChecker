@@ -1,86 +1,86 @@
 import { Router } from "express";
-import fs from "fs";
-import path from "path";
+import sql from "../public/js/db.js";
 const router = Router();
 
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import * as sqlServices from "../public/js/sqlServices.js";
 
-import { addOrUpdateUser, getUsers, saveUsers } from "../public/js/userService.js";
+router.get("/", async (req, res) => {
+  try {
+    // Query the database for all models
+    const motherboards = await sqlServices.getMobos();
 
-router.get("/", (req, res) => {
-  // Read the JSON file
-  const filePath = path.join(__dirname, "../public/data/models.json");
-  fs.readFile(filePath, "utf8", (err, data) => {
-    if (err) {
-      console.error("Error reading models.json:", err);
-      res.status(500).send("Failed to read models.json");
-      return;
-    }
-
-    // Parse the JSON data
-    const motherboards = JSON.parse(data);
-    // Render the EJS template with the parsed data
+    // Render the EJS template with the fetched data
     res.render("allmodels", { motherboards });
-  });
+  } catch (err) {
+    console.error("Error querying the database:", err);
+    res.status(500).send("Failed to fetch models from the database");
+  }
 });
 
-router.post("/submit", (req, res) => {
+router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
 
   if (!email || !selectedMobo) {
     return res.status(400).send("Missing email or motherboard selection");
   }
 
-  // Get the current users and check for the existing user
-  const users = getUsers();
-  const user = users.find((u) => u.email === email);
-  const previousMobo = user ? user.mobo : null;
+  try {
+    //SQL always returns even a single row as an array, hence the destructure
+    const [user] = await sqlServices.getUsers(email);
+    const previousMobo = user ? user.mobo : null;
 
-  // Add or update the user
-  addOrUpdateUser(email, selectedMobo);
+    // Add or update the user
+    await sqlServices.addOrUpdateUser(email, selectedMobo);
 
-  // Render the submit page with the relevant data
-  res.render("submitPage", {
-    email: email,
-    selectedMobo: selectedMobo,
-    previousMobo: previousMobo,
-  });
+    // Render the submit page with the relevant data
+    res.render("submitPage", {
+      email,
+      selectedMobo,
+      previousMobo,
+    });
+  } catch (err) {
+    console.error("Error processing the request:", err);
+    return res
+      .status(500)
+      .send("An error occurred while processing your request");
+  }
 });
 
-
 //handles both form 'POST' and link-based 'GET' requests
-router.all("/unsubscribe", (req, res) => {
+router.all("/unsubscribe", async (req, res) => {
   const email = req.method === "POST" ? req.body.email : req.query.email;
 
   if (!email) {
-    return res.status(400).render("error", { 
-      message: "Missing email address.", 
-      title: "Error 400" 
+    return res.status(400).render("error", {
+      message: "Missing email address.",
+      title: "Error 400",
     });
   }
 
-  let users = getUsers();
-  const userIndex = users.findIndex((u) => u.email === email);
+  try {
+    // Fetch user by email
+    const [user] = await sqlServices.getUsers(email);
 
-  if (userIndex === -1) {
-    return res.status(404).render("error", { 
-      message: "User not found.", 
-      title: "Error 404" 
+    // Check if the user exists
+    if (!user) {
+      return res.status(404).render("error", {
+        message: "User not found.",
+        title: "Error 404",
+      });
+    }
+
+    // Remove the user from the database
+    await sql`DELETE FROM users WHERE email = ${email}`;
+
+    // Render the unsubscribe confirmation view
+    res.render("unsubscribe", { email: user.email });
+  } catch (error) {
+    console.error("Error handling unsubscribe:", error);
+    return res.status(500).render("error", {
+      message: "An error occurred while processing your request.",
+      title: "Error 500",
     });
   }
-
-  // Remove the user
-  const [removedUser] = users.splice(userIndex, 1);
-
-  // Save the updated users list
-  saveUsers(users);
-
-  // Render the unsubscribe confirmation view
-  res.render("unsubscribe", { email: removedUser.email });
 });
-
-
 
 export default router;
