@@ -32,4 +32,4 @@ async function viewModels() {
 }
 
 viewUsers();
-//viewModels();
+viewModels();

@@ -77,6 +77,7 @@ export async function saveUsers(userOrUsers) {
 
   try {
     for (const user of usersArray) {
+      console.log(user)
       await sql`
         INSERT INTO users (id, email, mobo, givenVersion, lastContacted)
         VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenVersion}, ${user.lastContacted})
@@ -103,7 +104,8 @@ export async function addOrUpdateUser(email, mobo) {
 
     // Fetch the motherboard data for the given model
     const model = await getMobos(mobo);
-    const latestVersion = model ? model.heldVersion : null;
+
+    const latestVersion = model ? model[0].heldversion : null;
 
     if (existingUser) {
       // Update the existing user
