@@ -31,13 +31,13 @@ export async function saveMobos(moboOrMobos) {
   try {
     for (const mobo of mobosArray) {
       await sql`
-        INSERT INTO models (id, model, biospage, heldVersion)
-        VALUES (${mobo.id}, ${mobo.model}, ${mobo.biospage}, ${mobo.heldVersion})
+        INSERT INTO models (id, model, biospage, heldversion)
+        VALUES (${mobo.id}, ${mobo.model}, ${mobo.biospage}, ${mobo.heldversion})
         ON CONFLICT (id) DO UPDATE
         SET 
           model = EXCLUDED.model,
           biospage = EXCLUDED.biospage,
-          heldVersion = EXCLUDED.heldVersion;
+          heldversion = EXCLUDED.heldversion;
       `;
     }
     console.log("Models saved or updated successfully.");
@@ -79,14 +79,14 @@ export async function saveUsers(userOrUsers) {
     for (const user of usersArray) {
       console.log(user)
       await sql`
-        INSERT INTO users (id, email, mobo, givenVersion, lastContacted)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenVersion}, ${user.lastContacted})
+        INSERT INTO users (id, email, mobo, givenversion, lastcontacted)
+        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.lastcontacted})
         ON CONFLICT (id) DO UPDATE
         SET 
           email = EXCLUDED.email,
           mobo = EXCLUDED.mobo,
-          givenVersion = EXCLUDED.givenVersion,
-          lastContacted = EXCLUDED.lastContacted;
+          givenversion = EXCLUDED.givenversion,
+          lastcontacted = EXCLUDED.lastcontacted;
       `;
     }
     console.log("Users saved or updated successfully.");
