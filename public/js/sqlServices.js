@@ -97,25 +97,34 @@ export async function saveUsers(userOrUsers) {
 
 //this is what happens when the user hits submit
 export async function addOrUpdateUser(email, mobo) {
-  let users = await getUsers();
-  let user = await getUsers(email);
+  try {
+    // Check if the user already exists
+    const [existingUser] = await getUsers(email);
 
-  let model = await getMobos(mobo);
-  let latestVersion = model ? model.heldVersion : null;
+    // Fetch the motherboard data for the given model
+    const model = await getMobos(mobo);
+    const latestVersion = model ? model.heldVersion : null;
 
-  if (user) {
-    user.mobo = mobo;
-    //adds or overwrites mobo choice    
-  } else {
-    //generates a new user since they don't exist 
-    user = {
-      id: generateUniqueId("user_"),
-      email,
-      mobo,
-      givenVersion: latestVersion,
-      lastContacted: new Date().toISOString(), //or null
-    };
+    if (existingUser) {
+      // Update the existing user
+      existingUser.mobo = mobo;
+      await saveUsers(existingUser);
+      console.log(`Updated user ${email} with mobo: ${mobo}`);
+    } else {
+      // Create a new user
+      const newUser = {
+        id: generateUniqueId("user_"),
+        email,
+        mobo,
+        givenVersion: latestVersion,
+        lastContacted: new Date().toISOString(),
+      };
+      await saveUsers(newUser);
+      console.log(`Created new user: ${email} with mobo: ${mobo}`);
+    }
+  } catch (error) {
+    console.error(`Error in addOrUpdateUser for ${email}:`, error.message);
+    throw error;
   }
-
-  await saveUsers(user);
 }
+

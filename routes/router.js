@@ -29,6 +29,7 @@ router.post("/submit", async (req, res) => {
     const [user] = await sqlServices.getUsers(email);
     const previousMobo = user ? user.mobo : null;
 
+
     // Add or update the user
     await sqlServices.addOrUpdateUser(email, selectedMobo);
 
@@ -59,7 +60,7 @@ router.all("/unsubscribe", async (req, res) => {
 
   try {
     // Fetch user by email
-    const [user] = await sqlServices.getUsers(email);
+    const user = await sqlServices.getUsers(email);
 
     // Check if the user exists
     if (!user) {
