@@ -2,7 +2,7 @@ name: Run Daily Tasks (versionChecker, notifyChecker, mailer if so)
 
 on:
   schedule:
-    - cron: '40 4 * * *' # Scheduled to run daily at 5:40PM NZ / 4:40AM UTC
+    - cron: '50 4 * * *' # Scheduled to run daily at 5:50PM NZ / 4:50AM UTC
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
 
       # Run the tasks
       - name: Run checker tasks
-        run: node ../../public/js/runTasks.js
+        run: node public/js/runTasks.js
 
       # Optional: Notify on workflow success
       - name: Notify success
