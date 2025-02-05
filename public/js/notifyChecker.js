@@ -1,5 +1,6 @@
 import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers } from "./sqlServices.js";
+import sql from "./db.js";
 
 // Function to compare version strings properly
 function compareVersions(v1, v2) {
