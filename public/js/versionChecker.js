@@ -46,7 +46,7 @@ async function scrapeBIOSVersion(url) {
   }
 }
 
-async function updateModels() {
+export async function updateModels() {
   const mobos = await getMobos();
   const updatedMobos = [];
 
@@ -100,4 +100,4 @@ async function updateModels() {
   }
 }
 
-updateModels();
+//updateModels();
