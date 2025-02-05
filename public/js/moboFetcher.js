@@ -7,6 +7,8 @@ import { getMobos, saveMobos } from "./sqlServices.js";
 //run this casually, as it just checks for newly released models, not bioses
 
 //AND it checks the bios page for www or pg
+//this is probably not good unless PG actually works
+//but for now let's leave it in
 
 //this renders pgupdater.js useless, generally
 async function checkBiosPage(maker, modelName) {
@@ -53,7 +55,8 @@ export async function scrapeMotherboards() {
       return;
     }
 
-    const jsonString = scriptContent.split("allmodels=")[1].split("];")[0] + "]";
+    const jsonString =
+      scriptContent.split("allmodels=")[1].split("];")[0] + "]";
     const sanitizedJsonString = jsonString.trim().replace(/'/g, '"');
 
     let allmodels;
@@ -82,9 +85,11 @@ export async function scrapeMotherboards() {
         model: modelName,
         maker: maker,
         socket: socketType,
-        link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName.replace(/\s/g, "%20").replace(/\//g, "")}`,
+        link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
+          .replace(/\s/g, "%20")
+          .replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
-        heldVersion: existingEntry ? existingEntry.heldVersion : null,
+        heldversion: existingEntry ? existingEntry.heldversion : null,
       };
 
       // Only save the model if it's new or has changes
@@ -112,12 +117,13 @@ export async function scrapeMotherboards() {
       await saveMobos(newOrUpdatedModels);
       console.log("Saved new or updated models to the database.");
     } else {
-      console.log("No new or updated models found. Database remains unchanged.");
+      console.log(
+        "No new or updated models found. Database remains unchanged."
+      );
     }
   } catch (error) {
     console.error("Error scraping motherboards:", error);
   }
 }
-
 
 scrapeMotherboards();

@@ -1,5 +1,5 @@
 import { generateUniqueId } from "./uuid.js";
-import sql from './db.js';
+import sql from "./db.js";
 
 export async function getMobos(singleMoboModel) {
   try {
@@ -59,8 +59,6 @@ export async function getUsers(singleUserEmail) {
   }
 }
 
-
-
 export async function saveUsers(userOrUsers) {
   let usersArray;
 
@@ -77,7 +75,7 @@ export async function saveUsers(userOrUsers) {
 
   try {
     for (const user of usersArray) {
-      console.log(user)
+      console.log(user);
       await sql`
         INSERT INTO users (id, email, mobo, givenversion, lastcontacted)
         VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.lastcontacted})
@@ -94,7 +92,6 @@ export async function saveUsers(userOrUsers) {
     console.error("Error saving users:", error);
   }
 }
-
 
 //this is what happens when the user hits submit
 export async function addOrUpdateUser(email, mobo) {
@@ -118,8 +115,8 @@ export async function addOrUpdateUser(email, mobo) {
         id: generateUniqueId("user_"),
         email,
         mobo,
-        givenVersion: latestVersion,
-        lastContacted: new Date().toISOString(),
+        givenversion: latestVersion,
+        lastcontacted: new Date().toISOString(),
       };
       await saveUsers(newUser);
       console.log(`Created new user: ${email} with mobo: ${mobo}`);
@@ -129,4 +126,3 @@ export async function addOrUpdateUser(email, mobo) {
     throw error;
   }
 }
-

@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
 
-import notifyUsers from "./notifyChecker.js";
+import { notifyUsers } from "./notifyChecker.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
 
 // Helper function to add a delay
@@ -10,6 +10,9 @@ function delay(ms) {
 }
 
 async function scrapeBIOSVersion(url) {
+  //currently, this still attempts to check PG pages
+  //it will fail, but it's probably better to leave it in?
+  //
   try {
     const response = await fetch(url, {
       headers: {
@@ -48,7 +51,7 @@ async function updateModels() {
   const updatedMobos = [];
 
   for (const mobo of mobos) {
-    const { model, biospage, heldVersion } = mobo;
+    const { model, biospage, heldversion } = mobo;
 
     console.log(`Checking BIOS for: ${model}...`);
 
@@ -63,16 +66,16 @@ async function updateModels() {
     const { fullVersion, numericVersion } = scrapedVersion;
 
     console.log(
-      `Found version: ${fullVersion} (held: ${heldVersion || "none"})`
+      `Found version: ${fullVersion} (held: ${heldversion || "none"})`
     );
 
-    // Extract numeric part of heldVersion for comparison
-    const heldNumeric = heldVersion?.match(/[\d.]+/)?.[0];
+    // Extract numeric part of heldversion for comparison
+    const heldNumeric = heldversion?.match(/[\d.]+/)?.[0];
 
     if (!heldNumeric || parseFloat(numericVersion) > parseFloat(heldNumeric)) {
-      mobo.heldVersion = fullVersion; // Save the full version string
+      mobo.heldversion = fullVersion; // Save the full version string
       console.log(
-        `Updating ${model} from ${heldVersion || "none"} to ${fullVersion}`
+        `Updating ${model} from ${heldversion || "none"} to ${fullVersion}`
       );
       updatedMobos.push(mobo); // Add to updated mobos list
     } else {
@@ -87,9 +90,9 @@ async function updateModels() {
   try {
     await saveMobos(updatedMobos);
     console.log("models db updated.");
-    
+
     console.log("BIOS version checks complete - proceeding to notifycheck");
-    
+
     // Notify users of any updates
     notifyUsers();
   } catch (error) {

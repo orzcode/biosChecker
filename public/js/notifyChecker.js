@@ -35,7 +35,7 @@ export async function notifyUsers() {
 
     // Iterate over users to determine if they need to be notified
     for (const user of users) {
-      const { id, email, mobo: userMobo, givenVersion } = user;
+      const { id, email, mobo: userMobo, givenversion } = user;
       const mobo = mobos.find((m) => m.model === userMobo);
 
       if (!mobo) {
@@ -43,12 +43,12 @@ export async function notifyUsers() {
         continue; // Skip if motherboard isn't found
       }
 
-      const heldVersion = mobo.heldVersion
+      const heldversion = mobo.heldversion
         .match(/\d+(\.\d+)*|[A-Z]+/g)
         ?.join("");
-      const userVersion = givenVersion.match(/\d+(\.\d+)*|[A-Z]+/g)?.join("");
+      const userVersion = givenversion.match(/\d+(\.\d+)*|[A-Z]+/g)?.join("");
 
-      if (!heldVersion || !userVersion) {
+      if (!heldversion || !userVersion) {
         console.warn(
           `Invalid version data for ${userMobo} (User: ${email}). Skipping.`
         );
@@ -56,16 +56,16 @@ export async function notifyUsers() {
       }
 
       // Compare versions using compareVersions
-      if (compareVersions(heldVersion, userVersion) > 0) {
+      if (compareVersions(heldversion, userVersion) > 0) {
         console.log(`Notifying ${email} about ${userMobo} update.`);
 
         try {
           // Send the notification email
           await mailer(user, mobo);
 
-          // Update lastContacted timestamp and version
-          user.lastContacted = new Date().toISOString();
-          user.givenVersion = mobo.heldVersion;
+          // Update lastcontacted timestamp and version
+          user.lastcontacted = new Date().toISOString();
+          user.givenversion = mobo.heldversion;
           updatedUsers.push(user);
         } catch (emailError) {
           console.error(
@@ -89,4 +89,4 @@ export async function notifyUsers() {
   }
 }
 
-notifyUsers();
+//notifyUsers();
