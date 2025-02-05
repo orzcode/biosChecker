@@ -2,7 +2,7 @@ name: Run Scheduled Tasks
 
 on:
   schedule:
-    - cron: '30 4 * * *' # Scheduled to run daily at 5:30PM NZ / 4:30AM UTC
+    - cron: '40 4 * * *' # Scheduled to run daily at 5:40PM NZ / 4:40AM UTC
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
