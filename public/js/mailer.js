@@ -6,8 +6,7 @@ export async function mailer(userObject, modelsObject) {
   const user = userObject;
   const models = modelsObject;
 
-  const projectLink = "/";
-  //change this to the actual project link
+  const projectLink = "https://asrockbioschecker.koyeb.app/";
 
   // <domain>/unsubscribe?email=test@test.com
   const unsubLink = `${projectLink}/unsubscribe?email=${user.email}`;
@@ -22,5 +21,6 @@ export async function mailer(userObject, modelsObject) {
   if (error) {
     return console.error({ error });
   }
+  console.log("MAILER.JS:   Email sent to ", user.email);
   console.log({ data });
 }

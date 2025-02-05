@@ -39,6 +39,7 @@ async function delay(ms) {
 }
 
 export async function scrapeMotherboards() {
+  console.log("---GitHub Actions moboFetcher (weekly) starting...---");
   try {
     const url = "https://www.asrock.com/mb/";
     const response = await fetch(url);
@@ -124,6 +125,7 @@ export async function scrapeMotherboards() {
   } catch (error) {
     console.error("Error scraping motherboards:", error);
   }
+  console.log("---moboFetcher (weekly) finished---");
 }
 
 scrapeMotherboards();
