@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Check loading of keys
+      - name: Debug Environment Variables
+        run: printenv | grep RESENDKI
+
       # Run the tasks
       - name: Run checker tasks
         env:
