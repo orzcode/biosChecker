@@ -6,25 +6,20 @@ export async function getMobos(singleMoboModel) {
     const query = singleMoboModel
       ? sql`SELECT * FROM models WHERE model = ${singleMoboModel}`
       : sql`SELECT * FROM models`;
-    const result = await query;
-    return result;
+    return await query;
   } catch (error) {
     console.error("Error fetching model(s) from the database:", error);
-    return []; // Return an empty array if there's an error
+    return [];
   }
 }
 
 export async function saveMobos(moboOrMobos) {
   let mobosArray;
 
-  // If no parameter is passed, fetch all models from the database
   if (!moboOrMobos) {
     const mobos = await sql`SELECT * FROM models`;
-    mobosArray = mobos; // All models from the database
+    mobosArray = mobos;
   } else {
-    // If a single model or multiple models are passed, normalize to an array
-    //
-    //NOTE: if it's empty, that's already caught in the above 'if'!
     mobosArray = Array.isArray(moboOrMobos) ? moboOrMobos : [moboOrMobos];
   }
 
@@ -51,31 +46,25 @@ export async function getUsers(singleUserEmail) {
     const query = singleUserEmail
       ? sql`SELECT * FROM users WHERE email = ${singleUserEmail}`
       : sql`SELECT * FROM users`;
-    const result = await query;
-    return result;
+    return await query;
   } catch (error) {
     console.error("Error fetching user(s) from the database:", error);
-    return []; // Return an empty array if there's an error
+    return [];
   }
 }
 
 export async function saveUsers(userOrUsers) {
   let usersArray;
 
-  // If no parameter is passed, fetch all users from the database
   if (!userOrUsers) {
     const users = await sql`SELECT * FROM users`;
-    usersArray = users; // All users from the database
+    usersArray = users;
   } else {
-    // If a single user or multiple users are passed, normalize to an array
-    //
-    //NOTE: if it's empty, that's already caught in the above 'if'!
     usersArray = Array.isArray(userOrUsers) ? userOrUsers : [userOrUsers];
   }
 
   try {
     for (const user of usersArray) {
-      console.log(user);
       await sql`
         INSERT INTO users (id, email, mobo, givenversion, lastcontacted)
         VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.lastcontacted})
@@ -93,7 +82,7 @@ export async function saveUsers(userOrUsers) {
   }
 }
 
-//this is what happens when the user hits submit
+// Function to add or update a user
 export async function addOrUpdateUser(email, mobo) {
   try {
     // Check if the user already exists
@@ -124,5 +113,7 @@ export async function addOrUpdateUser(email, mobo) {
   } catch (error) {
     console.error(`Error in addOrUpdateUser for ${email}:`, error.message);
     throw error;
+  } finally {
+    await sql.end(); // Ensure connection is closed
   }
 }

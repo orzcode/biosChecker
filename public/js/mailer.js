@@ -9,7 +9,7 @@ export async function mailer(userObject, modelsObject) {
   const projectLink = "https://asrockbioschecker.koyeb.app/";
 
   // <domain>/unsubscribe?email=test@test.com
-  const unsubLink = `${projectLink}/unsubscribe?email=${user.email}`;
+  const unsubLink = `${projectLink}unsubscribe?email=${user.email}`;
 
   const { data, error } = await resend.emails.send({
     from: "ASRock Bios Notifier <onboarding@resend.dev>",
