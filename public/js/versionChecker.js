@@ -93,8 +93,6 @@ export async function updateModels() {
 
     console.log("BIOS version checks complete - proceeding to notifycheck");
 
-    // Notify users of any updates
-    notifyUsers();
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
   }

@@ -81,6 +81,7 @@ export async function notifyUsers() {
     if (updatedUsers.length > 0) {
       await saveUsers(updatedUsers);
       console.log("Updated users saved successfully.");
+      await sql.end();
     } else {
       console.log("No users needed updates. No changes saved.");
     }
