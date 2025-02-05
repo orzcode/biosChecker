@@ -126,6 +126,7 @@ export async function scrapeMotherboards() {
     console.error("Error scraping motherboards:", error);
   }
   console.log("---moboFetcher (weekly) finished---");
+  await sql.end();
 }
 
 scrapeMotherboards();
