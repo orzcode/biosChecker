@@ -38,8 +38,6 @@ export async function saveMobos(moboOrMobos) {
     console.log("Models saved or updated successfully.");
   } catch (error) {
     console.error("Error saving models:", error);
-  } finally {
-    await sql.end(); // Ensure connection is closed
   }
 }
 
@@ -81,8 +79,6 @@ export async function saveUsers(userOrUsers) {
     console.log("Users saved or updated successfully.");
   } catch (error) {
     console.error("Error saving users:", error);
-  } finally {
-    await sql.end(); // Ensure connection is closed
   }
 }
 
