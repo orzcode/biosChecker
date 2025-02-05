@@ -1,4 +1,5 @@
 import postgres from 'postgres';
+import fs from 'fs';
 
 // Database connection
 const sql = postgres({
@@ -29,6 +30,21 @@ async function viewModels() {
   }
 }
 
+async function modelsToJson() {
+  try {
+    // Query the database for all models
+    const models = await sql`SELECT * FROM models`;
+
+    // Write the models to a JSON file
+    fs.writeFileSync('models.json', JSON.stringify(models, null, 2));
+    console.log('Data successfully exported to models.json');
+  } catch (err) {
+    console.error('Error exporting data:', err);
+  }
+  await sql.end();
+}
+
+
 // Function to reset `givenVersion` for a specific user
 async function userVerReset(email) {
   try {
@@ -54,9 +70,9 @@ const functionName = process.argv[2];
 const email = process.argv[3]; // Capture email if needed
 
 // USAGE:
-// node viewDB.js viewUsers
-// node viewDB.js viewModels
-// node viewDB.js userVerReset user@example.com
+// node DButils.js viewUsers
+// node DButils.js viewModels
+// node DButils.js userVerReset user@example.com
 
 (async () => {
   switch (functionName) {
@@ -72,6 +88,9 @@ const email = process.argv[3]; // Capture email if needed
         break;
       }
       await userVerReset(email);
+      break;
+    case 'modelsToJson':
+      await modelsToJson();
       break;
     default:
       console.log('No valid function specified. Use viewUsers, viewModels, or userVerReset <email>.');
