@@ -2,7 +2,7 @@ name: Run moboFetcher Task (weekly)
 
 on:
   schedule:
-    - cron: '0 3 * * 3' # (This will trigger at 3:00 AM UTC every Wednesday.)
+    - cron: "0 3 * * 3" # (This will trigger at 3:00 AM UTC every Wednesday.)
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
       # Run the tasks
       - name: Run mobofetcher task
         env:
-          RESENDKI: ${{ secrets.RESENDKI }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
           DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}

@@ -1,9 +1,14 @@
-import { updateModels } from './versionChecker.js';
-import { notifyUsers } from './notifyChecker.js';
+import { updateModels } from "./versionChecker.js";
+import { notifyUsers } from "./notifyChecker.js";
 
 async function runTasks() {
-	console.log("Debug runTasks.js: RESENDKI:", process.env.RESENDKI ? "Loaded" : "Missing");
-	console.log("---GitHub Actions runTasks (daily) - version + notify checks---");
+  console.log(
+    "Debug runTasks.js: RESEND_API_KEY:",
+    process.env.RESEND_API_KEY ? "Loaded" : "Missing"
+  );
+  console.log(
+    "---GitHub Actions runTasks (daily) - version + notify checks---"
+  );
   try {
     console.log("---Starting daily versionChecker...");
     await updateModels();

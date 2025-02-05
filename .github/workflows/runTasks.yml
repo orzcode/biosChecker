@@ -2,7 +2,7 @@ name: Run Daily Tasks (versionChecker, notifyChecker, mailer if so)
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Scheduled to run daily at 5:00PM NZ / 4:00AM UTC
+    - cron: "0 4 * * *" # Scheduled to run daily at 5:00PM NZ / 4:00AM UTC
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
       # Run the tasks
       - name: Run checker tasks
         env:
-          RESENDKI: ${{ secrets.RESENDKI }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
           DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
