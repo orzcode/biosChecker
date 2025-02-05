@@ -31,5 +31,16 @@ async function viewModels() {
   }
 }
 
-viewUsers();
-viewModels();
+//Usage: `node viewDB.js viewUsers` etc
+
+const functionName = process.argv[2];
+switch (functionName) {
+  case "viewUsers":
+    viewUsers();
+    break;
+  case "viewModels":
+    viewModels();
+    break;
+  default:
+    console.log("No additional function specified");
+}
