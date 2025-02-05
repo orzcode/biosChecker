@@ -89,4 +89,4 @@ export async function notifyUsers() {
   }
 }
 
-//notifyUsers();
+notifyUsers();
