@@ -26,7 +26,7 @@ jobs:
 
       # Check loading of keys
       - name: Debug Environment Variables
-        run: printenv
+        run: echo "DBHOST is set to '${{ secrets.DATABASE_HOST }}'"
 
       # Run the tasks
       - name: Run checker tasks
