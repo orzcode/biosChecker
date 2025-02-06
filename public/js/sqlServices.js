@@ -26,11 +26,22 @@ export async function saveMobos(moboOrMobos) {
   try {
     for (const mobo of mobosArray) {
       await sql`
-        INSERT INTO models (id, model, biospage, heldversion)
-        VALUES (${mobo.id}, ${mobo.model}, ${mobo.biospage}, ${mobo.heldversion})
+        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion)
+        VALUES (
+          ${mobo.id},
+          ${mobo.model},
+          ${mobo.maker},
+          ${mobo.socket},
+          ${mobo.link},
+          ${mobo.biospage},
+          ${mobo.heldversion}
+        )
         ON CONFLICT (id) DO UPDATE
         SET 
           model = EXCLUDED.model,
+          maker = EXCLUDED.maker,
+          socket = EXCLUDED.socket,
+          link = EXCLUDED.link,
           biospage = EXCLUDED.biospage,
           heldversion = EXCLUDED.heldversion;
       `;
@@ -40,6 +51,7 @@ export async function saveMobos(moboOrMobos) {
     console.error("Error saving models:", error);
   }
 }
+
 
 export async function getUsers(singleUserEmail) {
   try {

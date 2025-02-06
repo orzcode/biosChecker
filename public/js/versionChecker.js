@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
 
-import { notifyUsers } from "./notifyChecker.js";
+import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
 
 // Helper function to add a delay
@@ -91,8 +91,25 @@ export async function updateModels() {
     await saveMobos(updatedMobos);
     console.log("models db updated.");
 
-    console.log("BIOS version checks complete - proceeding to notifycheck");
+    // Combine all mobos into one list (updated and unchanged)
+    const combinedMobos = mobos.map((mobo) => {
+      // If the mobo was updated, replace it with the updated version
+      const updatedMobo = updatedMobos.find((uMobo) => uMobo.id === mobo.id);
+      return updatedMobo || mobo; // Use updated version or the original
+    });
 
+    // Save the full list to models.json
+    try {
+      await fs.writeFile(
+        "./public/data/models.json",
+        JSON.stringify(combinedMobos, null, 2)
+      );
+      console.log("models.json updated.");
+    } catch (error) {
+      console.error("Failed to save models.json:", error);
+    }
+
+    console.log("BIOS version checks complete - proceeding to notifycheck");
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
   }

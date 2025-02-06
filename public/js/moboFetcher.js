@@ -1,7 +1,10 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
+import fs from "fs/promises";
+import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
+
 
 //script to fetch motherboard data from ASRock website
 //run this casually, as it just checks for newly released models, not bioses
@@ -71,6 +74,7 @@ export async function scrapeMotherboards() {
     const relevantSockets = ["1700", "1851", "am4", "am5"];
     const existingModels = await getMobos(); // Fetch existing models from the database
     const newOrUpdatedModels = []; // Only save these models
+    const allEntries = []; // To build the full JSON content
 
     for (const model of allmodels) {
       if (!relevantSockets.includes(model[1].toLowerCase())) continue;
@@ -93,6 +97,9 @@ export async function scrapeMotherboards() {
         heldversion: existingEntry ? existingEntry.heldversion : null,
       };
 
+      // Add to the full list for JSON
+      allEntries.push(newEntry);
+
       // Only save the model if it's new or has changes
       if (
         !existingEntry || // New entry
@@ -106,7 +113,7 @@ export async function scrapeMotherboards() {
 
       console.log(
         `Processed: ${modelName}, BIOS Page: ${biosPage || "Not found"}, ${
-          existingEntry ? "Updated" : "New"
+          existingEntry ? "Updated w/ live data" : "New entry"
         }`
       );
 
@@ -114,13 +121,23 @@ export async function scrapeMotherboards() {
       await delay(1000);
     }
 
+    // Save only if there are new/updated models
     if (newOrUpdatedModels.length > 0) {
-      await saveMobos(newOrUpdatedModels);
+      await saveMobos(newOrUpdatedModels); // Save to database
       console.log("Saved new or updated models to the database.");
+
+      // Save to models.json
+      try {
+        await fs.writeFile(
+          "./public/data/models.json",
+          JSON.stringify(allEntries, null, 2)
+        );
+        console.log("Updated models.json with the latest motherboard data.");
+      } catch (error) {
+        console.error("Failed to save models.json:", error);
+      }
     } else {
-      console.log(
-        "No new or updated models found. Database remains unchanged."
-      );
+      console.log("No new or updated models found. Database and JSON remain unchanged.");
     }
   } catch (error) {
     console.error("Error scraping motherboards:", error);

@@ -24,7 +24,7 @@ async function viewUsers() {
 async function viewModels() {
   try {
     const models = await sql`SELECT * FROM models`;
-    console.log('Models in the database:', models);
+    console.log('Models in the database:', JSON.stringify(models, null, 2));
   } catch (error) {
     console.error('Error fetching data:', error);
   }
@@ -65,9 +65,27 @@ async function userVerReset(email) {
   }
 }
 
+async function deleteModelById(id) {
+  try {
+    const result = await sql`
+      DELETE FROM models
+      WHERE id = ${id}
+      RETURNING *;
+    `;
+
+    if (result.count > 0) {
+      console.log(`Deleted model with id ${id}`);
+    } else {
+      console.log(`Model with id ${id} not found.`);
+    }
+  } catch (error) {
+    console.error('Error deleting model:', error);
+  }
+}
+
 // Process CLI arguments
 const functionName = process.argv[2];
-const email = process.argv[3]; // Capture email if needed
+const param = process.argv[3]; // Capture email if needed
 
 // USAGE:
 // node DButils.js viewUsers
@@ -83,14 +101,21 @@ const email = process.argv[3]; // Capture email if needed
       await viewModels();
       break;
     case 'userVerReset':
-      if (!email) {
+      if (!param) {
         console.error('Error: Email is required for userVerReset.');
         break;
       }
-      await userVerReset(email);
+      await userVerReset(param);
       break;
     case 'modelsToJson':
       await modelsToJson();
+      break;
+    case 'deleteModelById':
+      if (!param) {
+        console.error('Error: ID is required for deleteModelById.');
+        break;
+      }
+      await deleteModelById(param);
       break;
     default:
       console.log('No valid function specified. Use viewUsers, viewModels, or userVerReset <email>.');
