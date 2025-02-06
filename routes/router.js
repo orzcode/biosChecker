@@ -1,13 +1,15 @@
 import { Router } from "express";
 import sql from "../public/js/db.js";
+import fs from "fs/promises";
 const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
 
 router.get("/", async (req, res) => {
   try {
-    // Query the database for all models
-    const motherboards = await sqlServices.getMobos();
+    const localMoboFile = await fs.readFile("./public/data/models.json", "utf8");
+
+    const motherboards = JSON.parse(localMoboFile);
 
     // Render the EJS template with the fetched data
     res.render("allmodels", { motherboards });
