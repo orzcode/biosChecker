@@ -107,9 +107,9 @@
           </thead>
             <tbody>
             <% motherboards.forEach((mobo) => { %>
-              <!-- limit to non-PG items -->
+              <!-- limit to items with valid links -->
               <% if (mobo.link && mobo.biospage) { %>
-              <!-- limit to non-PG items -->
+              <!-- limit to items with valid links -->
               <tr data-row="<%= mobo.socket %>">
                 <td>
                 <input
