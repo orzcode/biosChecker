@@ -115,9 +115,6 @@ export async function updateModels() {
         JSON.stringify(combinedMobos, null, 2)
       );
       console.log("models.json updated.");
-
-      console.log(combinedMobos)
-
     } catch (error) {
       console.error("Failed to save models.json:", error);
     }
