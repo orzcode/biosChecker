@@ -108,8 +108,12 @@
             <tbody>
             <% motherboards.forEach((mobo) => { %>
               <!-- limit to non-PG items -->
-              <% if (mobo.biospage.startsWith('https://www')) { %>
+              <!-- <% if (mobo.biospage.startsWith('https://www')) { %> -->
               <!-- limit to non-PG items -->
+
+              <!-- limit to items with links that presumably work -->
+              <% if (mobo.link && mobo.biospage && mobo.heldversion) { %>
+              <!-- limit to items with links that presumably work -->
               <tr data-row="<%= mobo.socket %>">
                 <td>
                 <input
