@@ -297,24 +297,6 @@
     "heldversion": "21.02"
   },
   {
-    "id": "mobo_m68rfcv2ljza5k",
-    "model": "Z890 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
-    "heldversion": "2.21.AS03[Beta]"
-  },
-  {
-    "id": "mobo_m68rfcv2wfo7ob",
-    "model": "Z890 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
-    "heldversion": "2.22.AS05[Beta]"
-  },
-  {
     "id": "mobo_m68rfcv2wndyez",
     "model": "Z890M Riptide WiFi",
     "maker": "Intel",
@@ -358,6 +340,24 @@
     "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
     "heldversion": "1.13"
+  },
+  {
+    "id": "mobo_m68rfcv2ljza5k",
+    "model": "Z890 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
+    "heldversion": "2.21.AS03[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv2wfo7ob",
+    "model": "Z890 Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
+    "heldversion": "2.22.AS05[Beta]"
   },
   {
     "id": "mobo_m68rfcv2hux6re",
@@ -630,24 +630,6 @@
     "heldversion": "9.02"
   },
   {
-    "id": "mobo_m68rfcv25iuhy4",
-    "model": "Z790 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "12.02"
-  },
-  {
-    "id": "mobo_m68rfcv243pgp9",
-    "model": "Z790 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
-    "heldversion": "10.02"
-  },
-  {
     "id": "mobo_m68rfcv230c679",
     "model": "B760M PG SONIC WiFi",
     "maker": "Intel",
@@ -709,6 +691,24 @@
     "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
     "heldversion": "5.03"
+  },
+  {
+    "id": "mobo_m68rfcv25iuhy4",
+    "model": "Z790 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
+    "heldversion": "12.02"
+  },
+  {
+    "id": "mobo_m68rfcv243pgp9",
+    "model": "Z790 Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
+    "heldversion": "10.02"
   },
   {
     "id": "mobo_m68rfcv2et3i5p",
@@ -1413,24 +1413,6 @@
     "heldversion": "1.14.AS06[Beta]"
   },
   {
-    "id": "mobo_m68rfcv21xnr3n",
-    "model": "X870 Riptide WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
-  },
-  {
-    "id": "mobo_m68rfcv2jpvbv5",
-    "model": "B850 Riptide WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
-  },
-  {
     "id": "mobo_m68rfcv2jxjmaw",
     "model": "B850M Riptide WiFi",
     "maker": "AMD",
@@ -1446,6 +1428,24 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS01[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv21xnr3n",
+    "model": "X870 Riptide WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.18.AS01[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv2jpvbv5",
+    "model": "B850 Riptide WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html",
     "heldversion": "3.18.AS01[Beta]"
   },
   {
@@ -1764,24 +1764,6 @@
     "heldversion": "2.20"
   },
   {
-    "id": "mobo_m68rfcv2qev4up",
-    "model": "B650M PG Riptide WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
-  },
-  {
-    "id": "mobo_m68rfcv26z3vfh",
-    "model": "B650M PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
-  },
-  {
     "id": "mobo_m68rfcv2rpj9cl",
     "model": "B650M PG Lightning",
     "maker": "AMD",
@@ -1806,6 +1788,24 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS01[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv2qev4up",
+    "model": "B650M PG Riptide WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
+    "heldversion": "3.18.AS01[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv26z3vfh",
+    "model": "B650M PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "3.18.AS01[Beta]"
   },
   {
@@ -2203,15 +2203,6 @@
     "link": "https://asrock.com/mb/amd/B450%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html",
     "heldversion": "10.31[Beta]"
-  },
-  {
-    "id": "mobo_m68rfcv2ighnta",
-    "model": "B450M Steel Legend",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
-    "biospage": "https://pg.asrock.com/mb/amd/B450M%20Steel%20Legend/bios.html",
-    "heldversion": null
   },
   {
     "id": "mobo_m68rfcv26mj62w",
@@ -2662,6 +2653,15 @@
     "link": "https://asrock.com/mb/amd/X300M-STX",
     "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
     "heldversion": "2.10"
+  },
+  {
+    "id": "mobo_m68rfcv2ighnta",
+    "model": "B450M Steel Legend",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
+    "heldversion": "10.31[Beta]"
   },
   {
     "id": "mobo_m68rfcv2sb4f96",
