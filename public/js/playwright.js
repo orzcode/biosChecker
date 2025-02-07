@@ -1,4 +1,4 @@
-//import { chromium } from "playwright";
+import { chromium } from "playwright";
 
 export async function scrapeWithPlaywright(url) {
   const browser = await chromium.launch({
