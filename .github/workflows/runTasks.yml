@@ -25,12 +25,10 @@ jobs:
         run: npm install
 
       # Install Playwright browsers
+      # Revert if needed to:
+      # npx playwright install --with-deps chromium
       - name: Install Playwright browsers
-        run: npx playwright install chromium
-
-      # Install Playwright deps
-      - name: Install Playwright deps
-        run: npx playwright install-deps chromium
+        run: npx playwright install --with-deps --no-shell
 
       # Check loading of keys
       - name: Debug Environment Variables

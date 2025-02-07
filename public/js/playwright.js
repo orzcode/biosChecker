@@ -1,7 +1,9 @@
 import { chromium } from "playwright";
 
 export async function scrapeWithPlaywright(url) {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({
+    channel: 'chromium', // Use the new Chromium channel
+  });
   const page = await browser.newPage();
 
   try {

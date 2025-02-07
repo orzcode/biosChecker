@@ -5,6 +5,11 @@ import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
 
+// Delay function to pause execution for a specified time
+async function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 //script to fetch motherboard product info from ASRock website
 //run this casually, as it just checks for newly released models, not bios versions
 
@@ -13,42 +18,58 @@ import { getMobos, saveMobos } from "./sqlServices.js";
 //I had to implement the checks below.
 //At the time of writing, this is only for B450M Steel Legend
 
+import { scrapeWithPlaywright } from "./playwright.js";
+
 async function checkBiosPage(maker, modelName) {
   const baseLink = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
     .replace(/\s/g, "%20")
     .replace(/\//g, "")}/`;
 
-  const possiblePages = ["bios.html", "bios1.html", "bios2.html"];
+  const possiblePages = ["bios.html", "bios1.html"];
 
   for (const subdomain of ["www", "pg"]) {
     for (const pageName of possiblePages) {
       const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
-
-      try {
-        const response = await fetch(testUrl, {
-          headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
-        });
-
-        if (response.ok) {
-          const html = await response.text();
-          const $ = cheerio.load(html);
-
-          // Check for key content on the page (e.g., BIOS table rows)
-          const biosTableExists = $("tbody tr:first-child td:first-child").length > 0;
-
-          if (biosTableExists) {
-            console.log(`Valid BIOS page found: ${testUrl}`);
-            return testUrl; // Return the first valid URL with actual content
-          } else {
-            console.log(`Page exists but is invalid: ${testUrl}`);
-          }
+      console.log(`Checking: ${testUrl}`);
+      
+      if (subdomain === "pg") {
+        // Use Playwright for 'pg' subdomain
+        const result = await scrapeWithPlaywright(testUrl);
+        if (result) {
+          console.log(`Valid BIOS page found with Playwright: ${testUrl}`);
+          return testUrl; // Return the valid 'pg' URL
+        } else {
+          console.log(`Playwright failed for: ${testUrl}`);
         }
-      } catch (error) {
-        console.log(
-          `Error checking BIOS page for ${modelName} (${subdomain}/${pageName}):`,
-          error
-        );
+      } else {
+        // Use fetch for 'www' subdomain
+        try {
+          const response = await fetch(testUrl, {
+            headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+          });
+
+          if (response.ok) {
+            const html = await response.text();
+            const $ = cheerio.load(html);
+
+            // Check for key content on the page (e.g., BIOS table rows)
+            const biosTableExists = $("tbody tr:first-child td:first-child").length > 0;
+
+            if (biosTableExists) {
+              console.log(`Valid BIOS page found: ${testUrl}`);
+              return testUrl; // Return the first valid URL with actual content
+            } else {
+              console.log(`Page exists but is invalid: ${testUrl}`);
+            }
+          }
+        } catch (error) {
+          console.log(
+            `Error checking BIOS page for ${modelName} (${subdomain}/${pageName}):`,
+            error
+          );
+        }
       }
+      await delay(2000); // Add a 2-second delay between checks
     }
   }
 
@@ -57,10 +78,7 @@ async function checkBiosPage(maker, modelName) {
 }
 
 
-// Delay function to pause execution for a specified time
-async function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+
 
 export async function scrapeMotherboards() {
   console.log("---GitHub Actions moboFetcher (weekly) starting...---");
@@ -168,4 +186,5 @@ export async function scrapeMotherboards() {
 }
 
 //checkBiosPage("amd", "B450M Steel Legend");
+//checkBiosPage("amd", "X870E Nova WiFi");
 scrapeMotherboards();
