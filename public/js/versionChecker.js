@@ -90,6 +90,7 @@ export async function updateModels() {
     } else {
       console.log(`No update needed for ${model}.`);
     }
+      console.log("\n");
 
     // Add a 1-second delay before proceeding to the next motherboard
     await delay(1000); // Delay for 1000 milliseconds (1 second)
@@ -114,6 +115,9 @@ export async function updateModels() {
         JSON.stringify(combinedMobos, null, 2)
       );
       console.log("models.json updated.");
+
+      console.log(combinedMobos)
+
     } catch (error) {
       console.error("Failed to save models.json:", error);
     }

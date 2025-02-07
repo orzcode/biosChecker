@@ -5,36 +5,57 @@ import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
 
+//script to fetch motherboard product info from ASRock website
+//run this casually, as it just checks for newly released models, not bios versions
 
-//script to fetch motherboard data from ASRock website
-//run this casually, as it just checks for newly released models, not bioses
+//due to some pages residing on PG subdomain,
+//and very rare edge case of some bioses being "bios1.html" or "bios2.html",
+//I had to implement the checks below.
+//At the time of writing, this is only for B450M Steel Legend
 
-//AND it checks the bios page for www or pg
-//this is probably not good unless PG actually works
-//but for now let's leave it in
-
-//this renders pgupdater.js useless, generally
 async function checkBiosPage(maker, modelName) {
   const baseLink = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
     .replace(/\s/g, "%20")
-    .replace(/\//g, "")}/bios.html`;
+    .replace(/\//g, "")}/`;
+
+  const possiblePages = ["bios.html", "bios1.html", "bios2.html"];
 
   for (const subdomain of ["www", "pg"]) {
-    const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`);
-    try {
-      const response = await fetch(testUrl);
-      if (response.ok) {
-        return testUrl; // Return the working URL
+    for (const pageName of possiblePages) {
+      const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
+
+      try {
+        const response = await fetch(testUrl, {
+          headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+        });
+
+        if (response.ok) {
+          const html = await response.text();
+          const $ = cheerio.load(html);
+
+          // Check for key content on the page (e.g., BIOS table rows)
+          const biosTableExists = $("tbody tr:first-child td:first-child").length > 0;
+
+          if (biosTableExists) {
+            console.log(`Valid BIOS page found: ${testUrl}`);
+            return testUrl; // Return the first valid URL with actual content
+          } else {
+            console.log(`Page exists but is invalid: ${testUrl}`);
+          }
+        }
+      } catch (error) {
+        console.log(
+          `Error checking BIOS page for ${modelName} (${subdomain}/${pageName}):`,
+          error
+        );
       }
-    } catch (error) {
-      console.log(
-        `Error checking BIOS page for ${modelName} with ${subdomain}:`,
-        error
-      );
     }
   }
-  return null; // Return null if both fail
+
+  console.warn(`No valid BIOS page found for ${modelName}`);
+  return null; // Return null if no valid page is found
 }
+
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
@@ -146,4 +167,5 @@ export async function scrapeMotherboards() {
   await sql.end();
 }
 
+//checkBiosPage("amd", "B450M Steel Legend");
 scrapeMotherboards();

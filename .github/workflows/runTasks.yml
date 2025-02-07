@@ -26,11 +26,11 @@ jobs:
 
       # Install Playwright browsers
       - name: Install Playwright browsers
-        run: npx playwright install
+        run: npx playwright install chromium
 
       # Install Playwright deps
       - name: Install Playwright deps
-        run: npx playwright install-deps
+        run: npx playwright install-deps chromium
 
       # Check loading of keys
       - name: Debug Environment Variables
