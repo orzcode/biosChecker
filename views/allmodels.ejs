@@ -106,7 +106,7 @@
             </tr>
           </thead>
             <tbody>
-            <% motherboards.forEach((mobo) => { %>
+              <% motherboards.sort((a, b) => a.socket.localeCompare(b.socket)).forEach((mobo) => { %>
               <!-- limit to items with valid links -->
               <% if (mobo.link && mobo.biospage) { %>
               <!-- limit to items with valid links -->
