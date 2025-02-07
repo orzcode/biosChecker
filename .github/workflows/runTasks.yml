@@ -24,6 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Install Playwright browsers
+      - name: Install Playwright browsers
+        run: npx playwright install
+
+      # Install Playwright deps
+      - name: Install Playwright deps
+        run: npx playwright install-deps
+
       # Check loading of keys
       - name: Debug Environment Variables
         run: echo "DBHOST is set to '${{ secrets.DATABASE_HOST }}'"
