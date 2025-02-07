@@ -4,6 +4,7 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "node-fetch": "^3.3.2",
+    "playwright": "^1.50.1",
     "postgres": "^3.4.5",
     "resend": "^4.1.1"
   },

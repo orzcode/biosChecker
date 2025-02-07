@@ -3,6 +3,7 @@ import * as cheerio from "cheerio";
 
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
+import { scrapeWithPlaywright } from "./playwright.js";
 
 // Helper function to add a delay
 function delay(ms) {
@@ -10,39 +11,47 @@ function delay(ms) {
 }
 
 async function scrapeBIOSVersion(url) {
-  //currently, this still attempts to check PG pages
-  //it will fail, but it's probably better to leave it in?
-  //
-  try {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-      },
-    });
+  // Determine the subdomain (www or pg)
+  const isPGSubdomain = url.includes("pg.");
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+  if (isPGSubdomain) {
+    // Use Playwright for pg subdomains
+    console.log(`Using Playwright to scrape: ${url}`);
+    return await scrapeWithPlaywright(url);
+  } else {
+    // Use Fetch and Cheerio for www subdomains
+    console.log(`Using Fetch to scrape: ${url}`);
+    try {
+      const response = await fetch(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const html = await response.text();
+      const $ = cheerio.load(html);
+
+      const rawVersion = $("tbody tr:first-child td:first-child").html()?.trim();
+      if (!rawVersion) {
+        throw new Error("Version number not found.");
+      }
+
+      const fullVersion = rawVersion.replace(/<[^>]*>/g, "").trim();
+      const numericVersion = fullVersion.match(/[\d.]+/)?.[0];
+
+      if (!numericVersion) {
+        throw new Error("Unable to parse numeric version.");
+      }
+
+      return { fullVersion, numericVersion };
+    } catch (err) {
+      console.error(`Fetch scraping error at ${url}: ${err.message}`);
+      return null;
     }
-
-    const html = await response.text();
-    const $ = cheerio.load(html);
-
-    const rawVersion = $("tbody tr:first-child td:first-child").html()?.trim();
-    if (!rawVersion) {
-      throw new Error("Version number not found.");
-    }
-
-    const fullVersion = rawVersion.replace(/<[^>]*>/g, "").trim();
-    const numericVersion = fullVersion.match(/[\d.]+/)?.[0];
-
-    if (!numericVersion) {
-      throw new Error("Unable to parse numeric version.");
-    }
-
-    return { fullVersion, numericVersion };
-  } catch (err) {
-    console.error(`Error scraping BIOS version from ${url}: ${err.message}`);
-    return null;
   }
 }
 
