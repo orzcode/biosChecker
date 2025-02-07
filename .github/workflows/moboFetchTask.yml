@@ -39,7 +39,23 @@ jobs:
           DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           DATABASE_USER: ${{ secrets.DATABASE_USER }}
-        run: node public/js/moboFetcher.js
+        run:
+          node public/js/moboFetcher.js
+
+          # Commit and push changes to models.json (if modified)
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/models.json
+          if git diff-index --quiet HEAD; then
+            echo "No changes to models.json, skipping commit."
+          else
+            git commit -m "Update models.json via daily workflow"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Optional: Notify on workflow success
       - name: Notify success
