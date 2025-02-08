@@ -48,6 +48,7 @@ jobs:
           git add public/data/models.json
           if git diff-index --quiet HEAD; then
             echo "No changes to models.json, skipping commit."
+            exit 0
           else
             git commit -m "Update models.json via daily workflow"
             git push
