@@ -25,6 +25,6 @@ export async function mailer(userObject, modelsObject) {
   if (error) {
     return console.error({ error });
   }
-  console.log("MAILER.JS:   Email sent to ", user.email);
+  console.log("MAILER.JS:   Email sent to ", user.id);
   console.log({ data });
 }

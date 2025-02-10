@@ -40,7 +40,7 @@ export async function notifyUsers() {
       const mobo = mobos.find((m) => m.model === userMobo);
 
       if (!mobo) {
-        console.warn(`Mobo ${userMobo} not found for user ${email}. Skipping.`);
+        console.warn(`Mobo ${userMobo} not found for user ${id}. Skipping.`);
         continue; // Skip if motherboard isn't found
       }
 
@@ -51,14 +51,14 @@ export async function notifyUsers() {
 
       if (!heldversion || !userVersion) {
         console.warn(
-          `Invalid version data for ${userMobo} (User: ${email}). Skipping.`
+          `Invalid version data for ${userMobo} (User: ${id}). Skipping.`
         );
         continue;
       }
 
       // Compare versions using compareVersions
       if (compareVersions(heldversion, userVersion) > 0) {
-        console.log(`Notifying ${email} about ${userMobo} update.`);
+        console.log(`Notifying ${id} about ${userMobo} update.`);
 
         try {
           // Send the notification email
@@ -70,11 +70,11 @@ export async function notifyUsers() {
           updatedUsers.push(user);
         } catch (emailError) {
           console.error(
-            `Failed to notify ${email} about ${userMobo}: ${emailError.message}`
+            `Failed to notify ${id} about ${userMobo}: ${emailError.message}`
           );
         }
       } else {
-        console.log(`No update needed for ${email} (${userMobo}).`);
+        console.log(`No update needed for ${id} (${userMobo}).`);
       }
     }
 
