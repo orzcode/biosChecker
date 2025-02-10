@@ -1,19 +1,21 @@
-// This script is used to filter the table based on the selected checkboxes
-//
+// Helper script
+// filters the table based on the selected socket
 document.addEventListener("DOMContentLoaded", function () {
 	const checkboxes = document.querySelectorAll('.socket-checkbox');
 	const tableRows = document.querySelectorAll('#motherboard-table tbody tr'); // all the rows in the table
   
 	checkboxes.forEach((checkbox) => {
 	  checkbox.addEventListener('change', function () {
-		// When one checkbox is clicked, uncheck all others
+		// Unchecks all other checkboxes when you click on one
+		// (eg: one checkbox at a time)
 		checkboxes.forEach((otherCheckbox) => {
 		  if (otherCheckbox !== checkbox) {
 			otherCheckbox.checked = false;
 		  }
 		});
   
-		// Filter the table based on the selected checkbox
+		// Filters the table based on the ticked box (function below)
+		// In short - this is 'attached' to each of the 4 checkboxes
 		filterTable();
 	  });
 	});
@@ -21,16 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	function filterTable() {
 	  const selectedSockets = Array.from(checkboxes)
 		.filter((checkbox) => checkbox.checked)
-		.map((checkbox) => checkbox.value); // Get selected socket values
+		.map((checkbox) => checkbox.value);
   
 	  tableRows.forEach((row) => {
-		const socketType = row.getAttribute('data-row'); // Get socket type from each row's data attribute
+		const socketType = row.getAttribute('data-row');
+		//See EJS view if needed - basically, each row has a data-row attribute
   
-		// Check if the row matches the selected socket
+		// Checks if the row matches the selected socket
 		if (selectedSockets.length === 0 || selectedSockets.includes(socketType)) {
-		  row.style.display = ''; // Show row if it matches the selected socket
+		  row.style.display = ''; // Shows row if it matches
 		} else {
-		  row.style.display = 'none'; // Hide row if it doesn't match
+		  row.style.display = 'none'; // Hides row if it doesn't
 		}
 	  });
 	}
