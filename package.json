@@ -13,6 +13,7 @@
     "playwright": "^1.50.1"
   },
   "scripts": {
-    "dev": "node --env-file=.env --watch app.js"
+    "dev": "node --env-file=.env --watch app.js",
+    "koyeb": "npx playwright install --with-deps --no-shell && node app.js"
   }
 }
