@@ -4,7 +4,7 @@ import fs from "fs/promises";
 import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
-import { koyebToRepo } from "./koyeb.js";
+import { koyebToRepo } from "./koyebToGithub.js";
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
