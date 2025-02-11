@@ -103,8 +103,8 @@ router.post("/trigger", async (req, res) => {
       return res.status(403).send({ error: "Unauthorized: Invalid permission" });
     }
 
-    console.log("Installing Playwright dependencies...");
-    execSync("npx playwright install --with-deps --no-shell", { stdio: "inherit" });
+    // console.log("Installing Playwright dependencies...");
+    // execSync("npx playwright install --with-deps --no-shell", { stdio: "inherit" });
 
     // Determine which task to run
     if (task === "runTasks") {
