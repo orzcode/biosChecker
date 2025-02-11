@@ -104,7 +104,7 @@ router.post("/trigger", async (req, res) => {
     }
 
     console.log("Installing Playwright dependencies...");
-    execSync("sudo npx playwright install --with-deps --no-shell", { stdio: "inherit" });
+    execSync("npx playwright install --with-deps --no-shell", { stdio: "inherit" });
 
     // Determine which task to run
     if (task === "runTasks") {
