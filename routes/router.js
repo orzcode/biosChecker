@@ -5,6 +5,10 @@ const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
 
+import runTasks from "./runTasks.js";
+import scrapeMotherboards from "./moboFetcher.js";
+const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;
+
 router.get("/", async (req, res) => {
   try {
     const localMoboFile = await fs.readFile("./public/data/models.json", "utf8");
@@ -83,6 +87,35 @@ router.all("/unsubscribe", async (req, res) => {
       message: "An error occurred while processing your request.",
       title: "Error 500",
     });
+  }
+});
+
+//for triggering scheduled tasks
+router.post("/trigger", async (req, res) => {
+  try {
+    const { secret, task } = req.body;
+
+    // Check if the secret is provided and matches
+    if (!secret || secret !== KOYEB_REPOPUSHKEY) {
+      console.warn("Unauthorized request: Invalid or missing permission.");
+      return res.status(403).send({ error: "Unauthorized: Invalid permission" });
+    }
+
+    // Determine which task to run
+    if (task === "runTasks") {
+      console.log("Running runTasks.js...");
+      await runTasks("fromKoyeb");
+      res.status(200).send({ message: "runTasks.js completed via route trigger" });
+    } else if (task === "moboFetcher") {
+      console.log("Running moboFetcher.js...");
+      await scrapeMotherboards("fromKoyeb");
+      res.status(200).send({ message: "moboFetcher.js completed via route trigger" });
+    } else {
+      res.status(400).send({ error: "Invalid or missing task parameter." });
+    }
+  } catch (error) {
+    console.error("Error triggering task:", error.message);
+    res.status(500).send({ error: "Internal server error." });
   }
 });
 

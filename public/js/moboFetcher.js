@@ -4,6 +4,7 @@ import fs from "fs/promises";
 import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
+import { koyebToRepo } from "./koyeb.js";
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
@@ -80,8 +81,8 @@ async function checkBiosPage(maker, modelName) {
 
 
 
-export async function scrapeMotherboards() {
-  console.log("---GitHub Actions moboFetcher (weekly) starting...---");
+export async function scrapeMotherboards(fromKoyeb) {
+  console.log("---moboFetcher (weekly) starting...---");
   try {
     const url = "https://www.asrock.com/mb/";
     const response = await fetch(url);
@@ -175,6 +176,13 @@ export async function scrapeMotherboards() {
       } catch (error) {
         console.error("Failed to save models.json:", error);
       }
+
+      //ONLY USED IN KOYEB TASK!
+      if(fromKoyeb === "fromKoyeb"){
+      koyebToRepo(); // Push changes to GitHub
+      }
+      //ONLY USED IN KOYEB TASK!
+
     } else {
       console.log("No new or updated models found. Database and JSON remain unchanged.");
     }
@@ -188,3 +196,5 @@ export async function scrapeMotherboards() {
 //checkBiosPage("amd", "B450M Steel Legend");
 //checkBiosPage("amd", "X870E Nova WiFi");
 scrapeMotherboards();
+//note: dont be surprised if koyeb is missing packages, since 
+//you're calling the func directly from the router

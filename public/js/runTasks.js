@@ -1,17 +1,21 @@
 import { updateModels } from "./versionChecker.js";
 import { notifyUsers } from "./notifyChecker.js";
 
-async function runTasks() {
+async function runTasks(fromKoyeb) {
   console.log(
     "Debug runTasks.js: RESEND_API_KEY:",
     process.env.RESEND_API_KEY ? "Loaded" : "Missing"
   );
   console.log(
-    "---GitHub Actions runTasks (daily) - version + notify checks---"
+    "---runTasks (daily) - version + notify checks---"
   );
   try {
     console.log("---Starting daily versionChecker...");
-    await updateModels();
+    if(fromKoyeb === "fromKoyeb"){
+      await updateModels("fromKoyeb");
+    } else {
+      await updateModels();
+    }
     console.log("---Finished daily versionChecker.");
 
     console.log("---Starting daily notifyChecker...");

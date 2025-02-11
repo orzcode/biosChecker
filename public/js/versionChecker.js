@@ -4,6 +4,7 @@ import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { scrapeWithPlaywright } from "./playwright.js";
+import { koyebToRepo } from "./koyebToGithub.js";
 
 // Helper function to add a delay
 function delay(ms) {
@@ -55,7 +56,7 @@ async function scrapeBIOSVersion(url) {
   }
 }
 
-export async function updateModels() {
+export async function updateModels(fromKoyeb) {
   const mobos = await getMobos();
   const updatedMobos = [];
 
@@ -118,6 +119,12 @@ export async function updateModels() {
     } catch (error) {
       console.error("Failed to save models.json:", error);
     }
+
+      //ONLY USED IN KOYEB TASK!
+      if(fromKoyeb === "fromKoyeb"){
+      koyebToRepo(); // Push changes to GitHub
+      }
+      //ONLY USED IN KOYEB TASK!
 
     console.log("BIOS version checks complete - proceeding to notifycheck");
   } catch (error) {

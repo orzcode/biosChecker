@@ -1,0 +1,25 @@
+name: runTasks ON KOYEB
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # Scheduled to run daily at 5:00PM NZ / 4:00AM UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  trigger-runTasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger runTasks ON KOYEB
+        run: |
+          curl -X POST https://asrockbioschecker.koyeb.app/trigger \
+            -H "Content-Type: application/json" \
+            -d '{"secret": "${{ secrets.KOYEB_REPOPUSHKEY }}", "task": "runTasks"}'
+
+      - name: Notify success
+        if: success()
+        run: echo "runTasks triggered successfully on Koyeb!"
+
+      - name: Notify failure
+        if: failure()
+        run: echo "Failed to trigger runTasks on Koyeb."
