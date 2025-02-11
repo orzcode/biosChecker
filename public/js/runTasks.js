@@ -1,7 +1,7 @@
 import { updateModels } from "./versionChecker.js";
 import { notifyUsers } from "./notifyChecker.js";
 
-async function runTasks(fromKoyeb) {
+export async function runTasks(fromKoyeb) {
   console.log(
     "Debug runTasks.js: RESEND_API_KEY:",
     process.env.RESEND_API_KEY ? "Loaded" : "Missing"
