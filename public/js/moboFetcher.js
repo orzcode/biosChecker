@@ -195,6 +195,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
 //checkBiosPage("amd", "B450M Steel Legend");
 //checkBiosPage("amd", "X870E Nova WiFi");
-scrapeMotherboards();
+
+//scrapeMotherboards();
 //note: dont be surprised if koyeb is missing packages, since 
 //you're calling the func directly from the router
