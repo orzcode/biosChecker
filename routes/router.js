@@ -5,8 +5,8 @@ const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
 
-import runTasks from "./runTasks.js";
-import scrapeMotherboards from "./moboFetcher.js";
+import runTasks from "../public/js/runTasks.js";
+import scrapeMotherboards from "../public/js/moboFetcher.js";
 const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;
 
 router.get("/", async (req, res) => {
