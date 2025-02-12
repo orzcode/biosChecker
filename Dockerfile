@@ -1,12 +1,13 @@
 # Use Playwright's official image with dependencies pre-installed
-FROM mcr.microsoft.com/playwright:focal
+FROM node:20-bookworm
+
+RUN npx playwright install --with-deps --no-shell
 
 # Copy package.json and package-lock.json separately for better caching
-COPY package*.json ./
+ADD . .
 
 # Install dependencies
-RUN npm install && \
-    npx playwright install --with-deps --no-shell
+RUN npm install
 
 # Set the command to start the server
 CMD ["node", "app.js"]
