@@ -1,11 +1,13 @@
 import { chromium } from "playwright";
 
 export async function scrapeWithPlaywright(url) {
+  console.log("Playwright initiated...");
   const browser = await chromium.launch({
     channel: 'chromium', // Use the new Chromium channel
   });
   const page = await browser.newPage();
 
+  console.log(`Playwrighting to ${url}...`);
   try {
     // Navigate to the target URL
     await page.goto(url, { waitUntil: "domcontentloaded" });
@@ -18,6 +20,8 @@ export async function scrapeWithPlaywright(url) {
 
     const fullVersion = rawVersion.trim();
     const numericVersion = fullVersion.match(/[\d.]+/)?.[0];
+
+    console.log(`Full version found with Playwright: ${fullVersion}`);
 
     if (!numericVersion) {
       throw new Error("Unable to parse numeric version.");
@@ -34,4 +38,4 @@ export async function scrapeWithPlaywright(url) {
 
 
 // Call the function with the BIOS page URL
-//scrapeLatestBIOSVersion('https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/bios.html');
+//scrapeWithPlaywright('https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/bios.html');
