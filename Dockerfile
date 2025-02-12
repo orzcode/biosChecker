@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.50.1-jammy
+FROM node:20-bookworm
 
 # Set working directory inside container
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Install Playwright dependencies
-RUN npx -y playwright install --with-deps --no-shell
+RUN npx -y playwright@1.50.1 install --with-deps
 
 # Expose 8000
 EXPOSE 8000
