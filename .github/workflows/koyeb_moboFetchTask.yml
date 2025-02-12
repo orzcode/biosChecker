@@ -14,7 +14,7 @@ jobs:
         run: |
           curl -X POST https://asrockbioschecker.koyeb.app/trigger \
             -H "Content-Type: application/json" \
-            -d '{"secret": "${{ secrets.KOYEB_REPOPUSHKEY }}", "task": "moboFetcher"}'
+            --data "{\"secret\": \"${{ secrets.KOYEB_REPOPUSHKEY }}\", \"task\": \"moboFetcher\"}"
 
       - name: Notify success
         if: success()
