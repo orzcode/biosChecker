@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.41.1-jammy
+FROM mcr.microsoft.com/playwright:v1.50.1-jammy
 
 # Set working directory inside container
 WORKDIR /app
