@@ -8,8 +8,5 @@ COPY package*.json ./
 RUN npm install && \
     npx playwright install --with-deps --no-shell
 
-# Copy the rest of the application files
-COPY . .
-
 # Set the command to start the server
 CMD ["node", "app.js"]
