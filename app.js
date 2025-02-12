@@ -21,7 +21,7 @@ import router from "./routes/router.js";
 
 app.use("/", router);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-  console.log(`App is live @ http://localhost:3000/`);
+  console.log(`App is live @ http://localhost:${PORT}/`);
 });

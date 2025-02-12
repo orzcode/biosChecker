@@ -15,5 +15,8 @@ COPY . .
 # Install Playwright dependencies
 RUN npx -y playwright install --with-deps --no-shell
 
+# Expose 8000
+EXPOSE 8000
+
 # Start the app
 CMD ["node", "app.js"]
