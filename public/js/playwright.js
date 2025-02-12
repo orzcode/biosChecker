@@ -3,7 +3,6 @@ import { chromium } from "playwright";
 export async function scrapeWithPlaywright(url) {
   console.log("Playwright initiated...");
   const browser = await chromium.launch({
-    channel: "chromium",
     headless: true,  // Ensure headless mode
     args: ["--no-sandbox", "--disable-setuid-sandbox"],  // Fix permissions inside Docker
   });
