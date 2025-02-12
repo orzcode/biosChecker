@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Install Playwright dependencies
-RUN npx -y playwright@1.50.1 install --with-deps chromium
+RUN npx -y playwright@1.50.1 install --with-deps --no-shell
 
 # Expose 8000
 EXPOSE 8000
