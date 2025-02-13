@@ -31,6 +31,7 @@ async function checkBiosPage(maker, modelName) {
   for (const subdomain of ["www", "pg"]) {
     for (const pageName of possiblePages) {
       const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
+      console.log("\n");
       console.log(`Checking: ${testUrl}`);
       
       if (subdomain === "pg") {
