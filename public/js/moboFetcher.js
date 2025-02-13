@@ -31,7 +31,6 @@ async function checkBiosPage(maker, modelName) {
   for (const subdomain of ["www", "pg"]) {
     for (const pageName of possiblePages) {
       const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
-      console.log("\n");
       console.log(`Checking: ${testUrl}`);
       
       if (subdomain === "pg") {
@@ -157,6 +156,7 @@ export async function scrapeMotherboards(fromKoyeb) {
           existingEntry ? "Updated w/ live data" : "New entry"
         }`
       );
+      console.log("\n");
 
       // Add a 1-second delay between each motherboard check
       await delay(1000);
