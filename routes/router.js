@@ -5,11 +5,6 @@ const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
 
-import { runTasks } from "../public/js/runTasks.js";
-import { scrapeMotherboards } from "../public/js/moboFetcher.js";
-const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;
-
-import { execSync } from "child_process";
 
 router.get("/", async (req, res) => {
   try {
@@ -92,7 +87,12 @@ router.all("/unsubscribe", async (req, res) => {
   }
 });
 
+
+
 //for triggering scheduled tasks
+import { runTasks } from "../public/js/runTasks.js";
+import { scrapeMotherboards } from "../public/js/moboFetcher.js";
+const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;
 router.post("/trigger", async (req, res) => {
   try {
     const { secret, task } = req.body;
@@ -102,9 +102,6 @@ router.post("/trigger", async (req, res) => {
       console.warn("Unauthorized request: Invalid or missing permission.");
       return res.status(403).send({ error: "Unauthorized: Invalid permission" });
     }
-
-    // console.log("Installing Playwright dependencies...");
-    // execSync("npx playwright install --with-deps --no-shell", { stdio: "inherit" });
 
     // Determine which task to run
     if (task === "runTasks") {

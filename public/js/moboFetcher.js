@@ -180,6 +180,7 @@ export async function scrapeMotherboards(fromKoyeb) {
       //ONLY USED IN KOYEB TASK!
       if(fromKoyeb === "fromKoyeb"){
       koyebToRepo(); // Push changes to GitHub
+      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       }
       //ONLY USED IN KOYEB TASK!
 

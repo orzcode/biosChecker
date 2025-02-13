@@ -5,7 +5,7 @@ export async function scrapeWithPlaywright(url) {
   const browser = await chromium.launch({
     channel: "chromium",
     headless: true,  // Ensure headless mode
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],  // Fix permissions inside Docker
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],  // Fix permissions inside Docker
   });
   const page = await browser.newPage();
 

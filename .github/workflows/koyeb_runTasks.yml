@@ -1,8 +1,8 @@
-name: runTasks ON KOYEB
+name: runTasks ON KOYEB (defunct)
 
 on:
-  schedule:
-    - cron: "0 4 * * *" # Scheduled to run daily at 5:00PM NZ / 4:00AM UTC
+  # schedule:
+  #  - cron: "0 4 * * *" # Scheduled to run daily at 5:00PM NZ / 4:00AM UTC
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:

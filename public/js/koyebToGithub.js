@@ -1,6 +1,11 @@
 import { exec } from "child_process";
 import util from "util";
 
+// allows koyeb to re-push to the GH repo
+// was going to be used when running scripts on koyeb
+// called at end of moboFetcher and versionChecker
+// essentially the same as the GH action
+
 const execAsync = util.promisify(exec);
 
 export async function koyebToRepo() {

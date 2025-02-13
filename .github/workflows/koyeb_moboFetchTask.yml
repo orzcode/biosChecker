@@ -1,8 +1,8 @@
-name: Run moboFetcher ON KOYEB
+name: Run moboFetcher ON KOYEB (defunct)
 
 on:
-  schedule:
-    - cron: "0 3 * * 3" # (This will trigger at 3:00 AM UTC every Wednesday.)
+  # schedule:
+  #   - cron: "0 3 * * 3" # (This will trigger at 3:00 AM UTC every Wednesday.)
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:

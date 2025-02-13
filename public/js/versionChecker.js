@@ -122,6 +122,7 @@ export async function updateModels(fromKoyeb) {
 
       //ONLY USED IN KOYEB TASK!
       if(fromKoyeb === "fromKoyeb"){
+      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       koyebToRepo(); // Push changes to GitHub
       }
       //ONLY USED IN KOYEB TASK!

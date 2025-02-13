@@ -1,0 +1,70 @@
+name: moboFetcher (weekly)
+
+on:
+  schedule:
+    - cron: "0 3 * * 3" # (This will trigger at 3:00 AM UTC every Wednesday.)
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  run-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Use the Node.js version your app requires
+
+      # Install dependencies
+      - name: Install dependencies
+        run:
+          npm install
+
+          # Install Playwright browsers
+      # Revert if needed to:
+      # npx playwright install --with-deps chromium
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps --no-shell
+
+      # Run the tasks
+      - name: Run mobofetcher task
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+        run:
+          node public/js/moboFetcher.js
+
+          # Commit and push changes to models.json (if modified)
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Check for changes in the working directory and staging area
+          if git diff --quiet public/data/models.json && git diff --cached --quiet public/data/models.json; then
+          echo "No changes to models.json. Skipping commit and push."
+          else
+            git add public/data/models.json
+            git commit -m "Update models.json via daily workflow"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Optional: Notify on workflow success
+      - name: Notify success
+        if: success()
+        run: echo "Scheduled task ran successfully!"
+
+      # Optional: Notify on workflow failure
+      - name: Notify failure
+        if: failure()
+        run: echo "Scheduled task failed to complete."
