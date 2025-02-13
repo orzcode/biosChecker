@@ -26,4 +26,4 @@ export async function runTasks(fromKoyeb) {
   }
 }
 
-//runTasks();
+runTasks();
