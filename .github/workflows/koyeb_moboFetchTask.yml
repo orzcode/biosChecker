@@ -1,4 +1,4 @@
-name: Run moboFetcher ON KOYEB (defunct)
+name: KOYEB (defunct) moboFetcher
 
 on:
   # schedule:

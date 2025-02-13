@@ -1,4 +1,4 @@
-name: runTasks (daily) (versionChecker, notifyChecker, mailer if req.)
+name: runTasks (daily)
 
 on:
   schedule:

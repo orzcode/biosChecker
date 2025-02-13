@@ -1,0 +1,8 @@
+To have koyeb run the scripts:
+
+Trigger route already setup in express
+Secret Env Vars already set in app and both platforms
+GH YML schedule has been commented out - can run manually or un-comment
+
+Koyeb build: Dockerfile may work with current file, but short on mem for PW
+There was also an issue with a build error right at the end of Koyeb, but it didn't seem to affect anything
