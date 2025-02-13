@@ -83,6 +83,43 @@ async function deleteModelById(id) {
   }
 }
 
+async function resetModelHeldVersion(id) {
+  try {
+    const result = await sql`
+      UPDATE models
+      SET heldversion = NULL
+      WHERE id = ${id}
+      RETURNING *;
+    `;
+
+    if (result.count > 0) {
+      console.log(`Reset heldversion for model with id ${id}`);
+    } else {
+      console.log(`Model with id ${id} not found.`);
+    }
+  } catch (error) {
+    console.error('Error resetting model heldversion:', error);
+  }
+}
+
+async function getModelByName(model) {
+  try {
+    const result = await sql`
+      SELECT * FROM models
+      WHERE model = ${model};
+    `;
+
+    if (result.length > 0) {
+      console.log(`Model details for '${model}':`, JSON.stringify(result, null, 2));
+    } else {
+      console.log(`No model found with name '${model}'.`);
+    }
+  } catch (error) {
+    console.error('Error fetching model data:', error);
+  }
+}
+
+
 // Process CLI arguments
 const functionName = process.argv[2];
 const param = process.argv[3]; // Capture email if needed
@@ -117,9 +154,25 @@ const param = process.argv[3]; // Capture email if needed
       }
       await deleteModelById(param);
       break;
+    case 'resetModelHeldVersion':
+      if (!param) {
+        console.error('Error: ID is required for resetModelHeldVersion.');
+        break;
+      }
+      await resetModelHeldVersion(param);
+      break;
+    case 'getModelByName':
+      if (!param) {
+        console.error('Error: Model name is required for getModelByName.');
+        break;
+      }
+      await getModelByName(param);
+      break;
     default:
-      console.log('No valid function specified. Use viewUsers, viewModels, or userVerReset <email>.');
+      console.log('No valid function specified. Use viewUsers, viewModels, userVerReset <email>, modelsToJson, deleteModelById <id>, resetModelHeldVersion <id>, or getModelByName "<name>".');
   }
 
   await sql.end(); // Close the SQL connection after all operations
 })();
+
+

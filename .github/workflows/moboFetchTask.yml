@@ -48,16 +48,18 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Ensure the latest changes are fetched before checking for differences
-          # (prevents errors where repo was updated during workflow run)
-          git pull --rebase origin main
-
           # Check for changes in the working directory and staging area
           if git diff --quiet public/data/models.json && git diff --cached --quiet public/data/models.json; then
           echo "No changes to models.json. Skipping commit and push."
+
           else
             git add public/data/models.json
             git commit -m "Update models.json via daily workflow"
+
+          # Ensure the latest changes are fetched before pushing
+          # (prevents errors where repo was updated during workflow run)
+          git pull --rebase origin main
+
             git push
           fi
         env:
