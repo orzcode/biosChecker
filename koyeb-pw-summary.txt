@@ -1,6 +1,6 @@
 To have koyeb run the scripts:
 
-Trigger route already setup in express
+Trigger route already setup in express (commented else koyeb autoruns - see below)
 Secret Env Vars already set in app and both platforms
 GH YML schedule has been commented out - can run manually or un-comment
 moboFetcher.js and runTasks.js had their autorun commented out (trigger route calls them)
