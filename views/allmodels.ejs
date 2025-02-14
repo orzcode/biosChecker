@@ -6,12 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ASRock BIOS Notifier</title>
 
-        <meta property="og:title" content="ASRock BIOS Notifier">
-        <meta property="og:description" content="Get notified of new bios updates for your ASRock motherboard">
-        <meta property="og:image" content="https://asrockbioschecker.koyeb.app/images/embed.png?v=1">
-        <meta property="og:url" content="https://asrockbioschecker.koyeb.app/">
-        <meta property="og:type" content="website">
-        
+    <meta property="og:title" content="ASRock BIOS Notifier" />
+    <meta
+      property="og:description"
+      content="Get notified of new bios updates for your ASRock motherboard"
+    />
+    <meta
+      property="og:image"
+      content="https://asrockbioschecker.koyeb.app/images/embed.png?v=1"
+    />
+    <meta property="og:url" content="https://asrockbioschecker.koyeb.app/" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
@@ -31,9 +37,24 @@
 
     <main id="main">
       <div class="blurb">
-        <p><strong>Track modern ASRock motherboards and get notified of new bios updates</strong></p>
-        <p>Usage is easy - select a motherboard, enter your email, and you will be notified if a bios update is released. Selections are limited to one board per email (this can be changed)</p>
-        <p><em>Note: this tool is unofficial and not supported or affiliated with ASRock in any way.</em></p></div>
+        <p>
+          <strong
+            >Track modern ASRock motherboards and get notified of new bios
+            updates</strong
+          >
+        </p>
+        <p>
+          Usage is easy - select a motherboard, enter your email, and you will
+          be notified if a bios update is released. Selections are limited to
+          one board per email (this can be changed)
+        </p>
+        <p>
+          <em
+            >Note: this tool is unofficial and not supported or affiliated with
+            ASRock in any way.</em
+          >
+        </p>
+      </div>
       <form action="/submit" method="POST">
         <!-- Form for email subscription -->
         <div class="form-controls">
@@ -111,13 +132,14 @@
               <th>BIOS Page</th>
             </tr>
           </thead>
-            <tbody>
-              <!-- sort models.json by socket -->
-              <!-- limit to items with valid links -->
-              <% motherboards.sort((a, b) => a.socket.localeCompare(b.socket)).forEach((mobo) => { %>        
-              <% if (mobo.link && mobo.biospage) { %>
-              <tr data-row="<%= mobo.socket %>">
-                <td>
+          <tbody>
+            <!-- sort models.json by socket -->
+            <!-- limit to items with valid links -->
+            <% motherboards.sort((a, b) =>
+            a.socket.localeCompare(b.socket)).forEach((mobo) => { %> <% if
+            (mobo.link && mobo.biospage) { %>
+            <tr data-row="<%= mobo.socket %>">
+              <td>
                 <input
                   type="radio"
                   required
@@ -126,30 +148,29 @@
                   value="<%= mobo.model %>"
                   title="Select this motherboard"
                 />
-                </td>
-                <td data-cell="model"><%= mobo.model %></td>
-                <td data-cell="maker"><%= mobo.maker %></td>
-                <td data-cell="socket"><%= mobo.socket %></td>
-                <td>
+              </td>
+              <td data-cell="model"><%= mobo.model %></td>
+              <td data-cell="maker"><%= mobo.maker %></td>
+              <td data-cell="socket"><%= mobo.socket %></td>
+              <td>
                 <a data-cell="link" href="<%= mobo.link %>" target="_blank"
                   >Details <i class="fa-sharp fa-solid fa-link"></i
                 ></a>
-                </td>
-                <td>
+              </td>
+              <td>
                 <a data-cell="link" href="<%= mobo.biospage %>" target="_blank"
                   >BIOSes <i class="fa-sharp fa-solid fa-link"></i
                 ></a>
-                </td>
-              </tr>
-              <% } %>
-            <% }) %>
-            </tbody>
+              </td>
+            </tr>
+            <% } %> <% }) %>
+          </tbody>
         </table>
       </form>
     </main>
 
     <footer id="footer">
-      <a href="https://github.com/orzcode" target="_blank">
+      <a href="https://github.com/orzcode/biosChecker" target="_blank">
         Created by Orz <i class="fa-brands fa-github"></i>
       </a>
     </footer>
