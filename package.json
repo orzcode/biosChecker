@@ -3,6 +3,8 @@
     "cheerio": "^1.0.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
     "node-fetch": "^3.3.2",
     "postgres": "^3.4.5",
     "resend": "^4.1.1"
@@ -13,6 +15,11 @@
     "playwright": "^1.50.1"
   },
   "scripts": {
-    "dev": "node --env-file=.env --watch app.js"
+    "dev": "node --env-file=.env --watch app.js",
+    "start": "npm install && npm run build && NODE_ENV=production && node app.js",
+    "build": "npm run minify-css && npm run minify-js && npm run minify-ejs",
+    "minify-css": "cleancss -o public/css/styles.min.css public/css/styles.css",
+    "minify-js": "terser public/js/script.js -o public/js/script.min.js --compress --mangle",
+    "minify-ejs": "ejs-cli views/index.ejs -o views/index.min.ejs"
   }
 }

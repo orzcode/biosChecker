@@ -23,6 +23,18 @@ router.get("/", async (req, res) => {
 router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
 
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  if (!validateEmail(email)) {
+    return res.status(400).json({ error: "Invalid email format." });
+  }
+
+  if (req.body.hachimitsu) {
+    return res.status(400).json({ error: "Spam detected." });
+  }
+
   if (!email || !selectedMobo) {
     return res.status(400).send("Missing email or motherboard selection");
   }

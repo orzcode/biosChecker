@@ -119,6 +119,10 @@ a:visited {
   color: whitesmoke;
   font-size: 75%;
 }
+.hachimitsu
+{
+  display: none;
+}
 /* ----------------------------------------- */
 form {
   display: flex;
