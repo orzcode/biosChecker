@@ -2661,7 +2661,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D",
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D/bios.html",
-    "heldversion": "3.16"
+    "heldversion": "3.18.AS02[Beta]"
   },
   {
     "id": "mobo_m68rfcv2ighnta",
@@ -2724,6 +2724,6 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
-    "heldversion": "3.16"
+    "heldversion": "3.18.AS02[Beta]"
   }
 ]
