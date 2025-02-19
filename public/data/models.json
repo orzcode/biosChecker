@@ -2664,6 +2664,15 @@
     "heldversion": "3.18.AS02[Beta]"
   },
   {
+    "id": "mobo_m6uk05wpmq12bj",
+    "model": "B650M Pro X3D WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]"
+  },
+  {
     "id": "mobo_m68rfcv2ighnta",
     "model": "B450M Steel Legend",
     "maker": "AMD",
@@ -2716,14 +2725,5 @@
     "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "3.18.AS01[Beta]"
-  },
-  {
-    "id": "mobo_m6uk05wpmq12bj",
-    "model": "B650M Pro X3D WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
-    "heldversion": "3.18.AS02[Beta]"
   }
 ]
