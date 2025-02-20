@@ -204,7 +204,7 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "1.08"
+    "heldversion": "1.09.AS01[Beta]"
   },
   {
     "id": "mobo_m68rfcv2q1pm0f",
@@ -240,7 +240,7 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "1.19"
+    "heldversion": "1.20.AS01[Beta]"
   },
   {
     "id": "mobo_m68rfcv2pbev3i",
