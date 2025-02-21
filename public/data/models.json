@@ -198,15 +198,6 @@
     "heldversion": "1.15"
   },
   {
-    "id": "mobo_m68rfcv2iafmq0",
-    "model": "B860M LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "1.09.AS01[Beta]"
-  },
-  {
     "id": "mobo_m68rfcv2q1pm0f",
     "model": "B860M-X WiFi",
     "maker": "Intel",
@@ -232,15 +223,6 @@
     "link": "https://asrock.com/mb/intel/B860M-H2",
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
     "heldversion": "1.12"
-  },
-  {
-    "id": "mobo_m68rfcv2xbr8z8",
-    "model": "B860I WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "1.20.AS01[Beta]"
   },
   {
     "id": "mobo_m68rfcv2pbev3i",
@@ -342,6 +324,15 @@
     "heldversion": "1.13"
   },
   {
+    "id": "mobo_m68rfcv2iafmq0",
+    "model": "B860M LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "1.09.AS01[Beta]"
+  },
+  {
     "id": "mobo_m68rfcv2ljza5k",
     "model": "Z890 Riptide WiFi",
     "maker": "Intel",
@@ -358,6 +349,15 @@
     "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
     "heldversion": "2.22.AS05[Beta]"
+  },
+  {
+    "id": "mobo_m68rfcv2xbr8z8",
+    "model": "B860I WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
+    "heldversion": "1.20.AS01[Beta]"
   },
   {
     "id": "mobo_m68rfcv2hux6re",
