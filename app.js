@@ -1,24 +1,28 @@
 import express from "express";
-const app = express();
-
 import path from "path";
-
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-
-app.set('trust proxy', 1)
-
 import { fileURLToPath } from "url";
+import router from "./routes/router.js";
+
+// Initialize Express app
+const app = express();
+
+// Resolve __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Set view engine and views directory
 app.set("view engine", "ejs");
 app.set("views", path.join(path.resolve(), "views"));
 
-app.use(express.static(path.join(__dirname, "public")));
+// Trust proxy for rate-limiting and security
+app.set("trust proxy", 1);
 
-// Middleware to parse URL-encoded bodies (for form submissions)
-app.use(express.urlencoded({ extended: true }));
+// Middleware
+app.use(express.urlencoded({ extended: true })); // Form data parsing
+app.use(express.json()); // JSON parsing
+app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
 // 🛡️ Security middleware
 app.use(
@@ -34,19 +38,25 @@ const limiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   message: "Too many requests, please try again later.",
+  keyGenerator: (request) => {
+    if (!request.ip) {
+      console.error(
+        "WARN | `express-rate-limit` | `request.ip` is undefined. You can avoid this by providing a custom `keyGenerator` function, but it may be indicative of a larger issue."
+      );
+    }
+    return request.ip.replace(/:\d+[^:]*$/, "");
+  },
 });
 app.use(limiter);
 
-// Middleware to parse JSON (if you're sending JSON data)
-app.use(express.json());
-
-import router from "./routes/router.js";
-
+// Routes
 app.use("/", router);
 
+// Start server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`App is live @ http://localhost:${PORT}/`);
-  const isProduction = process.env.NODE_ENV === "prod";
-  console.log(`Running in ${isProduction ? "prod" : "dev"} mode`);
+  console.log(
+    `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
+  );
 });
