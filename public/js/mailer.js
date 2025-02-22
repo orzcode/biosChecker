@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const projectLink = "https://asrockbioschecker.link/";
+const projectLink = "https://www.asrockbioschecker.link/";
 
 export async function mailer(userObject, modelsObject) {
   const user = userObject;
