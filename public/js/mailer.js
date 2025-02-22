@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const projectLink = "https://asrockbioschecker.koyeb.app/";
+const projectLink = "https://asrockbioschecker.link/";
 
 export async function mailer(userObject, modelsObject) {
   const user = userObject;
@@ -10,7 +10,7 @@ export async function mailer(userObject, modelsObject) {
   const unsubLink = `${projectLink}unsubscribe?email=${user.email}`;
 
   const { data, error } = await resend.emails.send({
-    from: "ASRock Bios Notifier <onboarding@resend.dev>",
+    from: "ASRock Bios Notifier <update@asrockbioschecker.link>",
     to: user.email,
     subject: "New BIOS Update Available",
     html: `<div style="background-color: #202020; color: whitesmoke; padding: 20px; font-family: Arial, sans-serif; line-height: 1.5;">
@@ -62,7 +62,7 @@ export async function confirmationMail(userObject) {
   const confirmLink = `${projectLink}confirm/${user.id}`;
 
   const { data, error } = await resend.emails.send({
-    from: "ASRock Bios Notifier <onboarding@resend.dev>",
+    from: "ASRock Bios Notifier <confirm@asrockbioschecker.link>",
     to: user.email,
     subject: "Confirm your email",
     html: `<div style="background-color: #202020; color: whitesmoke; padding: 20px; font-family: Arial, sans-serif; line-height: 1.5;">
