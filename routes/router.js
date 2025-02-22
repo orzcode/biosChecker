@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     res.status(500).send("Failed to fetch models from the database");
   }
 });
-
+router.get('/ip', (request, response) => response.send(request.ip))
 
 router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
