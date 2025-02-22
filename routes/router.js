@@ -21,6 +21,7 @@ router.get("/", async (req, res) => {
   }
 });
 router.get('/ip', (request, response) => response.send(request.ip))
+router.get('/x-forwarded-for', (request, response) => response.send(request.headers['x-forwarded-for']))
 
 router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
