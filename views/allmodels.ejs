@@ -56,10 +56,9 @@
         </p>
       </div>
       <form action="/submit" method="POST">
-        <span class="hachimitsu">
-          <input type="email" name="email" required>
-          <input type="text" name="hachimitsu">
-          <button type="submit">Hachimitsu</button>
+        <span class="hachimitsu" aria-hidden="true">
+          <label for="hachimitsu">&nbsp;</label>
+          <input tabindex="-1" type="text" name="hachimitsu" id="hachimitsu">
         </span>
         <!-- Form for email subscription -->
         <div class="form-controls">

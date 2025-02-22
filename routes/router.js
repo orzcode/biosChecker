@@ -4,6 +4,7 @@ import fs from "fs/promises";
 const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
+import { confirmationMail } from "../public/js/mailer.js";
 
 
 router.get("/", async (req, res) => {
@@ -20,47 +21,97 @@ router.get("/", async (req, res) => {
   }
 });
 
+
 router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
 
-  const validateEmail = (email) => {
+  ////validates email input////
+  function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
+  }
   if (!validateEmail(email)) {
     return res.status(400).json({ error: "Invalid email format." });
   }
-
   if (req.body.hachimitsu) {
     return res.status(400).json({ error: "Spam detected." });
   }
-
   if (!email || !selectedMobo) {
-    return res.status(400).send("Missing email or motherboard selection");
+    return res.status(400).send("Missing email or motherboard selection.");
   }
+  ////////////////////////////
 
+  //checks for existing user
   try {
-    //SQL always returns even a single row as an array, hence the destructure
     const [user] = await sqlServices.getUsers(email);
-    const previousMobo = user ? user.mobo : null;
 
+    //if no user, make new user with unverified status (handled automatically by sql)
+    if (!user) {
+      console.log("User not found; creating, sending confirm, & routing")
+      const newUser = await sqlServices.addOrUpdateUser(email, selectedMobo);
+      await confirmationMail(newUser);
+      return res.render("checkEmail", { email });
+    }
 
-    // Add or update the user
-    await sqlServices.addOrUpdateUser(email, selectedMobo);
+    //if user exists but still not verified, remind them to confirm
+    if (!user.verified) {
+      console.log("User found but unverified, routing appropriately")
+      return res.render("checkEmail", { email });
+    }
 
-    // Render the submit page with the relevant data
-    res.render("submitPage", {
-      email,
-      selectedMobo,
-      previousMobo,
-    });
+    //otherwise, updates the existing verified user
+    return updateUserMobo(res, user, selectedMobo);
   } catch (err) {
-    console.error("Error processing the request:", err);
-    return res
-      .status(500)
-      .send("An error occurred while processing your request");
+    console.error("Error processing request:", err);
+    res.status(500).send("An error occurred.");
   }
 });
+
+router.get("/confirm/:id", async (req, res) => {
+  try {
+    const [user] = await sqlServices.getUsers(req.params.id);
+
+    if (!user) {
+      return res.status(400).send("Invalid or expired confirmation link.");
+    }
+
+    if (!user.verified) {
+      await sqlServices.verifyUser(req.params.id);
+    }
+
+    return updateUserMobo(res, user, null);
+    //prevents showing previous mobo for confirmations
+
+  } catch (err) {
+    console.error("Error confirming user:", err);
+    res.status(500).send("Error confirming your email.");
+  }
+});
+
+async function updateUserMobo(res, user, selectedMobo) {
+  const previousMobo = user.mobo;
+  
+  //Prevents showing previous mobo for confirmations
+  //This means the user got here from the main page,
+  //with (res, user, selectedMobo)
+  if(selectedMobo != null){
+  await sqlServices.addOrUpdateUser(user.email, selectedMobo);
+  res.render("submitPage", {
+    email: user.email,
+    selectedMobo,
+    previousMobo,
+  });
+  }
+  //Only used in confirmations
+  //This means the user got here from their email link and is a new user,
+  //with (res, user, null)
+  else{
+    res.render("submitPage", {
+      email: user.email,
+      selectedMobo: user.mobo
+    });
+  }
+}
+
 
 //handles both form 'POST' and link-based 'GET' requests
 router.all("/unsubscribe", async (req, res) => {
@@ -75,7 +126,7 @@ router.all("/unsubscribe", async (req, res) => {
 
   try {
     // Fetch user by email
-    const user = await sqlServices.getUsers(email);
+    const [user] = await sqlServices.getUsers(email);
 
     // Check if the user exists
     if (!user) {
@@ -86,7 +137,7 @@ router.all("/unsubscribe", async (req, res) => {
     }
 
     // Remove the user from the database
-    await sql`DELETE FROM users WHERE email = ${email}`;
+    await sqlServices.deleteUser(email)
 
     // Render the unsubscribe confirmation view
     res.render("unsubscribe", { email: user.email });
@@ -101,7 +152,7 @@ router.all("/unsubscribe", async (req, res) => {
 
 
 
-//for triggering scheduled tasks
+//for triggering scheduled tasks on koyeb
 // import { runTasks } from "../public/js/runTasks.js";
 // import { scrapeMotherboards } from "../public/js/moboFetcher.js";
 // const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;

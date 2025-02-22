@@ -34,7 +34,7 @@
           alt="Selected Motherboard"
         />
 
-        <% if (previousMobo) { %>
+        <% if (typeof previousMobo !== 'undefined' && previousMobo) { %>
         <em>
           (Previously you were signed up for:
           <strong><%= previousMobo %></strong>).

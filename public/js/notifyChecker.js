@@ -1,5 +1,5 @@
 import { mailer } from "./mailer.js";
-import { getMobos, getUsers, saveUsers } from "./sqlServices.js";
+import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import sql from "./db.js";
 
 // Function to compare version strings properly
@@ -36,13 +36,35 @@ export async function notifyUsers() {
 
     // Iterate over users to determine if they need to be notified
     for (const user of users) {
-      const { id, email, mobo: userMobo, givenversion } = user;
+      const {
+        id,
+        email,
+        mobo: userMobo,
+        givenversion,
+        lastcontacted,
+        verified,
+      } = user;
       const mobo = mobos.find((m) => m.model === userMobo);
 
       if (!mobo) {
         console.warn(`Mobo ${userMobo} not found for user ${id}. Skipping.`);
         continue; // Skip if motherboard isn't found
       }
+
+      //checks and removes unverified users, unless within last 2 hours
+      if (verified === false) {
+        const lastContactedDate = new Date(lastcontacted);
+        const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000); // 2 hours ago
+
+        if (lastContactedDate < twoHoursAgo) {
+          console.log(
+            `Deleting unverified user ${email} (last contacted: ${lastcontacted})`
+          );
+          await deleteUser(email);
+        }
+      }
+
+      //main function proceeds below
 
       const heldversion = mobo.heldversion
         .match(/\d+(\.\d+)*|[A-Z]+/g)
