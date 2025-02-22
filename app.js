@@ -1,5 +1,8 @@
 import express from "express";
 const app = express();
+app.set('trust proxy', 1)
+app.get('/ip', (request, response) => response.send(request.ip))
+
 import path from "path";
 
 import helmet from "helmet";
