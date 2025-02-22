@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-app.set('trust proxy', 2)
+app.set('trust proxy', 3)
 
 
 import path from "path";
