@@ -1,5 +1,5 @@
-import postgres from 'postgres';
-import fs from 'fs';
+import postgres from "postgres";
+import fs from "fs";
 
 // Database connection
 const sql = postgres({
@@ -7,16 +7,16 @@ const sql = postgres({
   database: process.env.DATABASE_NAME,
   username: process.env.DATABASE_USER,
   password: process.env.DATABASE_PASSWORD,
-  ssl: 'require',
+  ssl: "require",
 });
 
 // Function to view all users
 async function viewUsers() {
   try {
     const users = await sql`SELECT * FROM users`;
-    console.log('Users in the database:', users);
+    console.log("Users in the database:", users);
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 }
 
@@ -24,9 +24,9 @@ async function viewUsers() {
 async function viewModels() {
   try {
     const models = await sql`SELECT * FROM models`;
-    console.log('Models in the database:', JSON.stringify(models, null, 2));
+    console.log("Models in the database:", JSON.stringify(models, null, 2));
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 }
 
@@ -36,14 +36,13 @@ async function modelsToJson() {
     const models = await sql`SELECT * FROM models`;
 
     // Write the models to a JSON file
-    fs.writeFileSync('models.json', JSON.stringify(models, null, 2));
-    console.log('Data successfully exported to models.json');
+    fs.writeFileSync("models.json", JSON.stringify(models, null, 2));
+    console.log("Data successfully exported to models.json");
   } catch (err) {
-    console.error('Error exporting data:', err);
+    console.error("Error exporting data:", err);
   }
   await sql.end();
 }
-
 
 // Function to reset `givenVersion` for a specific user
 async function userVerReset(email) {
@@ -61,7 +60,7 @@ async function userVerReset(email) {
       console.log(`User with email ${email} not found.`);
     }
   } catch (error) {
-    console.error('Error updating user:', error);
+    console.error("Error updating user:", error);
   }
 }
 
@@ -79,7 +78,7 @@ async function deleteModelById(id) {
       console.log(`Model with id ${id} not found.`);
     }
   } catch (error) {
-    console.error('Error deleting model:', error);
+    console.error("Error deleting model:", error);
   }
 }
 
@@ -98,7 +97,7 @@ async function resetModelHeldVersion(id) {
       console.log(`Model with id ${id} not found.`);
     }
   } catch (error) {
-    console.error('Error resetting model heldversion:', error);
+    console.error("Error resetting model heldversion:", error);
   }
 }
 
@@ -110,15 +109,47 @@ async function getModelByName(model) {
     `;
 
     if (result.length > 0) {
-      console.log(`Model details for '${model}':`, JSON.stringify(result, null, 2));
+      console.log(
+        `Model details for '${model}':`,
+        JSON.stringify(result, null, 2)
+      );
     } else {
       console.log(`No model found with name '${model}'.`);
     }
   } catch (error) {
-    console.error('Error fetching model data:', error);
+    console.error("Error fetching model data:", error);
   }
 }
 
+async function deleteUser(email) {
+  await sql`DELETE FROM users WHERE email = ${email}`;
+  console.log(`Deleted user:${email}`);
+}
+
+async function verifyUser(email) {
+  try {
+    const result = await sql`
+      UPDATE users
+      SET verified = true
+      WHERE email = ${email}
+      RETURNING *;
+    `;
+
+    if (result.length > 0) {
+      console.log(`User with ID ${email} has been verified.`);
+    } else {
+      console.log(`User with ID ${email} not found.`);
+    }
+  } catch (error) {
+    console.error("Error verifying user:", error);
+  }
+}
+
+async function oneTimeWhatever() {
+  console.log(
+    await sql`SELECT column_name FROM information_schema.columns WHERE table_name = 'users' AND column_name = 'verified';`
+  );
+}
 
 // Process CLI arguments
 const functionName = process.argv[2];
@@ -131,48 +162,65 @@ const param = process.argv[3]; // Capture email if needed
 
 (async () => {
   switch (functionName) {
-    case 'viewUsers':
+    case "viewUsers":
       await viewUsers();
       break;
-    case 'viewModels':
+    case "viewModels":
       await viewModels();
       break;
-    case 'userVerReset':
+    case "userVerReset":
       if (!param) {
-        console.error('Error: Email is required for userVerReset.');
+        console.error("Error: Email is required for userVerReset.");
         break;
       }
       await userVerReset(param);
       break;
-    case 'modelsToJson':
+    case "modelsToJson":
       await modelsToJson();
       break;
-    case 'deleteModelById':
+    case "deleteModelById":
       if (!param) {
-        console.error('Error: ID is required for deleteModelById.');
+        console.error("Error: ID is required for deleteModelById.");
         break;
       }
       await deleteModelById(param);
       break;
-    case 'resetModelHeldVersion':
+    case "resetModelHeldVersion":
       if (!param) {
-        console.error('Error: ID is required for resetModelHeldVersion.');
+        console.error("Error: ID is required for resetModelHeldVersion.");
         break;
       }
       await resetModelHeldVersion(param);
       break;
-    case 'getModelByName':
+    case "getModelByName":
       if (!param) {
-        console.error('Error: Model name is required for getModelByName.');
+        console.error("Error: Model name is required for getModelByName.");
         break;
       }
       await getModelByName(param);
       break;
+    case "deleteUser":
+      if (!param) {
+        console.error("Error: username is required.");
+        break;
+      }
+      await deleteUser(param);
+      break;
+    case "verifyUser":
+      if (!param) {
+        console.error("Error: User email is required for verifyUser.");
+        break;
+      }
+      await verifyUser(param);
+      break;
+    case "oneTimeWhatever":
+      await oneTimeWhatever();
+      break;
     default:
-      console.log('No valid function specified. Use viewUsers, viewModels, userVerReset <email>, modelsToJson, deleteModelById <id>, resetModelHeldVersion <id>, or getModelByName "<name>".');
+      console.log(
+        'No valid function specified. Use viewUsers, viewModels, userVerReset <email>, modelsToJson, deleteModelById <id>, resetModelHeldVersion <id>, getModelByName "<name>", deleteUser "<email>", or oneTimeWhatever(see func).'
+      );
   }
 
   await sql.end(); // Close the SQL connection after all operations
 })();
-
-

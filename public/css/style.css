@@ -257,7 +257,7 @@ fieldset {
   transform: rotate(45deg);
 }
 /* ----------------------------------------- */
-.buttonsDiv, .submissionDetails, .unsubscribeDetails, .errorDetails {
+.buttonsDiv, .submissionDetails, .unsubscribeDetails, .errorDetails, .checkEmailDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
