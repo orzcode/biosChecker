@@ -61,6 +61,7 @@ export async function notifyUsers() {
             `Deleting unverified user ${id} (last contacted: ${lastcontacted})`
           );
           await deleteUser(email);
+          continue; // Skip user mobo check if they're being deleted
         }
       }
 
