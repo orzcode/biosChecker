@@ -58,7 +58,7 @@ export async function notifyUsers() {
 
         if (lastContactedDate < twoHoursAgo) {
           console.log(
-            `Deleting unverified user ${email} (last contacted: ${lastcontacted})`
+            `Deleting unverified user ${id} (last contacted: ${lastcontacted})`
           );
           await deleteUser(email);
         }
