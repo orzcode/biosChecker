@@ -1,12 +1,12 @@
 import express from "express";
 const app = express();
-app.set('trust proxy', 3)
-
 
 import path from "path";
 
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+
+app.set('trust proxy', 1)
 
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
