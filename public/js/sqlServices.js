@@ -116,7 +116,7 @@ export async function addOrUpdateUser(email, mobo) {
       existingUser.mobo = mobo;
       existingUser.givenversion = latestVersion;
       await saveUsers(existingUser);
-      console.log(`Updated user ${email} with mobo: ${mobo} + latestheldversion`);
+      console.log(`Updated user ${existingUser.id} with mobo: ${mobo} + latestheldversion`);
     }
     //otherwise creates new user (with unverified status)
     else {
@@ -130,14 +130,14 @@ export async function addOrUpdateUser(email, mobo) {
         verified: false,
       };
       await saveUsers(newUser);
-      console.log(`Created new user: ${email} with mobo: ${mobo}`);
+      console.log(`Created new user: ${newUser.id} with mobo: ${mobo}`);
 
       //only returns in case of new user creation
       //if this sucks, just request the user object within router or w/e
       return newUser
     }
   } catch (error) {
-    console.error(`Error adding/updating user ${email}:`, error.message);
+    console.error(`Error adding/updating user:`, error.message);
     throw error;
   }
   // finally {

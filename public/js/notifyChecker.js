@@ -51,12 +51,12 @@ export async function notifyUsers() {
         continue; // Skip if motherboard isn't found
       }
 
-      //checks and removes unverified users, unless within last 2 hours
+      //checks and removes unverified users, unless within last 18 hours
       if (verified === false) {
         const lastContactedDate = new Date(lastcontacted);
-        const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000); // 2 hours ago
+        const eighteenHoursAgo = new Date(Date.now() - 18 * 60 * 60 * 1000); // 18 hours ago
 
-        if (lastContactedDate < twoHoursAgo) {
+        if (lastContactedDate < eighteenHoursAgo) {
           console.log(
             `Deleting unverified user ${id} (last contacted: ${lastcontacted})`
           );
