@@ -10,7 +10,7 @@ export async function mailer(userObject, modelsObject) {
   const unsubLink = `${projectLink}unsubscribe?email=${user.email}`;
 
   const { data, error } = await resend.emails.send({
-    from: "ASRock Bios Notifier <update@asrockbioschecker.link>",
+    from: "ASRock Bios Checker <update@asrockbioschecker.link>",
     to: user.email,
     subject: "New BIOS Update Available",
     html: `<div style="background-color: #202020; color: whitesmoke; padding: 20px; font-family: Arial, sans-serif; line-height: 1.5;">
@@ -22,7 +22,7 @@ export async function mailer(userObject, modelsObject) {
       
       <p style="font-size: 14px;">
         <em>Note:</em> You are receiving this because you previously signed up to be notified of updates from the unofficial 
-        <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Notifier project page</strong></a>.
+        <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Checker project page</strong></a>.
       </p>
 
       <p style="font-size: 14px;">
@@ -62,14 +62,14 @@ export async function confirmationMail(userObject) {
   const confirmLink = `${projectLink}confirm/${user.id}`;
 
   const { data, error } = await resend.emails.send({
-    from: "ASRock Bios Notifier <confirm@asrockbioschecker.link>",
+    from: "ASRock Bios Checker <confirm@asrockbioschecker.link>",
     to: user.email,
     subject: "Confirm your email",
     html: `<div style="background-color: #202020; color: whitesmoke; padding: 20px; font-family: Arial, sans-serif; line-height: 1.5;">
-      <h2 style="color: #6b9b1d; text-align: center;">ASRock BIOS Notifier</h2>
+      <h2 style="color: #6b9b1d; text-align: center;">ASRock BIOS Checker</h2>
         <p>
         You are receiving this because you signed up to be notified of bios updates from the unofficial 
-        <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Notifier project page</strong></a>.
+        <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Checker project page</strong></a>.
         </p>
         <p>
         You must confirm your email in order to proceed.
