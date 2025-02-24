@@ -4,6 +4,7 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import { fileURLToPath } from "url";
 import router from "./routes/router.js";
+import compression from "compression";
 
 // Initialize Express app
 const app = express();
@@ -11,6 +12,9 @@ const app = express();
 // Resolve __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Enable gzip compression
+app.use(compression());
 
 // Set view engine and views directory
 app.set("view engine", "ejs");
