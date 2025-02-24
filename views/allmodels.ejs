@@ -42,8 +42,8 @@
         </p>
         <p>
           Usage is easy - select a motherboard, enter your email, and you will
-          be notified if a bios update is released. Selections are limited to
-          one board per email (this can be changed)
+          be notified if a bios update is released. Limited to
+          one board per email (you may alter by re-selecting).
         </p>
         <p>
           <em
@@ -51,6 +51,11 @@
             ASRock in any way.</em
           >
         </p>
+        <p>
+          This tool is free to use, and long-term reliability is not guaranteed. But if you find it helpful, you are welcome to support the project with a small donation via Ko-fi.
+          <%- include('components/kofiModal') %>
+        </p>
+        <hr style="border: 1px solid #6b9b1d;">
       </div>
       <form action="/submit" method="POST">
         <span class="hachimitsu" aria-hidden="true">
@@ -174,6 +179,7 @@
       <a href="https://github.com/orzcode/biosChecker" target="_blank">
         Created by Orz <i class="fa-brands fa-github"></i>
       </a>
+      <%- include('components/kofiModal') %>
     </footer>
 
     <script>

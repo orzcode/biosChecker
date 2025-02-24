@@ -37,8 +37,8 @@ app.use(
 
 // 🚧 Global Rate Limiting
 const limiter = rateLimit({
-  windowMs: 8 * 60 * 1000,
-  max: 8,
+  windowMs: 1 * 60 * 1000,
+  max: 15,
   standardHeaders: true,
   legacyHeaders: false,
   message: "Too many requests, please try again later.",
