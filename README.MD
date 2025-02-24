@@ -8,5 +8,7 @@ This is a personal project created with Node and Express.js, hosted via Koyeb al
 
 **This project is not affiliated with ASRock in any way.** Please note that this is an unofficial tool and not supported by ASRock. As with any such service, things can break, fail to update, URLs can change, or the service may be abandoned at any time. Long-term reliability is not guaranteed.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M2WXDXF)
+
 Credits:
 Favicon designed using resources from Nikita Golubev, via Flaticon.com
