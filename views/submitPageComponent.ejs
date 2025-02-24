@@ -1,0 +1,27 @@
+<div class="submissionDetails">
+	<p>You will get notified when a new BIOS update is available for:</p>
+	<p><strong><%= selectedMobo %></strong>.</p>
+
+	<% const trimmedImgLink = selectedMobo.replace(/\//g, ""); %>
+	<img
+	  class="moboThumb"
+	  src="https://www.asrock.com/mb/photo/<%= trimmedImgLink %>.png"
+	  alt="Selected Motherboard"
+	/>
+
+	<% if (typeof previousMobo !== 'undefined' && previousMobo) { %>
+	<em>
+	  (Previously you were signed up for:
+	  <strong><%= previousMobo %></strong>).
+	</em>
+	<% } %>
+
+	<div class="buttonsDiv">
+	  <button onclick="window.location.href='/'">Return to Main</button>
+	  <p>or</p>
+	  <form action="/unsubscribe" method="POST">
+		<input type="hidden" name="email" value="<%= email %>" />
+		<button type="submit" class="unsub">Unsubscribe</button>
+	  </form>
+	</div>
+  </div>

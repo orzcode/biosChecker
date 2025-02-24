@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ASRock BIOS Checker</title>
+
+    <meta property="og:title" content="ASRock BIOS Checker" />
+    <meta
+      property="og:description"
+      content="Get notified of new bios updates for your ASRock motherboard"
+    />
+    <meta
+      property="og:image"
+      content="https://asrockbioschecker.koyeb.app/images/embed.png?v=1"
+    />
+    <meta property="og:url" content="https://asrockbioschecker.koyeb.app/" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
@@ -18,25 +31,14 @@
       <img src="/images/biosimg.png" />
     </header>
 
-    <main id="main">
-      <div class="checkEmailDetails">
-        <p>
-          <strong><%= email %></strong>
-        </p>
-        <p>
-          Check your email shortly and confirm in order to receive notifications
-          ✉️
-        </p>
-        <button onclick="window.location.href='/'" class="button">
-          Return to Main
-        </button>
-      </div>
-    </main>
+    <main id="main"><%- include(page) %></main>
 
     <footer id="footer">
       <a href="https://github.com/orzcode/biosChecker" target="_blank">
         Created by Orz <i class="fa-brands fa-github"></i>
       </a>
+      <% if (page !== "mainPageComponent") { %> <%-
+      include('components/kofiModal') %> <% } %>
     </footer>
   </body>
 </html>

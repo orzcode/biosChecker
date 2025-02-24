@@ -5,15 +5,17 @@ const router = Router();
 import * as sqlServices from "../public/js/sqlServices.js";
 import { confirmationMail } from "../public/js/mailer.js";
 
-
 router.get("/", async (req, res) => {
   try {
-    const localMoboFile = await fs.readFile("./public/data/models.json", "utf8");
+    const localMoboFile = await fs.readFile(
+      "./public/data/models.json",
+      "utf8"
+    );
 
     const motherboards = JSON.parse(localMoboFile);
 
     // Render the EJS template with the fetched data
-    res.render("allmodels", { motherboards });
+    res.render("layout", { motherboards, page: "mainPageComponent" });
   } catch (err) {
     console.error("Error querying the database:", err);
     res.status(500).send("Failed to fetch models from the database");
@@ -47,13 +49,13 @@ router.post("/submit", async (req, res) => {
       //console.log("User not found; creating, sending confirm, & routing")
       const newUser = await sqlServices.addOrUpdateUser(email, selectedMobo);
       await confirmationMail(newUser);
-      return res.render("checkEmail", { email });
+      return res.render("layout", { email, page: "checkEmailComponent" })
     }
 
     //if user exists but still not verified, remind them to confirm
     if (!user.verified) {
       //console.log("User found but unverified, routing appropriately")
-      return res.render("checkEmail", { email });
+      return res.render("layout", { email, page: "checkEmailComponent" })
     }
 
     //otherwise, updates the existing verified user
@@ -78,7 +80,6 @@ router.get("/confirm/:id", async (req, res) => {
 
     return await updateUserMobo(res, user, null);
     //prevents showing previous mobo for confirmations
-
   } catch (err) {
     console.error("Error confirming user:", err);
     res.status(500).send("Error confirming your email.");
@@ -87,38 +88,40 @@ router.get("/confirm/:id", async (req, res) => {
 
 async function updateUserMobo(res, user, selectedMobo) {
   const previousMobo = user.mobo;
-  
+
   //Prevents showing previous mobo for confirmations
   //This means the user got here from the main page,
   //with (res, user, selectedMobo)
-  if(selectedMobo != null){
-  await sqlServices.addOrUpdateUser(user.email, selectedMobo);
-  res.render("submitPage", {
-    email: user.email,
-    selectedMobo,
-    previousMobo,
-  });
+  if (selectedMobo != null) {
+    await sqlServices.addOrUpdateUser(user.email, selectedMobo);
+    res.render("layout", {
+      email: user.email,
+      selectedMobo,
+      previousMobo,
+      page: "submitPageComponent"
+    });
   }
   //Only used in confirmations
   //This means the user got here from their email link and is a new user,
   //with (res, user, null)
-  else{
-    res.render("submitPage", {
+  else {
+    res.render("layout", {
       email: user.email,
-      selectedMobo: user.mobo
+      selectedMobo: user.mobo,
+      page: "submitPageComponent"
     });
   }
 }
-
 
 //handles both form 'POST' and link-based 'GET' requests
 router.all("/unsubscribe", async (req, res) => {
   const email = req.method === "POST" ? req.body.email : req.query.email;
 
   if (!email) {
-    return res.status(400).render("error", {
+    return res.status(400).render("layout", {
       message: "Missing email address.",
       title: "Error 400",
+      page: "errorComponent"
     });
   }
 
@@ -128,22 +131,24 @@ router.all("/unsubscribe", async (req, res) => {
 
     // Check if the user exists
     if (!user) {
-      return res.status(404).render("error", {
+      return res.status(404).render("layout", {
         message: "User not found.",
         title: "Error 404",
+        page: "errorComponent"
       });
     }
 
     // Remove the user from the database
-    await sqlServices.deleteUser(email)
+    await sqlServices.deleteUser(email);
 
     // Render the unsubscribe confirmation view
-    res.render("unsubscribe", { email: user.email });
+    res.render("layout", { email: user.email, page: "unsubscribeComponent" });
   } catch (error) {
     console.error("Error handling unsubscribe:", error);
-    return res.status(500).render("error", {
+    return res.status(500).render("layout", {
       message: "An error occurred while processing your request.",
       title: "Error 500",
+      page: "errorComponent"
     });
   }
 });
