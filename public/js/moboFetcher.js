@@ -126,7 +126,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
       const biosPage = await checkBiosPage(maker, modelName);
       const newEntry = {
-        id: existingEntry ? existingEntry.id : generateUniqueId("mobo_"),
+        id: existingEntry ? existingEntry.id : await generateUniqueId("mobo_"),
         model: modelName,
         maker: maker,
         socket: socketType,

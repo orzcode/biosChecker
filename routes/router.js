@@ -25,7 +25,7 @@ router.post("/submit", async (req, res) => {
   const { email, selectedMobo } = req.body;
 
   ////validates email input////
-  function validateEmail(email) {
+  async function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
   if (!validateEmail(email)) {
@@ -58,7 +58,7 @@ router.post("/submit", async (req, res) => {
     }
 
     //otherwise, updates the existing verified user
-    return updateUserMobo(res, user, selectedMobo);
+    return await updateUserMobo(res, user, selectedMobo);
   } catch (err) {
     console.error("Error processing request:", err);
     res.status(500).send("An error occurred.");
@@ -77,7 +77,7 @@ router.get("/confirm/:id", async (req, res) => {
       await sqlServices.verifyUser(req.params.id);
     }
 
-    return updateUserMobo(res, user, null);
+    return await updateUserMobo(res, user, null);
     //prevents showing previous mobo for confirmations
 
   } catch (err) {

@@ -122,7 +122,7 @@ export async function addOrUpdateUser(email, mobo) {
     else {
       // Fetch the motherboard data for the given model
       const newUser = {
-        id: generateUniqueId("user_"),
+        id: await generateUniqueId("user_"),
         email,
         mobo,
         givenversion: latestVersion,
