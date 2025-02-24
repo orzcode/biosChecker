@@ -1,5 +1,4 @@
 import { Router } from "express";
-import sql from "../public/js/db.js";
 import fs from "fs/promises";
 const router = Router();
 
@@ -45,7 +44,7 @@ router.post("/submit", async (req, res) => {
 
     //if no user, make new user with unverified status (handled automatically by sql)
     if (!user) {
-      console.log("User not found; creating, sending confirm, & routing")
+      //console.log("User not found; creating, sending confirm, & routing")
       const newUser = await sqlServices.addOrUpdateUser(email, selectedMobo);
       await confirmationMail(newUser);
       return res.render("checkEmail", { email });
@@ -53,7 +52,7 @@ router.post("/submit", async (req, res) => {
 
     //if user exists but still not verified, remind them to confirm
     if (!user.verified) {
-      console.log("User found but unverified, routing appropriately")
+      //console.log("User found but unverified, routing appropriately")
       return res.render("checkEmail", { email });
     }
 
@@ -148,39 +147,5 @@ router.all("/unsubscribe", async (req, res) => {
     });
   }
 });
-
-
-
-//for triggering scheduled tasks on koyeb
-// import { runTasks } from "../public/js/runTasks.js";
-// import { scrapeMotherboards } from "../public/js/moboFetcher.js";
-// const KOYEB_REPOPUSHKEY = process.env.KOYEB_REPOPUSHKEY;
-// router.post("/trigger", async (req, res) => {
-//   try {
-//     const { secret, task } = req.body;
-
-//     // Check if the secret is provided and matches
-//     if (!secret || secret !== KOYEB_REPOPUSHKEY) {
-//       console.warn("Unauthorized request: Invalid or missing permission.");
-//       return res.status(403).send({ error: "Unauthorized: Invalid permission" });
-//     }
-
-//     // Determine which task to run
-//     if (task === "runTasks") {
-//       console.log("Running runTasks.js...");
-//       await runTasks("fromKoyeb");
-//       res.status(200).send({ message: "runTasks.js completed via route trigger" });
-//     } else if (task === "moboFetcher") {
-//       console.log("Running moboFetcher.js...");
-//       await scrapeMotherboards("fromKoyeb");
-//       res.status(200).send({ message: "moboFetcher.js completed via route trigger" });
-//     } else {
-//       res.status(400).send({ error: "Invalid or missing task parameter." });
-//     }
-//   } catch (error) {
-//     console.error("Error triggering task:", error.message);
-//     res.status(500).send({ error: "Internal server error." });
-//   }
-// });
 
 export default router;

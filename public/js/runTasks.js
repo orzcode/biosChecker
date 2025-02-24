@@ -3,10 +3,6 @@ import { notifyUsers } from "./notifyChecker.js";
 
 export async function runTasks(fromKoyeb) {
   console.log(
-    "Debug runTasks.js: RESEND_API_KEY:",
-    process.env.RESEND_API_KEY ? "Loaded" : "Missing"
-  );
-  console.log(
     "---runTasks (daily) - version + notify checks---"
   );
   try {

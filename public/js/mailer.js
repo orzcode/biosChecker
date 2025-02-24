@@ -52,7 +52,7 @@ export async function mailer(userObject, modelsObject) {
     " at ",
     new Date().toISOString()
   );
-  console.log({ data });
+  //console.log({ data });
 }
 
 export async function confirmationMail(userObject) {
@@ -108,7 +108,7 @@ export async function confirmationMail(userObject) {
     " at ",
     new Date().toISOString()
   );
-  console.log({ data });
+  //console.log({ data });
 }
 
 // Test function with hidden objects from .env
