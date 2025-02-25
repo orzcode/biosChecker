@@ -54,23 +54,31 @@
 	  closeBtn.className = "close";
 	  document.querySelector(".modal-content").appendChild(closeBtn);
   
-	  let iframeLoaded = false; // Track whether iframe is created
+	  let iframe = document.createElement("iframe");
+	  iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
+	  iframe.style.border = "none";
+	  iframe.style.width = "100%";
+	  iframe.style.background = "#202020";
+	  iframe.height = "600";
+	  iframe.title = "Support project";
+	  iframe.loading = "lazy"; // Still ensures it's not blocking initial pageload
+	  iframe.style.position = "absolute"; // Keep it off-screen initially
+	  iframe.style.visibility = "hidden";
+  
+	  // Delay loading the iframe slightly after page load
+	  setTimeout(() => {
+		document.body.appendChild(iframe);
+	  }, 3000); // Loads 3 seconds after page load, adjust as needed
   
 	  showBtn.addEventListener("click", () => {
 		modal.style.display = "flex";
 		setTimeout(() => modal.classList.add("show"), 10);
   
-		if (!iframeLoaded) {
-		  const iframe = document.createElement("iframe");
-		  iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-		  iframe.style.border = "none";
-		  iframe.style.width = "100%";
-		  iframe.style.background = "#202020";
-		  iframe.height = "600";
-		  iframe.title = "Support project";
-		  iframe.loading = "lazy"; // Ensure it's still lazy-loaded
+		if (iframe) {
+		  iframe.style.position = ""; // Reset positioning
+		  iframe.style.visibility = "visible";
 		  document.querySelector(".modal-content").appendChild(iframe);
-		  iframeLoaded = true; // Prevents creating multiple iframes
+		  iframe = null; // Ensure it's only moved once
 		}
 	  });
   
@@ -87,6 +95,7 @@
 	  });
 	});
   </script>
+  
   
   <!-- Preload Styles Efficiently -->
   <link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
