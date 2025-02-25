@@ -1221,7 +1221,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m68rfcv270q1ko",
@@ -1230,7 +1230,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m68rfcv2agn1tt",
@@ -1239,7 +1239,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m68rfcv2nodzix",
@@ -1275,7 +1275,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m68rfcv2dvel2l",
@@ -1437,7 +1437,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m68rfcv2jpvbv5",
@@ -2715,7 +2715,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
-    "heldversion": "3.18.AS01[Beta]"
+    "heldversion": "3.20[Beta]"
   },
   {
     "id": "mobo_m6ujzkh81nuuag",
