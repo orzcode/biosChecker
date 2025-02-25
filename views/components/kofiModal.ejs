@@ -61,6 +61,18 @@
 		setTimeout(() => modal.classList.add("show"), 10);
   
 		if (!iframeLoaded) {
+		  // Prevent unload event listeners for bfcache compatibility
+		  (function(w) {
+			const originalAddEventListener = w.addEventListener;
+			w.addEventListener = function(type, listener, options) {
+			  if (type === "unload") {
+				originalAddEventListener.call(w, "pagehide", listener, options);
+				return;
+			  }
+			  originalAddEventListener.call(w, type, listener, options);
+			};
+		  })(window);
+  
 		  const iframe = document.createElement("iframe");
 		  iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
 		  iframe.style.border = "none";
@@ -68,7 +80,7 @@
 		  iframe.style.background = "#202020";
 		  iframe.height = "600";
 		  iframe.title = "Support project";
-		  //iframe.loading = "lazy"; // Ensure it's still lazy-loaded
+		  iframe.loading = "lazy"; // Ensure it's still lazy-loaded
 		  document.querySelector(".modal-content").appendChild(iframe);
 		  iframeLoaded = true; // Prevents creating multiple iframes
 		}
@@ -87,6 +99,7 @@
 	  });
 	});
   </script>
+  
   
   <!-- Preload Styles Efficiently -->
   <link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
