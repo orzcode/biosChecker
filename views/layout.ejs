@@ -18,11 +18,11 @@
     <meta property="og:url" content="https://asrockbioschecker.koyeb.app/" />
     <meta property="og:type" content="website" />
 
+    <link rel="preconnect" href="https://www.google.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
   </head>
@@ -35,7 +35,13 @@
 
     <footer id="footer">
       <a href="https://github.com/orzcode/biosChecker" target="_blank">
-        Created by Orz <i class="fa-brands fa-github"></i>
+        Created by Orz 
+      
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.385.6.11.793-.26.793-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.805 1.305 3.49.997.108-.776.418-1.305.762-1.604-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.123-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.138 3.003.403 2.29-1.553 3.297-1.23 3.297-1.23.654 1.653.24 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.608-2.805 5.627-5.475 5.922.43.37.823 1.102.823 2.222v3.293c0 .32.19.692.8.575C20.565 21.795 24 17.297 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+
+      </i>
       </a>
       <% if (page !== "mainPageComponent") { %> <%-
       include('components/kofiModal') %> <% } %>

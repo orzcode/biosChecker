@@ -11,13 +11,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* --header: #85c226; */
   --header: #6b9b1d;
   --main: #202020;
   /* --main: #4a5942; (Old Steam) */
-
-  /* --1851: #015cb5;
-  --AM5: #ed1c24; */
 
   --1851: #003366;
   --AM5: #660000;
@@ -31,7 +27,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid rgb(142, 53, 53); */
 }
 html {
   font-size: 62.5%;
@@ -75,10 +70,6 @@ html {
   flex-grow: 0;
   flex-shrink: 0;
 }
-h1 {
-  filter: drop-shadow(1px 1px 1px black);
-  font-size: clamp(2rem, 4vw, 4rem);
-}
 .blurb{
   max-width: 80rem;
   display: flex;
@@ -109,7 +100,6 @@ h1 {
   align-items: center;
   flex-grow: 0;
   flex-shrink: 0;
-  /* filter: drop-shadow(0px 0px 4px rgb(var(--header))); */
 }
 a,
 a:visited {
@@ -120,11 +110,6 @@ a:visited {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
-.fa-brands,
-.fa-sharp {
-  color: whitesmoke;
-  font-size: 75%;
 }
 .hachimitsu
 {
@@ -148,9 +133,6 @@ table {
   border-collapse: collapse;
   border-left: 2px solid var(--header);
   border-right: 2px solid var(--header);
-
-  /* outline: 2px solid var(--header);
-  border-radius: 1rem; */
 }
 th,
 td {
@@ -207,7 +189,6 @@ th {
   width: 100%;
   justify-content: space-evenly;
 }
-
 legend {
   color: var(--header);
   text-align: center;
@@ -219,19 +200,16 @@ fieldset {
   display: flex;
   gap: 0 2rem;
 }
-
 .checkbox-btn {
   cursor: pointer;
   position: relative;
   color: var(--header);
 }
-
 .checkbox-btn input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-
 .checkbox-btn span {
   position: absolute;
   top: 0;
@@ -240,21 +218,17 @@ fieldset {
   width: 20px;
   background-color: transparent;
 }
-
 .checkbox-btn input:checked + span {
   background-color: var(--header);
 }
-
 .checkbox-btn span::after {
   content: "";
   position: absolute;
   display: none;
 }
-
 .checkbox-btn input:checked + span::after {
   display: block;
 }
-
 .checkbox-btn span::after {
   left: 7px;
   top: 3px;
@@ -281,5 +255,4 @@ fieldset {
 }
 .unsub {
   filter:grayscale(10%) opacity(0.9);
-
 }
