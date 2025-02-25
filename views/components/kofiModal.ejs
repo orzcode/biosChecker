@@ -1,22 +1,16 @@
 <!-- Ko-Fi Modal Component -->
 <button id="showKoFi">Support project
-	<img src="images/kofi_symbol.svg" alt="Ko-Fi" class="kofi-icon">
+	<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon" loading="lazy">
   </button>
   
   <div id="koFiModal" class="modal">
 	<div class="modal-content">
 	  <span class="close">&times;</span>
-	  <iframe 
-		id="kofiframe"
-		src="https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true"
-		style="border:none;width:100%;background:#202020;"
-		height="600"
-		title="Support project">
-	  </iframe>
 	</div>
   </div>
   
   <style>
+	/* Modal Styling */
 	.modal { 
 	  display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
 	  width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
@@ -55,11 +49,29 @@
 	document.addEventListener("DOMContentLoaded", () => {
 	  const modal = document.getElementById("koFiModal");
 	  const showBtn = document.getElementById("showKoFi");
-	  const closeBtn = document.querySelector(".close");
+	  const closeBtn = document.createElement("span");
+	  closeBtn.innerHTML = "&times;";
+	  closeBtn.className = "close";
+	  document.querySelector(".modal-content").appendChild(closeBtn);
+  
+	  let iframeLoaded = false; // Track whether iframe is created
   
 	  showBtn.addEventListener("click", () => {
 		modal.style.display = "flex";
 		setTimeout(() => modal.classList.add("show"), 10);
+  
+		if (!iframeLoaded) {
+		  const iframe = document.createElement("iframe");
+		  iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
+		  iframe.style.border = "none";
+		  iframe.style.width = "100%";
+		  iframe.style.background = "#202020";
+		  iframe.height = "600";
+		  iframe.title = "Support project";
+		  iframe.loading = "lazy"; // Ensure it's still lazy-loaded
+		  document.querySelector(".modal-content").appendChild(iframe);
+		  iframeLoaded = true; // Prevents creating multiple iframes
+		}
 	  });
   
 	  closeBtn.addEventListener("click", () => {
@@ -75,4 +87,8 @@
 	  });
 	});
   </script>
+  
+  <!-- Preload Styles Efficiently -->
+  <link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   

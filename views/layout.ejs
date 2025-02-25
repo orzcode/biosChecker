@@ -22,13 +22,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'; document.body.style.opacity = 1;">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <style>
+      body { opacity: 0; } /* Prevent unstyled flash */
+
+#main {
+background-color: var(--main);
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+padding: 1rem;
+flex-grow: 1;
+align-items: center;
+justify-content: center;
+}
+    </style>
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
   </head>
   <body>
     <header id="header">
-      <img src="/images/biosimg.png" />
+      <img src="/images/biosimg.webp" alt="header" width="545" height="175"/>
     </header>
 
     <main id="main"><%- include(page) %></main>
