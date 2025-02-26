@@ -26,10 +26,6 @@ app.set("trust proxy", 1);
 // Middleware
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
-app.use(express.static(path.join(__dirname, 'public'), { 
-  maxAge: '12h',
-  etag: true
-})); // Serve static files, but also cache them
 
 // Override cache for models.json (6 hours, must revalidate)
 app.use("/public/data/models.json", (req, res, next) => {
@@ -37,11 +33,15 @@ app.use("/public/data/models.json", (req, res, next) => {
   next();
 });
 
-// Override cache for images & CSS (10 days)
-app.use(["/public/images", "/public/css"], (req, res, next) => {
-  res.setHeader("Cache-Control", "public, max-age=864000, must-revalidate");
+// Cache images for a year (immutable)
+app.use("/public/images", (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
   next();
 });
+
+// Serve static files (etag enabled)
+app.use(express.static(path.join(__dirname, "public"), { etag: true }));
+
 
 // 🛡️ Security middleware
 app.use(
