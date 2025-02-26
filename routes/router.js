@@ -5,6 +5,14 @@ const router = Router();
 import * as sqlServices from "../public/js/sqlServices.js";
 import { confirmationMail } from "../public/js/mailer.js";
 
+// Prevent caching on dynamic routes
+router.use((req, res, next) => {
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
+  next();
+});
+
 router.get("/", async (req, res) => {
   try {
     const localMoboFile = await fs.readFile(

@@ -26,7 +26,11 @@ app.set("trust proxy", 1);
 // Middleware
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
-app.use(express.static(path.join(__dirname, "public"))); // Serve static files
+app.use(express.static(path.join(__dirname, 'public'), { 
+  maxAge: '12h', 
+  etag: true
+})); // Serve static files, but also cache them
+
 
 // 🛡️ Security middleware
 app.use(
