@@ -146,6 +146,9 @@ td {
 th {
   background-color: var(--header);
 }
+tr[data-row] {
+  content-visibility: auto;
+}
 .form-controls {
   display: flex;
   justify-content: center;
