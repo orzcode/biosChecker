@@ -38,7 +38,7 @@ app.use("/public/data/models.json", (req, res, next) => {
 });
 
 // Override cache for images & CSS (10 days)
-app.use(["/images", "/css"], (req, res, next) => {
+app.use(["/public/images", "/public/css"], (req, res, next) => {
   res.setHeader("Cache-Control", "public, max-age=864000, must-revalidate");
   next();
 });
