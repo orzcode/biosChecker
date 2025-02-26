@@ -27,17 +27,17 @@ app.set("trust proxy", 1);
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
 
-// Override cache for models.json (6 hours, must revalidate)
-app.use("/public/data/models.json", (req, res, next) => {
-  res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
-  next();
-});
-
-// Cache images for a year (immutable)
+// 1. Long-term caching for images
 app.use("/public/images", (req, res, next) => {
   res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
   next();
-});
+}, express.static(path.join(__dirname, "public/images"), { etag: true }));
+
+// 2. Special case for models.json
+app.use("/public/data/models.json", (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
+  next();
+}, express.static(path.join(__dirname, "public/data"), { etag: true }));
 
 // Serve static files (etag enabled)
 app.use(express.static(path.join(__dirname, "public"), { etag: true }));
