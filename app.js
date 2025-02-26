@@ -27,10 +27,21 @@ app.set("trust proxy", 1);
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
 app.use(express.static(path.join(__dirname, 'public'), { 
-  maxAge: '12h', 
+  maxAge: '12h',
   etag: true
 })); // Serve static files, but also cache them
 
+// Override cache for models.json (6 hours, must revalidate)
+app.use("/public/data/models.json", (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
+  next();
+});
+
+// Override cache for images & CSS (10 days)
+app.use(["/images", "/css"], (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=864000, must-revalidate");
+  next();
+});
 
 // 🛡️ Security middleware
 app.use(
