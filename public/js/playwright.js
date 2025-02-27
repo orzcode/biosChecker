@@ -13,21 +13,13 @@ export async function scrapeWithPlaywright(url) {
   try {
     await page.goto(url, { waitUntil: "domcontentloaded" });
 
-    // Locate the BIOS table by finding the <h3>BIOS</h3> header and selecting the next <table>
-    const biosTable = await page.$("h3:text('BIOS') + table");
-
-    if (!biosTable) {
-      throw new Error("BIOS table not found.");
-    }
-
-    const firstRow = await biosTable.$("tbody tr:first-child");
-
-    if (!firstRow) {
-      throw new Error("No BIOS entries found.");
-    }
-
-    const rawVersion = await firstRow.textContent("td:first-child");
-    const rawDate = await firstRow.textContent("td:nth-child(2)");
+    // Extract the latest BIOS version and date from the first table only
+    const rawVersion = await page.textContent(
+      "table:first-of-type tbody tr:first-child td:first-child"
+    );
+    const rawDate = await page.textContent(
+      "table:first-of-type tbody tr:first-child td:nth-child(2)"
+    );
 
     if (!rawVersion || !rawDate) {
       throw new Error("BIOS version or release date not found.");

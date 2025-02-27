@@ -53,12 +53,8 @@ async function scrapeBIOSInfo(url) {
       const html = await response.text();
       const $ = cheerio.load(html);
 
-      // Find the BIOS table by locating the <h3>BIOS</h3> header and selecting the next <table>
-      const biosTable = $("h3")
-        .filter((_, el) => $(el).text().trim() === "BIOS")
-        .next("table");
-
-      const firstRow = biosTable.find("tbody tr:first-child");
+      // Get the first table and its first row
+      const firstRow = $("table:first-of-type tbody tr:first-child");
 
       // Extract version from the first column
       const version = firstRow.find("td:first-child").text().trim();
