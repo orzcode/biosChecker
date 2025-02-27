@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { extractVersionInfo } from "./versionChecker";
+import { extractVersionInfo } from "./versionChecker.js";
 
 export async function scrapeWithPlaywright(url) {
   console.log("Playwright initiated...");

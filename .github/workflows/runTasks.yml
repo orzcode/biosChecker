@@ -2,7 +2,7 @@ name: runTasks (daily)
 
 on:
   schedule:
-    - cron: "0 4 * * *" # Scheduled to run daily at 5:00PM NZT
+    - cron: "0 18 * * *" # Scheduled to run daily at 6:00AM NZT
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:

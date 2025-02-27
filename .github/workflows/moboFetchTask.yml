@@ -2,7 +2,7 @@ name: moboFetcher (weekly)
 
 on:
   schedule:
-    - cron: "0 16 * * 0" # (This will trigger at 4:00AM NZT every Sunday.)
+    - cron: "0 6 * * 0" # (This will trigger at 6:00PM NZT every Sunday.)
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
