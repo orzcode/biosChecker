@@ -1,5 +1,75 @@
 [
   {
+    "id": "mobo_m68rfcv2rylnqg",
+    "model": "Z890I Nova WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
+    "heldversion": "2.23.AS05[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2ljza5k",
+    "model": "Z890 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
+    "heldversion": "2.21.AS05[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2k6vc1c",
+    "model": "B860 Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
+    "heldversion": "1.21.AS04[Beta]",
+    "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv2kjnqn4",
+    "model": "B860M Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
+    "heldversion": "1.18.AS01[Beta]",
+    "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv22uz6bk",
+    "model": "B860I Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
+    "heldversion": "1.13.AS01[Beta]",
+    "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv2iafmq0",
+    "model": "B860M LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "1.09.AS01[Beta]",
+    "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv2wfo7ob",
+    "model": "Z890 Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
     "id": "mobo_m68rfcv2tjc3b0",
     "model": "B860 Steel Legend WiFi",
     "maker": "Intel",
@@ -8,6 +78,126 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "1.21.AS04[Beta]",
     "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv2xbr8z8",
+    "model": "B860I WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
+    "heldversion": "1.20.AS01[Beta]",
+    "helddate": "2025/2/20"
+  },
+  {
+    "id": "mobo_m68rfcv2ove8a3",
+    "model": "Z890 Taichi OCF",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
+    "heldversion": "2.26.AS05[Beta]20241118",
+    "helddate": "2025/2/192024/12/5"
+  },
+  {
+    "id": "mobo_m68rfcv2s1nztq",
+    "model": "Z890 Taichi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
+    "heldversion": "2.20.AS05[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv20vusni",
+    "model": "Z890 Taichi Lite",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
+    "heldversion": "2.20.AS05[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2n25xyb",
+    "model": "Z890 Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2vhr5qi",
+    "model": "Z890 Pro RS WiFi White",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2ynbm5k",
+    "model": "Z890 Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2b3n21o",
+    "model": "Z890 Pro RS",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2nwz4xe",
+    "model": "Z890 Pro-A WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2qp5c7g",
+    "model": "Z890 Pro-A",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A/bios.html",
+    "heldversion": "2.22.AS07[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv282gxg6",
+    "model": "Z890 LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "2.21.AS05[Beta]",
+    "helddate": "2025/2/19"
+  },
+  {
+    "id": "mobo_m68rfcv2wndyez",
+    "model": "Z890M Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
+    "heldversion": "2.21.AS05[Beta]",
+    "helddate": "2025/2/19"
   },
   {
     "id": "mobo_m68rfcv2hewjne",
@@ -57,16 +247,6 @@
     "link": "https://asrock.com/mb/intel/B860%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html",
     "heldversion": "1.24.AS04[Beta]",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv2nin551",
-    "model": "B860M Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "1.18.AS01[Beta]",
     "helddate": "2025/2/20"
   },
   {
@@ -198,189 +378,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
     "heldversion": "21.02",
     "helddate": "2025/1/15"
-  },
-  {
-    "id": "mobo_m68rfcv2rylnqg",
-    "model": "Z890I Nova WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2ljza5k",
-    "model": "Z890 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2k6vc1c",
-    "model": "B860 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv2kjnqn4",
-    "model": "B860M Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv22uz6bk",
-    "model": "B860I Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv2iafmq0",
-    "model": "B860M LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "1.09.AS01[Beta]",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv2wfo7ob",
-    "model": "Z890 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2xbr8z8",
-    "model": "B860I WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "1.20.AS01[Beta]",
-    "helddate": "2025/2/20"
-  },
-  {
-    "id": "mobo_m68rfcv2ove8a3",
-    "model": "Z890 Taichi OCF",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
-    "heldversion": "2.26.AS05[Beta]20241118",
-    "helddate": "2025/2/192024/12/5"
-  },
-  {
-    "id": "mobo_m68rfcv2s1nztq",
-    "model": "Z890 Taichi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "2.20.AS05[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv20vusni",
-    "model": "Z890 Taichi Lite",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "2.20.AS05[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2n25xyb",
-    "model": "Z890 Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2vhr5qi",
-    "model": "Z890 Pro RS WiFi White",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2ynbm5k",
-    "model": "Z890 Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2b3n21o",
-    "model": "Z890 Pro RS",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2nwz4xe",
-    "model": "Z890 Pro-A WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2qp5c7g",
-    "model": "Z890 Pro-A",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A/bios.html",
-    "heldversion": "2.22.AS07[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv282gxg6",
-    "model": "Z890 LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "2.21.AS05[Beta]",
-    "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2wndyez",
-    "model": "Z890M Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
-    "helddate": "2025/2/19"
   },
   {
     "id": "mobo_m68rfcv2hux6re",
@@ -689,6 +686,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html",
+    "heldversion": "11.01",
     "helddate": "2024/10/1"
   },
   {
@@ -698,6 +696,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html",
+    "heldversion": "6.02",
     "helddate": "2024/12/11"
   },
   {
@@ -707,6 +706,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html",
+    "heldversion": "12.02",
     "helddate": "2024/12/11"
   },
   {
@@ -716,6 +716,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html",
+    "heldversion": "8.01",
     "helddate": "2024/10/1"
   },
   {
@@ -725,6 +726,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "8.01",
     "helddate": "2024/10/1"
   },
   {
@@ -734,6 +736,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
+    "heldversion": "9.02",
     "helddate": "2024/12/6"
   },
   {
@@ -743,6 +746,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
+    "heldversion": "5.03",
     "helddate": "2024/12/6"
   },
   {
@@ -752,6 +756,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
+    "heldversion": "12.02",
     "helddate": "2025/1/16"
   },
   {
@@ -761,6 +766,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
+    "heldversion": "10.02",
     "helddate": "2025/1/15"
   },
   {
@@ -1330,6 +1336,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.20[Beta]",
     "helddate": "2025/2/26"
   },
   {
@@ -1339,6 +1346,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.20[Beta]",
     "helddate": "2025/2/26"
   },
   {
@@ -1398,6 +1406,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.20[Beta]",
     "helddate": "2025/2/24"
   },
   {
@@ -1567,6 +1576,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850M%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/13"
   },
   {
@@ -1746,6 +1756,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
   },
   {
@@ -1755,6 +1766,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
   },
   {
@@ -1764,6 +1776,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
   },
   {
@@ -1953,6 +1966,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
   },
   {
@@ -2912,6 +2926,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
+    "heldversion": "8.04",
     "helddate": "2025/1/15"
   },
   {
@@ -2921,6 +2936,7 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
+    "heldversion": "8.02",
     "helddate": "2025/1/15"
   },
   {
@@ -2930,6 +2946,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
+    "heldversion": "3.20[Beta]",
     "helddate": "2025/2/24"
   },
   {
@@ -2979,6 +2996,7 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
   },
   {
@@ -2988,6 +3006,7 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
+    "heldversion": "2.20.AS05[Beta]",
     "helddate": "2025/2/19"
   },
   {
@@ -2997,6 +3016,17 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.18.AS02[Beta]",
     "helddate": "2025/2/17"
+  },
+  {
+    "id": "mobo_m68rfcv2nin551",
+    "model": "B860M Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "1.18.AS01[Beta]",
+    "helddate": "2025/2/20"
   }
 ]
