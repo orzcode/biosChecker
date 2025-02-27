@@ -124,7 +124,7 @@ export async function updateModels(fromKoyeb) {
     } else {
       console.log(`No update needed for ${model}.`);
     }
-    console.log("\n");
+    console.log("\n\n");
 
     // Add a 1-second delay before proceeding to the next motherboard
     await delay(1000); // Delay for 1000 milliseconds (1 second)
