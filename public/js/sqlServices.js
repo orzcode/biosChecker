@@ -26,7 +26,7 @@ export async function saveMobos(moboOrMobos) {
   try {
     for (const mobo of mobosArray) {
       await sql`
-        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion)
+        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
         VALUES (
           ${mobo.id},
           ${mobo.model},
@@ -34,7 +34,8 @@ export async function saveMobos(moboOrMobos) {
           ${mobo.socket},
           ${mobo.link},
           ${mobo.biospage},
-          ${mobo.heldversion}
+          ${mobo.heldversion},
+          ${mobo.helddate}
         )
         ON CONFLICT (id) DO UPDATE
         SET 
@@ -43,7 +44,8 @@ export async function saveMobos(moboOrMobos) {
           socket = EXCLUDED.socket,
           link = EXCLUDED.link,
           biospage = EXCLUDED.biospage,
-          heldversion = EXCLUDED.heldversion;
+          heldversion = EXCLUDED.heldversion,
+          helddate = EXCLUDED.helddate;
       `;
     }
     console.log("Models saved or updated successfully.");
@@ -86,13 +88,14 @@ export async function saveUsers(userOrUsers) {
   try {
     for (const user of usersArray) {
       await sql`
-        INSERT INTO users (id, email, mobo, givenversion, lastcontacted, verified)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.lastcontacted}, ${user.verified})
+        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
+        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified})
         ON CONFLICT (id) DO UPDATE
         SET 
           email = EXCLUDED.email,
           mobo = EXCLUDED.mobo,
           givenversion = EXCLUDED.givenversion,
+          givendate = EXCLUDED.givendate,
           lastcontacted = EXCLUDED.lastcontacted,
           verified = EXCLUDED.verified;
       `;
@@ -108,6 +111,7 @@ export async function addOrUpdateUser(email, mobo) {
 
   const model = await getMobos(mobo);
   const latestVersion = model ? model[0].heldversion : null;
+  const latestDate = model ? model[0].helddate : null;
 
   //updates user mobo choice
   try {
@@ -126,6 +130,7 @@ export async function addOrUpdateUser(email, mobo) {
         email,
         mobo,
         givenversion: latestVersion,
+        givendate: latestDate,
         lastcontacted: new Date().toISOString(),
         verified: false,
       };

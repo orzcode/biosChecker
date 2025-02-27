@@ -1,20 +1,7 @@
 import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import sql from "./db.js";
-
-// Function to compare version strings properly
-function compareVersions(v1, v2) {
-  const parts1 = v1.split(".").map(Number);
-  const parts2 = v2.split(".").map(Number);
-
-  for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
-    const num1 = parts1[i] || 0;
-    const num2 = parts2[i] || 0;
-    if (num1 > num2) return 1;
-    if (num1 < num2) return -1;
-  }
-  return 0;
-}
+import { isNewerDate } from "./versionChecker.js";
 
 export async function notifyUsers() {
   try {
@@ -41,6 +28,7 @@ export async function notifyUsers() {
         email,
         mobo: userMobo,
         givenversion,
+        givendate,
         lastcontacted,
         verified,
       } = user;
@@ -66,30 +54,19 @@ export async function notifyUsers() {
       }
 
       //main function proceeds below
-
-      const heldversion = mobo.heldversion
-        .match(/\d+(\.\d+)*|[A-Z]+/g)
-        ?.join("");
-      const userVersion = givenversion.match(/\d+(\.\d+)*|[A-Z]+/g)?.join("");
-
-      if (!heldversion || !userVersion) {
-        console.warn(
-          `Invalid version data for ${userMobo} (User: ${id}). Skipping.`
-        );
-        continue;
-      }
-
-      // Compare versions using compareVersions
-      if (compareVersions(heldversion, userVersion) > 0) {
+      
+      // Check if there's a newer BIOS version based on release date
+      if (isNewerDate(givendate, mobo.helddate)) {
         console.log(`Notifying ${id} about ${userMobo} update.`);
 
         try {
           // Send the notification email
           await mailer(user, mobo);
 
-          // Update lastcontacted timestamp and version
+          // Update lastcontacted timestamp, version, and date
           user.lastcontacted = new Date().toISOString();
           user.givenversion = mobo.heldversion;
+          user.givendate = mobo.helddate;
           updatedUsers.push(user);
         } catch (emailError) {
           console.error(

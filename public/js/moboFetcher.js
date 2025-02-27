@@ -135,6 +135,7 @@ export async function scrapeMotherboards(fromKoyeb) {
           .replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
         heldversion: existingEntry ? existingEntry.heldversion : null,
+        helddate: existingEntry ? existingEntry.helddate : '2000/1/1',
       };
 
       // Add to the full list for JSON

@@ -11,28 +11,24 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function isNewerVersion(held, found) {
-  const parseVersion = (version) =>
-    version.match(/[\dA-Za-z]+/g).map((part) =>
-      /^\d+$/.test(part) ? parseInt(part, 10) : part
-    );
-
-  const heldParts = parseVersion(held);
-  const foundParts = parseVersion(found);
-
-  for (let i = 0; i < Math.max(heldParts.length, foundParts.length); i++) {
-    const heldPart = heldParts[i] ?? 0;
-    const foundPart = foundParts[i] ?? 0;
-
-    if (heldPart !== foundPart) {
-      return foundPart > heldPart;
-    }
-  }
-
-  return false;
+// Converts date strings like "2025/2/20" to Date objects for comparison
+export async function parseDate(dateStr) {
+  // Split the date string and convert to a Date object
+  const [year, month, day] = dateStr.split("/").map(Number);
+  return new Date(year, month - 1, day); // Month is 0-indexed in JavaScript Date
 }
 
-async function scrapeBIOSVersion(url) {
+// Checks if foundDate is newer than heldDate
+export async function isNewerDate(heldDate, foundDate) {
+  if (!heldDate) return true; // If no held date, consider found as newer
+  
+  const heldDateTime = parseDate(heldDate).getTime();
+  const foundDateTime = parseDate(foundDate).getTime();
+  
+  return foundDateTime > heldDateTime;
+}
+
+async function scrapeBIOSInfo(url) {
   // Determine the subdomain (www or pg)
   const isPGSubdomain = url.includes("pg.");
 
@@ -57,19 +53,20 @@ async function scrapeBIOSVersion(url) {
       const html = await response.text();
       const $ = cheerio.load(html);
 
-      const rawVersion = $("tbody tr:first-child td:first-child").html()?.trim();
-      if (!rawVersion) {
-        throw new Error("Version number not found.");
+      // Get the first row in the table
+      const firstRow = $("tbody tr:first-child");
+      
+      // Extract version from the first column
+      const version = firstRow.find("td:first-child").text().trim();
+      
+      // Extract date from the second column
+      const releaseDate = firstRow.find("td:nth-child(2)").text().trim();
+
+      if (!version || !releaseDate) {
+        throw new Error("Version or date information not found.");
       }
 
-      const fullVersion = rawVersion.replace(/<[^>]*>/g, "").trim();
-      const numericVersion = fullVersion.match(/[\d.]+/)?.[0];
-
-      if (!numericVersion) {
-        throw new Error("Unable to parse numeric version.");
-      }
-
-      return { fullVersion, numericVersion };
+      return { version, releaseDate };
     } catch (err) {
       console.error(`Fetch scraping error at ${url}: ${err.message}`);
       return null;
@@ -82,28 +79,30 @@ export async function updateModels(fromKoyeb) {
   const updatedMobos = [];
 
   for (const mobo of mobos) {
-    const { model, biospage, heldversion } = mobo;
+    const { model, biospage, heldversion, helddate } = mobo;
 
     console.log(`Checking BIOS for: ${model}...`);
 
-    // Scrape the latest BIOS version
-    const scrapedVersion = await scrapeBIOSVersion(biospage);
+    // Scrape the latest BIOS information
+    const scrapedInfo = await scrapeBIOSInfo(biospage);
 
-    if (!scrapedVersion) {
-      console.error(`Failed to fetch version for ${model}. Skipping.`);
+    if (!scrapedInfo) {
+      console.error(`Failed to fetch info for ${model}. Skipping.`);
       continue;
     }
 
-    const { fullVersion, numericVersion } = scrapedVersion;
+    const { version, releaseDate } = scrapedInfo;
 
     console.log(
-      `Found version: ${fullVersion} (held: ${heldversion || "none"})`
+      `Found version: ${version} (date: ${releaseDate}) | Current: ${heldversion || "none"} (date: ${helddate || "none"})`
     );
 
-    if (!heldversion || isNewerVersion(heldversion, fullVersion)) {
-      mobo.heldversion = fullVersion; // Save the full version string
+    // Compare dates to determine if an update is needed
+    if (isNewerDate(helddate, releaseDate)) {
+      mobo.heldversion = version;
+      mobo.helddate = releaseDate;
       console.log(
-        `Updating ${model} from ${heldversion || "none"} to ${fullVersion}`
+        `Updating ${model} from ${heldversion || "none"} (${helddate || "none"}) to ${version} (${releaseDate})`
       );
       updatedMobos.push(mobo); // Add to updated mobos list
     } else {
