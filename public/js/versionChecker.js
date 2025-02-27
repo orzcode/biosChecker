@@ -11,6 +11,27 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function isNewerVersion(held, found) {
+  const parseVersion = (version) =>
+    version.match(/[\dA-Za-z]+/g).map((part) =>
+      /^\d+$/.test(part) ? parseInt(part, 10) : part
+    );
+
+  const heldParts = parseVersion(held);
+  const foundParts = parseVersion(found);
+
+  for (let i = 0; i < Math.max(heldParts.length, foundParts.length); i++) {
+    const heldPart = heldParts[i] ?? 0;
+    const foundPart = foundParts[i] ?? 0;
+
+    if (heldPart !== foundPart) {
+      return foundPart > heldPart;
+    }
+  }
+
+  return false;
+}
+
 async function scrapeBIOSVersion(url) {
   // Determine the subdomain (www or pg)
   const isPGSubdomain = url.includes("pg.");
@@ -79,10 +100,7 @@ export async function updateModels(fromKoyeb) {
       `Found version: ${fullVersion} (held: ${heldversion || "none"})`
     );
 
-    // Extract numeric part of heldversion for comparison
-    const heldNumeric = heldversion?.match(/[\d.]+/)?.[0];
-
-    if (!heldNumeric || parseFloat(numericVersion) > parseFloat(heldNumeric)) {
+    if (!heldversion || isNewerVersion(heldversion, fullVersion)) {
       mobo.heldversion = fullVersion; // Save the full version string
       console.log(
         `Updating ${model} from ${heldversion || "none"} to ${fullVersion}`
@@ -91,7 +109,7 @@ export async function updateModels(fromKoyeb) {
     } else {
       console.log(`No update needed for ${model}.`);
     }
-      console.log("\n");
+    console.log("\n");
 
     // Add a 1-second delay before proceeding to the next motherboard
     await delay(1000); // Delay for 1000 milliseconds (1 second)
@@ -120,12 +138,12 @@ export async function updateModels(fromKoyeb) {
       console.error("Failed to save models.json:", error);
     }
 
-      //ONLY USED IN KOYEB TASK!
-      if(fromKoyeb === "fromKoyeb"){
+    //ONLY USED IN KOYEB TASK!
+    if(fromKoyeb === "fromKoyeb"){
       console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       koyebToRepo(); // Push changes to GitHub
-      }
-      //ONLY USED IN KOYEB TASK!
+    }
+    //ONLY USED IN KOYEB TASK!
 
     console.log("BIOS version checks complete - proceeding to notifycheck");
   } catch (error) {
