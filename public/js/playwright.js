@@ -13,16 +13,19 @@ export async function scrapeWithPlaywright(url) {
   try {
     await page.goto(url, { waitUntil: "domcontentloaded" });
 
-    // Extract the latest BIOS date
+    // Extract the latest BIOS version and date
+    const rawVersion = await page.textContent("tbody tr:first-child td:first-child");
     const rawDate = await page.textContent("tbody tr:first-child td:nth-child(2)");
-    if (!rawDate) {
-      throw new Error("BIOS release date not found.");
+    
+    if (!rawVersion || !rawDate) {
+      throw new Error("BIOS version or release date not found.");
     }
 
+    const version = rawVersion.trim();
     const releaseDate = rawDate.trim();
-    console.log(`BIOS release date found: ${releaseDate}`);
+    console.log(`BIOS version found: ${version}, BIOS release date found: ${releaseDate}`);
 
-    return { releaseDate };
+    return { version, releaseDate };
   } catch (err) {
     console.error(`Playwright scraping error at ${url}: ${err.message}`);
     return null;
@@ -30,6 +33,7 @@ export async function scrapeWithPlaywright(url) {
     await browser.close();
   }
 }
+
 
 
 
