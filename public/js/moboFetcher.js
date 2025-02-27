@@ -113,6 +113,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
     const relevantSockets = ["1700", "1851", "am4", "am5"];
     const existingModels = await getMobos(); // Fetch existing models from the database
+    //await sql.end()
     const newOrUpdatedModels = []; // Only save these models
     const allEntries = []; // To build the full JSON content
 

@@ -1,7 +1,7 @@
 import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import sql from "./db.js";
-import { isNewerDate } from "./versionChecker.js";
+import { parseDate, isNewerDate } from "./versionChecker.js";
 
 export async function notifyUsers() {
   try {
@@ -56,7 +56,7 @@ export async function notifyUsers() {
       //main function proceeds below
       
       // Check if there's a newer BIOS version based on release date
-      if (isNewerDate(givendate, mobo.helddate)) {
+      if (await isNewerDate(givendate, mobo.helddate)) {
         console.log(`Notifying ${id} about ${userMobo} update.`);
 
         try {

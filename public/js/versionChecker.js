@@ -22,8 +22,8 @@ export async function parseDate(dateStr) {
 export async function isNewerDate(heldDate, foundDate) {
   if (!heldDate) return true; // If no held date, consider found as newer
   
-  const heldDateTime = parseDate(heldDate).getTime();
-  const foundDateTime = parseDate(foundDate).getTime();
+  const heldDateTime = (await parseDate(heldDate)).getTime();
+  const foundDateTime = (await parseDate(foundDate)).getTime();
   
   return foundDateTime > heldDateTime;
 }
@@ -98,7 +98,7 @@ export async function updateModels(fromKoyeb) {
     );
 
     // Compare dates to determine if an update is needed
-    if (isNewerDate(helddate, releaseDate)) {
+    if (await isNewerDate(helddate, releaseDate)) {
       mobo.heldversion = version;
       mobo.helddate = releaseDate;
       console.log(
