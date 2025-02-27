@@ -1,4 +1,4 @@
-![ASRock BIOS Update Checker](public/images/biosimg.png)
+![ASRock BIOS Update Checker](public/images/biosimg.webp)
 
 # ASRock Bios Update Checker
 
