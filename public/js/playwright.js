@@ -1,4 +1,5 @@
 import { chromium } from "playwright";
+import { extractVersionInfo } from "./versionChecker";
 
 export async function scrapeWithPlaywright(url) {
   console.log("Playwright initiated...");
@@ -12,26 +13,11 @@ export async function scrapeWithPlaywright(url) {
   console.log(`Playwrighting to ${url}...`);
   try {
     await page.goto(url, { waitUntil: "domcontentloaded" });
-
-    // Extract the latest BIOS version and date from the first table only
-    const rawVersion = await page.textContent(
-      "table:first-of-type tbody tr:first-child td:first-child"
-    );
-    const rawDate = await page.textContent(
-      "table:first-of-type tbody tr:first-child td:nth-child(2)"
-    );
-
-    if (!rawVersion || !rawDate) {
-      throw new Error("BIOS version or release date not found.");
-    }
-
-    const version = rawVersion.trim();
-    const releaseDate = rawDate.trim();
-    console.log(
-      `BIOS version found: ${version}, BIOS release date found: ${releaseDate}`
-    );
-
-    return { version, releaseDate };
+  
+    // Create a Playwright-specific extractor function
+    const playwrightExtractor = async (selector) => await page.textContent(selector);
+    
+    return await extractVersionInfo(playwrightExtractor);
   } catch (err) {
     console.error(`Playwright scraping error at ${url}: ${err.message}`);
     return null;

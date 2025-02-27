@@ -28,6 +28,28 @@ export async function isNewerDate(heldDate, foundDate) {
   return foundDateTime > heldDateTime;
 }
 
+export async function extractVersionInfo(extractor) {
+  // Get the first row from the first table
+  const firstRowSelector = "table:first-of-type tbody tr:first-child";
+  const versionSelector = `${firstRowSelector} td:first-child`;
+  const dateSelector = `${firstRowSelector} td:nth-child(2)`;
+
+  // Extract data using the provided extractor function
+  const rawVersion = await extractor(versionSelector);
+  const rawDate = await extractor(dateSelector);
+
+  if (!rawVersion || !rawDate) {
+    throw new Error("Version or date information not found.");
+  }
+
+  const version = rawVersion.trim();
+  const releaseDate = rawDate.trim();
+  
+  console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
+  return { version, releaseDate };
+}
+//
+
 async function scrapeBIOSInfo(url) {
   // Determine the subdomain (www or pg)
   const isPGSubdomain = url.includes("pg.");
@@ -45,28 +67,18 @@ async function scrapeBIOSInfo(url) {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
         },
       });
-
+    
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-
+    
       const html = await response.text();
       const $ = cheerio.load(html);
-
-      // Get the first table and its first row
-      const firstRow = $("table:first-of-type tbody tr:first-child");
-
-      // Extract version from the first column
-      const version = firstRow.find("td:first-child").text().trim();
-
-      // Extract date from the second column
-      const releaseDate = firstRow.find("td:nth-child(2)").text().trim();
-
-      if (!version || !releaseDate) {
-        throw new Error("Version or date information not found.");
-      }
-
-      return { version, releaseDate };
+    
+      // Create a Cheerio-specific extractor function
+      const cheerioExtractor = (selector) => $(selector).text();
+      
+      return await extractVersionInfo(cheerioExtractor);
     } catch (err) {
       console.error(`Fetch scraping error at ${url}: ${err.message}`);
       return null;
