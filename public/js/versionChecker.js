@@ -21,10 +21,10 @@ export async function parseDate(dateStr) {
 // Checks if foundDate is newer than heldDate
 export async function isNewerDate(heldDate, foundDate) {
   if (!heldDate) return true; // If no held date, consider found as newer
-  
+
   const heldDateTime = (await parseDate(heldDate)).getTime();
   const foundDateTime = (await parseDate(foundDate)).getTime();
-  
+
   return foundDateTime > heldDateTime;
 }
 
@@ -53,12 +53,16 @@ async function scrapeBIOSInfo(url) {
       const html = await response.text();
       const $ = cheerio.load(html);
 
-      // Get the first row in the table
-      const firstRow = $("tbody tr:first-child");
-      
+      // Find the BIOS table by locating the <h3>BIOS</h3> header and selecting the next <table>
+      const biosTable = $("h3")
+        .filter((_, el) => $(el).text().trim() === "BIOS")
+        .next("table");
+
+      const firstRow = biosTable.find("tbody tr:first-child");
+
       // Extract version from the first column
       const version = firstRow.find("td:first-child").text().trim();
-      
+
       // Extract date from the second column
       const releaseDate = firstRow.find("td:nth-child(2)").text().trim();
 
@@ -94,7 +98,9 @@ export async function updateModels(fromKoyeb) {
     const { version, releaseDate } = scrapedInfo;
 
     console.log(
-      `Found version: ${version} (date: ${releaseDate}) | Current: ${heldversion || "none"} (date: ${helddate || "none"})`
+      `Found version: ${version} (date: ${releaseDate}) | Current: ${
+        heldversion || "none"
+      } (date: ${helddate || "none"})`
     );
 
     // Compare dates to determine if an update is needed
@@ -102,7 +108,9 @@ export async function updateModels(fromKoyeb) {
       mobo.heldversion = version;
       mobo.helddate = releaseDate;
       console.log(
-        `Updating ${model} from ${heldversion || "none"} (${helddate || "none"}) to ${version} (${releaseDate})`
+        `Updating ${model} from ${heldversion || "none"} (${
+          helddate || "none"
+        }) to ${version} (${releaseDate})`
       );
       updatedMobos.push(mobo); // Add to updated mobos list
     } else {
@@ -138,7 +146,7 @@ export async function updateModels(fromKoyeb) {
     }
 
     //ONLY USED IN KOYEB TASK!
-    if(fromKoyeb === "fromKoyeb"){
+    if (fromKoyeb === "fromKoyeb") {
       console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       koyebToRepo(); // Push changes to GitHub
     }

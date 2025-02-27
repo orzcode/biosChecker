@@ -13,17 +13,31 @@ export async function scrapeWithPlaywright(url) {
   try {
     await page.goto(url, { waitUntil: "domcontentloaded" });
 
-    // Extract the latest BIOS version and date
-    const rawVersion = await page.textContent("tbody tr:first-child td:first-child");
-    const rawDate = await page.textContent("tbody tr:first-child td:nth-child(2)");
-    
+    // Locate the BIOS table by finding the <h3>BIOS</h3> header and selecting the next <table>
+    const biosTable = await page.$("h3:text('BIOS') + table");
+
+    if (!biosTable) {
+      throw new Error("BIOS table not found.");
+    }
+
+    const firstRow = await biosTable.$("tbody tr:first-child");
+
+    if (!firstRow) {
+      throw new Error("No BIOS entries found.");
+    }
+
+    const rawVersion = await firstRow.textContent("td:first-child");
+    const rawDate = await firstRow.textContent("td:nth-child(2)");
+
     if (!rawVersion || !rawDate) {
       throw new Error("BIOS version or release date not found.");
     }
 
     const version = rawVersion.trim();
     const releaseDate = rawDate.trim();
-    console.log(`BIOS version found: ${version}, BIOS release date found: ${releaseDate}`);
+    console.log(
+      `BIOS version found: ${version}, BIOS release date found: ${releaseDate}`
+    );
 
     return { version, releaseDate };
   } catch (err) {
@@ -33,9 +47,6 @@ export async function scrapeWithPlaywright(url) {
     await browser.close();
   }
 }
-
-
-
 
 // Call the function with the BIOS page URL
 //scrapeWithPlaywright('https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/bios.html');
