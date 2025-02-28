@@ -120,7 +120,7 @@ export async function addOrUpdateUser(email, mobo) {
       existingUser.mobo = mobo;
       existingUser.givenversion = latestVersion;
       await saveUsers(existingUser);
-      console.log(`Updated user ${existingUser.id} with mobo: ${mobo} + latestheldversion`);
+      console.log(`Updated user ${existingUser.id} with mobo: ${mobo} + ${latestVersion}`);
     }
     //otherwise creates new user (with unverified status)
     else {
