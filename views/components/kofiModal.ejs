@@ -6,7 +6,14 @@
   <div id="koFiModal" class="modal">
 	<div class="modal-content">
 	  <span class="close">&times;</span>
+	  <div class="kofi-container" id="kofiContainer">
+		<!-- Iframe will be inserted here when needed -->
+	  </div>
 	</div>
+  </div>
+  
+  <div class="hidden-iframe-container" id="hiddenIframeContainer">
+	<!-- Hidden preloaded iframe -->
   </div>
   
   <style>
@@ -18,7 +25,7 @@
 	  transition: opacity 0.3s ease-in-out; 
 	}
 	.modal-content { 
-	  background-color: #ffffff; padding: 10px; border-radius: 8px; max-width: 90%;
+	  background-color: #ffffff; padding: 10px; border-radius: 8px; max-width: 92%;
 	  position: relative; transform: translateY(-20px); transition: transform 0.3s ease-in-out; 
 	}
 	.close { 
@@ -44,6 +51,17 @@
 	  width: 20px; height: auto;
 	}
 	
+	/* Hidden iframe container with content-visibility */
+	.hidden-iframe-container {
+	  content-visibility: auto;
+	  contain-intrinsic-size: 0 550px;
+	  position: absolute;
+	  width: 0;
+	  height: 0;
+	  overflow: hidden;
+	  visibility: hidden;
+	}
+	
 	/* Loading Indicator */
 	.kofi-loader {
 	  display: flex;
@@ -67,110 +85,100 @@
 	  closeBtn.innerHTML = "&times;";
 	  closeBtn.className = "close";
 	  document.querySelector(".modal-content").appendChild(closeBtn);
-  
-	  let iframeLoaded = false; // Track whether iframe is created
-	  let preloadedIframe = null; // Store the preloaded iframe
-  
-	  // Preload iframe content when browser is idle
-	  const preloadIframe = () => {
-		if ('requestIdleCallback' in window) {
-		  requestIdleCallback(() => {
-			if (!iframeLoaded && !preloadedIframe) {
-			  // Prevent unload event listeners for bfcache compatibility
-			  (function(w) {
-				const originalAddEventListener = w.addEventListener;
-				w.addEventListener = function(type, listener, options) {
-				  if (type === "unload") {
-					originalAddEventListener.call(w, "pagehide", listener, options);
-					return;
-				  }
-				  originalAddEventListener.call(w, type, listener, options);
-				};
-			  })(window);
-  
-			  // Create but don't append the iframe yet
-			  preloadedIframe = document.createElement("iframe");
-			  preloadedIframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-			  preloadedIframe.style.border = "none";
-			  preloadedIframe.style.width = "100%";
-			  preloadedIframe.style.background = "#202020";
-			  preloadedIframe.height = "550";
-			  preloadedIframe.title = "Support project";
-			  
-			  // Listen for the iframe to load
-			  preloadedIframe.onload = () => {
-				console.log("Ko-fi iframe preloaded and ready");
-			  };
-			}
-		  }, { timeout: 3000 }); // 3 second timeout
-		}
+	  
+	  let iframeCreated = false;
+	  
+	  // Fix for bfcache compatibility
+	  (function(w) {
+		const originalAddEventListener = w.addEventListener;
+		w.addEventListener = function(type, listener, options) {
+		  if (type === "unload") {
+			originalAddEventListener.call(w, "pagehide", listener, options);
+			return;
+		  }
+		  originalAddEventListener.call(w, type, listener, options);
+		};
+	  })(window);
+	  
+	  // Function to create the iframe with proper configuration
+	  const createKofiIframe = () => {
+		const iframe = document.createElement("iframe");
+		iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
+		iframe.style.border = "none";
+		iframe.style.width = "100%";
+		iframe.style.background = "#202020";
+		iframe.height = "550";
+		iframe.title = "Support project";
+		iframe.id = "kofiIframe";
+		return iframe;
 	  };
-  
-	  // Start preloading after critical content is loaded
-	  if (document.readyState === 'complete') {
-		preloadIframe();
-	  } else {
-		window.addEventListener('load', preloadIframe);
-	  }
-  
+	  
+	  // Create and load the iframe in a hidden container after page load
+	  window.addEventListener('load', () => {
+		if (!iframeCreated) {
+		  const hiddenContainer = document.getElementById("hiddenIframeContainer");
+		  const iframe = createKofiIframe();
+		  hiddenContainer.appendChild(iframe);
+		  iframeCreated = true;
+		}
+	  });
+	  
 	  showBtn.addEventListener("click", () => {
 		modal.style.display = "flex";
 		setTimeout(() => modal.classList.add("show"), 10);
-  
-		if (!iframeLoaded) {
-		  // Show a loading indicator in the modal
+		
+		const kofiContainer = document.getElementById("kofiContainer");
+		
+		// If iframe exists in hidden container, move it to the modal
+		const existingIframe = document.getElementById("kofiIframe");
+		if (existingIframe) {
+		  kofiContainer.appendChild(existingIframe);
+		} else {
+		  // Create a loading indicator
 		  const loader = document.createElement("div");
 		  loader.className = "kofi-loader";
 		  loader.innerHTML = `<div class="loading-text">Loading Ko-fi...</div>`;
-		  document.querySelector(".modal-content").appendChild(loader);
+		  kofiContainer.appendChild(loader);
 		  
-		  // Use the preloaded iframe if available, otherwise create a new one
-		  const iframe = preloadedIframe || document.createElement("iframe");
+		  // Create a new iframe if needed
+		  const newIframe = createKofiIframe();
 		  
-		  if (!preloadedIframe) {
-			// If we didn't preload, set up the iframe now
-			iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-			iframe.style.border = "none";
-			iframe.style.width = "100%";
-			iframe.style.background = "#202020";
-			iframe.height = "550";
-			iframe.title = "Support project";
-		  }
-		  
-		  // Initially hide the iframe
-		  iframe.style.opacity = "0";
-		  iframe.style.transition = "opacity 0.3s ease-in-out";
-		  
-		  // When iframe is loaded (or is already loaded), show it and remove the loader
-		  const handleIframeLoad = () => {
+		  // Remove loader when iframe loads
+		  newIframe.onload = () => {
 			if (loader.parentNode) {
 			  loader.parentNode.removeChild(loader);
 			}
-			iframe.style.opacity = "1";
 		  };
 		  
-		  if (preloadedIframe && preloadedIframe.complete) {
-			// If iframe was preloaded and is already complete
-			handleIframeLoad();
-		  } else {
-			iframe.onload = handleIframeLoad;
-		  }
-		  
-		  document.querySelector(".modal-content").appendChild(iframe);
-		  iframeLoaded = true;
-		  preloadedIframe = null; // Clear reference to avoid memory issues
+		  kofiContainer.appendChild(newIframe);
 		}
 	  });
-  
+	  
 	  closeBtn.addEventListener("click", () => {
 		modal.classList.remove("show");
-		setTimeout(() => modal.style.display = "none", 300);
+		setTimeout(() => {
+		  modal.style.display = "none";
+		  // Move the iframe back to the hidden container when closing
+		  const iframe = document.getElementById("kofiIframe");
+		  const hiddenContainer = document.getElementById("hiddenIframeContainer");
+		  if (iframe) {
+			hiddenContainer.appendChild(iframe);
+		  }
+		}, 300);
 	  });
-  
+	  
 	  window.addEventListener("click", (event) => {
 		if (event.target === modal) {
 		  modal.classList.remove("show");
-		  setTimeout(() => modal.style.display = "none", 300);
+		  setTimeout(() => {
+			modal.style.display = "none";
+			// Move the iframe back to the hidden container when closing
+			const iframe = document.getElementById("kofiIframe");
+			const hiddenContainer = document.getElementById("hiddenIframeContainer");
+			if (iframe) {
+			  hiddenContainer.appendChild(iframe);
+			}
+		  }, 300);
 		}
 	  });
 	});
