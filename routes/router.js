@@ -7,15 +7,21 @@ import { confirmationMail } from "../public/js/mailer.js";
 
 // Prevent caching on dynamic routes
 router.use((req, res, next) => {
-  if (req.path !== "/") {
+  if (
+    req.path === "/submit" ||
+    req.path === "/unsubscribe" ||
+    req.path.startsWith("/confirm/") // Handles "/confirm/:id"
+  ) {
     // Stops caching of dynamic routes
-    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.setHeader(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
     res.setHeader("Pragma", "no-cache");
     res.setHeader("Expires", "0");
   }
   next();
 });
-
 
 router.get("/", async (req, res) => {
   try {
@@ -61,13 +67,13 @@ router.post("/submit", async (req, res) => {
       //console.log("User not found; creating, sending confirm, & routing")
       const newUser = await sqlServices.addOrUpdateUser(email, selectedMobo);
       await confirmationMail(newUser);
-      return res.render("layout", { email, page: "checkEmailComponent" })
+      return res.render("layout", { email, page: "checkEmailComponent" });
     }
 
     //if user exists but still not verified, remind them to confirm
     if (!user.verified) {
       //console.log("User found but unverified, routing appropriately")
-      return res.render("layout", { email, page: "checkEmailComponent" })
+      return res.render("layout", { email, page: "checkEmailComponent" });
     }
 
     //otherwise, updates the existing verified user
@@ -110,7 +116,7 @@ async function updateUserMobo(res, user, selectedMobo) {
       email: user.email,
       selectedMobo,
       previousMobo,
-      page: "submitPageComponent"
+      page: "submitPageComponent",
     });
   }
   //Only used in confirmations
@@ -120,7 +126,7 @@ async function updateUserMobo(res, user, selectedMobo) {
     res.render("layout", {
       email: user.email,
       selectedMobo: user.mobo,
-      page: "submitPageComponent"
+      page: "submitPageComponent",
     });
   }
 }
@@ -133,7 +139,7 @@ router.all("/unsubscribe", async (req, res) => {
     return res.status(400).render("layout", {
       message: "Missing email address.",
       title: "Error 400",
-      page: "errorComponent"
+      page: "errorComponent",
     });
   }
 
@@ -146,7 +152,7 @@ router.all("/unsubscribe", async (req, res) => {
       return res.status(404).render("layout", {
         message: "User not found.",
         title: "Error 404",
-        page: "errorComponent"
+        page: "errorComponent",
       });
     }
 
@@ -160,7 +166,7 @@ router.all("/unsubscribe", async (req, res) => {
     return res.status(500).render("layout", {
       message: "An error occurred while processing your request.",
       title: "Error 500",
-      page: "errorComponent"
+      page: "errorComponent",
     });
   }
 });
