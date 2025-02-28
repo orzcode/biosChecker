@@ -146,8 +146,14 @@ td {
 th {
   background-color: var(--header);
 }
-tr[data-row] {
+tbody {
   content-visibility: auto;
+  will-change: contents;
+  contain: strict;
+}
+tr {
+  content-visibility: auto;
+  contain-intrinsic-size: auto;
 }
 .form-controls {
   display: flex;
