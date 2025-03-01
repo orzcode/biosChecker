@@ -1,163 +1,198 @@
-<!-- Ko-Fi Modal Component -->
-<button id="showKoFi">Support project
-	<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon">
-</button>
-
-<div id="koFiModal" class="modal">
-	<div class="modal-content">
-		<span class="close">&times;</span>
-	</div>
-</div>
-
+<!-- Kofi Widget Modal Component -->
 <style>
-	/* Modal Styling */
-	.modal { 
-		display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
-		width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
-		justify-content: center; align-items: center; opacity: 0; 
-		transition: opacity 0.3s ease-in-out; 
-	}
-	.modal-content { 
-		background-color: #ffffff; padding: 0px; border-radius: 8px; height: 580px; max-width: 90%;
-		position: relative; transform: translateY(-20px); transition: transform 0.3s ease-in-out; 
-	}
-	.close { 
-		position: absolute; top: 10px; right: 15px; font-size: 24px; 
-		cursor: pointer; color: #555; transition: color 0.2s; 
-	}
-	.close:hover { color: #ff0000; }
-	.modal.show { display: flex; opacity: 1; }
-	.modal.show .modal-content { transform: translateY(0); }
-	
-	body.modal-open { overflow: hidden; }
-
-	/* Button Styling */
-	#showKoFi {
-		display: inline-flex; align-items: center; gap: 8px;
-		background: #6b9b1d; color: white; border: 1px solid black; padding: 0.1rem 0.5rem 0.2rem 0.5rem;
-		font-size: clamp(1.4rem, 2vw, 1.8rem); cursor: pointer; border-radius: 8px;
-		transition: background 0.3s ease-in-out;
-		max-width: fit-content;
-	}
-	#showKoFi:hover { filter: brightness(1.1); }
-
-	/* Ko-Fi Icon */
-	.kofi-icon {
-		width: 20px; height: auto;
+	.kofi-modal-overlay {
+	  display: none;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: rgba(0, 0, 0, 0.7);
+	  z-index: 1000;
+	  align-items: center;
+	  justify-content: center;
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
 	}
 	
-	/* Loading Indicator */
-	.kofi-loader {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 200px;
-		width: 100%;
+	.kofi-modal-overlay.active {
+	  opacity: 1;
+	}
+  
+	.kofi-modal-container {
+	  background-color: white;
+	  max-width: 90%;
+	  height: 580px; /* Match the iframe height */
+	  border-radius: 8px;
+	  overflow: hidden; /* no scrollbars */
+	  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	  position: relative;
+	  transform: scale(0.95);
+	  transition: transform 0.3s ease;
 	}
 	
-	.loading-text {
-		font-size: 18px;
-		color: #555;
+	.kofi-modal-overlay.active .kofi-modal-container {
+	  transform: scale(1);
 	}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-	const modal = document.getElementById("koFiModal");
-	const showBtn = document.getElementById("showKoFi");
-	const closeBtn = document.createElement("span");
-	closeBtn.innerHTML = "&times;";
-	closeBtn.className = "close";
-	document.querySelector(".modal-content").appendChild(closeBtn);
-
-	let iframeLoaded = false;
-	let preloadedIframe = null;
-
-	const preloadIframe = () => {
-		if ('requestIdleCallback' in window) {
-			requestIdleCallback(() => {
-				if (!iframeLoaded && !preloadedIframe) {
-					preloadedIframe = document.createElement("iframe");
-					preloadedIframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-					preloadedIframe.style.border = "none";
-					preloadedIframe.style.borderRadius = "8px";
-					preloadedIframe.style.width = "100%";
-					preloadedIframe.style.background = "#202020";
-					preloadedIframe.height = "580px";
-					preloadedIframe.title = "Support project";
-					preloadedIframe.loading = "lazy";
-					preloadedIframe.onload = () => {
-						console.log("Ko-fi iframe preloaded and ready");
-					};
-				}
-			}, { timeout: 3000 });
-		}
-	};
-
-	if (document.readyState === 'complete') {
-		preloadIframe();
-	} else {
-		window.addEventListener('load', preloadIframe);
+  
+	.kofi-close-btn {
+	  position: absolute; 
+	  top: 10px; 
+	  right: 15px; 
+	  font-size: 24px; 
+	  cursor: pointer; 
+	  color: #FF5E5B; 
+	  transition: color 0.2s;
+	  z-index: 1010; 
 	}
-
-	showBtn.addEventListener("click", () => {
-		modal.style.display = "flex";
-		document.body.classList.add("modal-open");
-		setTimeout(() => modal.classList.add("show"), 10);
-
+	
+	.kofi-close-btn:hover {
+	  color: #E54844;
+	}
+  
+	.kofi-btn {
+	  display: inline-flex; 
+	  align-items: center; 
+	  gap: 8px;
+	  background: #6b9b1d; 
+	  color: white; 
+	  border: 1px solid black; 
+	  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+	  font-size: clamp(1.4rem, 2vw, 1.8rem); 
+	  cursor: pointer; 
+	  border-radius: 8px;
+	  transition: background 0.3s ease-in-out;
+	  max-width: fit-content;
+	  /* LCP optimization */
+	  content-visibility: auto;
+	  contain: layout style paint;
+	}
+  
+	.kofi-btn:hover { 
+	  filter: brightness(1.1); 
+	}
+  
+	/* For the iframe within the container */
+	#kofiframe {
+	  display: block;
+	  width: 100%;
+	  height: 580px; /* Match the container height */
+	  border: none;
+	  padding: 0;
+	  background: #f9f9f9;
+	}
+  </style>
+  
+  <!-- Load the button image early to help with LCP -->
+  <link rel="preload" href="images/kofi_symbol.svg" as="image">
+  
+  <button class="kofi-btn" id="showKofiBtn" loading="eager">
+	Support on Ko-fi<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon" fetchpriority="high">
+  </button>
+  
+  <div class="kofi-modal-overlay" id="kofiModalOverlay">
+	<div class="kofi-modal-container">
+	  <span class="kofi-close-btn" id="kofiCloseBtn">×</span>
+	  <div id="kofiFramePlaceholder"></div>
+	</div>
+  </div>
+  
+  <script>
+	(function() {
+	  const showKofiBtn = document.getElementById('showKofiBtn');
+	  const kofiModalOverlay = document.getElementById('kofiModalOverlay');
+	  const kofiCloseBtn = document.getElementById('kofiCloseBtn');
+	  const kofiFramePlaceholder = document.getElementById('kofiFramePlaceholder');
+	  let iframeLoaded = false;
+	  let hoverTimer;
+	  
+	  // Function to load the iframe
+	  function loadKofiFrame() {
 		if (!iframeLoaded) {
-			const loader = document.createElement("div");
-			loader.className = "kofi-loader";
-			loader.innerHTML = `<div class="loading-text">Loading Ko-fi...</div>`;
-			document.querySelector(".modal-content").appendChild(loader);
-
-			const iframe = preloadedIframe || document.createElement("iframe");
-			if (!preloadedIframe) {
-				iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-				iframe.style.border = "none";
-				iframe.style.borderRadius = "8px";
-				iframe.style.width = "100%";
-				iframe.style.background = "#202020";
-				iframe.height = "580px";
-				iframe.loading = "lazy";
-				iframe.title = "Support project";
-			}
-
-			iframe.style.opacity = "0";
-			iframe.style.transition = "opacity 0.3s ease-in-out";
-			const handleIframeLoad = () => {
-				if (loader.parentNode) {
-					loader.parentNode.removeChild(loader);
-				}
-				iframe.style.opacity = "1";
-			};
-			if (preloadedIframe && preloadedIframe.complete) {
-				handleIframeLoad();
-			} else {
-				iframe.onload = handleIframeLoad;
-			}
-			document.querySelector(".modal-content").appendChild(iframe);
-			iframeLoaded = true;
-			preloadedIframe = null;
+		  // Use a specific height for the iframe that matches the container
+		  kofiFramePlaceholder.innerHTML = '<iframe id="kofiframe" src="https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true" title="orzcode"></iframe>';
+		  iframeLoaded = true;
 		}
-	});
-
-	closeBtn.addEventListener("click", () => {
-		modal.classList.remove("show");
+	  }
+	  
+	  // Function to open the modal with animation
+	  function openModal() {
+		loadKofiFrame();
+		kofiModalOverlay.style.display = 'flex';
+		
+		// Force a reflow before adding the active class for the animation to work
+		void kofiModalOverlay.offsetWidth;
+		
+		kofiModalOverlay.classList.add('active');
+		
+		// Prevent scrolling on the background
+		document.body.style.overflow = 'hidden';
+		
+		// Add ESC key listener to close modal
+		document.addEventListener('keydown', handleEscKey);
+	  }
+	  
+	  // Function to close the modal with animation
+	  function closeModal() {
+		kofiModalOverlay.classList.remove('active');
+		
+		// Wait for the animation to complete before hiding
 		setTimeout(() => {
-			modal.style.display = "none";
-			document.body.classList.remove("modal-open");
-		}, 300);
-	});
-
-	window.addEventListener("click", (event) => {
-		if (event.target === modal) {
-			modal.classList.remove("show");
-			setTimeout(() => {
-				modal.style.display = "none";
-				document.body.classList.remove("modal-open");
-			}, 300);
+		  kofiModalOverlay.style.display = 'none';
+		  
+		  // Restore scrolling
+		  document.body.style.overflow = '';
+		}, 300); // Match the transition duration in CSS
+		
+		// Remove ESC key listener
+		document.removeEventListener('keydown', handleEscKey);
+	  }
+	  
+	  // Handle ESC key press
+	  function handleEscKey(e) {
+		if (e.key === 'Escape') {
+		  closeModal();
 		}
-	});
-});
-</script>
+	  }
+	  
+	  // Show modal when button is clicked
+	  showKofiBtn.addEventListener('click', openModal);
+	  
+	  // Close modal when close button is clicked
+	  kofiCloseBtn.addEventListener('click', closeModal);
+	  
+	  // Close modal when clicking outside the modal content
+	  kofiModalOverlay.addEventListener('click', function(e) {
+		if (e.target === kofiModalOverlay) {
+		  closeModal();
+		}
+	  });
+	  
+	  // Load the iframe on hover after a brief delay
+	  showKofiBtn.addEventListener('mouseenter', function() {
+		hoverTimer = setTimeout(loadKofiFrame, 100);
+	  });
+	  
+	  // Clear the timer if the user stops hovering before the delay
+	  showKofiBtn.addEventListener('mouseleave', function() {
+		clearTimeout(hoverTimer);
+	  });
+	  
+	  // Ensure proper bfcache behavior
+	  window.addEventListener('pageshow', function(event) {
+		if (event.persisted) {
+		  // Page was restored from bfcache
+		  kofiModalOverlay.classList.remove('active');
+		  kofiModalOverlay.style.display = 'none';
+		  document.body.style.overflow = '';
+		}
+	  });
+  
+	  // Give priority to loading the button to improve LCP
+	  if ('loading' in HTMLImageElement.prototype) {
+		// Modern browsers support lazy loading
+		const img = showKofiBtn.querySelector('img');
+		img.loading = 'eager';
+	  }
+	})();
+  </script>
