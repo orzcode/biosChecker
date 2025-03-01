@@ -1,6 +1,6 @@
 <!-- Ko-Fi Modal Component -->
 <button id="showKoFi">Support project
-	<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon" loading="lazy">
+	<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon">
 </button>
 
 <div id="koFiModal" class="modal">
@@ -18,7 +18,7 @@
 		transition: opacity 0.3s ease-in-out; 
 	}
 	.modal-content { 
-		background-color: #ffffff; padding: 10px; border-radius: 8px; max-width: 90%;
+		background-color: #ffffff; padding: 0px; border-radius: 8px; height: 580px; max-width: 90%;
 		position: relative; transform: translateY(-20px); transition: transform 0.3s ease-in-out; 
 	}
 	.close { 
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					preloadedIframe = document.createElement("iframe");
 					preloadedIframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
 					preloadedIframe.style.border = "none";
+					preloadedIframe.style.borderRadius = "8px";
 					preloadedIframe.style.width = "100%";
 					preloadedIframe.style.background = "#202020";
 					preloadedIframe.height = "580px";
@@ -113,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (!preloadedIframe) {
 				iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
 				iframe.style.border = "none";
+				iframe.style.borderRadius = "8px";
 				iframe.style.width = "100%";
 				iframe.style.background = "#202020";
 				iframe.height = "580px";
