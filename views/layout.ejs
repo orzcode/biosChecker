@@ -23,18 +23,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-    
+<link rel="preload" href="/css/style.css" as="style">
+<link rel="stylesheet" href="/css/style.css">
+
     <style>
-      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease-in; }
-    </style>
+      body { visibility: hidden; opacity: 0; transition: opacity 0.3s ease-in-out; }
+    </style> 
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
   </head>
   <body>
     <header id="header">
-      <img src="/images/biosimg.webp" alt="header" width="545" height="175"/>
+      <img src="/images/biosimg.webp" loading="eager" alt="header" width="545" height="175"/>
     </header>
 
     <main id="main"><%- include(page) %></main>

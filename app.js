@@ -27,6 +27,12 @@ app.set("trust proxy", 1);
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
 
+if (process.env.NODE_ENV === "dev") {
+  app.use((req, res, next) => {
+      setTimeout(next, Math.floor(Math.random() * 2000) + 100);
+  });
+}
+
 // 1. Long-term caching for images
 app.use("/public/images", (req, res, next) => {
   res.setHeader("Cache-Control", "public, max-age=31536000, immutable");

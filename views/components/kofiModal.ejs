@@ -1,190 +1,159 @@
 <!-- Ko-Fi Modal Component -->
 <button id="showKoFi">Support project
-	<img src="/images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon" loading="lazy">
-  </button>
-  
-  <div id="koFiModal" class="modal">
+	<img src="images/kofi_symbol.svg" width="20" height="16" alt="Ko-Fi" class="kofi-icon" loading="lazy">
+</button>
+
+<div id="koFiModal" class="modal">
 	<div class="modal-content">
-	  <span class="close">&times;</span>
-	  <div class="kofi-container" id="kofiContainer">
-		<!-- Iframe will be inserted here when needed -->
-	  </div>
+		<span class="close">&times;</span>
 	</div>
-  </div>
-  
-  <div class="hidden-iframe-container" id="hiddenIframeContainer">
-	<!-- Hidden preloaded iframe -->
-  </div>
-  
-  <style>
+</div>
+
+<style>
 	/* Modal Styling */
 	.modal { 
-	  display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
-	  width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
-	  justify-content: center; align-items: center; opacity: 0; 
-	  transition: opacity 0.3s ease-in-out; 
+		display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
+		width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+		justify-content: center; align-items: center; opacity: 0; 
+		transition: opacity 0.3s ease-in-out; 
 	}
 	.modal-content { 
-	  background-color: #ffffff; padding: 10px; border-radius: 8px; max-width: 92%;
-	  position: relative; transform: translateY(-20px); transition: transform 0.3s ease-in-out; 
+		background-color: #ffffff; padding: 10px; border-radius: 8px; max-width: 90%;
+		position: relative; transform: translateY(-20px); transition: transform 0.3s ease-in-out; 
 	}
 	.close { 
-	  position: absolute; top: 10px; right: 15px; font-size: 24px; 
-	  cursor: pointer; color: #555; transition: color 0.2s; 
+		position: absolute; top: 10px; right: 15px; font-size: 24px; 
+		cursor: pointer; color: #555; transition: color 0.2s; 
 	}
 	.close:hover { color: #ff0000; }
 	.modal.show { display: flex; opacity: 1; }
 	.modal.show .modal-content { transform: translateY(0); }
-  
+	
+	body.modal-open { overflow: hidden; }
+
 	/* Button Styling */
 	#showKoFi {
-	  display: inline-flex; align-items: center; gap: 8px;
-	  background: #6b9b1d; color: white; border: 1px solid black; padding: 0rem 0.4rem 0.3rem 0.4rem;
-	  font-size: clamp(1.2rem, 2vw, 1.8rem); cursor: pointer; border-radius: 8px;
-	  transition: background 0.3s ease-in-out;
-	  max-width: fit-content;
+		display: inline-flex; align-items: center; gap: 8px;
+		background: #6b9b1d; color: white; border: 1px solid black; padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+		font-size: clamp(1.4rem, 2vw, 1.8rem); cursor: pointer; border-radius: 8px;
+		transition: background 0.3s ease-in-out;
+		max-width: fit-content;
 	}
 	#showKoFi:hover { filter: brightness(1.1); }
-  
+
 	/* Ko-Fi Icon */
 	.kofi-icon {
-	  width: 20px; height: auto;
-	}
-	
-	/* Hidden iframe container with content-visibility */
-	.hidden-iframe-container {
-	  content-visibility: hidden;
-	  contain-intrinsic-size: 300px 550px;
-	  position: absolute;
-	  width: 0;
-	  height: 0;
-	  overflow: hidden;
-	  /* visibility: hidden; */
+		width: 20px; height: auto;
 	}
 	
 	/* Loading Indicator */
 	.kofi-loader {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  height: 200px;
-	  width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 200px;
+		width: 100%;
 	}
 	
 	.loading-text {
-	  font-size: 18px;
-	  color: #555;
+		font-size: 18px;
+		color: #555;
 	}
-  </style>
-  
-  <script>
-	document.addEventListener("DOMContentLoaded", () => {
-	  const modal = document.getElementById("koFiModal");
-	  const showBtn = document.getElementById("showKoFi");
-	  const closeBtn = document.createElement("span");
-	  closeBtn.innerHTML = "&times;";
-	  closeBtn.className = "close";
-	  document.querySelector(".modal-content").appendChild(closeBtn);
-	  
-	  let iframeCreated = false;
-	  
-	  // Fix for bfcache compatibility
-	  (function(w) {
-		const originalAddEventListener = w.addEventListener;
-		w.addEventListener = function(type, listener, options) {
-		  if (type === "unload") {
-			originalAddEventListener.call(w, "pagehide", listener, options);
-			return;
-		  }
-		  originalAddEventListener.call(w, type, listener, options);
-		};
-	  })(window);
-	  
-	  // Function to create the iframe with proper configuration
-	  const createKofiIframe = () => {
-		const iframe = document.createElement("iframe");
-		iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
-		iframe.style.border = "none";
-		iframe.style.width = "100%";
-		iframe.style.background = "#202020";
-		iframe.height = "550";
-		iframe.title = "Support project";
-		iframe.id = "kofiIframe";
-		iframe.loading = "lazy";
-		return iframe;
-	  };
-	  
-	  // Create and load the iframe in a hidden container after page load
-	  window.addEventListener('load', () => {
-		if (!iframeCreated) {
-		  const hiddenContainer = document.getElementById("hiddenIframeContainer");
-		  const iframe = createKofiIframe();
-		  hiddenContainer.appendChild(iframe);
-		  iframeCreated = true;
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+	const modal = document.getElementById("koFiModal");
+	const showBtn = document.getElementById("showKoFi");
+	const closeBtn = document.createElement("span");
+	closeBtn.innerHTML = "&times;";
+	closeBtn.className = "close";
+	document.querySelector(".modal-content").appendChild(closeBtn);
+
+	let iframeLoaded = false;
+	let preloadedIframe = null;
+
+	const preloadIframe = () => {
+		if ('requestIdleCallback' in window) {
+			requestIdleCallback(() => {
+				if (!iframeLoaded && !preloadedIframe) {
+					preloadedIframe = document.createElement("iframe");
+					preloadedIframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
+					preloadedIframe.style.border = "none";
+					preloadedIframe.style.width = "100%";
+					preloadedIframe.style.background = "#202020";
+					preloadedIframe.height = "580px";
+					preloadedIframe.title = "Support project";
+					preloadedIframe.onload = () => {
+						console.log("Ko-fi iframe preloaded and ready");
+					};
+				}
+			}, { timeout: 3000 });
 		}
-	  });
-	  
-	  showBtn.addEventListener("click", () => {
+	};
+
+	if (document.readyState === 'complete') {
+		preloadIframe();
+	} else {
+		window.addEventListener('load', preloadIframe);
+	}
+
+	showBtn.addEventListener("click", () => {
 		modal.style.display = "flex";
+		document.body.classList.add("modal-open");
 		setTimeout(() => modal.classList.add("show"), 10);
-		
-		const kofiContainer = document.getElementById("kofiContainer");
-		
-		// If iframe exists in hidden container, move it to the modal
-		const existingIframe = document.getElementById("kofiIframe");
-		if (existingIframe) {
-		  kofiContainer.appendChild(existingIframe);
-		} else {
-		  // Create a loading indicator
-		  const loader = document.createElement("div");
-		  loader.className = "kofi-loader";
-		  loader.innerHTML = `<div class="loading-text">Loading Ko-fi...</div>`;
-		  kofiContainer.appendChild(loader);
-		  
-		  // Create a new iframe if needed
-		  const newIframe = createKofiIframe();
-		  
-		  // Remove loader when iframe loads
-		  newIframe.onload = () => {
-			if (loader.parentNode) {
-			  loader.parentNode.removeChild(loader);
+
+		if (!iframeLoaded) {
+			const loader = document.createElement("div");
+			loader.className = "kofi-loader";
+			loader.innerHTML = `<div class="loading-text">Loading Ko-fi...</div>`;
+			document.querySelector(".modal-content").appendChild(loader);
+
+			const iframe = preloadedIframe || document.createElement("iframe");
+			if (!preloadedIframe) {
+				iframe.src = "https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true";
+				iframe.style.border = "none";
+				iframe.style.width = "100%";
+				iframe.style.background = "#202020";
+				iframe.height = "580px";
+				iframe.title = "Support project";
 			}
-		  };
-		  
-		  kofiContainer.appendChild(newIframe);
+
+			iframe.style.opacity = "0";
+			iframe.style.transition = "opacity 0.3s ease-in-out";
+			const handleIframeLoad = () => {
+				if (loader.parentNode) {
+					loader.parentNode.removeChild(loader);
+				}
+				iframe.style.opacity = "1";
+			};
+			if (preloadedIframe && preloadedIframe.complete) {
+				handleIframeLoad();
+			} else {
+				iframe.onload = handleIframeLoad;
+			}
+			document.querySelector(".modal-content").appendChild(iframe);
+			iframeLoaded = true;
+			preloadedIframe = null;
 		}
-	  });
-	  
-	  closeBtn.addEventListener("click", () => {
+	});
+
+	closeBtn.addEventListener("click", () => {
 		modal.classList.remove("show");
 		setTimeout(() => {
-		  modal.style.display = "none";
-		  // Move the iframe back to the hidden container when closing
-		  const iframe = document.getElementById("kofiIframe");
-		  const hiddenContainer = document.getElementById("hiddenIframeContainer");
-		  if (iframe) {
-			hiddenContainer.appendChild(iframe);
-		  }
-		}, 300);
-	  });
-	  
-	  window.addEventListener("click", (event) => {
-		if (event.target === modal) {
-		  modal.classList.remove("show");
-		  setTimeout(() => {
 			modal.style.display = "none";
-			// Move the iframe back to the hidden container when closing
-			const iframe = document.getElementById("kofiIframe");
-			const hiddenContainer = document.getElementById("hiddenIframeContainer");
-			if (iframe) {
-			  hiddenContainer.appendChild(iframe);
-			}
-		  }, 300);
-		}
-	  });
+			document.body.classList.remove("modal-open");
+		}, 300);
 	});
-  </script>
-  
-  <!-- Preload Styles Efficiently -->
-  <!-- <link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript> -->
+
+	window.addEventListener("click", (event) => {
+		if (event.target === modal) {
+			modal.classList.remove("show");
+			setTimeout(() => {
+				modal.style.display = "none";
+				document.body.classList.remove("modal-open");
+			}, 300);
+		}
+	});
+});
+</script>
