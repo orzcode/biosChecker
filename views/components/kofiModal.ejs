@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					preloadedIframe.style.background = "#202020";
 					preloadedIframe.height = "580px";
 					preloadedIframe.title = "Support project";
+					preloadedIframe.loading = "lazy";
 					preloadedIframe.onload = () => {
 						console.log("Ko-fi iframe preloaded and ready");
 					};
@@ -118,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				iframe.style.width = "100%";
 				iframe.style.background = "#202020";
 				iframe.height = "580px";
+				iframe.loading = "lazy";
 				iframe.title = "Support project";
 			}
 
