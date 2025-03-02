@@ -146,15 +146,10 @@ td {
 th {
   background-color: var(--header);
 }
-tbody {
+/* tbody {
   content-visibility: auto;
-  will-change: contents;
-  contain: strict;
-}
-tr {
-  content-visibility: auto;
-  contain-intrinsic-size: auto;
-}
+  contain-intrinsic-size: 1000px;
+} */
 .form-controls {
   display: flex;
   justify-content: center;
