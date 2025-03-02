@@ -30,6 +30,7 @@ app.use(express.json()); // JSON parsing
 if (process.env.NODE_ENV === "dev") {
   app.use((req, res, next) => {
       setTimeout(next, Math.floor(Math.random() * 2000) + 100);
+      console.log("Delaying request by ~1000ms due to dev mode");
   });
 }
 
