@@ -147,4 +147,60 @@
 	</table>
   </form>
 
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  const table = document.getElementById('motherboard-table');
+	  const tbody = table.querySelector('tbody');
+	  const allRows = Array.from(tbody.querySelectorAll('tr'));
+	  
+	  // Show initial set of rows immediately (first 25 rows)
+	  // This ensures Lighthouse sees some content painted
+	  const initialRowCount = 25;
+	  const remainingRows = allRows.slice(initialRowCount);
+	  
+	  // Hide the rows beyond the initial set
+	  remainingRows.forEach(row => {
+		row.style.display = 'none';
+	  });
+	  
+	  // Create a sentinel element to detect scroll position
+	  const sentinel = document.createElement('div');
+	  sentinel.style.height = '1px';
+	  sentinel.style.width = '100%';
+	  
+	  // Insert after the last visible row
+	  if (allRows.length > initialRowCount) {
+		tbody.insertBefore(sentinel, remainingRows[0]);
+	  } else {
+		tbody.appendChild(sentinel);
+	  }
+	  
+	  // Function to load remaining rows
+	  function loadRemainingRows() {
+		remainingRows.forEach(row => {
+		  row.style.display = '';
+		});
+		sentinel.remove();
+		window.removeEventListener('scroll', checkScroll);
+	  }
+	  
+	  // Check if user has scrolled to the sentinel element
+	  function checkScroll() {
+		const rect = sentinel.getBoundingClientRect();
+		const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+		
+		if (rect.top <= windowHeight + 100) {
+		  // User has scrolled near the sentinel, load remaining rows
+		  loadRemainingRows();
+		}
+	  }
+	  
+	  // Add scroll listener
+	  window.addEventListener('scroll', checkScroll);
+	  
+	  // Also check initial position in case sentinel is already visible
+	  setTimeout(checkScroll, 100);
+	});
+</script>
+
 <%- include('components/tableHelper') %>
