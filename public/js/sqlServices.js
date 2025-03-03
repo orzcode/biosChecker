@@ -22,10 +22,10 @@ export async function loadMotherboards() {
 ///////Init db indexes///////
 export async function initializeIndexes() {
   try {
-    await sql`
-      CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
-      CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);
-    `;
+    await Promise.all([
+      sql`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`,
+      sql`CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);`
+    ]);    
     console.log("Indexes initialized successfully.");
   } catch (error) {
     console.error("Error initializing indexes:", error);
