@@ -147,7 +147,9 @@
 	</table>
   </form>
 
-  <script>
+  <%- include('components/tableHelper') %>
+
+  <!-- <script>
 	document.addEventListener('DOMContentLoaded', function() {
 	  const table = document.getElementById('motherboard-table');
 	  const tbody = table.querySelector('tbody');
@@ -201,6 +203,4 @@
 	  // Also check initial position in case sentinel is already visible
 	  setTimeout(checkScroll, 100);
 	});
-</script>
-
-<%- include('components/tableHelper') %>
+</script> -->
