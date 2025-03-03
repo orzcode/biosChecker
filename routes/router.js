@@ -6,37 +6,23 @@ import * as sqlServices from "../public/js/sqlServices.js";
 import { confirmationMail } from "../public/js/mailer.js";
 
 // Prevent caching on dynamic routes
-router.use((req, res, next) => {
-  if (
-    req.path === "/submit" ||
-    req.path === "/unsubscribe" ||
-    req.path.startsWith("/confirm/") // Handles "/confirm/:id"
-  ) {
-    // Stops caching of dynamic routes
-    res.setHeader(
-      "Cache-Control",
-      "no-store, no-cache, must-revalidate, proxy-revalidate"
-    );
-    res.setHeader("Pragma", "no-cache");
-    res.setHeader("Expires", "0");
-  }
+const noCache = (req, res, next) => {
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
   next();
-});
+};
+// Apply only to relevant routes
+router.use(["/submit", "/unsubscribe", "/confirm/:id"], noCache);
+
 
 router.get("/", async (req, res) => {
   try {
-    const localMoboFile = await fs.readFile(
-      "./public/data/models.json",
-      "utf8"
-    );
-
-    const motherboards = JSON.parse(localMoboFile);
-
-    // Render the EJS template with the fetched data
+    const motherboards = await sqlServices.loadMotherboards();
     res.render("layout", { motherboards, page: "mainPageComponent" });
   } catch (err) {
-    console.error("Error querying the database:", err);
-    res.status(500).send("Failed to fetch models from the database");
+    console.error("Error reading models.json:", err);
+    res.status(500).send("Failed to fetch models.");
   }
 });
 

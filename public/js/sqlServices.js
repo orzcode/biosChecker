@@ -1,12 +1,25 @@
 import { generateUniqueId } from "./uuid.js";
 import sql from "./db.js";
 
+///////Saving/loading models json to memory///////
+import { promises as fs } from "fs";
+
+let cachedMotherboards = null;
+
+export async function loadMotherboards() {
+  if (!cachedMotherboards) {
+    const localMoboFile = await fs.readFile("./public/data/models.json", "utf8");
+    cachedMotherboards = JSON.parse(localMoboFile);
+  }
+  return cachedMotherboards;
+}
+///////Saving/loading models json to memory///////
+
 export async function getMobos(singleMoboModel) {
   try {
-    const query = singleMoboModel
-      ? sql`SELECT * FROM models WHERE model = ${singleMoboModel}`
-      : sql`SELECT * FROM models`;
-    return await query;
+    return singleMoboModel
+      ? await sql`SELECT * FROM models WHERE model = ${singleMoboModel}`
+      : await sql`SELECT id, model, maker, socket, link, biospage, heldversion, helddate FROM models`;
   } catch (error) {
     console.error("Error fetching model(s) from the database:", error);
     return [];
@@ -14,40 +27,24 @@ export async function getMobos(singleMoboModel) {
 }
 
 export async function saveMobos(moboOrMobos) {
-  let mobosArray;
-
-  if (!moboOrMobos) {
-    const mobos = await sql`SELECT * FROM models`;
-    mobosArray = mobos;
-  } else {
-    mobosArray = Array.isArray(moboOrMobos) ? moboOrMobos : [moboOrMobos];
-  }
+  if (!moboOrMobos) return;
+  const mobosArray = Array.isArray(moboOrMobos) ? moboOrMobos : [moboOrMobos];
 
   try {
-    for (const mobo of mobosArray) {
-      await sql`
-        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
-        VALUES (
-          ${mobo.id},
-          ${mobo.model},
-          ${mobo.maker},
-          ${mobo.socket},
-          ${mobo.link},
-          ${mobo.biospage},
-          ${mobo.heldversion},
-          ${mobo.helddate}
-        )
-        ON CONFLICT (id) DO UPDATE
-        SET 
-          model = EXCLUDED.model,
-          maker = EXCLUDED.maker,
-          socket = EXCLUDED.socket,
-          link = EXCLUDED.link,
-          biospage = EXCLUDED.biospage,
-          heldversion = EXCLUDED.heldversion,
-          helddate = EXCLUDED.helddate;
-      `;
-    }
+    await sql`
+      INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
+      SELECT * FROM UNNEST(
+        ${sql(mobosArray.map(m => [m.id, m.model, m.maker, m.socket, m.link, m.biospage, m.heldversion, m.helddate]))}
+      )
+      ON CONFLICT (id) DO UPDATE SET
+        model = EXCLUDED.model,
+        maker = EXCLUDED.maker,
+        socket = EXCLUDED.socket,
+        link = EXCLUDED.link,
+        biospage = EXCLUDED.biospage,
+        heldversion = EXCLUDED.heldversion,
+        helddate = EXCLUDED.helddate;
+    `;
     console.log("Models saved or updated successfully.");
   } catch (error) {
     console.error("Error saving models:", error);
@@ -57,18 +54,12 @@ export async function saveMobos(moboOrMobos) {
 export async function getUsers(identifier) {
   try {
     if (!identifier) {
-      return await sql`SELECT * FROM users`;
+      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified FROM users`;
     }
-
-    const query =
-      typeof identifier === "string" && identifier.includes("@")
-        ? await sql`SELECT * FROM users WHERE email = ${identifier}`
-        : await sql`SELECT * FROM users WHERE id = ${identifier}`;
-
-    //de-structures 'array' to single user, or returns all users.
-    //alternatively returns 'null' if user not found
-    //return query.length > 0 ? query[0] : null;
-    return query;
+    return await sql`
+      SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified FROM users
+      WHERE ${identifier.includes("@") ? sql`email = ${identifier}` : sql`id = ${identifier}`}
+    `;
   } catch (error) {
     console.error("Error fetching user(s) from the database:", error);
     return [];
@@ -76,55 +67,42 @@ export async function getUsers(identifier) {
 }
 
 export async function saveUsers(userOrUsers) {
-  let usersArray;
-
-  if (!userOrUsers) {
-    const users = await sql`SELECT * FROM users`;
-    usersArray = users;
-  } else {
-    usersArray = Array.isArray(userOrUsers) ? userOrUsers : [userOrUsers];
-  }
+  if (!userOrUsers) return;
+  const usersArray = Array.isArray(userOrUsers) ? userOrUsers : [userOrUsers];
 
   try {
-    for (const user of usersArray) {
-      await sql`
-        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified})
-        ON CONFLICT (id) DO UPDATE
-        SET 
-          email = EXCLUDED.email,
-          mobo = EXCLUDED.mobo,
-          givenversion = EXCLUDED.givenversion,
-          givendate = EXCLUDED.givendate,
-          lastcontacted = EXCLUDED.lastcontacted,
-          verified = EXCLUDED.verified;
-      `;
-    }
+    await sql`
+      INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
+      SELECT * FROM UNNEST(
+        ${sql(usersArray.map(u => [u.id, u.email, u.mobo, u.givenversion, u.givendate, u.lastcontacted, u.verified]))}
+      )
+      ON CONFLICT (id) DO UPDATE SET
+        email = EXCLUDED.email,
+        mobo = EXCLUDED.mobo,
+        givenversion = EXCLUDED.givenversion,
+        givendate = EXCLUDED.givendate,
+        lastcontacted = EXCLUDED.lastcontacted,
+        verified = EXCLUDED.verified;
+    `;
     console.log("Users saved or updated successfully.");
   } catch (error) {
     console.error("Error saving users:", error);
   }
 }
 
-// Function to add or update a user
 export async function addOrUpdateUser(email, mobo) {
-
-  const model = await getMobos(mobo);
-  const latestVersion = model ? model[0].heldversion : null;
-  const latestDate = model ? model[0].helddate : null;
-
-  //updates user mobo choice
   try {
+    const model = await getMobos(mobo);
+    const latestVersion = model?.[0]?.heldversion ?? null;
+    const latestDate = model?.[0]?.helddate ?? null;
+
     const [existingUser] = await getUsers(email);
     if (existingUser) {
       existingUser.mobo = mobo;
       existingUser.givenversion = latestVersion;
       await saveUsers(existingUser);
       console.log(`Updated user ${existingUser.id} with mobo: ${mobo} + ${latestVersion}`);
-    }
-    //otherwise creates new user (with unverified status)
-    else {
-      // Fetch the motherboard data for the given model
+    } else {
       const newUser = {
         id: await generateUniqueId("user_"),
         email,
@@ -136,49 +114,32 @@ export async function addOrUpdateUser(email, mobo) {
       };
       await saveUsers(newUser);
       console.log(`Created new user: ${newUser.id} with mobo: ${mobo}`);
-
-      //only returns in case of new user creation
-      //if this sucks, just request the user object within router or w/e
-      return newUser
+      return newUser;
     }
   } catch (error) {
-    console.error(`Error adding/updating user:`, error.message);
+    console.error("Error adding/updating user:", error.message);
     throw error;
   }
-  // finally {
-  //   await sql.end(); // Ensure connection is closed
-  // }
 }
 
 export async function deleteUser(identifier) {
-  try {
-    if (!identifier){
-      throw new Error("Identifier is required to delete a user.");
-    }
-    if (identifier === 'dummy'){
-      console.log("Skipping deletion of dummy")
-      return 
-    }
-    else{
-    const query =
-      typeof identifier === "string" && identifier.includes("@")
-        ? sql`DELETE FROM users WHERE email = ${identifier}`
-        : sql`DELETE FROM users WHERE id = ${identifier}`;
+  if (!identifier) throw new Error("Identifier is required to delete a user.");
+  if (identifier === "dummy") return console.log("Skipping deletion of dummy");
 
-    await query;
-    }
+  try {
+    await sql`
+      DELETE FROM users
+      WHERE ${identifier.includes("@") ? sql`email = ${identifier}` : sql`id = ${identifier}`}
+    `;
   } catch (error) {
     console.error("Error deleting user:", error);
   }
-  // finally {
-  //   await sql.end(); // Ensure connection is closed
-  // }
 }
 
 export async function verifyUser(id) {
   try {
     await sql`UPDATE users SET verified = true WHERE id = ${id}`;
-    console.log(`${id} verification processed via verifyUser()`)
+    console.log(`${id} verification processed via verifyUser()`);
   } catch (error) {
     console.error("Error verifying user:", error);
   }
