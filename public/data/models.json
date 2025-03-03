@@ -1656,8 +1656,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/2/27"
   },
   {
     "id": "mobo_m68rfcv2f48962",
@@ -1666,8 +1666,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv2ty66cj",
