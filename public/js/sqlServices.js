@@ -163,6 +163,7 @@ export async function deleteUser(identifier) {
           : sql`id = ${identifier}`
       }
     `;
+    console.log("User deleted successfully.");
   } catch (error) {
     console.error("Error deleting user:", error);
   }
