@@ -8,12 +8,30 @@ let cachedMotherboards = null;
 
 export async function loadMotherboards() {
   if (!cachedMotherboards) {
-    const localMoboFile = await fs.readFile("./public/data/models.json", "utf8");
+    const localMoboFile = await fs.readFile(
+      "./public/data/models.json",
+      "utf8"
+    );
     cachedMotherboards = JSON.parse(localMoboFile);
   }
   return cachedMotherboards;
 }
 ///////Saving/loading models json to memory///////
+
+
+///////Init db indexes///////
+export async function initializeIndexes() {
+  try {
+    await sql`
+      CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+      CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);
+    `;
+    console.log("Indexes initialized successfully.");
+  } catch (error) {
+    console.error("Error initializing indexes:", error);
+  }
+}
+///////Init db indexes///////
 
 export async function getMobos(singleMoboModel) {
   try {
@@ -31,20 +49,21 @@ export async function saveMobos(moboOrMobos) {
   const mobosArray = Array.isArray(moboOrMobos) ? moboOrMobos : [moboOrMobos];
 
   try {
-    await sql`
-      INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
-      SELECT * FROM UNNEST(
-        ${sql(mobosArray.map(m => [m.id, m.model, m.maker, m.socket, m.link, m.biospage, m.heldversion, m.helddate]))}
-      )
-      ON CONFLICT (id) DO UPDATE SET
-        model = EXCLUDED.model,
-        maker = EXCLUDED.maker,
-        socket = EXCLUDED.socket,
-        link = EXCLUDED.link,
-        biospage = EXCLUDED.biospage,
-        heldversion = EXCLUDED.heldversion,
-        helddate = EXCLUDED.helddate;
-    `;
+    for (const mobo of mobosArray) {
+      await sql`
+        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
+        VALUES (${mobo.id}, ${mobo.model}, ${mobo.maker}, ${mobo.socket},
+          ${mobo.link}, ${mobo.biospage}, ${mobo.heldversion}, ${mobo.helddate})
+        ON CONFLICT (id) DO UPDATE SET
+          model = EXCLUDED.model,
+          maker = EXCLUDED.maker,
+          socket = EXCLUDED.socket,
+          link = EXCLUDED.link,
+          biospage = EXCLUDED.biospage,
+          heldversion = EXCLUDED.heldversion,
+          helddate = EXCLUDED.helddate;
+      `;
+    }
     console.log("Models saved or updated successfully.");
   } catch (error) {
     console.error("Error saving models:", error);
@@ -58,7 +77,11 @@ export async function getUsers(identifier) {
     }
     return await sql`
       SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified FROM users
-      WHERE ${identifier.includes("@") ? sql`email = ${identifier}` : sql`id = ${identifier}`}
+      WHERE ${
+        identifier.includes("@")
+          ? sql`email = ${identifier}`
+          : sql`id = ${identifier}`
+      }
     `;
   } catch (error) {
     console.error("Error fetching user(s) from the database:", error);
@@ -71,19 +94,19 @@ export async function saveUsers(userOrUsers) {
   const usersArray = Array.isArray(userOrUsers) ? userOrUsers : [userOrUsers];
 
   try {
-    await sql`
-      INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
-      SELECT * FROM UNNEST(
-        ${sql(usersArray.map(u => [u.id, u.email, u.mobo, u.givenversion, u.givendate, u.lastcontacted, u.verified]))}
-      )
-      ON CONFLICT (id) DO UPDATE SET
-        email = EXCLUDED.email,
-        mobo = EXCLUDED.mobo,
-        givenversion = EXCLUDED.givenversion,
-        givendate = EXCLUDED.givendate,
-        lastcontacted = EXCLUDED.lastcontacted,
-        verified = EXCLUDED.verified;
-    `;
+    for (const user of usersArray) {
+      await sql`
+        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
+        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified})
+        ON CONFLICT (id) DO UPDATE SET
+          email = EXCLUDED.email,
+          mobo = EXCLUDED.mobo,
+          givenversion = EXCLUDED.givenversion,
+          givendate = EXCLUDED.givendate,
+          lastcontacted = EXCLUDED.lastcontacted,
+          verified = EXCLUDED.verified;
+      `;
+    }
     console.log("Users saved or updated successfully.");
   } catch (error) {
     console.error("Error saving users:", error);
@@ -101,7 +124,9 @@ export async function addOrUpdateUser(email, mobo) {
       existingUser.mobo = mobo;
       existingUser.givenversion = latestVersion;
       await saveUsers(existingUser);
-      console.log(`Updated user ${existingUser.id} with mobo: ${mobo} + ${latestVersion}`);
+      console.log(
+        `Updated user ${existingUser.id} with mobo: ${mobo} + ${latestVersion}`
+      );
     } else {
       const newUser = {
         id: await generateUniqueId("user_"),
@@ -129,7 +154,11 @@ export async function deleteUser(identifier) {
   try {
     await sql`
       DELETE FROM users
-      WHERE ${identifier.includes("@") ? sql`email = ${identifier}` : sql`id = ${identifier}`}
+      WHERE ${
+        identifier.includes("@")
+          ? sql`email = ${identifier}`
+          : sql`id = ${identifier}`
+      }
     `;
   } catch (error) {
     console.error("Error deleting user:", error);

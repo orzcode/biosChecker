@@ -1,5 +1,4 @@
 import { Router } from "express";
-import fs from "fs/promises";
 const router = Router();
 
 import * as sqlServices from "../public/js/sqlServices.js";
