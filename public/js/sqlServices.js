@@ -22,16 +22,18 @@ export async function loadMotherboards() {
 ///////Init db indexes///////
 export async function initializeIndexes() {
   try {
-    await Promise.all([
-      sql`SET client_min_messages TO WARNING;`, // Suppress NOTICE messages
-      sql`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`,
-      sql`CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);`
-    ]);    
+    // Suppress NOTICE messages
+    await sql`SET client_min_messages = WARNING;`;
+
+    await sql`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);`;
+
     console.log("Indexes initialized successfully.");
   } catch (error) {
     console.error("Error initializing indexes:", error);
   }
 }
+
 ///////Init db indexes///////
 
 export async function getMobos(singleMoboModel) {
