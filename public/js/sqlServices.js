@@ -23,6 +23,7 @@ export async function loadMotherboards() {
 export async function initializeIndexes() {
   try {
     await Promise.all([
+      sql`SET client_min_messages TO WARNING;`, // Suppress NOTICE messages
       sql`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`,
       sql`CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);`
     ]);    
