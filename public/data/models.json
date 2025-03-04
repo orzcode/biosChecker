@@ -1246,8 +1246,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Taichi%20Carrara",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2u9j6wi",
@@ -1256,8 +1256,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2iljqwv",
@@ -1266,8 +1266,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Steel%20Legend/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2aqwh6p",
@@ -1496,8 +1496,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2c0u8ux",
@@ -1506,8 +1506,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2tm6bvq",
@@ -1536,8 +1536,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv22ixqc7",
@@ -1566,8 +1566,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2ot347m",
@@ -1576,8 +1576,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
     "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/4"
   },
   {
     "id": "mobo_m68rfcv2cfn8nx",
@@ -1650,16 +1650,6 @@
     "helddate": "2025/2/26"
   },
   {
-    "id": "mobo_m68rfcv2vbnd5m",
-    "model": "A620M-HDV/M.2",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/2/27"
-  },
-  {
     "id": "mobo_m68rfcv2f48962",
     "model": "A620M-HDVP",
     "maker": "AMD",
@@ -1686,8 +1676,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv2qev4up",
@@ -1878,6 +1868,16 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20PG%20Riptide/bios.html",
     "heldversion": "1.40",
     "helddate": "2022/10/20"
+  },
+  {
+    "id": "mobo_m68rfcv2vbnd5m",
+    "model": "A620M-HDV/M.2",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/2/27"
   },
   {
     "id": "mobo_m68rfcv29sskri",
@@ -2996,8 +2996,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.18.AS02[Beta]",
-    "helddate": "2025/2/17"
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv2sb4f96",
