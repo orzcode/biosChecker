@@ -42,65 +42,68 @@
 	</div>
 
 	<!-- Socket selection filters -->
-	<div class="filterGroup">
-	  <fieldset class="socket-filters">
-		<legend class="legendAMD"><strong>AMD</strong></legend>
-		<div class="label-group">
-		  <label for="am4">
-			<input
-			  type="checkbox"
-			  id="am4"
-			  class="socket-checkbox"
-			  value="AM4"
-			/>
-			AM4
-		  </label>
-		  <label for="am5">
-			<input
-			  type="checkbox"
-			  id="am5"
-			  class="socket-checkbox"
-			  value="AM5"
-			/>
-			AM5
-		  </label>
+	<div class="searchAndFilter">
+		<div class="filterGroup">
+		  <fieldset class="socket-filters">
+			<legend class="legendAMD"><strong>AMD</strong></legend>
+			<div class="label-group">
+			  <label for="am4">
+				<input
+				  type="checkbox"
+				  id="am4"
+				  class="socket-checkbox"
+				  value="AM4"
+				/>
+				AM4
+			  </label>
+			  <label for="am5">
+				<input
+				  type="checkbox"
+				  id="am5"
+				  class="socket-checkbox"
+				  value="AM5"
+				/>
+				AM5
+			  </label>
+			</div>
+		  </fieldset>
+		  <fieldset class="socket-filters">
+			<legend class="legendIntel"><strong>Intel</strong></legend>
+			<div class="label-group">
+			  <label for="1700">
+				<input
+				  type="checkbox"
+				  id="1700"
+				  class="socket-checkbox"
+				  value="1700"
+				/>
+				LGA 1700
+			  </label>
+			  <label for="1851">
+				<input
+				  type="checkbox"
+				  id="1851"
+				  class="socket-checkbox"
+				  value="1851"
+				/>
+				LGA 1851
+			  </label>
+			</div>
+		  </fieldset>
 		</div>
-	  </fieldset>
-	  <fieldset class="socket-filters">
-		<legend class="legendIntel"><strong>Intel</strong></legend>
-		<div class="label-group">
-		  <label for="1700">
-			<input
-			  type="checkbox"
-			  id="1700"
-			  class="socket-checkbox"
-			  value="1700"
-			/>
-			LGA 1700
-		  </label>
-		  <label for="1851">
-			<input
-			  type="checkbox"
-			  id="1851"
-			  class="socket-checkbox"
-			  value="1851"
-			/>
-			LGA 1851
-		  </label>
-		</div>
-	  </fieldset>
+		<input id="searchInput" type="text" placeholder="Search motherboards..."/>
 	</div>
 
 	<!-- Table for motherboards -->
 	<table id="motherboard-table">
 	  <thead>
 		<tr>
-		  <th>Select</th>
-		  <th>Model</th>
-		  <th>Maker</th>
-		  <th>Socket</th>
-		  <th>Link</th>
-		  <th>BIOS Page</th>
+		  <th data-cell="tableCheckbox">Select</th>
+		  <th data-cell="model">Model</th>
+		  <th data-cell="maker">Maker</th>
+		  <th data-cell="socket">Socket</th>
+		  <th data-cell="link">Link</th>
+		  <th data-cell="link">BIOS Page</th>
 		</tr>
 	  </thead>
 	  <tbody>
@@ -110,11 +113,10 @@
 		a.socket.localeCompare(b.socket)).forEach((mobo) => { %> <% if
 		(mobo.link && mobo.biospage) { %>
 		<tr data-row="<%= mobo.socket %>">
-		  <td>
+		  <td data-cell="tableCheckbox">
 			<input
 			  type="radio"
 			  required
-			  class="mobo-checkbox"
 			  name="selectedMobo"
 			  value="<%= mobo.model %>"
 			  title="Select this motherboard"
@@ -123,8 +125,8 @@
 		  <td data-cell="model"><%= mobo.model %></td>
 		  <td data-cell="maker"><%= mobo.maker %></td>
 		  <td data-cell="socket"><%= mobo.socket %></td>
-		  <td>
-			<a data-cell="link" href="<%= mobo.link %>" target="_blank"
+		  <td data-cell="link">
+			<a data-cell="linkAHREF" href="<%= mobo.link %>" target="_blank"
 			  >Details <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="1em" viewBox="0 0 52 52" fill="whitesmoke">
   <path d="M27.2 41.7c-.7-.1-1.4-.2-2.1-.3s-1.4-.3-2.1-.6c-.4-.1-.9 0-1.2.3l-.5.5c-2.9 2.9-7.6 3.2-10.6.6-3.4-2.9-3.5-8.1-.4-11.2l7.6-7.6c1-1 2.2-1.6 3.4-2 1.6-.4 3.3-.3 4.8.3.9.4 1.8.9 2.6 1.7.4.4.7.8 1 1.3.4.7 1.3.8 1.8.2.9-.9 2.1-2.1 2.8-2.8.4-.4.4-1 .1-1.5-.5-.6-1-1.1-1.5-1.6-.7-.7-1.5-1.4-2.4-1.9-1.4-.9-3-1.5-4.7-1.8-3.1-.6-6.5-.1-9.3 1.4-1.1.6-2.2 1.4-3.1 2.3l-7.3 7.3c-5.3 5.3-5.7 13.9-.6 19.3 5.3 5.8 14.3 5.9 19.8.4l2.5-2.5c-.7-.5-1.2-1.7-2.1-1.8z"/>
   <path d="M45.6 5.8c-5.5-5.1-14.1-4.7-19.3.6L24 8.6c-.7.7-.2 1.9.7 2 1.4.1 2.8.4 4.2.8.4.1.9 0 1.2-.3l.5-.5c2.9-2.9 7.6-3.2 10.6-.6 3.4 2.9 3.5 8.1.4 11.2L34 28.8c-1 1-2.2 1.6-3.4 2-1.6.4-3.3.3-4.8-.3-.9-.4-1.8-.9-2.6-1.7-.4-.4-.7-.8-1-1.3-.4-.7-1.3-.8-1.8-.2l-2.8 2.8c-.4.4-.4 1-.1 1.5.4.6.9 1.1 1.4 1.6.7.7 1.6 1.4 2.4 1.9 1.4.9 3 1.5 4.6 1.8 3.1.6 6.5.1 9.3-1.4 1.1-.6 2.2-1.4 3.1-2.3l7.6-7.6c5.4-5.2 5.2-14.2-.5-19.5z"/>
@@ -132,8 +134,8 @@
 </i
 			></a>
 		  </td>
-		  <td>
-			<a data-cell="link" href="<%= mobo.biospage %>" target="_blank"
+		  <td data-cell="link">
+			<a data-cell="linkAHREF" href="<%= mobo.biospage %>" target="_blank"
 			  >BIOSes <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="1em" viewBox="0 0 52 52" fill="whitesmoke">
   <path d="M27.2 41.7c-.7-.1-1.4-.2-2.1-.3s-1.4-.3-2.1-.6c-.4-.1-.9 0-1.2.3l-.5.5c-2.9 2.9-7.6 3.2-10.6.6-3.4-2.9-3.5-8.1-.4-11.2l7.6-7.6c1-1 2.2-1.6 3.4-2 1.6-.4 3.3-.3 4.8.3.9.4 1.8.9 2.6 1.7.4.4.7.8 1 1.3.4.7 1.3.8 1.8.2.9-.9 2.1-2.1 2.8-2.8.4-.4.4-1 .1-1.5-.5-.6-1-1.1-1.5-1.6-.7-.7-1.5-1.4-2.4-1.9-1.4-.9-3-1.5-4.7-1.8-3.1-.6-6.5-.1-9.3 1.4-1.1.6-2.2 1.4-3.1 2.3l-7.3 7.3c-5.3 5.3-5.7 13.9-.6 19.3 5.3 5.8 14.3 5.9 19.8.4l2.5-2.5c-.7-.5-1.2-1.7-2.1-1.8z"/>
   <path d="M45.6 5.8c-5.5-5.1-14.1-4.7-19.3.6L24 8.6c-.7.7-.2 1.9.7 2 1.4.1 2.8.4 4.2.8.4.1.9 0 1.2-.3l.5-.5c2.9-2.9 7.6-3.2 10.6-.6 3.4 2.9 3.5 8.1.4 11.2L34 28.8c-1 1-2.2 1.6-3.4 2-1.6.4-3.3.3-4.8-.3-.9-.4-1.8-.9-2.6-1.7-.4-.4-.7-.8-1-1.3-.4-.7-1.3-.8-1.8-.2l-2.8 2.8c-.4.4-.4 1-.1 1.5.4.6.9 1.1 1.4 1.6.7.7 1.6 1.4 2.4 1.9 1.4.9 3 1.5 4.6 1.8 3.1.6 6.5.1 9.3-1.4 1.1-.6 2.2-1.4 3.1-2.3l7.6-7.6c5.4-5.2 5.2-14.2-.5-19.5z"/>

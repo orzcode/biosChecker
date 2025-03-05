@@ -1,42 +1,86 @@
 <script>
-	// Helper script
-// filters the table based on the selected socket
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll('.socket-checkbox');
-  const tableRows = document.querySelectorAll('#motherboard-table tbody tr'); // all the rows in the table
+  const tableBody = document.querySelector('#motherboard-table tbody');
+  const tableRows = document.querySelectorAll('#motherboard-table tbody tr');
+  const searchInput = document.querySelector('#searchInput');
+
+
+  // Create "No results" row
+  const noResultsRow = document.createElement('tr');
+  noResultsRow.id = 'no-results-row';
+  noResultsRow.style.display = 'none';
+  
+  // Create cells to match the table structure
+  const noResultsCells = `
+    <td data-cell="tableCheckbox"></td>
+    <td data-cell="model">No motherboards match your search</td>
+    <td data-cell="maker"></td>
+    <td data-cell="socket"></td>
+    <td data-cell="link"></td>
+    <td data-cell="link"></td>
+  `;
+  noResultsRow.innerHTML = noResultsCells;
+  
+  // Append "No results" row to table body
+  tableBody.appendChild(noResultsRow);
 
   checkboxes.forEach((checkbox) => {
-	checkbox.addEventListener('change', function () {
-	  // Unchecks all other checkboxes when you click on one
-	  // (eg: one checkbox at a time)
-	  checkboxes.forEach((otherCheckbox) => {
-		if (otherCheckbox !== checkbox) {
-		  otherCheckbox.checked = false;
-		}
-	  });
-
-	  // Filters the table based on the ticked box (function below)
-	  // In short - this is 'attached' to each of the 4 checkboxes
-	  filterTable();
-	});
+    checkbox.addEventListener('change', function () {
+      // Unchecks all other checkboxes when you click on one
+      checkboxes.forEach((otherCheckbox) => {
+        if (otherCheckbox !== checkbox) {
+          otherCheckbox.checked = false;
+        }
+      });
+      
+      // Filters the table based on the ticked box (function below)
+      // In short - this is 'attached' to each of the 4 checkboxes
+      filterTable();
+    });
   });
 
-  async function filterTable() {
-	const selectedSockets = Array.from(checkboxes)
-	  .filter((checkbox) => checkbox.checked)
-	  .map((checkbox) => checkbox.value);
+  // Add search input event listener
+  searchInput.addEventListener('input', function () {
+    filterTable();
+  });
 
-	tableRows.forEach((row) => {
-	  const socketType = row.getAttribute('data-row');
-	  //See EJS view if needed - basically, each row has a data-row attribute
+  function filterTable() {
+    const selectedSockets = Array.from(checkboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
 
-	  // Checks if the row matches the selected socket
-	  if (selectedSockets.length === 0 || selectedSockets.includes(socketType)) {
-		row.style.display = ''; // Shows row if it matches
-	  } else {
-		row.style.display = 'none'; // Hides row if it doesn't
-	  }
-	});
+    const searchTerm = searchInput.value.toLowerCase();
+
+    let visibleRowsCount = 0;
+
+    tableRows.forEach((row) => {
+      const socketType = row.getAttribute('data-row');
+      
+      // Check all text cells for search term
+      const cellsText = Array.from(row.querySelectorAll('td'))
+        .map(cell => cell.textContent.toLowerCase())
+        .join(' ');
+
+      const socketMatch = selectedSockets.length === 0 || selectedSockets.includes(socketType);
+      const searchMatch = searchTerm === '' || cellsText.includes(searchTerm);
+
+      // Checks if the row matches the selected socket
+      if (socketMatch && searchMatch) {
+        row.style.display = ''; // Shows row if it matches
+        visibleRowsCount++;
+      } else {
+        row.style.display = 'none'; // Hides row if it doesn't
+      }
+    });
+
+    // Toggle "No results" row
+    const noResultsRow = document.getElementById('no-results-row');
+    if (visibleRowsCount === 0) {
+      noResultsRow.style.display = '';
+    } else {
+      noResultsRow.style.display = 'none';
+    }
   }
 });
   </script>

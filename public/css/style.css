@@ -70,7 +70,7 @@ html {
   flex-grow: 0;
   flex-shrink: 0;
 }
-.blurb{
+.blurb {
   max-width: 80rem;
   display: flex;
   flex-direction: column;
@@ -111,8 +111,7 @@ a:visited {
   align-items: center;
   gap: 1rem;
 }
-.hachimitsu
-{
+.hachimitsu {
   display: none;
 }
 /* ----------------------------------------- */
@@ -175,6 +174,9 @@ th {
   color: #c60000;
 }
 
+[data-cell="tableCheckbox"] {
+  width: 3ch;
+}
 [data-cell="model"] {
   width: 33ch;
 }
@@ -184,16 +186,36 @@ th {
 [data-cell="socket"] {
   width: 4ch;
 }
-
 [data-cell="link"] {
+  width: 10ch;
+  white-space: nowrap;
+}
+[data-cell="linkAHREF"] {
   display: flex;
   flex-wrap: wrap;
+  max-width: 95%;
 }
 /* ----------------------------------------- */
+.searchAndFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-self: center;
+  padding: 2rem 0;
+  border: 1px solid var(--header);
+  border-radius: 1rem;
+}
 .filterGroup {
   display: flex;
-  width: 100%;
+  width: 90%;
+  align-self: center;
   justify-content: space-evenly;
+}
+#searchInput {
+  align-self: center;
+  width: 90%;
+  max-width: 380px;
 }
 legend {
   color: var(--header);
@@ -244,7 +266,11 @@ fieldset {
   transform: rotate(45deg);
 }
 /* ----------------------------------------- */
-.buttonsDiv, .submissionDetails, .unsubscribeDetails, .errorDetails, .checkEmailDetails {
+.buttonsDiv,
+.submissionDetails,
+.unsubscribeDetails,
+.errorDetails,
+.checkEmailDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,5 +286,5 @@ fieldset {
   max-width: 300px;
 }
 .unsub {
-  filter:grayscale(10%) opacity(0.9);
+  filter: grayscale(10%) opacity(0.9);
 }

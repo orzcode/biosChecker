@@ -87,7 +87,7 @@ app.use("/", router);
 // Start server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-  console.log(`App is live @ http://localhost:${PORT}/`);
+  console.log(`App is live @ ${process.env.NODE_ENV === "prod" ? `https://www.asrockbioschecker.link:${PORT}/` : `http://localhost:${PORT}/`}`);
   console.log(
     `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
   );
