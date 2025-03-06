@@ -1570,6 +1570,16 @@
     "helddate": "2025/3/3"
   },
   {
+    "id": "mobo_m68rfcv2qev4up",
+    "model": "B650M PG Riptide WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
+    "heldversion": "3.20[Beta]",
+    "helddate": "2025/3/3"
+  },
+  {
     "id": "mobo_m68rfcv2cfn8nx",
     "model": "B650 Pro RS WiFi",
     "maker": "AMD",
@@ -1668,16 +1678,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html",
     "heldversion": "2.20",
     "helddate": "2022/10/20"
-  },
-  {
-    "id": "mobo_m68rfcv2qev4up",
-    "model": "B650M PG Riptide WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv26z3vfh",
@@ -3000,16 +3000,6 @@
     "helddate": "2025/2/19"
   },
   {
-    "id": "mobo_m6ujzkh81nuuag",
-    "model": "B650 PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/3/3"
-  },
-  {
     "id": "mobo_m68rfcv2ljza5k",
     "model": "Z890 Riptide WiFi",
     "maker": "Intel",
@@ -3026,6 +3016,16 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
+  },
+  {
+    "id": "mobo_m6ujzkh81nuuag",
+    "model": "B650 PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/3"
   }
