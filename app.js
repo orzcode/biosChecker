@@ -103,3 +103,4 @@ if (process.env.NODE_ENV !== "prod") {
 
 // For Vercel
 //module.exports = app;
+export default app;
