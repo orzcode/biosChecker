@@ -93,12 +93,12 @@ if (process.env.NODE_ENV !== "prod") {
   app.listen(PORT, () => {
     console.log(`App is live @ http://localhost:${PORT}/`);
   });
-} else {
-  console.log("App is live @ https://www.asrockbioschecker.link/");
   app.use((req, res, next) => {
     setTimeout(next, Math.floor(Math.random() * 2000) + 100);
     console.log("Delaying request by ~1000ms due to dev mode");
   });
+} else {
+  console.log("App is live @ https://www.asrockbioschecker.link/");
 }
 
 // For Vercel
