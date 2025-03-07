@@ -33,28 +33,28 @@ initializeIndexes()
   .then(() => console.log("Database indexes ensured."))
   .catch((err) => console.error("Failed to initialize indexes:", err));
 
-if (process.env.NODE_ENV === "dev") {
-  app.use((req, res, next) => {
-      setTimeout(next, Math.floor(Math.random() * 2000) + 100);
-      console.log("Delaying request by ~1000ms due to dev mode");
-  });
-}
-
 // 1. Long-term caching for images
-app.use("/public/images", (req, res, next) => {
-  res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
-  next();
-}, express.static(path.join(__dirname, "public/images"), { etag: true }));
+app.use(
+  "/public/images",
+  (req, res, next) => {
+    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    next();
+  },
+  express.static(path.join(__dirname, "public/images"), { etag: true })
+);
 
 // 2. Special case for models.json
-app.use("/public/data/models.json", (req, res, next) => {
-  res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
-  next();
-}, express.static(path.join(__dirname, "public/data"), { etag: true }));
+app.use(
+  "/public/data/models.json",
+  (req, res, next) => {
+    res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
+    next();
+  },
+  express.static(path.join(__dirname, "public/data"), { etag: true })
+);
 
 // Serve static files (etag enabled)
 app.use(express.static(path.join(__dirname, "public"), { etag: true }));
-
 
 // 🛡️ Security middleware
 app.use(
@@ -84,11 +84,22 @@ app.use(limiter);
 // Routes
 app.use("/", router);
 
-// Start server
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`App is live @ ${process.env.NODE_ENV === "prod" ? `https://www.asrockbioschecker.link:${PORT}/` : `http://localhost:${PORT}/`}`);
-  console.log(
-    `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
-  );
-});
+console.log(
+  `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
+);
+// For local development
+if (process.env.NODE_ENV !== "prod") {
+  const PORT = process.env.PORT || 8000;
+  app.listen(PORT, () => {
+    console.log(`App is live @ http://localhost:${PORT}/`);
+  });
+} else {
+  console.log("App is live @ https://www.asrockbioschecker.link/");
+  app.use((req, res, next) => {
+    setTimeout(next, Math.floor(Math.random() * 2000) + 100);
+    console.log("Delaying request by ~1000ms due to dev mode");
+  });
+}
+
+// For Vercel
+//module.exports = app;
