@@ -87,9 +87,11 @@ app.use("/", router);
 console.log(
   `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
 );
+
+const PORT = process.env.PORT || 8000;
+
 // For local development
 if (process.env.NODE_ENV !== "prod") {
-  const PORT = process.env.PORT || 8000;
   app.listen(PORT, () => {
     console.log(`App is live @ http://localhost:${PORT}/`);
   });
@@ -98,7 +100,9 @@ if (process.env.NODE_ENV !== "prod") {
     console.log("Delaying request by ~1000ms due to dev mode");
   });
 } else {
-  console.log("App is live @ https://www.asrockbioschecker.link/");
+  app.listen(PORT, () => {
+    console.log(`App is live @ https://www.asrockbioschecker.link/`);
+  });
 }
 
 // For Vercel
