@@ -113,7 +113,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
     const relevantSockets = ["1700", "1851", "am4", "am5"];
     const existingModels = await getMobos(); // Fetch existing models from the database
-    //await sql.end()
+
     const newOrUpdatedModels = []; // Only save these models
     const allEntries = []; // To build the full JSON content
 
@@ -194,7 +194,7 @@ export async function scrapeMotherboards(fromKoyeb) {
     console.error("Error scraping motherboards:", error);
   }
   console.log("---moboFetcher (weekly) finished---");
-  await sql.end();
+  //await sql.end();
 }
 
 //checkBiosPage("amd", "B450M Steel Legend");
