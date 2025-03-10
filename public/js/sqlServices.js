@@ -122,6 +122,8 @@ export async function addOrUpdateUser(email, mobo) {
     const latestVersion = model?.[0]?.heldversion ?? null;
     const latestDate = model?.[0]?.helddate ?? null;
 
+    //console.log(latestDate)
+
     const [existingUser] = await getUsers(email);
     if (existingUser) {
       existingUser.mobo = mobo;
@@ -141,6 +143,7 @@ export async function addOrUpdateUser(email, mobo) {
         verified: false,
       };
       await saveUsers(newUser);
+      //console.log(newUser);
       console.log(`Created new user: ${newUser.id} with mobo: ${mobo}`);
       return newUser;
     }
