@@ -85,28 +85,24 @@ app.use(limiter);
 app.use("/", router);
 
 console.log(
-  `Running in ${process.env.NODE_ENV === "prod" ? "prod" : "dev"} mode`
+  `Running in ${process.env.NODE_ENV} mode`
 );
 
 const PORT = process.env.PORT || 8000;
 
-// For local development
-if (process.env.NODE_ENV !== "prod") {
-  app.listen(PORT, () => {
-    console.log(`App is live @ http://localhost:${PORT}/`);
-  });
+// For local development, or for Koyeb
+// Vercel doesn't use 'listen' but seems to run regardless
+app.listen(PORT, () => {
+  console.log(`App is live @ ${process.env.NODE_ENV !== "production" ? "http://localhost:" + PORT : "https://www.asrockbioschecker.link/"}`);
+});
+
+// Only add delay in development
+if (process.env.NODE_ENV !== "production") {
   app.use((req, res, next) => {
     setTimeout(next, Math.floor(Math.random() * 2000) + 100);
-    console.log("Delaying request by ~1000ms due to dev mode");
+    console.log("Delaying request by ~1000ms due to development mode");
   });
 }
-// else {
-  //For Koyeb
-  // app.listen(PORT, () => {
-  //   console.log(`App is live @ https://www.asrockbioschecker.link/`);
-  // });
-// }
 
 // For Vercel
-//module.exports = app;
 export default app;

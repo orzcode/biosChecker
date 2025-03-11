@@ -17,7 +17,8 @@
   },
   "scripts": {
     "dev": "node --env-file=.env --watch app.js",
-    "start": "npm install && npm run minify && NODE_ENV=production node app.js",
+    "start": "node app.js",
+    "minifystart": "npm install && npm run minify && NODE_ENV=production node app.js",
     "minify": "npm run minify-css && npm run minify-js && npm run minify-ejs",
     "minify-css": "cleancss -o public/css/styles.min.css public/css/styles.css",
     "minify-js": "terser public/js/script.js -o public/js/script.min.js --compress --mangle",
