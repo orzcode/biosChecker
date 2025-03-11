@@ -99,11 +99,13 @@ if (process.env.NODE_ENV !== "prod") {
     setTimeout(next, Math.floor(Math.random() * 2000) + 100);
     console.log("Delaying request by ~1000ms due to dev mode");
   });
-} else {
-  app.listen(PORT, () => {
-    console.log(`App is live @ https://www.asrockbioschecker.link/`);
-  });
 }
+// else {
+  //For Koyeb
+  // app.listen(PORT, () => {
+  //   console.log(`App is live @ https://www.asrockbioschecker.link/`);
+  // });
+// }
 
 // For Vercel
 //module.exports = app;
