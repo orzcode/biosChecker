@@ -18,24 +18,6 @@ export async function loadMotherboards() {
 }
 ///////Saving/loading models json to memory///////
 
-
-///////Init db indexes///////
-export async function initializeIndexes() {
-  try {
-    // Suppress NOTICE messages
-    await sql`SET client_min_messages = WARNING;`;
-
-    await sql`CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);`;
-    await sql`CREATE INDEX IF NOT EXISTS idx_models_model ON models(model);`;
-
-    console.log("Indexes initialized successfully.");
-  } catch (error) {
-    console.error("Error initializing indexes:", error);
-  }
-}
-
-///////Init db indexes///////
-
 export async function getMobos(singleMoboModel) {
   try {
     return singleMoboModel

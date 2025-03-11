@@ -5,7 +5,6 @@ import rateLimit from "express-rate-limit";
 import { fileURLToPath } from "url";
 import router from "./routes/router.js";
 import compression from "compression";
-import { initializeIndexes } from "./public/js/sqlServices.js";
 
 // Initialize Express app
 const app = express();
@@ -27,11 +26,6 @@ app.set("trust proxy", 1);
 // Middleware
 app.use(express.urlencoded({ extended: true })); // Form data parsing
 app.use(express.json()); // JSON parsing
-
-// Initialize database indexes
-initializeIndexes()
-  .then(() => console.log("Database indexes ensured."))
-  .catch((err) => console.error("Failed to initialize indexes:", err));
 
 // 1. Long-term caching for images
 app.use(
