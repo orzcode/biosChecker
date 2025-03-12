@@ -22,7 +22,6 @@ const sql = postgres({
   password: process.env.PGPASSWORD,
   port: 5432,
   ssl: "require",
-
   // Connection pooling settings
   max: 10, // Maximum number of connections in pool
   idle_timeout: 10, // Close idle connections after 30 seconds
