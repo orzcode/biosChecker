@@ -53,7 +53,14 @@ app.use(express.static(path.join(__dirname, "public"), { etag: true }));
 // 🛡️ Security middleware
 app.use(
   helmet({
-    contentSecurityPolicy: false, // Disable if using inline scripts/styles
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"], // For my inline scripts
+        styleSrc: ["'self'", "'unsafe-inline'"], // For my inline styles
+        imgSrc: ["'self'", "data:"],
+      },
+    },
   })
 );
 
