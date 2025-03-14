@@ -56,6 +56,7 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
+        frameSrc: ["'self'", "https://ko-fi.com/", "https://www.paypal.com/"],
         scriptSrc: ["'self'", "'unsafe-inline'"],
         scriptSrcAttr: ["'unsafe-inline'"], 
         styleSrc: ["'self'", "'unsafe-inline'"],
