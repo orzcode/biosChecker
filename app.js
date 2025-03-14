@@ -58,7 +58,7 @@ app.use(
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'", "'unsafe-inline'"], // For my inline scripts
         styleSrc: ["'self'", "'unsafe-inline'"], // For my inline styles
-        imgSrc: ["'self'", "data:"],
+        imgSrc: ["'self'", "data:", "https://*.asrock.com"],
       },
     },
   })
@@ -85,16 +85,20 @@ app.use(limiter);
 // Routes
 app.use("/", router);
 
-console.log(
-  `Running in ${process.env.NODE_ENV} mode`
-);
+console.log(`Running in ${process.env.NODE_ENV} mode`);
 
 const PORT = process.env.PORT || 8000;
 
 // For local development, or for Koyeb
 // Vercel doesn't use 'listen' but seems to run regardless
 app.listen(PORT, () => {
-  console.log(`App is live @ ${process.env.NODE_ENV !== "production" ? "http://localhost:" + PORT : "https://www.asrockbioschecker.link/"}`);
+  console.log(
+    `App is live @ ${
+      process.env.NODE_ENV !== "production"
+        ? "http://localhost:" + PORT
+        : "https://www.asrockbioschecker.link/"
+    }`
+  );
 });
 
 // Only add delay in development
