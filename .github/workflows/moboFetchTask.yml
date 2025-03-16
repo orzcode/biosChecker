@@ -64,9 +64,15 @@ jobs:
             git add public/data/models.json
             git commit -m "Update models.json via daily workflow"
 
-          # Ensure the latest changes are fetched before pushing
-          # (prevents errors where repo was updated during workflow run)
-          git pull --rebase origin main
+            # Stash any remaining unstaged changes before rebasing (prevents the error)
+            git stash --include-untracked
+
+            # Fetch latest changes and rebase safely
+            git fetch origin main
+            git rebase origin/main || (git rebase --abort && echo "Rebase failed, skipping rebase")
+
+            # Apply stashed changes back (if there were any)
+            git stash pop || echo "No stash to apply"
 
             git push
           fi
