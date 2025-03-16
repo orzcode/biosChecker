@@ -1125,7 +1125,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Pro%20RS%20WiFi",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/2/25"
   },
@@ -1505,7 +1505,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi%20Lite",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/4"
   },
@@ -1545,7 +1545,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition/bios.html",
     "heldversion": "3.46[Beta]",
     "helddate": "2024/8/21"
   },
@@ -1675,7 +1675,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
     "heldversion": "3.46[Beta]",
     "helddate": "2024/8/21"
   },
@@ -1695,7 +1695,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVPDASH",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVPDASH/bios.html",
     "heldversion": "1.91[Beta]",
     "helddate": "2023/6/27"
   },
@@ -1915,7 +1915,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M-HDV%20R4.0",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
   },
@@ -2005,7 +2005,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370M%20Pro4%20R2.0",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4%20R2.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
   },
@@ -2265,7 +2265,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Steel%20Legend",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
   },
@@ -2645,7 +2645,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M-HDV%20R3.0",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R3.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
   },
@@ -2885,7 +2885,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X600TM-ITX",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/X600TM-ITX/bios.html",
     "heldversion": "2.01",
     "helddate": "2024/9/23"
   },
@@ -3015,7 +3015,7 @@
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/2/25"
   },
@@ -3025,7 +3025,7 @@
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-HDV%20R3.0",
-    "biospage": "Not found",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
   }
