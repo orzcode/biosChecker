@@ -70,7 +70,7 @@ async function checkBiosPage(maker, modelName) {
           );
         }
       }
-      await delay(2000); // Add a 2-second delay between checks
+      await delay(3000); // Add a 2-second delay between checks
     }
   }
 
@@ -114,20 +114,38 @@ export async function scrapeMotherboards(fromKoyeb) {
     const relevantSockets = ["1700", "1851", "am4", "am5"];
     const existingModels = await getMobos(); // Fetch existing models from the database
 
+    // Create a lookup map of existing models for faster checking
+    const existingModelMap = new Map();
+    for (const model of existingModels) {
+      existingModelMap.set(model.model, model);
+    }
+
+    // Filter to only get new models with relevant sockets
+    const newModels = allmodels.filter(model => {
+      // Check if it has a relevant socket
+      if (!relevantSockets.includes(model[1].toLowerCase())) return false;
+      
+      // Check if it already exists in our database
+      const modelName = model[0];
+      return !existingModelMap.has(modelName);
+    });
+
+    console.log(`Found ${newModels.length} new models out of ${allmodels.length} total models`);
+
     const newOrUpdatedModels = []; // Only save these models
     const allEntries = []; // To build the full JSON content
 
-    for (const model of allmodels) {
-      if (!relevantSockets.includes(model[1].toLowerCase())) continue;
-
+    // Process only the new models
+    for (const model of newModels) {
       const maker = model[2].toLowerCase().includes("intel") ? "Intel" : "AMD";
       const modelName = model[0];
       const socketType = model[1];
-      const existingEntry = existingModels.find((m) => m.model === modelName);
-
+      
+      // Only check BIOS page for new models
       const biosPage = await checkBiosPage(maker, modelName);
+      
       const newEntry = {
-        id: existingEntry ? existingEntry.id : await generateUniqueId("mobo_"),
+        id: await generateUniqueId("mobo_"),
         model: modelName,
         maker: maker,
         socket: socketType,
@@ -135,39 +153,27 @@ export async function scrapeMotherboards(fromKoyeb) {
           .replace(/\s/g, "%20")
           .replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
-        heldversion: existingEntry ? existingEntry.heldversion : null,
-        helddate: existingEntry ? existingEntry.helddate : '2000/1/1',
+        heldversion: null,
+        helddate: '2000/1/1',
       };
-
-      // Add to the full list for JSON
-      allEntries.push(newEntry);
-
-      // Only save the model if it's new or has changes
-      if (
-        !existingEntry || // New entry
-        existingEntry.biospage !== newEntry.biospage || // BIOS page changed
-        existingEntry.link !== newEntry.link || // Link changed
-        existingEntry.maker !== newEntry.maker || // Maker changed (unlikely)
-        existingEntry.socket !== newEntry.socket // Socket changed (unlikely)
-      ) {
-        newOrUpdatedModels.push(newEntry);
-      }
-
-      console.log(
-        `Processed: ${modelName}, BIOS Page: ${biosPage || "Not found"}, ${
-          existingEntry ? "Updated w/ live data" : "New entry"
-        }`
-      );
+      
+      // Add to both lists
+      newOrUpdatedModels.push(newEntry);
+      
+      console.log(`Processed new model: ${modelName}, BIOS Page: ${biosPage || "Not found"}`);
       console.log("\n");
-
+      
       // Add a 1-second delay between each motherboard check
-      await delay(1000);
+      await delay(5000);
     }
 
-    // Save only if there are new/updated models
+    // Add all models to the allEntries array (existing + new)
+    allEntries.push(...existingModels, ...newOrUpdatedModels);
+
+    // Save only if there are new models
     if (newOrUpdatedModels.length > 0) {
       await saveMobos(newOrUpdatedModels); // Save to database
-      console.log("Saved new or updated models to the database.");
+      console.log(`Saved ${newOrUpdatedModels.length} new models to the database.`);
 
       // Save to models.json
       try {
@@ -182,13 +188,13 @@ export async function scrapeMotherboards(fromKoyeb) {
 
       //ONLY USED IN KOYEB TASK!
       if(fromKoyeb === "fromKoyeb"){
-      koyebToRepo(); // Push changes to GitHub
-      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+        koyebToRepo(); // Push changes to GitHub
+        console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       }
       //ONLY USED IN KOYEB TASK!
 
     } else {
-      console.log("No new or updated models found. Database and JSON remain unchanged.");
+      console.log("No new models found. Database and JSON remain unchanged.");
     }
   } catch (error) {
     console.error("Error scraping motherboards:", error);
