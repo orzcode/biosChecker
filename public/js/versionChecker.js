@@ -127,7 +127,7 @@ export async function updateModels(fromKoyeb) {
     console.log("\n\n");
 
     // Add a 1-second delay before proceeding to the next motherboard
-    await delay(1000); // Delay for 1000 milliseconds (1 second)
+    await delay(2000); // Delay for 1000 milliseconds (1 second)
   }
 
   // Save updated models db
