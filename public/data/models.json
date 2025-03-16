@@ -3018,15 +3018,5 @@
     "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/3"
-  },
-  {
-    "id": "mobo_m6ujzkh81nuuag",
-    "model": "B650 PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/3/3"
   }
 ]
