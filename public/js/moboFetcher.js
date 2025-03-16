@@ -111,21 +111,43 @@ export async function scrapeMotherboards(fromKoyeb) {
       return;
     }
 
-    const relevantSockets = ["1700", "1851", "am4", "am5"];
-    const existingModels = await getMobos(); // Fetch existing models from the database
-
-    // Create a lookup map of existing models for faster checking
+    // First, get existing models from the database
+    const existingModels = await getMobos();
+    
+    // Then, load the current models.json to prevent overwriting existing data
+    let currentModelsJson = [];
+    try {
+      const fileContent = await fs.readFile("./public/data/models.json", "utf8");
+      currentModelsJson = JSON.parse(fileContent);
+      console.log(`Loaded ${currentModelsJson.length} models from models.json`);
+    } catch (error) {
+      console.warn("Could not load models.json, starting with empty list:", error);
+    }
+    
+    // Create a combined map of existing models with models.json as the primary source
+    // This ensures we don't overwrite any existing BIOS page values
     const existingModelMap = new Map();
-    for (const model of existingModels) {
+    
+    // First add all models from models.json
+    for (const model of currentModelsJson) {
       existingModelMap.set(model.model, model);
     }
+    
+    // Then add any models from the database that aren't in models.json
+    for (const model of existingModels) {
+      if (!existingModelMap.has(model.model)) {
+        existingModelMap.set(model.model, model);
+      }
+    }
+
+    const relevantSockets = ["1700", "1851", "am4", "am5"];
 
     // Filter to only get new models with relevant sockets
     const newModels = allmodels.filter(model => {
       // Check if it has a relevant socket
       if (!relevantSockets.includes(model[1].toLowerCase())) return false;
       
-      // Check if it already exists in our database
+      // Check if it already exists in our combined map
       const modelName = model[0];
       return !existingModelMap.has(modelName);
     });
@@ -133,7 +155,6 @@ export async function scrapeMotherboards(fromKoyeb) {
     console.log(`Found ${newModels.length} new models out of ${allmodels.length} total models`);
 
     const newOrUpdatedModels = []; // Only save these models
-    const allEntries = []; // To build the full JSON content
 
     // Process only the new models
     for (const model of newModels) {
@@ -157,18 +178,24 @@ export async function scrapeMotherboards(fromKoyeb) {
         helddate: '2000/1/1',
       };
       
-      // Add to both lists
+      // Add to new models list
       newOrUpdatedModels.push(newEntry);
+      
+      // Add to the combined map
+      existingModelMap.set(modelName, newEntry);
       
       console.log(`Processed new model: ${modelName}, BIOS Page: ${biosPage || "Not found"}`);
       console.log("\n");
       
-      // Add a 1-second delay between each motherboard check
+      // Add a delay between each motherboard check
       await delay(5000);
     }
 
-    // Add all models to the allEntries array (existing + new)
-    allEntries.push(...existingModels, ...newOrUpdatedModels);
+    // Create the final allEntries array from the map values
+    const allEntries = Array.from(existingModelMap.values());
+    // Basically - maps out models.json & DB data with NEW models
+    // and removes any duplicates, to prevent over-writing existing data
+    // Useful where it bugs out and overwrites with 'biospage: not found'
 
     // Save only if there are new models
     if (newOrUpdatedModels.length > 0) {
@@ -204,8 +231,5 @@ export async function scrapeMotherboards(fromKoyeb) {
 }
 
 //checkBiosPage("amd", "B450M Steel Legend");
-//checkBiosPage("amd", "X870E Nova WiFi");
 
 scrapeMotherboards();
-//note: dont be surprised if koyeb is missing packages, since 
-//you're calling the func directly from the router
