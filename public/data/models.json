@@ -1166,8 +1166,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570S%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html",
-    "heldversion": "2.20",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
   },
   {
     "id": "mobo_m68rfcv2ur6y52",
@@ -1366,8 +1366,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
-    "heldversion": "1.14.AS06[Beta]",
-    "helddate": "2022/12/21"
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv2itfcbt",
@@ -1476,8 +1476,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "1.14.AS06[Beta]",
-    "helddate": "2022/12/21"
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv26z3vfh",
@@ -1516,8 +1516,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204S",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html",
-    "heldversion": "4.50",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
   },
   {
     "id": "mobo_m68rfcv2bp00y3",
@@ -1526,8 +1526,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "4.50",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
   },
   {
     "id": "mobo_m68rfcv2w6rc8a",
@@ -1536,8 +1536,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html",
-    "heldversion": "3.70",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
   },
   {
     "id": "mobo_m68rfcv20ym2bz",
@@ -1556,8 +1556,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Phantom%20Gaming%204",
     "biospage": "https://pg.asrock.com/mb/amd/B550M%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "2.20",
-    "helddate": "2022/12/29"
+    "heldversion": "3.46[Beta]",
+    "helddate": "2024/8/21"
   },
   {
     "id": "mobo_m68rfcv22u2c1v",
@@ -2856,8 +2856,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%20X",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%20X/bios.html",
-    "heldversion": "5.00",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
   },
   {
     "id": "mobo_m68rfcv24fax9j",
@@ -2866,8 +2866,18 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
-    "heldversion": "4.50",
-    "helddate": "2022/10/20"
+    "heldversion": "5.63[Beta]",
+    "helddate": "2024/8/26"
+  },
+  {
+    "id": "mobo_m8bhibtmk2h5mj",
+    "model": "B650 PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.20",
+    "helddate": "2025/3/3"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
@@ -3018,15 +3028,5 @@
     "biospage": "Not found",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
-  },
-  {
-    "id": "mobo_m8bhibtmk2h5mj",
-    "model": "B650 PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": null,
-    "helddate": "2000/1/1"
   }
 ]
