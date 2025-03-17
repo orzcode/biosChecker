@@ -3018,5 +3018,15 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
+  },
+  {
+    "id": "mobo_m8cei4v6ycmn7j",
+    "model": "B650M Pro X3D WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
+    "heldversion": "3.20",
+    "helddate": "2025/2/25"
   }
 ]
