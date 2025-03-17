@@ -3,6 +3,7 @@ import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import sql from "./db.js";
 import { generateUniqueId } from "./uuid.js";
+import { scrapeBiosInfo } from "./versionChecker.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { koyebToRepo } from "./koyebToGithub.js";
 
@@ -169,6 +170,8 @@ export async function scrapeMotherboards(fromKoyeb) {
       
       // Checks/figures out the subdomain for bios page
       const biosPage = await checkBiosPage(maker, modelName);
+      await delay(3000);
+      const versionInfo = await scrapeBiosInfo(biosPage);
       
       const newEntry = {
         id: await generateUniqueId("mobo_"),
@@ -179,8 +182,8 @@ export async function scrapeMotherboards(fromKoyeb) {
           .replace(/\s/g, "%20")
           .replace(/\//g, "")}`,
         biospage: biosPage || "Not found",
-        heldversion: null,
-        helddate: '2000/1/1',
+        heldversion: versionInfo?.version,
+        helddate: versionInfo?.releaseDate,
       };
       
       // Add to new models list
