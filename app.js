@@ -51,44 +51,70 @@ app.use(
 app.use(express.static(path.join(__dirname, "public"), { etag: true }));
 
 // 🛡️ Security middleware
+// Note: all of this horseshit is because of Paypal's dogshit SDK and popup window
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
+        connectSrc: [
+          "'self'", 
+          "*.paypal.com", 
+          "*.paypalobjects.com", 
+          "*.venmo.com"
+        ],
         frameSrc: [
           "'self'",
           "'unsafe-inline'",
-          "https://ko-fi.com/",
-          "https://www.paypal.com/",
-          "https://*.paypal.com",
-          "https://*.paypal.cn",
-          "https://*.paypalobjects.com",
-          "https://objects.paypal.cn",
-          "https://www.gstatic.com",
-          "https://*.synchronycredit.com",
-          "https://synchronycredit.com",
-          "https://www.datadoghq-browser-agent.com",
-          "https://static.novacredit.com",
+          "https://ko-fi.com",
+          "*.paypal.com",
+          "*.paypal.cn",
+          "*.paypalobjects.com",
+          "*.objects.paypal.cn",
+          "*.gstatic.com",
+          "*.synchronycredit.com",
+          "*.datadoghq-browser-agent.com",
+          "*.static.novacredit.com",
+          "*.venmo.com"
         ],
         scriptSrc: [
           "'self'",
           "'unsafe-inline'",
-          "https://*.paypal.com",
-          "https://*.paypal.cn",
-          "https://*.paypalobjects.com",
-          "https://objects.paypal.cn",
-          "https://www.gstatic.com",
-          "https://*.synchronycredit.com",
-          "https://synchronycredit.com",
-          "https://www.datadoghq-browser-agent.com",
-          "https://static.novacredit.com",
+          "*.paypal.com",
+          "*.paypal.cn",
+          "*.paypalobjects.com",
+          "*.objects.paypal.cn",
+          "*.gstatic.com",
+          "*.synchronycredit.com",
+          "*.datadoghq-browser-agent.com",
+          "*.static.novacredit.com",
+          "*.venmo.com"
         ],
         scriptSrcAttr: ["'unsafe-inline'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", "data:", "https://*.asrock.com"],
+        styleSrc: [
+          "'self'", 
+          "'unsafe-inline'", 
+          "*.paypal.com", 
+          "*.paypalobjects.com", 
+          "*.venmo.com"
+        ],
+        imgSrc: [
+          "'self'", 
+          "data:", 
+          "*.asrock.com", 
+          "*.paypal.com", 
+          "*.paypalobjects.com", 
+          "*.venmo.com"
+        ],
+        childSrc: [
+          "'self'", 
+          "*.paypal.com", 
+          "*.paypalobjects.com", 
+          "*.venmo.com"
+        ]
       },
     },
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" }
   })
 );
 
