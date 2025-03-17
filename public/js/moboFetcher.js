@@ -22,6 +22,8 @@ async function delay(ms) {
 import { scrapeWithPlaywright } from "./playwright.js";
 
 async function checkBiosPage(maker, modelName) {
+  // Determines the appropriate bios URL/subdomain
+  // i.e. PG or non-PG
   const baseLink = `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
     .replace(/\s/g, "%20")
     .replace(/\//g, "")}/`;
@@ -82,6 +84,9 @@ async function checkBiosPage(maker, modelName) {
 
 
 export async function scrapeMotherboards(fromKoyeb) {
+  //Checks for newly released motherboards
+  //Skips existing models in the database
+  //Maps and compares against DB and JSON to prevent overwriting
   console.log("---moboFetcher (weekly) starting...---");
   try {
     const url = "https://www.asrock.com/mb/";
@@ -162,7 +167,7 @@ export async function scrapeMotherboards(fromKoyeb) {
       const modelName = model[0];
       const socketType = model[1];
       
-      // Only check BIOS page for new models
+      // Checks/figures out the subdomain for bios page
       const biosPage = await checkBiosPage(maker, modelName);
       
       const newEntry = {

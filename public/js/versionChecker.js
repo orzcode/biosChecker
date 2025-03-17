@@ -6,18 +6,17 @@ import { getMobos, saveMobos } from "./sqlServices.js";
 import { scrapeWithPlaywright } from "./playwright.js";
 import { koyebToRepo } from "./koyebToGithub.js";
 
+/////////////////////////////////////////////
 // Helper function to add a delay
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
   // Split the date string and convert to a Date object
   const [year, month, day] = dateStr.split("/").map(Number);
   return new Date(year, month - 1, day); // Month is 0-indexed in JavaScript Date
 }
-
 // Checks if foundDate is newer than heldDate
 export async function isNewerDate(heldDate, foundDate) {
   if (!heldDate) return true; // If no held date, consider found as newer
@@ -27,6 +26,14 @@ export async function isNewerDate(heldDate, foundDate) {
 
   return foundDateTime > heldDateTime;
 }
+/////////////////////////////////////////////
+// scrapeBiosInfo(url)
+// takes a bios page url, decides whether to use Playwright or normal Fetch based on the URL (checks if it's PG subdomain or not), scrapes the text, and passes it to...
+
+// extractVersionInfo()
+// ...which then parses and cleans the relevant data (latest bios and date) and RETURNS these two:
+// console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
+// return { version, releaseDate };
 
 export async function extractVersionInfo(extractor) {
   // Get the first row from the first table
@@ -44,11 +51,11 @@ export async function extractVersionInfo(extractor) {
 
   const version = rawVersion.trim();
   const releaseDate = rawDate.trim();
-  
+
   console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
   return { version, releaseDate };
 }
-//
+/////////////////////////////////////////////
 
 async function scrapeBIOSInfo(url) {
   // Determine the subdomain (www or pg)
@@ -67,17 +74,17 @@ async function scrapeBIOSInfo(url) {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
         },
       });
-    
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-    
+
       const html = await response.text();
       const $ = cheerio.load(html);
-    
+
       // Create a Cheerio-specific extractor function
       const cheerioExtractor = (selector) => $(selector).text();
-      
+
       return await extractVersionInfo(cheerioExtractor);
     } catch (err) {
       console.error(`Fetch scraping error at ${url}: ${err.message}`);
