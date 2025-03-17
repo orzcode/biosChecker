@@ -57,7 +57,7 @@ export async function extractVersionInfo(extractor) {
 }
 /////////////////////////////////////////////
 
-async function scrapeBIOSInfo(url) {
+export async function scrapeBIOSInfo(url) {
   // Determine the subdomain (www or pg)
   const isPGSubdomain = url.includes("pg.");
 
