@@ -139,10 +139,6 @@ app.use(limiter);
 // Routes
 app.use("/", router);
 
-// Vercel Analytics
-import { inject } from '@vercel/analytics';
-inject();
-
 console.log(`Running in ${process.env.NODE_ENV} mode`);
 
 const PORT = process.env.PORT || 8000;
