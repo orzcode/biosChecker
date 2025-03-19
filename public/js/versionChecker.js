@@ -96,17 +96,35 @@ export async function scrapeBIOSInfo(url) {
 export async function updateModels(fromKoyeb) {
   const mobos = await getMobos();
   const updatedMobos = [];
+  
+  // Add tracking variables
+  let totalChecked = 0;
+  let updatesFound = 0;
+  let errorCount = 0;
+  let errorItems = [];
+  let updatedItems = []; // Track details of updated items
 
   for (const mobo of mobos) {
     const { model, biospage, heldversion, helddate } = mobo;
+    totalChecked++;
 
     console.log(`Checking BIOS for: ${model}...`);
 
     // Scrape the latest BIOS information
-    const scrapedInfo = await scrapeBIOSInfo(biospage);
+    let scrapedInfo;
+    try {
+      scrapedInfo = await scrapeBIOSInfo(biospage);
+    } catch (error) {
+      console.error(`Error scraping ${model}: ${error.message}`);
+      errorCount++;
+      errorItems.push({ model, error: error.message });
+      continue;
+    }
 
     if (!scrapedInfo) {
       console.error(`Failed to fetch info for ${model}. Skipping.`);
+      errorCount++;
+      errorItems.push({ model, error: "Failed to fetch info" });
       continue;
     }
 
@@ -128,13 +146,23 @@ export async function updateModels(fromKoyeb) {
         }) to ${version} (${releaseDate})`
       );
       updatedMobos.push(mobo); // Add to updated mobos list
+      updatesFound++;
+      
+      // Track details of this update
+      updatedItems.push({
+        model,
+        oldVersion: heldversion || "none",
+        newVersion: version,
+        oldDate: helddate || "none",
+        newDate: releaseDate
+      });
     } else {
       console.log(`No update needed for ${model}.`);
     }
     console.log("\n\n");
 
-    // Add a 1-second delay before proceeding to the next motherboard
-    await delay(2000); // Delay for 1000 milliseconds (1 second)
+    // Add a delay before proceeding to the next motherboard
+    await delay(2000); // Delay for 2000 milliseconds (2 seconds)
   }
 
   // Save updated models db
@@ -155,6 +183,29 @@ export async function updateModels(fromKoyeb) {
       console.log("models.json updated.");
     } catch (error) {
       console.error("Failed to save models.json:", error);
+      errorCount++;
+    }
+
+    // Print summary
+    console.log("\n==== BIOS Update Summary ====");
+    console.table({
+      "Total Items": totalChecked,
+      "Updates Found": updatesFound,
+      "Errors Encountered": errorCount
+    });
+    
+    // Show detailed information about updated items
+    if (updatesFound > 0) {
+      console.log("\n==== Updated Items ====");
+      console.table(updatedItems);
+    } else {
+      console.log("\nNo updates found for any models.");
+    }
+    
+    // If there were errors, show detailed error information
+    if (errorCount > 0) {
+      console.log("\n==== Error Details ====");
+      console.table(errorItems);
     }
 
     //ONLY USED IN KOYEB TASK!
@@ -165,9 +216,41 @@ export async function updateModels(fromKoyeb) {
     //ONLY USED IN KOYEB TASK!
 
     console.log("BIOS version checks complete - proceeding to notifycheck");
+    
+    // Return summary information in case you want to use it elsewhere
+    return {
+      totalChecked,
+      updatesFound,
+      errorCount,
+      errorItems,
+      updatedItems,
+      updatedMobos
+    };
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
+    errorCount++;
+    
+    // Still print summary even if there was an error
+    console.log("\n==== BIOS Update Summary ====");
+    console.table({
+      "Total Items": totalChecked,
+      "Updates Found": updatesFound,
+      "Errors Encountered": errorCount
+    });
+    
+    // Show detailed update information even if there was a database error
+    if (updatesFound > 0) {
+      console.log("\n==== Updated Items ====");
+      console.table(updatedItems);
+    }
+    
+    return {
+      totalChecked,
+      updatesFound,
+      errorCount,
+      errorItems: [...errorItems, { model: "Database", error: error.message }],
+      updatedItems,
+      updatedMobos
+    };
   }
 }
-
-//updateModels();

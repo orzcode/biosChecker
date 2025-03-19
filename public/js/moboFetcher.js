@@ -209,6 +209,23 @@ export async function scrapeMotherboards(fromKoyeb) {
     if (newOrUpdatedModels.length > 0) {
       await saveMobos(newOrUpdatedModels); // Save to database
       console.log(`Saved ${newOrUpdatedModels.length} new models to the database.`);
+      
+      // Display table of added models
+      console.log("New models added:");
+      console.log("-".repeat(80));
+      console.log("| Model".padEnd(35) + "| Socket".padEnd(10) + "| Maker".padEnd(10) + "| BIOS Version".padEnd(15) + "| BIOS Date".padEnd(15) + "|");
+      console.log("-".repeat(80));
+      for (const model of newOrUpdatedModels) {
+        console.log(
+          "| " + model.model.padEnd(33) + 
+          "| " + model.socket.padEnd(8) + 
+          "| " + model.maker.padEnd(8) + 
+          "| " + (model.heldversion || "N/A").padEnd(13) + 
+          "| " + (model.helddate || "N/A").padEnd(13) + 
+          "|"
+        );
+      }
+      console.log("-".repeat(80));
 
       // Save to models.json
       try {
