@@ -31,8 +31,8 @@ export async function notifyUsers() {
 
             if (user.verified === false) {
                 const lastContactedDate = new Date(user.lastcontacted);
-                const eighteenHoursAgo = new Date(Date.now() - 18 * 60 * 60 * 1000);
-                if (lastContactedDate < eighteenHoursAgo) {
+                const fiftyHoursAgo = new Date(Date.now() - 50 * 60 * 60 * 1000);
+                if (lastContactedDate < fiftyHoursAgo) {
                     console.log(`Deleting unverified user ${user.id} (last contacted: ${user.lastcontacted})`);
                     await deleteUser(user.email);
                     continue;
