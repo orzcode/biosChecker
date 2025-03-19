@@ -143,11 +143,8 @@ export async function updateModels(fromKoyeb) {
     console.log("models db updated.");
 
     // Combine all mobos into one list (updated and unchanged)
-    const combinedMobos = mobos.map((mobo) => {
-      // If the mobo was updated, replace it with the updated version
-      const updatedMobo = updatedMobos.find((uMobo) => uMobo.id === mobo.id);
-      return updatedMobo || mobo; // Use updated version or the original
-    });
+    const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
+    const combinedMobos = mobos.map((mobo) => updatedMoboMap.get(mobo.id) || mobo);
 
     // Save the full list to models.json
     try {
