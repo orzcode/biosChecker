@@ -4,6 +4,7 @@ import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { scrapeWithPlaywright } from "./playwright.js";
+import { sendSummaryToDiscord } from './reporter.js';
 import { koyebToRepo } from "./koyebToGithub.js";
 
 /////////////////////////////////////////////
@@ -165,8 +166,18 @@ export async function updateModels(fromKoyeb) {
     await delay(2000); // Delay for 2000 milliseconds (2 seconds)
   }
 
-  // Save updated models db
+  // Create summary object to be used in both success and error paths
+  let summary = {
+    totalChecked,
+    updatesFound,
+    errorCount,
+    errorItems,
+    updatedItems,
+    updatedMobos
+  };
+
   try {
+    // Save updated models db
     await saveMobos(updatedMobos);
     console.log("models db updated.");
 
@@ -184,73 +195,52 @@ export async function updateModels(fromKoyeb) {
     } catch (error) {
       console.error("Failed to save models.json:", error);
       errorCount++;
+      summary.errorCount = errorCount;
     }
-
-    // Print summary
-    console.log("\n==== BIOS Update Summary ====");
-    console.table({
-      "Total Items": totalChecked,
-      "Updates Found": updatesFound,
-      "Errors Encountered": errorCount
-    });
-    
-    // Show detailed information about updated items
-    if (updatesFound > 0) {
-      console.log("\n==== Updated Items ====");
-      console.table(updatedItems);
-    } else {
-      console.log("\nNo updates found for any models.");
-    }
-    
-    // If there were errors, show detailed error information
-    if (errorCount > 0) {
-      console.log("\n==== Error Details ====");
-      console.table(errorItems);
-    }
-
-    //ONLY USED IN KOYEB TASK!
-    if (fromKoyeb === "fromKoyeb") {
-      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-      koyebToRepo(); // Push changes to GitHub
-    }
-    //ONLY USED IN KOYEB TASK!
-
-    console.log("BIOS version checks complete - proceeding to notifycheck");
-    
-    // Return summary information in case you want to use it elsewhere
-    return {
-      totalChecked,
-      updatesFound,
-      errorCount,
-      errorItems,
-      updatedItems,
-      updatedMobos
-    };
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
     errorCount++;
-    
-    // Still print summary even if there was an error
-    console.log("\n==== BIOS Update Summary ====");
-    console.table({
-      "Total Items": totalChecked,
-      "Updates Found": updatesFound,
-      "Errors Encountered": errorCount
-    });
-    
-    // Show detailed update information even if there was a database error
-    if (updatesFound > 0) {
-      console.log("\n==== Updated Items ====");
-      console.table(updatedItems);
-    }
-    
-    return {
-      totalChecked,
-      updatesFound,
-      errorCount,
-      errorItems: [...errorItems, { model: "Database", error: error.message }],
-      updatedItems,
-      updatedMobos
-    };
+    summary.errorCount = errorCount;
+    summary.errorItems = [...errorItems, { model: "Database", error: error.message }];
   }
+
+  // Print summary
+  console.log("\n==== BIOS Update Summary ====");
+  console.table({
+    "Total Items": totalChecked,
+    "Updates Found": updatesFound,
+    "Errors Encountered": errorCount
+  });
+  
+  // Show detailed information about updated items
+  if (updatesFound > 0) {
+    console.log("\n==== Updated Items ====");
+    console.table(updatedItems);
+  } else {
+    console.log("\nNo updates found for any models.");
+  }
+  
+  // If there were errors, show detailed error information
+  if (errorCount > 0) {
+    console.log("\n==== Error Details ====");
+    console.table(errorItems);
+  }
+
+  // ONLY USED IN KOYEB TASK!
+  if (fromKoyeb === "fromKoyeb") {
+    console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+    koyebToRepo(); // Push changes to GitHub
+  }
+  // ONLY USED IN KOYEB TASK!
+
+  console.log("BIOS version checks complete - proceeding to notifycheck");
+  
+  // Non-blocking call to send Discord notification
+  try {
+    Promise.resolve().then(() => sendSummaryToDiscord(summary, "BIOS Update"));
+  } catch (e) {
+    // Silent error handling
+  }
+  
+  return summary;
 }
