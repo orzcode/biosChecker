@@ -4,7 +4,7 @@ import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { scrapeWithPlaywright } from "./playwright.js";
-import { sendSummaryToDiscord } from './reporter.js';
+import { sendToDiscord } from './reporter.js';
 import { koyebToRepo } from "./koyebToGithub.js";
 
 /////////////////////////////////////////////
@@ -237,7 +237,7 @@ export async function updateModels(fromKoyeb) {
   
   // Non-blocking call to send Discord notification
   try {
-    Promise.resolve().then(() => sendSummaryToDiscord(summary, "BIOS Update"));
+    Promise.resolve().then(() => sendToDiscord(summary, "BIOS Update"));
   } catch (e) {
     // Silent error handling
   }
