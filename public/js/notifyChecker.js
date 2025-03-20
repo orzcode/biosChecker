@@ -39,6 +39,10 @@ export async function notifyUsers() {
         for (const user of users) {
             const mobo = moboMap.get(user.mobo); // O(1) lookup
 
+            if (user.id === "dummy"){
+                continue;
+            }
+
             if (!mobo) {
                 console.warn(`Mobo ${user.mobo} not found for user ${user.id}. Skipping.`);
                 stats.errors++;
