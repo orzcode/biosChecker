@@ -1,20 +1,22 @@
 import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import { parseDate, isNewerDate } from "./versionChecker.js";
+import { sendToDiscord } from "./reporter.js";
 
 export async function notifyUsers() {
-    // Simple statistics tracking
-    const stats = {
-        totalUsers: 0,
-        usersNotified: 0,
-        usersDeleted: 0,
-        errors: 0
+    const summary = {
+        summary: {
+            title: "Notification Check",
+            total: 0,
+            success: 0,
+            errors: 0,
+            additional: {
+                usersDeleted: 0,
+            },
+        },
+        details: [],
+        errors: [],
     };
-    
-    // Detailed tracking - no emails
-    const notifiedUsers = [];
-    const deletedUsers = [];
-    const errorDetails = [];
 
     try {
         const users = await getUsers();
@@ -22,35 +24,34 @@ export async function notifyUsers() {
 
         if (!mobos || mobos.length === 0) {
             console.warn("No motherboard data found. Exiting.");
-            return stats;
+            return summary;
         }
 
         if (!users || users.length === 0) {
             console.warn("No user data found. Exiting.");
-            return stats;
+            return summary;
         }
 
-        stats.totalUsers = users.length;
+        summary.summary.total = users.length;
 
-        // Create a Map for efficient motherboard lookups
         const moboMap = new Map(mobos.map((mobo) => [mobo.model, mobo]));
 
         const updatedUsers = [];
         for (const user of users) {
-            const mobo = moboMap.get(user.mobo); // O(1) lookup
+            const mobo = moboMap.get(user.mobo);
 
-            if (user.id === "dummy"){
+            if (user.id === "dummy") {
                 continue;
             }
 
             if (!mobo) {
                 console.warn(`Mobo ${user.mobo} not found for user ${user.id}. Skipping.`);
-                stats.errors++;
-                errorDetails.push({
+                summary.errors.push({
                     id: user.id,
                     mobo: user.mobo,
-                    error: "Motherboard not found"
+                    error: "Motherboard not found",
                 });
+                summary.summary.errors++;
                 continue;
             }
 
@@ -60,11 +61,12 @@ export async function notifyUsers() {
                 if (lastContactedDate < fiftyHoursAgo) {
                     console.log(`Deleting unverified user ${user.id} (last contacted: ${user.lastcontacted})`);
                     await deleteUser(user.email);
-                    stats.usersDeleted++;
-                    deletedUsers.push({
+                    summary.summary.additional.usersDeleted++;
+                    summary.details.push({
                         id: user.id,
                         mobo: user.mobo,
-                        lastContacted: user.lastcontacted
+                        lastContacted: user.lastcontacted,
+                        status: "deleted"
                     });
                     continue;
                 }
@@ -81,21 +83,22 @@ export async function notifyUsers() {
                         givendate: mobo.helddate,
                     };
                     updatedUsers.push(updatedUser);
-                    stats.usersNotified++;
-                    notifiedUsers.push({
+                    summary.summary.success++;
+                    summary.details.push({
                         id: user.id,
                         mobo: user.mobo,
                         newVersion: mobo.heldversion,
-                        newDate: mobo.helddate
+                        newDate: mobo.helddate,
+                        status: "notified"
                     });
                 } catch (emailError) {
                     console.error(`Failed to notify ${user.id} about ${user.mobo}: ${emailError}`);
-                    stats.errors++;
-                    errorDetails.push({
+                    summary.errors.push({
                         id: user.id,
                         mobo: user.mobo,
-                        error: emailError.message
+                        error: emailError.message,
                     });
+                    summary.summary.errors++;
                 }
             }
         }
@@ -106,57 +109,48 @@ export async function notifyUsers() {
         } else {
             console.log("No users needed updates.");
         }
-        
-        // Print focused summary
+
         console.log("\n==== Notification Summary ====");
         console.table({
-            "Total Users": stats.totalUsers,
-            "Users Notified": stats.usersNotified,
-            "Users Deleted": stats.usersDeleted,
-            "Errors": stats.errors
+            "Total Users": summary.summary.total,
+            "Users Notified": summary.summary.success,
+            "Users Deleted": summary.summary.additional.usersDeleted,
+            "Errors": summary.summary.errors,
         });
-        
-        // Show notified users
-        if (stats.usersNotified > 0) {
+
+        if (summary.summary.success > 0) {
             console.log("\n==== Notified Users ====");
-            console.table(notifiedUsers);
+            console.table(summary.details.filter(user => user.status === "notified"));
         }
-        
-        // Show deleted users
-        if (stats.usersDeleted > 0) {
+
+        if (summary.summary.additional.usersDeleted > 0) {
             console.log("\n==== Deleted Users ====");
-            console.table(deletedUsers);
+            console.table(summary.details.filter(user => user.status === "deleted"));
         }
-        
-        // Show errors
-        if (stats.errors > 0) {
+
+        if (summary.summary.errors > 0) {
             console.log("\n==== Errors ====");
-            console.table(errorDetails);
+            console.table(summary.errors);
         }
-        
-        return {
-            stats,
-            notifiedUsers,
-            deletedUsers,
-            errors: errorDetails
-        };
+
+        await sendToDiscord(summary);
+
+        return summary;
     } catch (error) {
         console.error("Error in notifyUsers:", error);
-        
-        // Simple error summary
+        summary.errors.push({ id: "system", error: error.message });
+        summary.summary.errors++;
+
         console.log("\n==== Notification Summary ====");
         console.table({
-            "Total Users": stats.totalUsers,
-            "Users Notified": stats.usersNotified,
-            "Users Deleted": stats.usersDeleted,
-            "Errors": stats.errors + 1
+            "Total Users": summary.summary.total,
+            "Users Notified": summary.summary.success,
+            "Users Deleted": summary.summary.additional.usersDeleted,
+            "Errors": summary.summary.errors,
         });
-        
-        return {
-            stats,
-            notifiedUsers,
-            deletedUsers,
-            errors: [...errorDetails, { id: "system", error: error.message }]
-        };
+
+        await sendToDiscord(summary);
+
+        return summary;
     }
 }

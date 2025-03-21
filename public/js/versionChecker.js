@@ -97,150 +97,117 @@ export async function scrapeBIOSInfo(url) {
 export async function updateModels(fromKoyeb) {
   const mobos = await getMobos();
   const updatedMobos = [];
-  
-  // Add tracking variables
-  let totalChecked = 0;
-  let updatesFound = 0;
-  let errorCount = 0;
-  let errorItems = [];
-  let updatedItems = []; // Track details of updated items
 
-  for (const mobo of mobos) {
-    const { model, biospage, heldversion, helddate } = mobo;
-    totalChecked++;
-
-    console.log(`Checking BIOS for: ${model}...`);
-
-    // Scrape the latest BIOS information
-    let scrapedInfo;
-    try {
-      scrapedInfo = await scrapeBIOSInfo(biospage);
-    } catch (error) {
-      console.error(`Error scraping ${model}: ${error.message}`);
-      errorCount++;
-      errorItems.push({ model, error: error.message });
-      continue;
-    }
-
-    if (!scrapedInfo) {
-      console.error(`Failed to fetch info for ${model}. Skipping.`);
-      errorCount++;
-      errorItems.push({ model, error: "Failed to fetch info" });
-      continue;
-    }
-
-    const { version, releaseDate } = scrapedInfo;
-
-    console.log(
-      `Found version: ${version} (date: ${releaseDate}) | Current: ${
-        heldversion || "none"
-      } (date: ${helddate || "none"})`
-    );
-
-    // Compare dates to determine if an update is needed
-    if (await isNewerDate(helddate, releaseDate)) {
-      mobo.heldversion = version;
-      mobo.helddate = releaseDate;
-      console.log(
-        `Updating ${model} from ${heldversion || "none"} (${
-          helddate || "none"
-        }) to ${version} (${releaseDate})`
-      );
-      updatedMobos.push(mobo); // Add to updated mobos list
-      updatesFound++;
-      
-      // Track details of this update
-      updatedItems.push({
-        model,
-        oldVersion: heldversion || "none",
-        newVersion: version,
-        oldDate: helddate || "none",
-        newDate: releaseDate
-      });
-    } else {
-      console.log(`No update needed for ${model}.`);
-    }
-    console.log("\n\n");
-
-    // Add a delay before proceeding to the next motherboard
-    await delay(2000); // Delay for 2000 milliseconds (2 seconds)
-  }
-
-  // Create summary object to be used in both success and error paths
-  let summary = {
-    totalChecked,
-    updatesFound,
-    errorCount,
-    errorItems,
-    updatedItems,
-    updatedMobos
+  const summary = {
+      summary: {
+          title: "BIOS Update",
+          total: mobos.length,
+          success: 0,
+          errors: 0,
+          additional: {},
+      },
+      details: [],
+      errors: [],
   };
 
-  try {
-    // Save updated models db
-    await saveMobos(updatedMobos);
-    console.log("models db updated.");
+  for (const mobo of mobos) {
+      const { model, biospage, heldversion, helddate } = mobo;
 
-    // Combine all mobos into one list (updated and unchanged)
-    const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
-    const combinedMobos = mobos.map((mobo) => updatedMoboMap.get(mobo.id) || mobo);
+      console.log(`Checking BIOS for: ${model}...`);
 
-    // Save the full list to models.json
-    try {
-      await fs.writeFile(
-        "./public/data/models.json",
-        JSON.stringify(combinedMobos, null, 2)
-      );
-      console.log("models.json updated.");
-    } catch (error) {
-      console.error("Failed to save models.json:", error);
-      errorCount++;
-      summary.errorCount = errorCount;
-    }
-  } catch (error) {
-    console.error("Failed to save updated mobos:", error);
-    errorCount++;
-    summary.errorCount = errorCount;
-    summary.errorItems = [...errorItems, { model: "Database", error: error.message }];
+      let scrapedInfo;
+      try {
+          scrapedInfo = await scrapeBIOSInfo(biospage);
+      } catch (error) {
+          console.error(`Error scraping ${model}: ${error.message}`);
+          summary.errors.push({ model, error: error.message });
+          summary.summary.errors++;
+          continue;
+      }
+
+      if (!scrapedInfo) {
+          console.error(`Failed to fetch info for ${model}. Skipping.`);
+          summary.errors.push({ model, error: "Failed to fetch info" });
+          summary.summary.errors++;
+          continue;
+      }
+
+      const { version, releaseDate } = scrapedInfo;
+
+      console.log(`Found version: ${version} (date: ${releaseDate}) | Current: ${heldversion || "none"} (date: ${helddate || "none"})`);
+
+      if (await isNewerDate(helddate, releaseDate)) {
+          mobo.heldversion = version;
+          mobo.helddate = releaseDate;
+          console.log(`Updating ${model} from ${heldversion || "none"} (${helddate || "none"}) to ${version} (${releaseDate})`);
+          updatedMobos.push(mobo);
+          summary.summary.success++;
+          summary.details.push({
+              model,
+              oldVersion: heldversion || "none",
+              newVersion: version,
+              oldDate: helddate || "none",
+              newDate: releaseDate,
+          });
+      } else {
+          console.log(`No update needed for ${model}.`);
+      }
+      console.log("\n\n");
+      await delay(2000);
   }
 
-  // Print summary
+  try {
+      await saveMobos(updatedMobos);
+      console.log("models db updated.");
+
+      const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
+      const combinedMobos = mobos.map((mobo) => updatedMoboMap.get(mobo.id) || mobo);
+
+      try {
+          await fs.writeFile("./public/data/models.json", JSON.stringify(combinedMobos, null, 2));
+          console.log("models.json updated.");
+      } catch (error) {
+          console.error("Failed to save models.json:", error);
+          summary.errors.push({ model: "Database", error: error.message });
+          summary.summary.errors++;
+      }
+  } catch (error) {
+      console.error("Failed to save updated mobos:", error);
+      summary.errors.push({ model: "Database", error: error.message });
+      summary.summary.errors++;
+  }
+
   console.log("\n==== BIOS Update Summary ====");
   console.table({
-    "Total Items": totalChecked,
-    "Updates Found": updatesFound,
-    "Errors Encountered": errorCount
+      "Total Items": summary.summary.total,
+      "Updates Found": summary.summary.success,
+      "Errors Encountered": summary.summary.errors,
   });
-  
-  // Show detailed information about updated items
-  if (updatesFound > 0) {
-    console.log("\n==== Updated Items ====");
-    console.table(updatedItems);
+
+  if (summary.summary.success > 0) {
+      console.log("\n==== Updated Items ====");
+      console.table(summary.details);
   } else {
-    console.log("\nNo updates found for any models.");
-  }
-  
-  // If there were errors, show detailed error information
-  if (errorCount > 0) {
-    console.log("\n==== Error Details ====");
-    console.table(errorItems);
+      console.log("\nNo updates found for any models.");
   }
 
-  // ONLY USED IN KOYEB TASK!
-  if (fromKoyeb === "fromKoyeb") {
-    console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-    koyebToRepo(); // Push changes to GitHub
+  if (summary.summary.errors > 0) {
+      console.log("\n==== Error Details ====");
+      console.table(summary.errors);
   }
-  // ONLY USED IN KOYEB TASK!
+
+  if (fromKoyeb === "fromKoyeb") {
+      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+      koyebToRepo();
+  }
 
   console.log("BIOS version checks complete - proceeding to notifycheck");
-  
-  // Non-blocking call to send Discord notification
+
   try {
-    Promise.resolve().then(() => sendToDiscord(summary, "BIOS Update"));
+      Promise.resolve().then(() => sendToDiscord(summary));
   } catch (e) {
-    // Silent error handling
+      // Silent error handling
   }
-  
+
   return summary;
 }
