@@ -48,6 +48,10 @@ jobs:
           PGPASSWORD: ${{ secrets.PGPASSWORD }}
           PGDATABASE: ${{ secrets.PGDATABASE }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_VERSIONCHECKER: ${{ secrets.DISCORD_WEBHOOK_VERSIONCHECKER }}
+          DISCORD_WEBHOOK_NOTIFYUSERS: ${{ secrets.DISCORD_WEBHOOK_NOTIFYUSERS }}
+          DISCORD_WEBHOOK_MOBOFETCHER: ${{ secrets.DISCORD_WEBHOOK_MOBOFETCHER }}
+          DISCORD_WEBHOOK_STATSCHARTS: ${{ secrets.DISCORD_WEBHOOK_STATSCHARTS }}
         run:
           node public/js/moboFetcher.js
 

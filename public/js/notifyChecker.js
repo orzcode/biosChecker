@@ -59,13 +59,12 @@ export async function notifyUsers() {
                 const lastContactedDate = new Date(user.lastcontacted);
                 const fiftyHoursAgo = new Date(Date.now() - 50 * 60 * 60 * 1000);
                 if (lastContactedDate < fiftyHoursAgo) {
-                    console.log(`Deleting unverified user ${user.id} (last contacted: ${user.lastcontacted})`);
+                    console.log(`Deleting unverified user ${user.id})`);
                     await deleteUser(user.email);
                     summary.summary.additional.usersDeleted++;
                     summary.details.push({
                         id: user.id,
                         mobo: user.mobo,
-                        lastContacted: user.lastcontacted,
                         status: "deleted"
                     });
                     continue;
@@ -133,7 +132,7 @@ export async function notifyUsers() {
             console.table(summary.errors);
         }
 
-        await sendToDiscord(summary);
+        await sendToDiscord(summary, "notifyUsers");
 
         return summary;
     } catch (error) {
@@ -149,7 +148,7 @@ export async function notifyUsers() {
             "Errors": summary.summary.errors,
         });
 
-        await sendToDiscord(summary);
+        await sendToDiscord(summary, "notifyUsers");
 
         return summary;
     }

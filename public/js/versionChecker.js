@@ -204,7 +204,7 @@ export async function updateModels(fromKoyeb) {
   console.log("BIOS version checks complete - proceeding to notifycheck");
 
   try {
-      Promise.resolve().then(() => sendToDiscord(summary));
+      Promise.resolve().then(() => sendToDiscord(summary, "versionChecker"));
   } catch (e) {
       // Silent error handling
   }

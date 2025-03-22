@@ -1,15 +1,29 @@
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+// Define webhook URLs for different scripts
+const DISCORD_WEBHOOKS = {
+  default: process.env.DISCORD_WEBHOOK_URL,
+  versionChecker: process.env.DISCORD_WEBHOOK_VERSIONCHECKER,
+  notifyUsers: process.env.DISCORD_WEBHOOK_NOTIFYUSERS,
+  moboFetcher: process.env.DISCORD_WEBHOOK_MOBOFETCHER,
+};
 
 /**
  * Send a summary to Discord with error protection to prevent affecting parent scripts
  * @param {Object} data - The data to send
- * @param {string} scriptName - Name of the script for the header (e.g., "BIOS Update", "Notification Check", "New Motherboards")
+ * @param {string} [scriptName='default'] - Name of the script for determining which webhook to use
  */
-export async function sendToDiscord(data) {
+export async function sendToDiscord(data, scriptName = 'default') {
     // Completely wrap everything in try/catch to never interrupt parent script
     try {
         if (!data) {
             console.log("No data provided to Discord logger");
+            return;
+        }
+
+        // Determine which webhook URL to use based on scriptName
+        const webhookUrl = DISCORD_WEBHOOKS[scriptName] || DISCORD_WEBHOOKS.default;
+        
+        if (!webhookUrl) {
+            console.log(`No webhook URL found for script: ${scriptName}`);
             return;
         }
 
@@ -18,8 +32,8 @@ export async function sendToDiscord(data) {
 
         // Add summary
         message += `**Summary:**\n\`\`\`\n`;
-        message += `Total Items: ${data.summary.total}\n`;
-        message += `Success: ${data.summary.success}\n`;
+        message += `Base Total: ${data.summary.total}\n`;
+        message += `Updated: ${data.summary.success}\n`;
         message += `Errors: ${data.summary.errors}\n`;
         if (data.summary.additional) {
           for (const [key, value] of Object.entries(data.summary.additional)) {
@@ -59,7 +73,7 @@ export async function sendToDiscord(data) {
         const runId = process.env.GITHUB_RUN_ID;
         let ghRunUrl = "";
         if (repository && runId) {
-            ghRunUrl = `[Click to view GH run log](https://github.com/${repository}/actions/runs/${runId})`;
+            ghRunUrl = `[Click to view GH run log](<https://github.com/${repository}/actions/runs/${runId}>)`;
         }
 
         // Append GitHub Actions Run URL to the message
@@ -79,7 +93,7 @@ export async function sendToDiscord(data) {
         );
 
         // Create the fetch promise
-        const fetchPromise = fetch(DISCORD_WEBHOOK_URL, {
+        const fetchPromise = fetch(webhookUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -104,7 +118,7 @@ export async function sendToDiscord(data) {
             return;
         }
 
-        console.log("Summary sent to Discord");
+        console.log(`Summary sent to Discord using ${scriptName} webhook`);
     } catch (error) {
         // Silently log any errors without throwing
         console.log(`Discord logger encountered an error: ${error.message}`);

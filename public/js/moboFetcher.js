@@ -246,7 +246,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
           // Send report to Discord
           summary.details = newOrUpdatedModels;
-          await sendToDiscord(summary, "New Motherboards");
+          await sendToDiscord(summary, "moboFetcher");
 
           //ONLY USED IN KOYEB TASK!
           if (fromKoyeb === "fromKoyeb") {
@@ -259,7 +259,7 @@ export async function scrapeMotherboards(fromKoyeb) {
           console.log("No new models found. Database and JSON remain unchanged.");
 
           // Send empty report to Discord (optional)
-          await sendToDiscord(summary, "New Motherboards");
+          await sendToDiscord(summary, "moboFetcher");
       }
 
       console.log("---moboFetcher (weekly) finished---");
@@ -271,7 +271,7 @@ export async function scrapeMotherboards(fromKoyeb) {
       summary.summary.errors++;
 
       // Send error report to Discord
-      await sendToDiscord(summary, "New Motherboards");
+      await sendToDiscord(summary, "moboFetcher");
 
       return summary;
   }
