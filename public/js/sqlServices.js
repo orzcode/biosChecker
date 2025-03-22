@@ -54,7 +54,25 @@ export async function saveMobos(moboOrMobos) {
     console.error("Error saving models:", error);
   }
 }
+export async function getSocketCounts() {
+  try {
+    const socketCounts = await sql`
+      SELECT m.socket, COUNT(*) AS count
+      FROM users u
+      JOIN models m ON u.mobo = m.model
+      WHERE u.id != 'dummy'
+      GROUP BY m.socket
+    `;
 
+    return socketCounts.reduce((acc, row) => {
+      acc[row.socket] = parseInt(row.count, 10);
+      return acc;
+    }, {});
+  } catch (error) {
+    console.error("Error fetching socket counts:", error);
+    return {};
+  }
+}
 export async function getUserMobos() {
   try {
     const mobos = await sql`SELECT mobo FROM users`;
