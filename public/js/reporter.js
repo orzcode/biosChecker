@@ -47,10 +47,14 @@ export async function sendToDiscord(data, scriptName = 'default') {
             message += `**Details (${data.details.length}):**\n\`\`\`\n`;
             if (data.details[0]) {
                 const keys = Object.keys(data.details[0]);
-                message += keys.map(key => key.padEnd(20)).join('') + '\n';
-                message += '-'.repeat(keys.length * 20) + '\n';
+
+                // Increase padding for better column separation
+                const padding = 25;
+
+                message += keys.map(key => key.padEnd(padding)).join('') + '\n';
+                message += '-'.repeat(keys.length * padding) + '\n';
                 data.details.forEach(item => {
-                    message += keys.map(key => String(item[key] || 'N/A').padEnd(20)).join('') + '\n';
+                    message += keys.map(key => String(item[key] || 'N/A').padEnd(padding)).join('') + '\n';
                 });
             }
             message += `\`\`\`\n\n`;
