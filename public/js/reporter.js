@@ -55,7 +55,7 @@ export async function sendToDiscord(data, scriptName = 'default') {
             }
             message += `\`\`\`\n\n`;
         } else {
-            message += "**No details available.**\n\n";
+            message += "**No details required.**\n\n";
         }
 
         // Add errors
@@ -78,7 +78,7 @@ export async function sendToDiscord(data, scriptName = 'default') {
 
         // Append GitHub Actions Run URL to the message
         if (ghRunUrl) {
-            message += `\n\n${ghRunUrl}`;
+            message += `${ghRunUrl}\n\n`;
         }
         /////////////////////////////////////////////////////////////
 
