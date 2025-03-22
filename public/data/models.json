@@ -2470,16 +2470,6 @@
     "helddate": "2025/2/20"
   },
   {
-    "id": "mobo_m68rfcv20vusni",
-    "model": "Z890 Taichi Lite",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21"
-  },
-  {
     "id": "mobo_m68rfcv2vhr5qi",
     "model": "Z890 Pro RS WiFi White",
     "maker": "Intel",
@@ -2650,6 +2640,26 @@
     "helddate": "2024/8/26"
   },
   {
+    "id": "mobo_m68rfcv20vusni",
+    "model": "Z890 Taichi Lite",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
+    "heldversion": "2.22",
+    "helddate": "2025/3/21"
+  },
+  {
+    "id": "mobo_m68rfcv2s1nztq",
+    "model": "Z890 Taichi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
+    "heldversion": "2.22",
+    "helddate": "2025/3/21"
+  },
+  {
     "id": "mobo_m68rfcv2980jww",
     "model": "B760M PG Lightning WiFi",
     "maker": "Intel",
@@ -2738,16 +2748,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
     "heldversion": "2.22.AS07[Beta]",
     "helddate": "2025/2/19"
-  },
-  {
-    "id": "mobo_m68rfcv2s1nztq",
-    "model": "Z890 Taichi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21"
   },
   {
     "id": "mobo_m68rfcv2nwz4xe",
@@ -2990,16 +2990,6 @@
     "helddate": "2025/2/24"
   },
   {
-    "id": "mobo_m68rfcv2sb4f96",
-    "model": "Z890 Nova WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21"
-  },
-  {
     "id": "mobo_m68rfcv2ljza5k",
     "model": "Z890 Riptide WiFi",
     "maker": "Intel",
@@ -3028,5 +3018,15 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26"
+  },
+  {
+    "id": "mobo_m68rfcv2sb4f96",
+    "model": "Z890 Nova WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
+    "heldversion": "2.22",
+    "helddate": "2025/3/21"
   }
 ]
