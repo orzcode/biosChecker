@@ -55,6 +55,18 @@ export async function saveMobos(moboOrMobos) {
   }
 }
 
+export async function getUserMobos() {
+  try {
+    const mobos = await sql`SELECT mobo FROM users`;
+    return mobos
+      .map((row) => row.mobo)
+      .filter((mobo) => mobo && mobo !== "dummy");
+  } catch (error) {
+    console.error("Error fetching user mobos:", error);
+    return [];
+  }
+}
+
 export async function getUsers(identifier) {
   try {
     if (!identifier) {
