@@ -72,7 +72,7 @@ export async function confirmationMail(userObject) {
         <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Checker project page</strong></a>.
         </p>
         <p>
-        You must confirm your email in order to proceed.
+        You must confirm your email in order to proceed. Unverified emails will be removed within 48 hours.
         </p>
 
       <hr style="border: 1px solid #444;">
@@ -83,7 +83,7 @@ export async function confirmationMail(userObject) {
 
       <p style="font-size: 14px;">
         You can <a href="${unsubLink}" style="color: #ff5252; text-decoration: underline;"><strong>unsubscribe here</strong></a> at any time 
-        or simply ignore this email to be removed automatically.
+        or simply ignore this email to be removed automatically within 48 hours.
       </p>
 
       <hr style="border: 1px solid #444;">
