@@ -247,6 +247,7 @@ export async function scrapeMotherboards(fromKoyeb) {
       // Send report to Discord
       summary.details = newOrUpdatedModels.map(model => ({
         ...model,
+        link: model.link ? `[link](<${model.link}>)` : "Not found",
         biospage: model.biospage ? `[link](<${model.biospage}>)` : "Not found"
       }));
       await sendToDiscord(summary, "moboFetcher");
