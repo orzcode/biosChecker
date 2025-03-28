@@ -22,4 +22,4 @@ DButils.js
 #Ignore other misc - for private use
 koyeb-pw-summary.txt
 testMailer.js
-sqlTests.js
+chartTests.js
