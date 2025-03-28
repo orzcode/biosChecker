@@ -3028,5 +3028,25 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
     "heldversion": "2.22",
     "helddate": "2025/3/21"
+  },
+  {
+    "id": "mobo_m8sa68wxklj100",
+    "model": "B850M-X WiFi R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M-X%20WiFi%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20WiFi%20R2.0/bios.html",
+    "heldversion": "3.20",
+    "helddate": "2025/2/25"
+  },
+  {
+    "id": "mobo_m8sa6f81674xyp",
+    "model": "B850M-X R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M-X%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20R2.0/bios.html",
+    "heldversion": "3.20",
+    "helddate": "2025/2/25"
   }
 ]
