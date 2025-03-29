@@ -50,13 +50,13 @@
     "helddate": "2025/1/10"
   },
   {
-    "id": "mobo_m68rfcv2rylnqg",
-    "model": "Z890I Nova WiFi",
+    "id": "mobo_m68rfcv2gnwvqv",
+    "model": "H810M-X",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
-    "heldversion": "2.26",
+    "link": "https://asrock.com/mb/intel/H810M-X",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "heldversion": "1.10",
     "helddate": "2025/3/28"
   },
   {
@@ -240,12 +240,12 @@
     "helddate": "2024/10/1"
   },
   {
-    "id": "mobo_m68rfcv2gnwvqv",
-    "model": "H810M-X",
+    "id": "mobo_m68rfcv2pbev3i",
+    "model": "H810M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
     "heldversion": "1.10",
     "helddate": "2025/3/28"
   },
@@ -258,16 +258,6 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html",
     "heldversion": "11.01",
     "helddate": "2024/10/1"
-  },
-  {
-    "id": "mobo_m68rfcv2pbev3i",
-    "model": "H810M-X WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2025/3/28"
   },
   {
     "id": "mobo_m68rfcv2uecthk",
@@ -368,6 +358,16 @@
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html",
     "heldversion": "8.01",
     "helddate": "2024/10/1"
+  },
+  {
+    "id": "mobo_m68rfcv2rylnqg",
+    "model": "Z890I Nova WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
+    "heldversion": "2.26",
+    "helddate": "2025/3/28"
   },
   {
     "id": "mobo_m68rfcv294tlmh",
