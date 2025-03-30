@@ -17,6 +17,7 @@ export async function mailer(userObject, modelsObject) {
 <h2 style="color: #6b9b1d; text-align: center;">ASRock BIOS Update Alert</h2>
 <p>A new BIOS is available for your ASRock <strong>${user.mobo}</strong> motherboard.</p>
 <p>You can download it from <a style="color: #6b9b1d; text-decoration: underline;" href="${models.biospage}"><strong>the official ASRock page here</strong></a>.</p>
+<p><strong>Version:</strong> ${models.heldversion}</p>
 <hr style="border: 1px solid #444;" />
 <p style="font-size: 14px;"><em>Note:</em> You are receiving this because you previously signed up to be notified of updates from the unofficial <a style="color: #6b9b1d; text-decoration: underline;" href="${projectLink}"><strong>ASRock BIOS Checker project page</strong></a>.</p>
 <p style="font-size: 14px;"><strong>💡Pro-tips for a successful bios update:</strong></p>
@@ -27,7 +28,7 @@ export async function mailer(userObject, modelsObject) {
 </ul>
 <hr style="border: 1px solid #444;" />
   <p style="font-size: 12px; text-align: center;">This is an <strong>unofficial</strong> tool and not supported by ASRock. As with any such service, things can break, fail to update, or change at any time. Long-term reliability is not guaranteed.</p>
-  <p style="font-size: 12px;">You can <a style="color: #ff5252; text-decoration: underline;" href="${unsubLink}"><strong>unsubscribe here</strong></a> at any time or visit the project page and re-enter your email to manually unsubscribe.</p>
+  <p style="font-size: 12px; text-align: center;">You can <a style="color: #ff5252; text-decoration: underline;" href="${unsubLink}"><strong>unsubscribe here</strong></a> at any time or visit the project page and re-enter your email to manually unsubscribe.</p>
 </div>`,
     headers: {
       "List-Unsubscribe": unsubLink,
