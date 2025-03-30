@@ -142,8 +142,32 @@ export async function sendToDiscord(data, scriptName = "default") {
 
 //////////////////////////////////////////////////////////////////
 
-export async function sendChartToDiscord(chartUrl) {
-  //Re-usable, sends a single chosen chart to discord
+// export async function sendChartToDiscord(chartUrl) {
+//   //Re-usable, sends a single chosen chart to discord
+//   try {
+//     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
+
+//     if (!webhookUrl) {
+//       console.log(`Error! No webhook found for sending charts to Discord`);
+//       return;
+//     }
+
+//     await fetch(webhookUrl, {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ content: chartUrl }),
+//     });
+
+//     console.log(`QuickChart img URL sent to Discord`);
+//   } catch (error) {
+//     console.error(`Error sending QuickChart img URL to Discord: ${error}`);
+//   }
+// }
+
+export async function sendAllChartsToDiscord() {
+  const chartUrlsObject = await chartManager();
+  const chartUrls = Object.values(chartUrlsObject);
+
   try {
     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
 
@@ -152,30 +176,24 @@ export async function sendChartToDiscord(chartUrl) {
       return;
     }
 
+    const today = new Date().toISOString().split("T")[0];
+
+    // Create an array of embed objects for each chart URL
+    const embeds = chartUrls.map((chartUrl) => ({
+      image: { url: chartUrl }
+    }));
+
     await fetch(webhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ content: chartUrl }),
+      body: JSON.stringify({
+        content: `Statistics as of ${today}`,
+        embeds: embeds,
+      }),
     });
 
-    console.log(`QuickChart img URL sent to Discord`);
+    console.log(`All QuickChart img URLs sent to Discord`);
   } catch (error) {
-    console.error(`Error sending QuickChart img URL to Discord: ${error}`);
+    console.error(`Error sending QuickChart img URLs to Discord: ${error}`);
   }
-}
-
-export async function sendAllChartsToDiscord() {
-  // Final exporter function for charts
-  // Goes through list and sends each chart to Discord
-  //
-  // Gets called above, by 'sendToDiscord', IF it's called by moboFetcher
-  const chartUrlsObject = await chartManager();
-
-  // Extract the URLs from the object's values
-  const chartUrls = Object.values(chartUrlsObject);
-
-  // Send each URL to Discord
-  await Promise.all(chartUrls.map(async (url) => {
-    await sendChartToDiscord(url);
-  }));
 }

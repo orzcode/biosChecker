@@ -43,6 +43,41 @@ async function updateDummyData() {
   const result = await getChartData();
   console.log(result);
 }
+async function chartManagerResult() {
+  // tests chartManager with above dummyData and shows the return
+  const result = await chartManager(dummyData);
+  //console.log(result);
+}
+
+export async function fullTestAllCharts() {
+  //uses dummy data as per function here
+  const chartUrlsObject = await chartManagerResult();
+
+  const chartUrls = Object.values(chartUrlsObject);
+  console.log(chartUrls);
+  try {
+    const webhookUrl = process.env.DISCORD_WEBHOOK_STATSCHARTS;
+    const today = new Date().toISOString().split("T")[0];
+
+    // Create an array of embed objects for each chart URL
+    const embeds = chartUrls.map((chartUrl) => ({
+      image: { url: chartUrl }
+    }));
+
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: `Statistics as of ${today}`,
+        embeds: embeds,
+      }),
+    });
+
+    console.log(`All QuickChart img URLs sent to Discord`);
+  } catch (error) {
+    console.error(`Error sending QuickChart img URLs to Discord: ${error}`);
+  }
+}
 async function testSendCharts() {
   // calls the final sendAllChartsToDiscord() (from reporter.js)
   // which calls chartManager() - which returns and obj with each chart URL
@@ -55,12 +90,9 @@ async function testSendCharts() {
   }
 }
 
-async function chartManagerResult() {
-  // tests chartManager with above dummyData and shows the return
-  const result = await chartManager(dummyData);
-  console.log(result);
-}
 
+
+//fullTestAllCharts();
 //testSendCharts();
 chartManagerResult()
 
