@@ -94,7 +94,8 @@ const chartConfig = {
       backgroundImageUrl:
       //"https://www.asrockbioschecker.link/images/graphLogo.png",
       //No longer used since we're using QuickChart's watermark feature
-      "https://www.asrockbioschecker.link/images/tilestone.jpg",
+      "https://www.asrockbioschecker.link/images/tilestone2.jpg",
+      //Added this tiling image, for better visuals
     },
   },
 };
