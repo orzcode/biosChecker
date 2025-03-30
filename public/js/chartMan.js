@@ -92,8 +92,9 @@ const chartConfig = {
     },
     plugins: {
       backgroundImageUrl:
-        "https://www.asrockbioschecker.link/images/graphLogo.png",
+      //"https://www.asrockbioschecker.link/images/graphLogo.png",
       //No longer used since we're using QuickChart's watermark feature
+      "https://www.asrockbioschecker.link/images/tilestone.jpg",
     },
   },
 };
@@ -233,7 +234,7 @@ function createMoboBarChart(data) {
         ],
       },
       plugins: {
-        //...chartConfig.options.plugins,
+        ...chartConfig.options.plugins,
         // no longer using 'plugins' at all due to watermark instead
         datalabels: {
           anchor: "end",
@@ -292,7 +293,7 @@ function createSocketPieChart(data) {
       },
       rotation: -0.2 * Math.PI,
       plugins: {
-        //...chartConfig.options.plugins,
+        ...chartConfig.options.plugins,
         // no longer using 'plugins' at all due to watermark instead
         // datalabels: {
         //   color: "white",
