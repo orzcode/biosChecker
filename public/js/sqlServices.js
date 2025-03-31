@@ -89,10 +89,10 @@ export async function saveMobos(moboOrMobos) {
 export async function getUsers(identifier) {
   try {
     if (!identifier) {
-      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified FROM users`;
+      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified FROM users`;
     }
     return await sql`
-      SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified FROM users
+      SELECT id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified FROM users
       WHERE ${
         identifier.includes("@")
           ? sql`email = ${identifier}`
@@ -112,15 +112,16 @@ export async function saveUsers(userOrUsers) {
   try {
     for (const user of usersArray) {
       await sql`
-        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified})
+        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified)
+        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified}, ${user.signupdate})
         ON CONFLICT (id) DO UPDATE SET
           email = EXCLUDED.email,
           mobo = EXCLUDED.mobo,
           givenversion = EXCLUDED.givenversion,
           givendate = EXCLUDED.givendate,
           lastcontacted = EXCLUDED.lastcontacted,
-          verified = EXCLUDED.verified;
+          verified = EXCLUDED.verified,
+          signupdate = EXCLUDED.signupdate;
       `;
     }
     console.log("Users saved or updated successfully.");
@@ -154,6 +155,7 @@ export async function addOrUpdateUser(email, mobo) {
         givendate: latestDate,
         lastcontacted: await today(),
         verified: false,
+        signupdate: await today(),
       };
       await saveUsers(newUser);
       //console.log(newUser);
