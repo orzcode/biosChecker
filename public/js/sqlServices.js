@@ -89,10 +89,10 @@ export async function saveMobos(moboOrMobos) {
 export async function getUsers(identifier) {
   try {
     if (!identifier) {
-      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified FROM users`;
+      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate FROM users`;
     }
     return await sql`
-      SELECT id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified FROM users
+      SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate FROM users
       WHERE ${
         identifier.includes("@")
           ? sql`email = ${identifier}`
@@ -112,7 +112,7 @@ export async function saveUsers(userOrUsers) {
   try {
     for (const user of usersArray) {
       await sql`
-        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, signupdate, verified)
+        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate)
         VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified}, ${user.signupdate})
         ON CONFLICT (id) DO UPDATE SET
           email = EXCLUDED.email,
