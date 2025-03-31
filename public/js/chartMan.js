@@ -37,7 +37,7 @@ export async function getChartData() {
 
     // Create the final response object with snapshotDate
     const responseObject = {
-      snapshotDate: new Date().toISOString().split("T")[0], // Format: YYYY-MM-DD
+      snapshotDate: await today(), // Format: YYYY-M-D
       userMobos: moboObject,
     };
 
@@ -47,7 +47,7 @@ export async function getChartData() {
   }
   // Current output:
   // {
-  // 	"snapshotDate": "2025-03-24",
+  // 	"snapshotDate": "2025/3/24",
   // 	"userMobos": {
   // 	  "z890 awesome mobo": { "socket": "1800", "maker": "Intel", "count": 12 },
   // 	  "x870 awesome mobo": { "socket": "AM4", "maker": "AMD", "count": 18 },

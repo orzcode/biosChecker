@@ -1,4 +1,5 @@
 import { chartManager } from "./chartMan.js";
+import { today } from "./dater.js"
 
 // Define webhook URLs for different scripts
 const DISCORD_WEBHOOKS = {
@@ -176,8 +177,6 @@ export async function sendAllChartsToDiscord() {
       return;
     }
 
-    const today = new Date().toISOString().split("T")[0];
-
     // Create an array of embed objects for each chart URL
     const embeds = chartUrls.map((chartUrl) => ({
       image: { url: chartUrl }
@@ -187,7 +186,7 @@ export async function sendAllChartsToDiscord() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `Statistics as of ${today}`,
+        content: `Statistics as of ${await today()}`,
         embeds: embeds,
       }),
     });

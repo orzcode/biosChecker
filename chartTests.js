@@ -1,11 +1,11 @@
 import { chartManager, getShortUrl, getChartData } from "./public/js/chartMan.js";
 import { sendChartToDiscord, sendAllChartsToDiscord } from "./public/js/reporter.js";
-
+import { today } from "./public/js/dater.js";
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 const dummyData = 
   {
-    snapshotDate: '2025-03-28',
+    snapshotDate: '2025/3/28',
     userMobos: {
       'X870E Nova WiFi': { socket: 'AM5', maker: 'AMD', count: '23' },
       'X870E Taichi': { socket: 'AM5', maker: 'AMD', count: '11' },
@@ -57,7 +57,6 @@ export async function fullTestAllCharts() {
   console.log(chartUrls);
   try {
     const webhookUrl = process.env.DISCORD_WEBHOOK_STATSCHARTS;
-    const today = new Date().toISOString().split("T")[0];
 
     // Create an array of embed objects for each chart URL
     const embeds = chartUrls.map((chartUrl) => ({
@@ -68,7 +67,7 @@ export async function fullTestAllCharts() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `Statistics as of ${today}`,
+        content: `Statistics as of ${await today()}`,
         embeds: embeds,
       }),
     });
