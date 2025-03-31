@@ -1,5 +1,6 @@
 import { generateUniqueId } from "./uuid.js";
 import sql from "./db.js";
+import { today } from "./dater.js";
 
 ///////Saving/loading models json to memory///////
 import { promises as fs } from "fs";
@@ -151,7 +152,7 @@ export async function addOrUpdateUser(email, mobo) {
         mobo,
         givenversion: latestVersion,
         givendate: latestDate,
-        lastcontacted: new Date().toISOString(),
+        lastcontacted: await today(),
         verified: false,
       };
       await saveUsers(newUser);

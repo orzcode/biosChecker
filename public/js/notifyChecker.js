@@ -2,6 +2,7 @@ import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import { parseDate, isNewerDate } from "./versionChecker.js";
 import { sendToDiscord } from "./reporter.js";
+import { today } from "./dater.js";
 
 export async function notifyUsers() {
     const summary = {
@@ -56,9 +57,11 @@ export async function notifyUsers() {
             }
 
             if (user.verified === false) {
-                const lastContactedDate = new Date(user.lastcontacted);
-                const fiftyHoursAgo = new Date(Date.now() - 50 * 60 * 60 * 1000);
-                if (lastContactedDate < fiftyHoursAgo) {
+                const lastContactedDate = user.lastcontacted; // Now just a string 'YYYY-M-D'
+                const formattedToday = await today(); // My custom today() function for YYYY-M-D
+            
+                // Compare only the date part (YYYY/M/D)
+                if (lastContactedDate < formattedToday) {
                     console.log(`Deleting unverified user ${user.id})`);
                     await deleteUser(user.email);
                     summary.summary.additional.usersDeleted++;
@@ -70,6 +73,7 @@ export async function notifyUsers() {
                     continue;
                 }
             }
+            
 
             if (await isNewerDate(user.givendate, mobo.helddate)) {
                 console.log(`Notifying ${user.id} about ${user.mobo} update.`);
@@ -77,7 +81,7 @@ export async function notifyUsers() {
                     await mailer(user, mobo);
                     const updatedUser = {
                         ...user,
-                        lastcontacted: new Date().toISOString(),
+                        lastcontacted: await today(),
                         givenversion: mobo.heldversion,
                         givendate: mobo.helddate,
                     };
