@@ -77,7 +77,7 @@ export async function confirmationMail(userObject) {
         As with any such service, things can break, fail to update, or change at any time. 
         Long-term reliability is not guaranteed.
       </p>
-        <p style="font-size: 12px;">
+        <p style="font-size: 12px; text-align: center;">
         You can <a href="${unsubLink}" style="color: #ff5252; text-decoration: underline;"><strong>unsubscribe here</strong></a> at any time 
         or simply ignore this email to be removed automatically within 48 hours.
       </p>
