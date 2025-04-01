@@ -49,8 +49,8 @@ export async function getChartData() {
   // {
   // 	"snapshotDate": "2025/3/24",
   // 	"userMobos": {
-  // 	  "z890 awesome mobo": { "socket": "1800", "maker": "Intel", "count": 12 },
-  // 	  "x870 awesome mobo": { "socket": "AM4", "maker": "AMD", "count": 18 },
+  //  'X870E Taichi Lite': { socket: 'AM5', maker: 'AMD', count: '2' },
+  //  'Z790 PG Lightning': { socket: '1700', maker: 'Intel', count: '1' },
   // 	  // ... more items
   // 	}
   //   }
