@@ -2216,8 +2216,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
-    "heldversion": "1.18.AS01[Beta]",
-    "helddate": "2025/2/20"
+    "heldversion": "1.19",
+    "helddate": "2025/3/31"
   },
   {
     "id": "mobo_m68rfcv22uz6bk",
@@ -2986,8 +2986,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "1.18.AS01[Beta]",
-    "helddate": "2025/2/20"
+    "heldversion": "1.19",
+    "helddate": "2025/3/31"
   },
   {
     "id": "mobo_m68rfcv2uapm08",
