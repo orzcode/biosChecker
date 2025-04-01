@@ -57,11 +57,17 @@ export async function notifyUsers() {
             }
 
             if (user.verified === false) {
-                const lastContactedDate = user.lastcontacted; // Now just a string 'YYYY-M-D'
-                const formattedToday = await today(); // My custom today() function for YYYY-M-D
-            
-                // Compare only the date part (YYYY/M/D)
-                if (lastContactedDate < formattedToday) {
+                const signupdate = user.signupdate; // Format: 'YYYY/M/D'
+                
+                // Convert signupdate to Date object
+                const [year, month, day] = signupdate.split('/');
+                const signupDateTime = new Date(year, month - 1, day); // month is 0-indexed in JS Date
+                
+                // 50 hours ago
+                const fiftyHoursAgo = new Date(Date.now() - 50 * 60 * 60 * 1000);
+                
+                // Compare actual timestamps, not just date strings
+                if (signupDateTime < fiftyHoursAgo) {
                     console.log(`Deleting unverified user ${user.id})`);
                     await deleteUser(user.email);
                     summary.summary.additional.usersDeleted++;

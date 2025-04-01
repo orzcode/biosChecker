@@ -123,7 +123,7 @@ export async function addOrUpdateUser(email, mobo) {
         mobo,
         givenversion: latestVersion,
         givendate: latestDate,
-        lastcontacted: await today(),
+        lastcontacted: null,
         verified: false,
         signupdate: await today(),
       };
