@@ -1,8 +1,15 @@
-export async function today() {
+export async function today(format = "default") {
   const now = new Date();
-  return `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}`;
-  //returns YYYY/M/D
-  //ASRock uses this format - strips leading zero from month and day.
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  switch (format) {
+    case "hyphen":
+      return `${year}-${month}-${day}`; // YYYY-MM-DD with leading zeroes
+    default:
+      return `${year}/${now.getMonth() + 1}/${now.getDate()}`; // YYYY/M/D without leading zeroes
+  }
 }
 
 export async function formatToYYYYMD(date) {
@@ -76,15 +83,14 @@ export function isValidYYYYMD(dateString) {
  * @returns {Date} Date object for midnight local time 7 days ago
  */
 export function getSevenDaysAgoStartOfDay() {
-  // Renamed for clarity
   const today = new Date(); // Current local date and time
   const sevenDaysAgo = new Date(today); // Copy it
 
   // Move the date back 7 days
   sevenDaysAgo.setDate(today.getDate() - 7);
 
-  // *** Crucial Change: Set time to the beginning of the day ***
-  sevenDaysAgo.setHours(0, 0, 0, 0); // Set to 00:00:00.000 local time
+  // *** Crucial: Set time to the beginning of the day (local time) ***
+  sevenDaysAgo.setHours(0, 0, 0, 0);
 
   return sevenDaysAgo;
 }

@@ -1,60 +1,20 @@
-import sql from "./db.js";
-import { today } from "./dater.js";
-
-///////////////////////////////////////////////////////////
+import { getChartData } from "./chartDataGrabber.js";
 // pull db data and process (joins, desired values etc)
 // This is a core, large data object from which you can pluck what you want
-// See below for example of current output
-export async function getChartData() {
-  try {
-    const results = await sql`
-		SELECT 
-		  u.mobo,
-		  m.socket,
-		  m.maker,
-		  COUNT(*) AS count
-		FROM 
-		  users u
-		JOIN 
-		  models m ON u.mobo = m.model
-		WHERE 
-		  u.mobo != 'dummy'
-		GROUP BY 
-		  u.mobo, m.socket, m.maker
-		ORDER BY 
-		  COUNT(*) DESC;
-	  `;
 
-    // Convert to a plain JavaScript object with mobo as the key
-    const moboObject = (results.rows || results).reduce((acc, row) => {
-      acc[row.mobo] = {
-        socket: row.socket,
-        maker: row.maker,
-        count: row.count,
-      };
-      return acc;
-    }, {});
+// Current output:
+// {
+// 	'snapshotDate': '2025/3/24',
+// 	'userMobos': {
+//  'X870E Taichi Lite': { socket: 'AM5', maker: 'AMD', count: 1, signups: 0 }},
+//  'Z790 PG Lightning': { socket: '1700', maker: 'Intel', count: 3, signups: 1 }},
+// 	// ... more items
+// 	}
+// 	'weeklyUpdates': {
+//  'X870E Taichi Lite': { helddate: '2025/3/24', heldversion: '1.0.0', notified: 1 },
+//  }
+///////////////////////////////////////////////////////////
 
-    // Create the final response object with snapshotDate
-    const responseObject = {
-      snapshotDate: await today(), // Format: YYYY-M-D
-      userMobos: moboObject,
-    };
-
-    return responseObject;
-  } catch (error) {
-    console.error("Error fetching usermobo data:", error);
-  }
-  // Current output:
-  // {
-  // 	"snapshotDate": "2025/3/24",
-  // 	"userMobos": {
-  //  'X870E Taichi Lite': { socket: 'AM5', maker: 'AMD', count: '2' },
-  //  'Z790 PG Lightning': { socket: '1700', maker: 'Intel', count: '1' },
-  // 	  // ... more items
-  // 	}
-  //   }
-}
 ///////////////////////////////////////////////////////////
 // Re-usable chart configuration options
 //

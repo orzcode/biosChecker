@@ -186,7 +186,7 @@ export async function sendAllChartsToDiscord() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `Statistics as of ${await today()}`,
+        content: `Statistics as of ${await today("hyphen")}`,
         embeds: embeds,
       }),
     });
