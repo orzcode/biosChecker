@@ -31,8 +31,14 @@ export async function sendToDiscord(data, scriptName = "default") {
       return;
     }
 
+    const emojiMap = {
+      notifyUsers: "📨",
+      versionChecker: "🔍",
+    };
+    const emoji = emojiMap[scriptName] || "";
+
     // Create the message based on the standardized data structure
-    let message = `**${data.summary.title} Results**\n\n`;
+    let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n\n`;
 
     // Add summary
     message += `**Summary:**\n\`\`\`\n`;
@@ -166,6 +172,7 @@ export async function sendToDiscord(data, scriptName = "default") {
 // }
 
 export async function sendAllChartsToDiscord() {
+  // New version that sends all charts to discord as an embedded object
   const chartUrlsObject = await chartManager();
   const chartUrls = Object.values(chartUrlsObject);
 
