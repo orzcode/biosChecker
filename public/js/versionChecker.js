@@ -104,7 +104,7 @@ export async function scrapeBIOSInfo(url) {
 
             return await extractVersionInfo(cheerioExtractor);
         } catch (err) {
-            console.error(`Fetch scraping error at ${url}: ${err.message}`);
+            console.error(`Fetch scraping error at ${url} : ${err.message}`);
             return null;
         }
     }
@@ -186,9 +186,9 @@ export async function updateModels(fromKoyeb) {
 
     // Retry failed URLs
     if (retryList.length > 0) {
-      console.log("\nRetrying shortlist of failed URLs...");
+      console.log("\n\n Retrying shortlist of failed URLs...");
       for (const mobo of retryList) {
-          console.log(`Retrying ${mobo.model}...`);
+          console.log(`Retrying shortlist for ${mobo.model}...`);
           try {
               const scrapedInfo = await scrapeBIOSInfo(mobo.biospage);
               if (scrapedInfo) {
