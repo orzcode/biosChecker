@@ -23,7 +23,7 @@ export async function getMobos(singleMoboModel) {
   try {
     return singleMoboModel
       ? await sql`SELECT * FROM models WHERE model = ${singleMoboModel}`
-      : await sql`SELECT id, model, maker, socket, link, biospage, heldversion, helddate FROM models`;
+      : await sql`SELECT id, model, maker, socket, link, biospage, heldversion, helddate, release FROM models`;
   } catch (error) {
     console.error("Error fetching model(s) from the database:", error);
     return [];
@@ -37,9 +37,9 @@ export async function saveMobos(moboOrMobos) {
   try {
     for (const mobo of mobosArray) {
       await sql`
-        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate)
+        INSERT INTO models (id, model, maker, socket, link, biospage, heldversion, helddate, release)
         VALUES (${mobo.id}, ${mobo.model}, ${mobo.maker}, ${mobo.socket},
-          ${mobo.link}, ${mobo.biospage}, ${mobo.heldversion}, ${mobo.helddate})
+          ${mobo.link}, ${mobo.biospage}, ${mobo.heldversion}, ${mobo.helddate}, ${mobo.release})
         ON CONFLICT (id) DO UPDATE SET
           model = EXCLUDED.model,
           maker = EXCLUDED.maker,
@@ -47,7 +47,8 @@ export async function saveMobos(moboOrMobos) {
           link = EXCLUDED.link,
           biospage = EXCLUDED.biospage,
           heldversion = EXCLUDED.heldversion,
-          helddate = EXCLUDED.helddate;
+          helddate = EXCLUDED.helddate,
+          release = EXCLUDED.release;
       `;
     }
     console.log("Models saved or updated successfully.");

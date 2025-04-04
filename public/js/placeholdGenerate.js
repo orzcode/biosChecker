@@ -124,8 +124,8 @@ export async function generatePlaceholdUrl(data) {
 	  "X870E Taichi Lite": { "helddate": "2025/3/24", "heldversion": "1.0.0", "notified": 1 },
 	  "Z790 PG Lightning": { "helddate": "2025/3/23", "heldversion": "F10a", "notified": 3 },
 	  "newBoards": {
-		 "X990 New Mobo": { "socket": "AM5", "maker": "AMD", "releasedate": "2024/12/3" },
-		 "Z890 Dark Hero": { "socket": "18XX", "maker": "Intel", "releasedate": "2025/01/15" }
+		 "X990 New Mobo": { "socket": "AM5", "maker": "AMD", "release": "2024/12/3" },
+		 "Z890 Dark Hero": { "socket": "18XX", "maker": "Intel", "release": "2025/01/15" }
 	  }
 	}
   };

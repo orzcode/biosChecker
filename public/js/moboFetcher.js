@@ -202,6 +202,10 @@ export async function scrapeMotherboards(fromKoyeb) {
         biospage: biosPage || "Not found",
         heldversion: versionInfo?.version,
         helddate: versionInfo?.releaseDate,
+        release: versionInfo?.releaseDate,
+        //The logic here is that the bios it finds is likely the only one since release
+        //assuming the script runs regularly (eg weekly).
+        //And thefore, the bios date is the same as the release date. Or close enough.
       };
 
       // Add to new models list
