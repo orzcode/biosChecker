@@ -10,22 +10,22 @@ import { koyebToRepo } from "./koyebToGithub.js";
 /////////////////////////////////////////////
 // Helper function to add a delay
 function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
-  // Split the date string and convert to a Date object
-  const [year, month, day] = dateStr.split("/").map(Number);
-  return new Date(year, month - 1, day); // Month is 0-indexed in JavaScript Date
+    // Split the date string and convert to a Date object
+    const [year, month, day] = dateStr.split("/").map(Number);
+    return new Date(year, month - 1, day); // Month is 0-indexed in JavaScript Date
 }
 // Checks if foundDate is newer than heldDate
 export async function isNewerDate(heldDate, foundDate) {
-  if (!heldDate) return true; // If no held date, consider found as newer
+    if (!heldDate) return true; // If no held date, consider found as newer
 
-  const heldDateTime = (await parseDate(heldDate)).getTime();
-  const foundDateTime = (await parseDate(foundDate)).getTime();
+    const heldDateTime = (await parseDate(heldDate)).getTime();
+    const foundDateTime = (await parseDate(foundDate)).getTime();
 
-  return foundDateTime > heldDateTime;
+    return foundDateTime > heldDateTime;
 }
 /////////////////////////////////////////////
 // scrapeBiosInfo(url)
@@ -37,80 +37,99 @@ export async function isNewerDate(heldDate, foundDate) {
 // return { version, releaseDate };
 
 export async function extractVersionInfo(extractor) {
-  // Get the first row from the first table
-  const firstRowSelector = "table:first-of-type tbody tr:first-child";
-  const versionSelector = `${firstRowSelector} td:first-child`;
-  const dateSelector = `${firstRowSelector} td:nth-child(2)`;
+    // Get the first row from the first table
+    const firstRowSelector = "table:first-of-type tbody tr:first-child";
+    const versionSelector = `${firstRowSelector} td:first-child`;
+    const dateSelector = `${firstRowSelector} td:nth-child(2)`;
 
-  // Extract data using the provided extractor function
-  const rawVersion = await extractor(versionSelector);
-  const rawDate = await extractor(dateSelector);
+    // Extract data using the provided extractor function
+    const rawVersion = await extractor(versionSelector);
+    const rawDate = await extractor(dateSelector);
 
-  if (!rawVersion || !rawDate) {
-    throw new Error("Version or date information not found.");
-  }
+    if (!rawVersion || !rawDate) {
+        throw new Error("Version or date information not found.");
+    }
 
-  const version = rawVersion.trim();
-  const releaseDate = rawDate.trim();
+    const version = rawVersion.trim();
+    const releaseDate = rawDate.trim();
 
-  console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
-  return { version, releaseDate };
+    console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
+    return { version, releaseDate };
 }
 /////////////////////////////////////////////
 
+// User-Agent list and random selection function
+const userAgents = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+  "Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+  "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/120.0.2210.144 Safari/537.36",
+    // Add more User-Agent strings here...
+];
+
+function getRandomUserAgent() {
+    return userAgents[Math.floor(Math.random() * userAgents.length)];
+}
+
 export async function scrapeBIOSInfo(url) {
-  // Determine the subdomain (www or pg)
-  const isPGSubdomain = url.includes("pg.");
+    // Determine the subdomain (www or pg)
+    const isPGSubdomain = url.includes("pg.");
 
-  if (isPGSubdomain) {
-    // Use Playwright for pg subdomains
-    console.log(`Using Playwright to scrape: ${url}`);
-    return await scrapeWithPlaywright(url);
-  } else {
-    // Use Fetch and Cheerio for www subdomains
-    console.log(`Using Fetch to scrape: ${url}`);
-    try {
-      const response = await fetch(url, {
-        headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-        },
-      });
+    if (isPGSubdomain) {
+        // Use Playwright for pg subdomains
+        console.log(`Using Playwright to scrape: ${url}`);
+        return await scrapeWithPlaywright(url);
+    } else {
+        // Use Fetch and Cheerio for www subdomains
+        console.log(`Using Fetch to scrape: ${url}`);
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    "User-Agent": getRandomUserAgent(), // Add random User-Agent
+                    //"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+                },
+            });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
 
-      const html = await response.text();
-      const $ = cheerio.load(html);
+            const html = await response.text();
+            const $ = cheerio.load(html);
 
-      // Create a Cheerio-specific extractor function
-      const cheerioExtractor = (selector) => $(selector).text();
+            // Create a Cheerio-specific extractor function
+            const cheerioExtractor = (selector) => $(selector).text();
 
-      return await extractVersionInfo(cheerioExtractor);
-    } catch (err) {
-      console.error(`Fetch scraping error at ${url}: ${err.message}`);
-      return null;
+            return await extractVersionInfo(cheerioExtractor);
+        } catch (err) {
+            console.error(`Fetch scraping error at ${url}: ${err.message}`);
+            return null;
+        }
     }
-  }
 }
 
 export async function updateModels(fromKoyeb) {
-  const mobos = await getMobos();
-  const updatedMobos = [];
+    const mobos = await getMobos();
+    const updatedMobos = [];
 
-  const summary = {
-      summary: {
-          title: "BIOS Update",
-          total: mobos.length,
-          success: 0,
-          errors: 0,
-          additional: {},
-      },
-      details: [],
-      errors: [],
-  };
+    const summary = {
+        summary: {
+            title: "BIOS Update",
+            total: mobos.length,
+            success: 0,
+            errors: 0,
+            additional: {},
+        },
+        details: [],
+        errors: [],
+    };
 
-  for (const mobo of mobos) {
+    const retryList = []; // List to store URLs that failed
+    const errorModels = new Set(); // Set to track models with errors
+
+    for (const mobo of mobos) {
       const { model, biospage, heldversion, helddate } = mobo;
 
       console.log(`Checking BIOS for: ${model}...`);
@@ -120,15 +139,23 @@ export async function updateModels(fromKoyeb) {
           scrapedInfo = await scrapeBIOSInfo(biospage);
       } catch (error) {
           console.error(`Error scraping ${model}: ${error.message}`);
-          summary.errors.push({ model, error: error.message });
-          summary.summary.errors++;
+          if (!errorModels.has(model)) {
+              summary.errors.push({ model, error: error.message });
+              summary.summary.errors++;
+              errorModels.add(model);
+          }
+          retryList.push(mobo); // Add the whole mobo object to retry list
           continue;
       }
 
       if (!scrapedInfo) {
           console.error(`Failed to fetch info for ${model}. Skipping.`);
-          summary.errors.push({ model, error: "Failed to fetch info" });
-          summary.summary.errors++;
+          if (!errorModels.has(model)) {
+              summary.errors.push({ model, error: "Failed to fetch info" });
+              summary.summary.errors++;
+              errorModels.add(model);
+          }
+          retryList.push(mobo); // Add the whole mobo object to retry list
           continue;
       }
 
@@ -156,58 +183,96 @@ export async function updateModels(fromKoyeb) {
       await delay(2000);
   }
 
-  try {
-      await saveMobos(updatedMobos);
-      console.log("models db updated.");
 
-      const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
-      const combinedMobos = mobos.map((mobo) => updatedMoboMap.get(mobo.id) || mobo);
-
-      try {
-          await fs.writeFile("./public/data/models.json", JSON.stringify(combinedMobos, null, 2));
-          console.log("models.json updated.");
-      } catch (error) {
-          console.error("Failed to save models.json:", error);
-          summary.errors.push({ model: "Database", error: error.message });
-          summary.summary.errors++;
+    // Retry failed URLs
+    if (retryList.length > 0) {
+      console.log("\nRetrying shortlist of failed URLs...");
+      for (const mobo of retryList) {
+          console.log(`Retrying ${mobo.model}...`);
+          try {
+              const scrapedInfo = await scrapeBIOSInfo(mobo.biospage);
+              if (scrapedInfo) {
+                  // Process the scraped info and update mobo data
+                  const { version, releaseDate } = scrapedInfo;
+                  if (await isNewerDate(mobo.helddate, releaseDate)) {
+                      mobo.heldversion = version;
+                      mobo.helddate = releaseDate;
+                      console.log(`Shortlist retry successful: Updating ${mobo.model} from ${mobo.heldversion || "none"} (${mobo.helddate || "none"}) to ${version} (${releaseDate})`);
+                      updatedMobos.push(mobo);
+                      summary.summary.success++;
+                      summary.details.push({
+                          model: mobo.model,
+                          oldVersion: mobo.heldversion || "none",
+                          newVersion: version,
+                          oldDate: mobo.helddate || "none",
+                          newDate: releaseDate,
+                      });
+                  }
+              }
+          } catch (retryError) {
+              console.error(`Shortlist retry failed for ${mobo.model}: ${retryError.message}`);
+              if (!errorModels.has(mobo.model)) {
+                  summary.errors.push({ model: mobo.model, error: retryError.message });
+                  summary.summary.errors++;
+                  errorModels.add(mobo.model);
+              }
+          }
+          await delay(2000); // delay before retry
       }
-  } catch (error) {
-      console.error("Failed to save updated mobos:", error);
-      summary.errors.push({ model: "Database", error: error.message });
-      summary.summary.errors++;
   }
 
-  console.log("\n==== BIOS Update Summary ====");
-  console.table({
-      "Total Items": summary.summary.total,
-      "Updates Found": summary.summary.success,
-      "Errors Encountered": summary.summary.errors,
-  });
+    try {
+        await saveMobos(updatedMobos);
+        console.log("models db updated.");
 
-  if (summary.summary.success > 0) {
-      console.log("\n==== Updated Items ====");
-      console.table(summary.details);
-  } else {
-      console.log("\nNo updates found for any models.");
-  }
+        const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
+        const combinedMobos = mobos.map((mobo) => updatedMoboMap.get(mobo.id) || mobo);
 
-  if (summary.summary.errors > 0) {
-      console.log("\n==== Error Details ====");
-      console.table(summary.errors);
-  }
+        try {
+            await fs.writeFile("./public/data/models.json", JSON.stringify(combinedMobos, null, 2));
+            console.log("models.json updated.");
+        } catch (error) {
+            console.error("Failed to save models.json:", error);
+            summary.errors.push({ model: "Database", error: error.message });
+            summary.summary.errors++;
+        }
+    } catch (error) {
+        console.error("Failed to save updated mobos:", error);
+        summary.errors.push({ model: "Database", error: error.message });
+        summary.summary.errors++;
+    }
 
-  if (fromKoyeb === "fromKoyeb") {
-      console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-      koyebToRepo();
-  }
+    console.log("\n==== BIOS Update Summary ====");
+    console.table({
+        "Total Items": summary.summary.total,
+        "Updates Found": summary.summary.success,
+        "Errors Encountered": summary.summary.errors,
+    });
 
-  console.log("BIOS version checks complete - proceeding to notifycheck");
+    if (summary.summary.success > 0) {
+        console.log("\n==== Updated Items ====");
+        console.table(summary.details);
+    } else {
+        console.log("\nNo updates found for any models.");
+    }
 
-  try {
-      Promise.resolve().then(() => sendToDiscord(summary, "versionChecker"));
-  } catch (e) {
-      // Silent error handling
-  }
+    if (summary.summary.errors > 0) {
+        console.log("\n==== Error Details ====");
+        console.table(summary.errors);
+    }
 
-  return summary;
+    if (fromKoyeb === "fromKoyeb") {
+        console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+        koyebToRepo();
+    }
+
+    console.log("BIOS version checks complete - proceeding to notifycheck");
+
+    try {
+        Promise.resolve().then(() => sendToDiscord(summary, "versionChecker"));
+    } catch (e) {
+        // Silent error handling
+    }
+
+    return summary;
 }
