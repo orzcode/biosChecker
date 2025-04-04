@@ -110,6 +110,27 @@ export async function scrapeBIOSInfo(url) {
     }
 }
 
+// Re-usable function to handle the update logic
+// Created due to retry shortlist usage
+async function processUpdate(mobo, version, releaseDate, updatedMobos, summary) {
+  if (await isNewerDate(mobo.helddate, releaseDate)) {
+      mobo.heldversion = version;
+      mobo.helddate = releaseDate;
+      console.log(`Updating ${mobo.model} from ${mobo.heldversion || "none"} (${mobo.helddate || "none"}) to ${version} (${releaseDate})`);
+      updatedMobos.push(mobo);
+      summary.summary.success++;
+      summary.details.push({
+          model: mobo.model,
+          oldVersion: mobo.heldversion || "none",
+          newVersion: version,
+          oldDate: mobo.helddate || "none",
+          newDate: releaseDate,
+      });
+  } else {
+      console.log(`No update needed for ${mobo.model}.`);
+  }
+}
+
 export async function updateModels(fromKoyeb) {
     const mobos = await getMobos();
     const updatedMobos = [];
@@ -135,50 +156,38 @@ export async function updateModels(fromKoyeb) {
       console.log(`Checking BIOS for: ${model}...`);
 
       let scrapedInfo;
-      try {
-          scrapedInfo = await scrapeBIOSInfo(biospage);
-      } catch (error) {
-          console.error(`Error scraping ${model}: ${error.message}`);
-          if (!errorModels.has(model)) {
-              summary.errors.push({ model, error: error.message });
-              summary.summary.errors++;
-              errorModels.add(model);
-          }
-          retryList.push(mobo); // Add the whole mobo object to retry list
-          continue;
-      }
+      let scrapeError = null; // Add a variable to store the specific error
 
-      if (!scrapedInfo) {
-          console.error(`Failed to fetch info for ${model}. Skipping.`);
-          if (!errorModels.has(model)) {
-              summary.errors.push({ model, error: "Failed to fetch info" });
-              summary.summary.errors++;
-              errorModels.add(model);
-          }
-          retryList.push(mobo); // Add the whole mobo object to retry list
-          continue;
+      try {
+        scrapedInfo = await scrapeBIOSInfo(biospage);
+    } catch (error) {
+        console.error(`Error scraping ${model}: ${error.message}`);
+        scrapeError = error; // Store the specific error
+        if (!errorModels.has(model)) {
+            summary.errors.push({ model, error: error.message });
+            summary.summary.errors++;
+            errorModels.add(model);
+        }
+        retryList.push(mobo);
+        continue;
+    }
+
+    if (!scrapedInfo) {
+      console.error(`Failed to fetch info for ${model}. Skipping.`);
+      if (!errorModels.has(model)) {
+          summary.errors.push({ model, error: scrapeError ? scrapeError.message : "Failed to fetch info" }); // Use the stored error message
+          summary.summary.errors++;
+          errorModels.add(model);
       }
+      retryList.push(mobo); // Add the whole mobo object to retry list
+      continue;
+  }
 
       const { version, releaseDate } = scrapedInfo;
 
       console.log(`Found version: ${version} (date: ${releaseDate}) | Current: ${heldversion || "none"} (date: ${helddate || "none"})`);
 
-      if (await isNewerDate(helddate, releaseDate)) {
-          mobo.heldversion = version;
-          mobo.helddate = releaseDate;
-          console.log(`Updating ${model} from ${heldversion || "none"} (${helddate || "none"}) to ${version} (${releaseDate})`);
-          updatedMobos.push(mobo);
-          summary.summary.success++;
-          summary.details.push({
-              model,
-              oldVersion: heldversion || "none",
-              newVersion: version,
-              oldDate: helddate || "none",
-              newDate: releaseDate,
-          });
-      } else {
-          console.log(`No update needed for ${model}.`);
-      }
+      await processUpdate(mobo, version, releaseDate, updatedMobos, summary);
       console.log("\n\n");
       await delay(2000);
   }
@@ -189,30 +198,19 @@ export async function updateModels(fromKoyeb) {
       console.log("\n\n Retrying shortlist of failed URLs...");
       for (const mobo of retryList) {
           console.log(`Retrying shortlist for ${mobo.model}...`);
+          let retryScrapeError = null; // Add a variable to store retry errors
           try {
               const scrapedInfo = await scrapeBIOSInfo(mobo.biospage);
               if (scrapedInfo) {
-                  // Process the scraped info and update mobo data
                   const { version, releaseDate } = scrapedInfo;
-                  if (await isNewerDate(mobo.helddate, releaseDate)) {
-                      mobo.heldversion = version;
-                      mobo.helddate = releaseDate;
-                      console.log(`Shortlist retry successful: Updating ${mobo.model} from ${mobo.heldversion || "none"} (${mobo.helddate || "none"}) to ${version} (${releaseDate})`);
-                      updatedMobos.push(mobo);
-                      summary.summary.success++;
-                      summary.details.push({
-                          model: mobo.model,
-                          oldVersion: mobo.heldversion || "none",
-                          newVersion: version,
-                          oldDate: mobo.helddate || "none",
-                          newDate: releaseDate,
-                      });
-                  }
+                  await processUpdate(mobo, version, releaseDate, updatedMobos, summary);
+                  errorModels.delete(mobo.model); // Remove from error list if retry succeeds
               }
           } catch (retryError) {
               console.error(`Shortlist retry failed for ${mobo.model}: ${retryError.message}`);
+              retryScrapeError = retryError; // Store the retry error
               if (!errorModels.has(mobo.model)) {
-                  summary.errors.push({ model: mobo.model, error: retryError.message });
+                  summary.errors.push({ model: mobo.model, error: retryScrapeError.message });
                   summary.summary.errors++;
                   errorModels.add(mobo.model);
               }
