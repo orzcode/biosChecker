@@ -131,19 +131,27 @@
     let hoverTimer;
 
     // Function to load the iframe
-    function loadKofiFrame() {
-      if (!iframeLoaded) {
-        // Use a specific height for the iframe that matches the container
-        kofiFramePlaceholder.innerHTML =
-          '<iframe id="kofiframe" src="https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true" title="orzcode"></iframe>';
-        iframeLoaded = true;
+	function loadKofiFrame() {
+            if (!iframeLoaded) {
+                // Create the iframe element
+                const iframe = document.createElement('iframe');
+                iframe.id = 'kofiframe';
+                iframe.src = 'https://ko-fi.com/orzcode/?hidefeed=true&widget=true&embed=true&preview=true';
+                iframe.title = 'orzcode';
 
-        //Hide loading text when Iframe is loaded.
-        document.getElementById("kofiframe").onload = function () {
-          document.getElementById("kofiLoadingText").style.display = "none";
-        };
-      }
-    }
+                // Append the iframe to the placeholder
+                kofiFramePlaceholder.appendChild(iframe);
+
+                iframe.onload = function() {
+                    // Use requestAnimationFrame to ensure the browser has finished rendering the iframe
+                    requestAnimationFrame(function() {
+                        document.getElementById('kofiLoadingText').style.display = 'none';
+                    });
+                };
+
+                iframeLoaded = true;
+            }
+        }
 
     // Function to open the modal with animation
     function openModal() {
