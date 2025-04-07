@@ -282,27 +282,30 @@ export async function updateModels(fromKoyeb) {
     if (updatedMobos.length > 0) {
       await saveMobos(updatedMobos);
       console.log("Models DB updated.");
+
+      const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
+      const combinedMobos = mobos.map(
+        (mobo) => updatedMoboMap.get(mobo.id) || mobo
+      );
+      try {
+        await fs.writeFile(
+          "./public/data/models.json",
+          JSON.stringify(combinedMobos, null, 2)
+        );
+        console.log("Models.json updated.");
+      } catch (error) {
+        console.error("Failed to save models.json:", error);
+        summary.errors.push({
+          model: "File System",
+          error: `Failed to save models.json: ${error.message}`,
+        });
+        summary.summary.errors++;
+      }
+
     } else {
       console.log("No updates found to save to database.");
     }
-    const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
-    const combinedMobos = mobos.map(
-      (mobo) => updatedMoboMap.get(mobo.id) || mobo
-    );
-    try {
-      await fs.writeFile(
-        "./public/data/models.json",
-        JSON.stringify(combinedMobos, null, 2)
-      );
-      console.log("models.json updated.");
-    } catch (error) {
-      console.error("Failed to save models.json:", error);
-      summary.errors.push({
-        model: "File System",
-        error: `Failed to save models.json: ${error.message}`,
-      });
-      summary.summary.errors++;
-    }
+
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
     summary.errors.push({
