@@ -174,6 +174,10 @@ export async function sendToDiscord(data, scriptName = "default") {
 export async function sendAllChartsToDiscord() {
   // New version that sends all charts to discord as an embedded object
   const chartUrlsObject = await chartManager();
+
+  await new Promise((resolve) => setTimeout(resolve, 6000));
+  // Waiting for 5 seconds to ensure all charts are generated
+
   const chartUrls = Object.values(chartUrlsObject);
 
   try {
@@ -193,8 +197,8 @@ export async function sendAllChartsToDiscord() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `Statistics as of ${await today("hyphen")}`,
-        embeds: embeds,
+      content: `Statistics as of ${await today("hyphen")} [URL](<${chartUrls[0]}>) | [URL](<${chartUrls[1]}>)`,
+      embeds: embeds,
       }),
     });
 
