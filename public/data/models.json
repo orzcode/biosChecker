@@ -6,8 +6,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.15.AS01[Beta]",
-    "helddate": "2025/2/20",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -17,8 +17,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.15.AS01[Beta]",
-    "helddate": "2025/2/20",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -28,8 +28,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "1.12",
-    "helddate": "2025/1/10",
+    "heldversion": "1.14",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -39,8 +39,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
-    "heldversion": "1.12",
-    "helddate": "2025/1/10",
+    "heldversion": "1.14",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -50,8 +50,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-H2",
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
-    "heldversion": "1.12",
-    "helddate": "2025/1/10",
+    "heldversion": "1.14",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -1260,8 +1260,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.15.AS01[Beta]",
-    "helddate": "2025/2/20",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -3119,8 +3119,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.15.AS01[Beta]",
-    "helddate": "2025/2/20",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
