@@ -19,7 +19,7 @@ export async function scrapeWithPlaywright(url) {
     
     return await extractVersionInfo(playwrightExtractor);
   } catch (err) {
-    console.error(`Playwright scraping error at ${url}: ${err.message}`);
+    console.error(`Playwright scraping error at ${url} : ${err.message}`);
     return null;
   } finally {
     await browser.close();
