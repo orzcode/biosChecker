@@ -281,8 +281,7 @@ export async function updateModels(fromKoyeb) {
     // Only save to DB if there were actual changes
     if (updatedMobos.length > 0) {
       await saveMobos(updatedMobos);
-
-      console.log("models db updated.");
+      console.log("Models DB updated.");
     } else {
       console.log("No updates found to save to database.");
     }
@@ -290,7 +289,6 @@ export async function updateModels(fromKoyeb) {
     const combinedMobos = mobos.map(
       (mobo) => updatedMoboMap.get(mobo.id) || mobo
     );
-
     try {
       await fs.writeFile(
         "./public/data/models.json",
