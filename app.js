@@ -142,7 +142,7 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-
+////////////////////////////////////////////////////////////
 // HTML-minifier-terser and EJS integration
 // Overrides the default res.render method to minify HTML output
 if (process.env.NODE_ENV !== 'production') {
@@ -203,6 +203,7 @@ if (process.env.NODE_ENV !== 'production') {
       next();
   });
 }
+////////////////////////////////////////////////////////////
 
 // Routes
 app.use("/", router);

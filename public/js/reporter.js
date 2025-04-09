@@ -171,39 +171,63 @@ export async function sendToDiscord(data, scriptName = "default") {
 //   }
 // }
 
-export async function sendAllChartsToDiscord() {
-  // New version that sends all charts to discord as an embedded object
+export async function sendAllChartsToDiscord(mode = "direct") {
+  // Embeds bundle summary and charts together
+  // Direct sends summary and each chart as its own message(s) due to weird Discord resolve behavior
   const chartUrlsObject = await chartManager();
-
-  await new Promise((resolve) => setTimeout(resolve, 6000));
-  // Waiting for 5 seconds to ensure all charts are generated
 
   const chartUrls = Object.values(chartUrlsObject);
 
   try {
     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
-
     if (!webhookUrl) {
       console.log(`Error! No webhook found for sending charts to Discord`);
       return;
     }
 
-    // Create an array of embed objects for each chart URL
-    const embeds = chartUrls.map((chartUrl) => ({
-      image: { url: chartUrl }
-    }));
+    const summaryContent = `Statistics as of ${await today("hyphen")} ${chartUrls.map(url => `[URL](<${url}>)`).join(" | ")}`;
 
-    await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-      content: `Statistics as of ${await today("hyphen")} [URL](<${chartUrls[0]}>) | [URL](<${chartUrls[1]}>)`,
-      embeds: embeds,
-      }),
-    });
+    if (mode === "embed") {
+      // Embeds bundle summary and charts together
+      const embeds = chartUrls.map((chartUrl) => ({
+        image: { url: chartUrl }
+      }));
 
-    console.log(`All QuickChart img URLs sent to Discord`);
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          content: summaryContent,
+          embeds: embeds,
+        }),
+      });
+
+    } else if (mode === "direct") {
+      // Summary
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: summaryContent }),
+      });
+
+      // Send each chart URL as its own message
+      for (const chartUrl of chartUrls) {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ content: `${chartUrl}` }),
+        });
+
+      }
+
+    } else {
+      console.warn(`Invalid mode "${mode}" passed to sendAllChartsToDiscord`);
+      return;
+    }
+
+    console.log(`QuickChart URLs sent to Discord (${mode} mode)`);
   } catch (error) {
-    console.error(`Error sending QuickChart img URLs to Discord: ${error}`);
+    console.error(`Error sending QuickChart URLs to Discord: ${error}`);
   }
 }
+
