@@ -23,7 +23,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(path.resolve(), "views"));
 // Enable template caching
 if (process.env.NODE_ENV === 'production') {
-  ejs.cache = true;
+  ejs.cache = false;
 }
 
 // Trust proxy for rate-limiting and security
