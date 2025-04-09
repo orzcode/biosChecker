@@ -187,3 +187,6 @@ export async function generatePlaceholdUrl(data) {
   Users notified: 4
   New signups: 3
   */
+
+  // Use: html-to-image
+  // or: modern-screenshot
