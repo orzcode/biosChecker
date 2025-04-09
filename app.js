@@ -22,9 +22,9 @@ app.use(compression());
 app.set("view engine", "ejs");
 app.set("views", path.join(path.resolve(), "views"));
 // Enable template caching
-if (process.env.NODE_ENV === 'production') {
-  ejs.cache = false;
-}
+// if (process.env.NODE_ENV === 'production') {
+//   ejs.cache = true;
+// }
 
 // Trust proxy for rate-limiting and security
 app.set("trust proxy", 1);
@@ -250,6 +250,14 @@ console.log(`Running in ${process.env.NODE_ENV} mode`);
 
 const PORT = process.env.PORT || 8000;
 
+if (process.env.NODE_ENV !== "production") {
+  app.use((req, res, next) => {
+    const delay = Math.floor(Math.random() * 2000) + 100;
+    console.log(`Delaying request by ${delay}ms`);
+    setTimeout(next, delay);
+  });
+}
+
 // For local development, or for Koyeb
 // Vercel doesn't use 'listen' but seems to run regardless
 app.listen(PORT, () => {
@@ -261,15 +269,6 @@ app.listen(PORT, () => {
     }`
   );
 });
-
-
-// Only add delay in development
-if (process.env.NODE_ENV !== "production") {
-  app.use((req, res, next) => {
-    setTimeout(next, Math.floor(Math.random() * 2000) + 100);
-    console.log("Delaying request by ~1000ms due to development mode");
-  });
-}
 
 // For Vercel
 export default app;
