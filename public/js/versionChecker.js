@@ -139,10 +139,9 @@ async function processUpdate(
     summary.summary.success++;
     summary.details.push({
       model: mobo.model,
-      oldVersion: mobo.heldversion || "none",
-      newVersion: version,
+      oldVer: mobo.heldversion || "none",
       oldDate: mobo.helddate || "none",
-      newDate: releaseDate,
+      newVer: version
     });
   } else {
     console.log(`No update needed for ${mobo.model}.`);
