@@ -6,6 +6,7 @@ import { fileURLToPath } from "url";
 import router from "./routes/router.js";
 import compression from "compression";
 import { minify } from 'html-minifier-terser';
+import ejs from 'ejs';
 
 // Initialize Express app
 const app = express();
