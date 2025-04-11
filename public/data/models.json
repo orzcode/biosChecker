@@ -1,16 +1,5 @@
 [
   {
-    "id": "mobo_m68rfcv2iumz8q",
-    "model": "B860M Pro-A WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.16",
-    "helddate": "2025/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2dbj0td",
     "model": "B860M Pro-A",
     "maker": "Intel",
@@ -283,6 +272,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html",
     "heldversion": "11.01",
     "helddate": "2024/10/1",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2iumz8q",
+    "model": "B860M Pro-A WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -1254,17 +1254,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2q504kn",
-    "model": "B860M Pro RS",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.16",
-    "helddate": "2025/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv277oaz3",
     "model": "B650E PG Riptide WiFi",
     "maker": "AMD",
@@ -1293,8 +1282,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20AQUA",
     "biospage": "https://www.asrock.com/mb/amd/X570%20AQUA/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1304,8 +1293,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Creator",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Creator/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1315,8 +1304,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Taichi%20Razer%20Edition",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Taichi%20Razer%20Edition/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1326,8 +1315,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Taichi/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1337,8 +1326,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Extreme4%20WiFi%20ax",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Extreme4%20WiFi%20ax/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1348,19 +1337,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Extreme4",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Extreme4/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2cozitb",
-    "model": "X570 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1370,8 +1348,19 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/X570M%20Pro4/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ty66cj",
+    "model": "X570S PG Riptide",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570S%20PG%20Riptide",
+    "biospage": "https://pg.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/9",
     "release": null
   },
   {
@@ -1381,8 +1370,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Steel%20Legend%20WiFi%20ax",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Steel%20Legend%20WiFi%20ax/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1392,8 +1381,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Steel%20Legend/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1628,17 +1617,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ty66cj",
-    "model": "X570S PG Riptide",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570S%20PG%20Riptide",
-    "biospage": "https://pg.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv26z3vfh",
     "model": "B650M PG Lightning WiFi",
     "maker": "AMD",
@@ -1661,14 +1639,36 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2q504kn",
+    "model": "B860M Pro RS",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2cozitb",
+    "model": "X570 Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/9",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2bp00y3",
     "model": "X570 Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1678,8 +1678,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1859,6 +1859,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv21jrdm8",
+    "model": "B550M-HDV",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/9",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2gybrac",
     "model": "B550M Pro SE",
     "maker": "AMD",
@@ -1876,8 +1887,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro4/bios.html",
-    "heldversion": "3.46[Beta]",
-    "helddate": "2024/8/21",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1911,17 +1922,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2024/10/22",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv21jrdm8",
-    "model": "B550M-HDV",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html",
-    "heldversion": "3.46[Beta]",
-    "helddate": "2024/8/21",
     "release": null
   },
   {
@@ -1986,8 +1986,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204S",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -2145,14 +2145,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv255dmdm",
-    "model": "B450 Pro4",
+    "id": "mobo_m68rfcv26qkriu",
+    "model": "A320M-HDV",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "link": "https://asrock.com/mb/amd/A320M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/9",
     "release": null
   },
   {
@@ -2250,8 +2250,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi/bios.html",
-    "heldversion": "3.46[Beta]",
-    "helddate": "2024/8/21",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -2409,25 +2409,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26qkriu",
-    "model": "A320M-HDV",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv27i38mx",
     "model": "A320M-ITX",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-ITX",
     "biospage": "https://www.asrock.com/mb/amd/A320M-ITX/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/9",
     "release": null
   },
   {
@@ -2448,8 +2437,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
-    "heldversion": "1.13.AS01[Beta]",
-    "helddate": "2025/2/20",
+    "heldversion": "1.14",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -2483,6 +2472,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
     "heldversion": "1.19",
     "helddate": "2025/3/31",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv255dmdm",
+    "model": "B450 Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/9",
     "release": null
   },
   {
@@ -2706,6 +2706,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2jwwtk2",
+    "model": "AB350 Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/AB350%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/AB350%20Pro4/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/9",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2vhr5qi",
     "model": "Z890 Pro RS WiFi White",
     "maker": "Intel",
@@ -2802,17 +2813,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/2/27",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2jwwtk2",
-    "model": "AB350 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/AB350%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/AB350%20Pro4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
     "release": null
   },
   {
@@ -3113,17 +3113,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gncb5d",
-    "model": "B860M Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.16",
-    "helddate": "2025/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2if8oot",
     "model": "B860 Pro-A",
     "maker": "Intel",
@@ -3141,8 +3130,19 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%20X",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%20X/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2gncb5d",
+    "model": "B860M Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "1.16",
+    "helddate": "2025/4/7",
     "release": null
   },
   {
@@ -3152,8 +3152,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
-    "heldversion": "5.63[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -3223,23 +3223,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2fjg1eg",
-    "model": "Fatal1ty AB350 Gaming K4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4",
-    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2p10rv8",
     "model": "A320M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-HDV%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R4.0/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2fjg1eg",
+    "model": "Fatal1ty AB350 Gaming K4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4",
+    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html",
     "heldversion": "10.31[Beta]",
     "helddate": "2024/8/26",
     "release": null
