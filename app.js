@@ -145,7 +145,7 @@ app.use(limiter);
 
 ////////////////////////////////////////////////////////////
 // Enhanced HTML-minifier-terser configuration with uglification
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
 
   console.log("Applying HTML minification middleware.");
   app.use((req, res, next) => {
