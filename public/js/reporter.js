@@ -148,6 +148,14 @@ export async function sendToDiscord(data, scriptName = "default") {
 }
 
 //////////////////////////////////////////////////////////////////
+const prewarmCharts = (chartUrls) =>
+  Promise.all(
+    chartUrls.map(url =>
+      fetch(url, { method: "GET", cache: "no-store" })
+        .then(r => r.arrayBuffer())
+        .catch(() => {})
+    )
+  );
 
 // export async function sendChartToDiscord(chartUrl) {
 //   //Re-usable, sends a single chosen chart to discord
@@ -171,12 +179,14 @@ export async function sendToDiscord(data, scriptName = "default") {
 //   }
 // }
 
-export async function sendAllChartsToDiscord(mode = "direct") {
-  // Embeds bundle summary and charts together
+export async function sendAllChartsToDiscord(mode = "embed") {
+  // Embed bundles summary and charts together
   // Direct sends summary and each chart as its own message(s) due to weird Discord resolve behavior
   const chartUrlsObject = await chartManager();
 
   const chartUrls = Object.values(chartUrlsObject);
+
+  await prewarmCharts(chartUrls);
 
   try {
     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
