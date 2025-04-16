@@ -1,4 +1,5 @@
 import { chartManager } from "./chartMan.js";
+import { generateImageFromData } from "./textGraph.js";
 import { today } from "./dater.js"
 
 // Define webhook URLs for different scripts
