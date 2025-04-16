@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with: 
-          fetch-depth: 0
+          fetch-depth: "0"
           # pulls all commits
 
       # Set up Node.js
@@ -25,16 +25,14 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install
+        run:
+          npm install
 
-      # Install Playwright browsers
+          # Install Playwright browsers
+      # Revert if needed to:
+      # npx playwright install --with-deps chromium
       - name: Install Playwright browsers
         run: npx playwright install --with-deps --no-shell
-
-      # Install TextGraph stuff 
-      - name: Install TextGraph stuff
-        run: |
-          npm install puppeteer node-html-to-image form-data node-fetch
 
       # Run the tasks
       - name: Run mobofetcher task
@@ -54,9 +52,10 @@ jobs:
           DISCORD_WEBHOOK_NOTIFYUSERS: ${{ secrets.DISCORD_WEBHOOK_NOTIFYUSERS }}
           DISCORD_WEBHOOK_MOBOFETCHER: ${{ secrets.DISCORD_WEBHOOK_MOBOFETCHER }}
           DISCORD_WEBHOOK_STATSCHARTS: ${{ secrets.DISCORD_WEBHOOK_STATSCHARTS }}
-        run: node public/js/moboFetcher.js
+        run:
+          node public/js/moboFetcher.js
 
-      # Commit and push changes to models.json (if modified)
+          # Commit and push changes to models.json (if modified)
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
@@ -64,7 +63,8 @@ jobs:
 
           # Check for changes in the working directory and staging area
           if git diff --quiet public/data/models.json && git diff --cached --quiet public/data/models.json; then
-            echo "No changes to models.json. Skipping commit and push."
+          echo "No changes to models.json. Skipping commit and push."
+
           else
             git add public/data/models.json
             git commit -m "Update models.json via daily workflow"

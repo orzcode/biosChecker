@@ -1,6 +1,5 @@
 import { chartManager } from "./chartMan.js";
 import { generateImageFromData } from "./textGraph.js";
-import FormData from "form-data"
 import { today } from "./dater.js"
 
 // Define webhook URLs for different scripts
@@ -203,55 +202,20 @@ export async function sendAllChartsToDiscord(mode = "embed") {
     const summaryContent = `Statistics as of ${await today("hyphen")} ${chartUrls.map(url => `[URL](<${url}>)`).join(" | ")}`;
 
     if (mode === "embed") {
-      try {
-        // Embeds bundle summary and charts together
-        const embeds = chartUrls.map((chartUrl) => ({
-          image: { url: chartUrl }
-        }));
-        
-        // Generate the image data from HTML - this returns a Buffer
-        const generatedImage = await generateImageFromData();
-        
-        // Create a unique filename for the generated image
-        const generatedImageFilename = `generated-image-${Date.now()}.png`;
-        
-        // Add the generated image to the embeds array
-        embeds.push({
-          image: { url: `attachment://${generatedImageFilename}` }
-        });
-        
-        // Create a Node.js FormData instance
-        const formData = new FormData();
-        
-        // Add the JSON payload
-        formData.append('payload_json', JSON.stringify({
+      // Embeds bundle summary and charts together
+      const embeds = chartUrls.map((chartUrl) => ({
+        image: { url: chartUrl }
+      }));
+
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           content: summaryContent,
           embeds: embeds,
-        }));
-        
-        // Add the generated image as a file
-        formData.append(generatedImageFilename, generatedImage, {
-          filename: generatedImageFilename,
-          contentType: 'image/png'
-        });
-        
-        // Send the webhook with the form data
-        const response = await fetch(webhookUrl, {
-          method: "POST",
-          // Use the FormData's headers
-          headers: formData.getHeaders(),
-          body: formData
-        });
-        
-        if (!response.ok) {
-          const responseText = await response.text();
-          console.error(`Discord API error: ${response.status} ${responseText}`);
-        } else {
-          console.log('Successfully sent webhook with image');
-        }
-      } catch (error) {
-        console.error('Error sending webhook with image:', error);
-      }
+        }),
+      });
+
     } else if (mode === "direct") {
       // Summary
       await fetch(webhookUrl, {
