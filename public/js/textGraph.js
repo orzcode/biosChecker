@@ -190,9 +190,12 @@ const htmlString = generateHtml(data);
 
 function generateImage(data) {
 	const image = nodeHtmlToImage({
-		html: data
-	  });
-	return image
+		html: data,
+		puppeteerArgs: {
+			args: ['--no-sandbox', '--disable-setuid-sandbox']
+		}
+	});
+	return image;
 }
 
 export async function generateImageFromData() {
