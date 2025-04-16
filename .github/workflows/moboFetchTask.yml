@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with: 
-          fetch-depth: "0"
+          fetch-depth: 0
           # pulls all commits
 
       # Set up Node.js
@@ -25,14 +25,21 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run:
-          npm install
+        run: npm install
 
-          # Install Playwright browsers
-      # Revert if needed to:
-      # npx playwright install --with-deps chromium
+      # Install Playwright browsers
       - name: Install Playwright browsers
         run: npx playwright install --with-deps --no-shell
+
+      # Install Puppeteer dependencies
+      - name: Install Puppeteer dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgbm-dev gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+    
+      # Install node-html-to-image
+      - name: Install node-html-to-image
+        run: npm install node-html-to-image
 
       # Run the tasks
       - name: Run mobofetcher task
@@ -52,10 +59,9 @@ jobs:
           DISCORD_WEBHOOK_NOTIFYUSERS: ${{ secrets.DISCORD_WEBHOOK_NOTIFYUSERS }}
           DISCORD_WEBHOOK_MOBOFETCHER: ${{ secrets.DISCORD_WEBHOOK_MOBOFETCHER }}
           DISCORD_WEBHOOK_STATSCHARTS: ${{ secrets.DISCORD_WEBHOOK_STATSCHARTS }}
-        run:
-          node public/js/moboFetcher.js
+        run: node public/js/moboFetcher.js
 
-          # Commit and push changes to models.json (if modified)
+      # Commit and push changes to models.json (if modified)
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
@@ -63,8 +69,7 @@ jobs:
 
           # Check for changes in the working directory and staging area
           if git diff --quiet public/data/models.json && git diff --cached --quiet public/data/models.json; then
-          echo "No changes to models.json. Skipping commit and push."
-
+            echo "No changes to models.json. Skipping commit and push."
           else
             git add public/data/models.json
             git commit -m "Update models.json via daily workflow"

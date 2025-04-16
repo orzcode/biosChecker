@@ -206,16 +206,39 @@ export async function sendAllChartsToDiscord(mode = "embed") {
       const embeds = chartUrls.map((chartUrl) => ({
         image: { url: chartUrl }
       }));
-
+      
+      // Generate the image data from HTML - this returns a Buffer
+      const generatedImage = await generateImageFromData();
+      
+      // Create a unique filename for the generated image
+      const generatedImageFilename = `generated-image-${Date.now()}.png`;
+      
+      // Add the generated image to the embeds array
+      embeds.push({
+        image: { url: `attachment://${generatedImageFilename}` }
+      });
+      
+      // Create a FormData object to handle file uploads
+      const formData = new FormData();
+      
+      // Add the JSON payload
+      formData.append('payload_json', JSON.stringify({
+        content: summaryContent,
+        embeds: embeds,
+      }));
+      
+      // Add the generated image as a file
+      // node-html-to-image returns a Buffer which works with FormData in Node.js
+      formData.append(generatedImageFilename, generatedImage, {
+        filename: generatedImageFilename,
+        contentType: 'image/png'
+      });
+      
+      // Send the webhook with the form data
       await fetch(webhookUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          content: summaryContent,
-          embeds: embeds,
-        }),
+        body: formData,
       });
-
     } else if (mode === "direct") {
       // Summary
       await fetch(webhookUrl, {
