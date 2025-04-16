@@ -38,7 +38,7 @@ app.use(express.json()); // JSON parsing
 app.use(
   "/public/images",
   (req, res, next) => {
-    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    res.setHeader("Cache-Control", "public, max-age=2500000");
     next();
   },
   express.static(path.join(__dirname, "public/images"), { etag: true })
@@ -48,7 +48,7 @@ app.use(
 app.use(
   "/public/data/models.json",
   (req, res, next) => {
-    res.setHeader("Cache-Control", "public, max-age=21600, must-revalidate");
+    res.setHeader("Cache-Control", "public, max-age=4000, must-revalidate");
     next();
   },
   express.static(path.join(__dirname, "public/data"), { etag: true })

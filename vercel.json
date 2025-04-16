@@ -15,7 +15,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=2500000"
         }
       ]
     },
@@ -24,38 +24,11 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=2500000"
         },
         {
           "key": "X-Cache-Debug",
           "value": "vercel-config-applied"
-        }
-      ]
-    },
-    {
-      "source": "/data/models.json",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=90000, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=200000, stale-while-revalidate=100000"
-        }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=200000, stale-while-revalidate=100000"
         }
       ]
     },
@@ -73,15 +46,6 @@
         {
           "key": "Expires",
           "value": "0"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=200000, stale-while-revalidate=100000"
         }
       ]
     }

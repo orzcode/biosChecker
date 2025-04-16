@@ -148,14 +148,17 @@ export async function sendToDiscord(data, scriptName = "default") {
 }
 
 //////////////////////////////////////////////////////////////////
-const prewarmCharts = (chartUrls) =>
-  Promise.all(
+const prewarmCharts = async (chartUrls) => {
+  await Promise.all(
     chartUrls.map(url =>
       fetch(url, { method: "GET", cache: "no-store" })
         .then(r => r.arrayBuffer())
         .catch(() => {})
     )
   );
+  // Wait for 3 seconds so QuickChart can fully process
+  await new Promise(resolve => setTimeout(resolve, 3000));
+};
 
 // export async function sendChartToDiscord(chartUrl) {
 //   //Re-usable, sends a single chosen chart to discord
