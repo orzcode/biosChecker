@@ -31,14 +31,10 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps --no-shell
 
-      # Install Puppeteer dependencies
-      - name: Install Puppeteer dependencies
+      # Install TextGraph stuff 
+      - name: Install TextGraph stuff
         run: |
-          npm install puppeteer
-    
-      # Install node-html-to-image
-      - name: Install node-html-to-image
-        run: npm install node-html-to-image
+          npm install puppeteer node-html-to-image form-data node-fetch
 
       # Run the tasks
       - name: Run mobofetcher task
