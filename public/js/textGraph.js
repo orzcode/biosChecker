@@ -1,4 +1,4 @@
-import nodeHtmlToImage from 'node-html-to-image';
+//import nodeHtmlToImage from 'node-html-to-image';
 import { getChartData } from './chartDataGrabber.js';
 /**
  * Generates an HTML string suitable for node-html-to-image, displaying
@@ -197,9 +197,115 @@ function generateImage(data) {
 	});
 	return image;
 }
-
 export async function generateImageFromData() {
     return await generateImage(htmlString);
 }
 
 // await generateImageFromData();
+console.log(htmlString);
+
+// Example HTML Output
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <meta charset="UTF-8">
+//     <style>
+//         body {
+//             /* --- Dimensions & Base Styling --- */
+//             width: 1036px;
+//             height: 740px;
+//             color: #000000;
+//             font-family: Arial, sans-serif;
+//             font-size: 16px;
+//             line-height: 1.5;
+//             margin: 0;
+//             padding: 20px;
+//             box-sizing: border-box;
+//             position: relative;
+//             overflow: hidden;
+
+//             /* --- Background Image --- */
+//             background-color: #efe7db;
+//             background-image: url('https://www.asrockbioschecker.link/images/tilestone2.jpg');
+//             background-size: cover;
+//             background-position: center center;
+//             background-repeat: no-repeat;
+
+//             /* --- Centering for the text block --- */
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+
+//         .content {
+//             text-align: left;
+//             white-space: normal;
+//             font-weight: normal; /* Or 'bold' if you want the text bolder like the example image title */
+//              /* Optional: Add a semi-transparent background to text for readability over complex backgrounds */
+//              /* background-color: rgba(255, 255, 255, 0.8); */
+//              /* padding: 15px; */
+//              /* border-radius: 5px; */
+//              /* max-width: 90%; */
+//         }
+
+//         /* --- Logo Styling --- */
+//         .logo {
+//             position: absolute;
+//             bottom: 20px;
+//             right: 20px;
+//             width: 120px;
+//             height: auto;
+//             z-index: 10;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <div class="content">
+//         Updates this week: 36<br>
+// &nbsp;&nbsp;-&nbsp;X570 Creator 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Taichi Razer Edition 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Taichi 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Extreme4 WiFi ax 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Extreme4 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Steel Legend 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 AQUA 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming-ITX/TB3 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550 Taichi Razer Edition 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M Pro RS 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M Pro SE 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550 Extreme4 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550 Steel Legend 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550 Pro4 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M Steel Legend 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M/ac 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M WiFi SE 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4S 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M Phantom Gaming 4 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M WiFi 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M-ITX/ac 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M-HVS SE 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;A520M Pro4 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;A520M-HVS 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;A520M-HDV 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B550M Pro4 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;A520M/ac 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;A520M-ITX/ac 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X470 Taichi Ultimate 10.41[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X470 Taichi 10.41[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;B860I Lightning WiFi 1.14<br>
+// &nbsp;&nbsp;-&nbsp;B550 Taichi 3.61[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming X 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Steel Legend WiFi ax 5.65[Beta]<br>
+// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4 WiFi ax 5.65[Beta]<br>
+// <br>
+// User activity this week:<br>
+// Users notified: 2<br>
+// New signups: 0
+//     </div>
+
+//     <img src="https://www.asrockbioschecker.link/images/watermark.png" class="logo" alt="Logo">
+
+// </body>
+// </html>
