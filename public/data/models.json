@@ -1672,23 +1672,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29sskri",
-    "model": "B550M Phantom Gaming 4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Phantom%20Gaming%204",
-    "biospage": "https://pg.asrock.com/mb/amd/B550M%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/14",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2z5n6ce",
     "model": "B550M Pro RS",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/14",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2gybrac",
+    "model": "B550M Pro SE",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
     "release": null
@@ -1859,12 +1859,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gybrac",
-    "model": "B550M Pro SE",
+    "id": "mobo_m68rfcv23gj3wn",
+    "model": "B550M WiFi SE",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M%20WiFi%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
     "release": null
@@ -1881,12 +1881,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv23gj3wn",
-    "model": "B550M WiFi SE",
+    "id": "mobo_m68rfcv29sskri",
+    "model": "B550M Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20WiFi%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M%20Phantom%20Gaming%204",
+    "biospage": "https://pg.asrock.com/mb/amd/B550M%20Phantom%20Gaming%204/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
     "release": null
@@ -1903,17 +1903,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2bp00y3",
-    "model": "X570 Phantom Gaming 4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
-    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "5.65[Beta]",
-    "helddate": "2025/4/10",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv28qf2bq",
     "model": "B550M-ITX/ac",
     "maker": "AMD",
@@ -1922,6 +1911,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2bp00y3",
+    "model": "X570 Phantom Gaming 4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
+    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
+    "heldversion": "5.65[Beta]",
+    "helddate": "2025/4/10",
     "release": null
   },
   {
@@ -1947,6 +1947,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2uayk9c",
+    "model": "A520M-HVS",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-HVS",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/14",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv224heeq",
     "model": "A520M Phantom Gaming 4",
     "maker": "AMD",
@@ -1958,12 +1969,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2uayk9c",
-    "model": "A520M-HVS",
+    "id": "mobo_m68rfcv224q3kt",
+    "model": "A520M-HDV",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HVS",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
     "release": null
@@ -1980,12 +1991,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv224q3kt",
-    "model": "A520M-HDV",
+    "id": "mobo_m68rfcv2bfcov5",
+    "model": "A520M/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
+    "link": "https://asrock.com/mb/amd/A520Mac",
+    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
     "release": null
@@ -1997,8 +2008,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
-    "heldversion": "3.41[Beta]",
-    "helddate": "2024/3/5",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2008,19 +2019,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
-    "heldversion": "3.41[Beta]",
-    "helddate": "2024/3/5",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2bfcov5",
-    "model": "A520M/ac",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520Mac",
-    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
     "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/14",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2074,8 +2074,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2096,8 +2096,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2107,8 +2107,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20B450%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming%20K4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2118,8 +2118,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20B450%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming-ITXac/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2129,8 +2129,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2151,8 +2151,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2162,8 +2162,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2173,8 +2173,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450Mac%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450Mac%20R2.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2184,8 +2184,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2195,8 +2195,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M-HDV%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.42[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2206,8 +2206,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M-HDV",
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2569,8 +2569,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41P[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -3218,8 +3218,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450Mac",
     "biospage": "https://www.asrock.com/mb/amd/B450Mac/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
