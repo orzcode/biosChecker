@@ -2057,17 +2057,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2f1h11f",
-    "model": "X470 Master SLI/ac",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X470%20Master%20SLIac",
-    "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html",
-    "heldversion": "10.41[Beta]",
-    "helddate": "2025/4/21",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2mrrai8",
     "model": "B450 Steel Legend",
     "maker": "AMD",
@@ -2079,12 +2068,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28syxgf",
-    "model": "Fatal1ty X470 Gaming K4",
+    "id": "mobo_m68rfcv2fdxsa9",
+    "model": "X370 Taichi",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4",
-    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4/bios.html",
+    "link": "https://asrock.com/mb/amd/X370%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/X370%20Taichi/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/21",
     "release": null
@@ -2189,12 +2178,34 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2fdxsa9",
-    "model": "X370 Taichi",
+    "id": "mobo_m68rfcv28syxgf",
+    "model": "Fatal1ty X470 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X370%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/X370%20Taichi/bios.html",
+    "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4",
+    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/21",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2cytjev",
+    "model": "X370 Killer SLI/ac",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X370%20Killer%20SLIac",
+    "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLIac/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/21",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2zifsho",
+    "model": "X370 Killer SLI",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X370%20Killer%20SLI",
+    "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLI/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/21",
     "release": null
@@ -2222,12 +2233,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2cytjev",
-    "model": "X370 Killer SLI/ac",
+    "id": "mobo_m68rfcv2r5wjwn",
+    "model": "X370 Pro4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X370%20Killer%20SLIac",
-    "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLIac/bios.html",
+    "link": "https://asrock.com/mb/amd/X370%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/X370%20Pro4/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/21",
     "release": null
@@ -2241,28 +2252,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "14.02",
     "helddate": "2025/1/15",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2zifsho",
-    "model": "X370 Killer SLI",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X370%20Killer%20SLI",
-    "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLI/bios.html",
-    "heldversion": "10.41[Beta]",
-    "helddate": "2025/4/21",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2r5wjwn",
-    "model": "X370 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X370%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/X370%20Pro4/bios.html",
-    "heldversion": "10.41[Beta]",
-    "helddate": "2025/4/21",
     "release": null
   },
   {
@@ -2800,8 +2789,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2811,8 +2800,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4-F/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2822,8 +2811,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2833,8 +2822,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4DASH",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4DASH/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2844,8 +2833,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M",
     "biospage": "https://www.asrock.com/mb/amd/AB350M/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2855,8 +2844,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M-HDV%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2866,8 +2855,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M-HDV%20R3.0",
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R3.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2877,8 +2866,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M-HDV",
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -3080,17 +3069,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2zm362h",
-    "model": "X470 Master SLI",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X470%20Master%20SLI",
-    "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html",
-    "heldversion": "10.41[Beta]",
-    "helddate": "2025/4/21",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2rizsg5",
     "model": "X570 Phantom Gaming X",
     "maker": "AMD",
@@ -3099,6 +3077,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%20X/bios.html",
     "heldversion": "5.65[Beta]",
     "helddate": "2025/4/10",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2zm362h",
+    "model": "X470 Master SLI",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X470%20Master%20SLI",
+    "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/21",
     "release": null
   },
   {
@@ -3309,6 +3298,17 @@
     "heldversion": "3.20",
     "helddate": "2025/2/26",
     "release": "2025/2/26"
+  },
+  {
+    "id": "mobo_m68rfcv2f1h11f",
+    "model": "X470 Master SLI/ac",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X470%20Master%20SLIac",
+    "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/21",
+    "release": null
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
