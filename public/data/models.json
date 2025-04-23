@@ -402,8 +402,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
-    "heldversion": "2.26",
-    "helddate": "2025/3/28",
+    "heldversion": "3.03",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2459,8 +2459,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2503,8 +2503,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2514,8 +2514,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2525,8 +2525,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4-F/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2538,6 +2538,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
     "heldversion": "2.10",
     "helddate": "2024/12/5",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2zn5zx3",
+    "model": "AB350M Pro4 R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/AB350M%20Pro4%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4%20R2.0/bios.html",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2569,8 +2580,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2580,8 +2591,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M",
     "biospage": "https://www.asrock.com/mb/amd/A320M/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2602,8 +2613,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-DVS%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R4.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2679,8 +2690,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2690,8 +2701,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2701,8 +2712,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
-    "heldversion": "2.28",
-    "helddate": "2025/3/27",
+    "heldversion": "3.03",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2712,8 +2723,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-DVS%20R3.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R3.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2723,8 +2734,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-DGS",
     "biospage": "https://www.asrock.com/mb/amd/A320M-DGS/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -2780,17 +2791,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
     "heldversion": "10.41P[Beta]",
     "helddate": "2025/4/18",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2zn5zx3",
-    "model": "AB350M Pro4 R2.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/AB350M%20Pro4%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.41[Beta]",
-    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2877,8 +2877,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2888,8 +2888,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2899,8 +2899,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2910,8 +2910,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2921,8 +2921,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2932,8 +2932,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A/bios.html",
-    "heldversion": "2.25",
-    "helddate": "2025/3/26",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2943,8 +2943,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "2.24",
-    "helddate": "2025/3/27",
+    "heldversion": "3.03",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -2954,8 +2954,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
-    "heldversion": "2.24",
-    "helddate": "2025/3/27",
+    "heldversion": "3.03",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -3350,8 +3350,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -3416,8 +3416,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-HDV%20R3.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
-    "heldversion": "10.31[Beta]",
-    "helddate": "2024/8/26",
+    "heldversion": "10.41[Beta]",
+    "helddate": "2025/4/23",
     "release": null
   },
   {
@@ -3427,8 +3427,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
-    "heldversion": "2.22",
-    "helddate": "2025/3/21",
+    "heldversion": "3.04",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -3438,8 +3438,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
-    "heldversion": "2.24",
-    "helddate": "2025/3/27",
+    "heldversion": "3.03",
+    "helddate": "2025/4/22",
     "release": null
   },
   {
@@ -3460,8 +3460,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "2.29",
-    "helddate": "2025/4/1",
+    "heldversion": "3.05",
+    "helddate": "2025/4/22",
     "release": null
   }
 ]
