@@ -18,7 +18,7 @@ export async function runTasks(fromKoyeb) {
     console.log("---Finished daily notifyChecker.");
 
     // temporarily doing daily charts for testing
-    await sendAllChartsToDiscord();
+    //await sendAllChartsToDiscord();
     
   } catch (error) {
     console.error("Error running tasks:", error.message);

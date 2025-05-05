@@ -1,6 +1,6 @@
 import { chartManager } from "./chartMan.js";
 //import { generateImageFromData } from "./textGraph.js";
-import { today } from "./dater.js"
+import { today } from "./dater.js";
 
 // Define webhook URLs for different scripts
 const DISCORD_WEBHOOKS = {
@@ -54,13 +54,12 @@ export async function sendToDiscord(data, scriptName = "default") {
     message += `\`\`\`\n\n`;
 
     // Add details
+    // In the 'Details' section of sendToDiscord:
     if (data.details && data.details.length > 0) {
       message += `**Details (${data.details.length}):**\n\`\`\`\n`;
       if (data.details[0]) {
         const keys = Object.keys(data.details[0]);
-
-        // Increase padding for better column separation
-        const padding = 25;
+        const padding = 20; // Adjust padding as needed for the new columns
 
         message += keys.map((key) => key.padEnd(padding)).join("") + "\n";
         message += "-".repeat(keys.length * padding) + "\n";
@@ -151,14 +150,14 @@ export async function sendToDiscord(data, scriptName = "default") {
 //////////////////////////////////////////////////////////////////
 const prewarmCharts = async (chartUrls) => {
   await Promise.all(
-    chartUrls.map(url =>
+    chartUrls.map((url) =>
       fetch(url, { method: "GET", cache: "no-store" })
-        .then(r => r.arrayBuffer())
+        .then((r) => r.arrayBuffer())
         .catch(() => {})
     )
   );
   // Wait for 3 seconds so QuickChart can fully process
-  await new Promise(resolve => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 };
 
 // export async function sendChartToDiscord(chartUrl) {
@@ -199,12 +198,14 @@ export async function sendAllChartsToDiscord(mode = "embed") {
       return;
     }
 
-    const summaryContent = `Statistics as of ${await today("hyphen")} ${chartUrls.map(url => `[URL](<${url}>)`).join(" | ")}`;
+    const summaryContent = `Statistics as of ${await today(
+      "hyphen"
+    )} ${chartUrls.map((url) => `[URL](<${url}>)`).join(" | ")}`;
 
     if (mode === "embed") {
       // Embeds bundle summary and charts together
       const embeds = chartUrls.map((chartUrl) => ({
-        image: { url: chartUrl }
+        image: { url: chartUrl },
       }));
 
       await fetch(webhookUrl, {
@@ -215,7 +216,6 @@ export async function sendAllChartsToDiscord(mode = "embed") {
           embeds: embeds,
         }),
       });
-
     } else if (mode === "direct") {
       // Summary
       await fetch(webhookUrl, {
@@ -231,9 +231,7 @@ export async function sendAllChartsToDiscord(mode = "embed") {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ content: `${chartUrl}` }),
         });
-
       }
-
     } else {
       console.warn(`Invalid mode "${mode}" passed to sendAllChartsToDiscord`);
       return;
@@ -244,4 +242,3 @@ export async function sendAllChartsToDiscord(mode = "embed") {
     console.error(`Error sending QuickChart URLs to Discord: ${error}`);
   }
 }
-

@@ -138,11 +138,10 @@ async function processUpdate(
     updatedMobos.push(mobo);
     summary.summary.success++;
     summary.details.push({
-      model: mobo.model,
-      oldVer: mobo.heldversion || "none",
-      oldDate: mobo.helddate || "none",
-      newVer: version
-    });
+      Model: mobo.model, // Renamed for clarity in Discord
+      'Old Version': mobo.heldversion || "none",
+      'New Version': version
+  });
   } else {
     console.log(`No update needed for ${mobo.model}.`);
   }

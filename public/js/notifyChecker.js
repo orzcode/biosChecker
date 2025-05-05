@@ -94,11 +94,10 @@ export async function notifyUsers() {
                     updatedUsers.push(updatedUser);
                     summary.summary.success++;
                     summary.details.push({
-                        id: user.id,
-                        mobo: user.mobo,
-                        newVersion: mobo.heldversion,
-                        newDate: mobo.helddate,
-                        status: "notified"
+                        ID: user.id,
+                        Mobo: user.mobo,
+                        'New Ver': mobo.heldversion,
+                        Status: "notified"
                     });
                 } catch (emailError) {
                     console.error(`Failed to notify ${user.id} about ${user.mobo}: ${emailError}`);
