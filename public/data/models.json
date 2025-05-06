@@ -1,16 +1,5 @@
 [
   {
-    "id": "mobo_m68rfcv2dbj0td",
-    "model": "B860M Pro-A",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.17",
-    "helddate": "2025/4/24",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2q1pm0f",
     "model": "B860M-X WiFi",
     "maker": "Intel",
@@ -29,6 +18,17 @@
     "link": "https://asrock.com/mb/intel/B860M-X",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
     "heldversion": "2.01",
+    "helddate": "2025/4/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2iumz8q",
+    "model": "B860M Pro-A WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
+    "heldversion": "1.17",
     "helddate": "2025/4/24",
     "release": null
   },
@@ -94,8 +94,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790M-ITX%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
-    "heldversion": "17.02",
-    "helddate": "2025/1/17",
+    "heldversion": "18.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -286,17 +286,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2iumz8q",
-    "model": "B860M Pro-A WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.17",
-    "helddate": "2025/4/24",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2uecthk",
     "model": "B760M-HDV/M.2 D4",
     "maker": "Intel",
@@ -407,6 +396,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2dbj0td",
+    "model": "B860M Pro-A",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
+    "heldversion": "1.17",
+    "helddate": "2025/4/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv294tlmh",
     "model": "B760M PG Lightning/D4",
     "maker": "Intel",
@@ -435,8 +435,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "12.02",
-    "helddate": "2025/1/16",
+    "heldversion": "13.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -655,8 +655,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
-    "heldversion": "17.02",
-    "helddate": "2025/1/15",
+    "heldversion": "18.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -1062,8 +1062,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html",
-    "heldversion": "17.02",
-    "helddate": "2025/1/15",
+    "heldversion": "18.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -1364,6 +1364,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2q504kn",
+    "model": "B860M Pro RS",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
+    "heldversion": "1.17",
+    "helddate": "2025/4/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2hkg8gk",
     "model": "X570 PG Velocita",
     "maker": "AMD",
@@ -1628,17 +1639,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2q504kn",
-    "model": "B860M Pro RS",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.17",
-    "helddate": "2025/4/24",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2cozitb",
     "model": "X570 Pro4",
     "maker": "AMD",
@@ -1843,8 +1843,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html",
-    "heldversion": "10.02",
-    "helddate": "2025/1/15",
+    "heldversion": "11.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -3091,17 +3091,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2if8oot",
-    "model": "B860 Pro-A",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A/bios.html",
-    "heldversion": "1.17",
-    "helddate": "2025/4/1",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2gncb5d",
     "model": "B860M Pro RS WiFi",
     "maker": "Intel",
@@ -3110,6 +3099,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "1.17",
     "helddate": "2025/4/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2if8oot",
+    "model": "B860 Pro-A",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A/bios.html",
+    "heldversion": "1.17",
+    "helddate": "2025/4/1",
     "release": null
   },
   {
