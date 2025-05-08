@@ -66,17 +66,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2hux6re",
-    "model": "Z790 Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/5/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2xdehra",
     "model": "Z790 PG-ITX/TB4",
     "maker": "Intel",
@@ -85,6 +74,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20PG-ITXTB4/bios.html",
     "heldversion": "3.10",
     "helddate": "2022/12/23",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2hux6re",
+    "model": "Z790 Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -440,17 +440,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv243pgp9",
-    "model": "Z790 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
-    "heldversion": "11.02",
-    "helddate": "2025/5/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2et3i5p",
     "model": "B760M-H2/M.2",
     "maker": "Intel",
@@ -646,6 +635,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax/bios.html",
     "heldversion": "19.01",
     "helddate": "2024/10/4",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv243pgp9",
+    "model": "Z790 Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
+    "heldversion": "11.02",
+    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -1375,6 +1375,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2tm6bvq",
+    "model": "Z790 LiveMixer",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20LiveMixer",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
+    "heldversion": "22.02",
+    "helddate": "2025/5/7",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2hkg8gk",
     "model": "X570 PG Velocita",
     "maker": "AMD",
@@ -1438,17 +1449,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/4",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2tm6bvq",
-    "model": "Z790 LiveMixer",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20LiveMixer",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
-    "heldversion": "22.02",
-    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -1837,6 +1837,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2r8e007",
+    "model": "A520M-HDVP R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/18",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv21jrdm8",
     "model": "B550M-HDV",
     "maker": "AMD",
@@ -1988,17 +1999,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2r8e007",
-    "model": "A520M-HDVP R2.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2024/1/24",
     "release": null
   },
   {
@@ -2244,17 +2244,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26aa39e",
-    "model": "Z790 Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "15.03",
-    "helddate": "2025/5/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2butk5y",
     "model": "Fatal1ty X370 Professional Gaming",
     "maker": "AMD",
@@ -2373,6 +2362,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
     "heldversion": "3.04",
     "helddate": "2025/4/22",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv26aa39e",
+    "model": "Z790 Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "15.03",
+    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -2563,13 +2563,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv21ye4rp",
-    "model": "Z790 Pro RS",
+    "id": "mobo_m68rfcv24u2in8",
+    "model": "Z790 Pro RS/D4",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html",
-    "heldversion": "17.03",
+    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RSD4",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RSD4/bios.html",
+    "heldversion": "15.04",
     "helddate": "2025/5/7",
     "release": null
   },
@@ -2593,17 +2593,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R4.0/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/23",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv24u2in8",
-    "model": "Z790 Pro RS/D4",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RSD4",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RSD4/bios.html",
-    "heldversion": "15.04",
-    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -2879,6 +2868,17 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/23",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv21ye4rp",
+    "model": "Z790 Pro RS",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html",
+    "heldversion": "17.03",
+    "helddate": "2025/5/7",
     "release": null
   },
   {
@@ -3399,6 +3399,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2uapm08",
+    "model": "Z790I Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
+    "heldversion": "9.02",
+    "helddate": "2025/5/7",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv20mzaum",
     "model": "Q670M vPro",
     "maker": "Intel",
@@ -3418,17 +3429,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/2/25",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2uapm08",
-    "model": "Z790I Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
-    "heldversion": "9.02",
-    "helddate": "2025/5/7",
     "release": null
   },
   {
