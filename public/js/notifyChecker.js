@@ -96,7 +96,7 @@ export async function notifyUsers() {
                     summary.details.push({
                         ID: user.id,
                         Mobo: user.mobo,
-                        'New Ver': mobo.heldversion,
+                        'New Ver': mobo.heldversion, // POST-UPDATE version; DB's MODEL version, not the user's version (givenver)
                         Status: "notified"
                     });
                 } catch (emailError) {

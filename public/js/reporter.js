@@ -59,7 +59,7 @@ export async function sendToDiscord(data, scriptName = "default") {
       message += `**Details (${data.details.length}):**\n\`\`\`\n`;
       if (data.details[0]) {
         const keys = Object.keys(data.details[0]);
-        const padding = 20; // Adjust padding as needed for the new columns
+        const padding = 25; // Adjust padding as needed for the new columns
 
         message += keys.map((key) => key.padEnd(padding)).join("") + "\n";
         message += "-".repeat(keys.length * padding) + "\n";

@@ -121,6 +121,7 @@ export async function scrapeBIOSInfo(url) {
 // Re-usable function to handle the update logic
 // Created due to retry shortlist usage
 async function processUpdate(
+  //Note - these are UPDATED versions.
   mobo,
   version,
   releaseDate,
@@ -128,20 +129,24 @@ async function processUpdate(
   summary
 ) {
   if (await isNewerDate(mobo.helddate, releaseDate)) {
+    const oldVersion = mobo.heldversion || "none";
+    const oldDate = mobo.helddate || "none";
+    //This was added to ensure it reports the update properly
+
     mobo.heldversion = version;
     mobo.helddate = releaseDate;
+
     console.log(
-      `Updating ${mobo.model} from ${mobo.heldversion || "none"} (${
-        mobo.helddate || "none"
-      }) to ${version} (${releaseDate})`
+      `Updating ${mobo.model} from ${oldVersion} (${oldDate}) to ${version} (${releaseDate})`
     );
+
     updatedMobos.push(mobo);
     summary.summary.success++;
     summary.details.push({
-      Model: mobo.model, // Renamed for clarity in Discord
-      'Old Version': mobo.heldversion || "none",
-      'New Version': version
-  });
+      Model: mobo.model,
+      "Old Version": oldVersion,
+      "New Version": version,
+    });
   } else {
     console.log(`No update needed for ${mobo.model}.`);
   }
@@ -201,7 +206,7 @@ export async function updateModels(fromKoyeb) {
       firstAttemptErrors.set(model, errorMessage);
 
       // Add the whole mobo object to retry list
-      retryList.push(mobo);       
+      retryList.push(mobo);
     } else {
       // Initial attempt succeeded
       const { version, releaseDate } = scrapedInfo;
@@ -281,7 +286,9 @@ export async function updateModels(fromKoyeb) {
       await saveMobos(updatedMobos);
       console.log("Models DB updated.");
 
-      const updatedMoboMap = new Map(updatedMobos.map((mobo) => [mobo.id, mobo]));
+      const updatedMoboMap = new Map(
+        updatedMobos.map((mobo) => [mobo.id, mobo])
+      );
       const combinedMobos = mobos.map(
         (mobo) => updatedMoboMap.get(mobo.id) || mobo
       );
@@ -299,11 +306,9 @@ export async function updateModels(fromKoyeb) {
         });
         summary.summary.errors++;
       }
-
     } else {
       console.log("No updates found to save to database.");
     }
-
   } catch (error) {
     console.error("Failed to save updated mobos:", error);
     summary.errors.push({
