@@ -1837,17 +1837,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2r8e007",
-    "model": "A520M-HDVP R2.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
-    "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/18",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv21jrdm8",
     "model": "B550M-HDV",
     "maker": "AMD",
@@ -1999,6 +1988,17 @@
     "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/14",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2r8e007",
+    "model": "A520M-HDVP R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
+    "heldversion": "3.61[Beta]",
+    "helddate": "2025/4/18",
     "release": null
   },
   {
@@ -2437,8 +2437,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
-    "heldversion": "8.04",
-    "helddate": "2025/1/15",
+    "heldversion": "9.03",
+    "helddate": "2025/5/8",
     "release": null
   },
   {
