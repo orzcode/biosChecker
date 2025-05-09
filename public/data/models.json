@@ -94,8 +94,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/1",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -105,8 +105,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "3.01",
-    "helddate": "2024/10/1",
+    "heldversion": "4.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -116,8 +116,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html",
-    "heldversion": "7.01",
-    "helddate": "2024/10/1",
+    "heldversion": "8.04",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -127,8 +127,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/1",
+    "heldversion": "5.04",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -138,8 +138,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/1",
+    "heldversion": "12.04",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -149,8 +149,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/1",
+    "heldversion": "12.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -160,8 +160,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/1",
+    "heldversion": "5.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -171,8 +171,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2024/10/1",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -182,8 +182,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2024/10/1",
+    "heldversion": "11.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -193,8 +193,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RSD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4%20WiFi/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/1",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -204,8 +204,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/1",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -215,8 +215,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2024/10/1",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -226,8 +226,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2024/10/1",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -237,8 +237,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2024/10/1",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -248,8 +248,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2024/10/1",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -270,8 +270,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HDVP",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/1",
+    "heldversion": "12.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -292,8 +292,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HDVM.2%20D4",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2%20D4/bios.html",
-    "heldversion": "9.02",
-    "helddate": "2024/12/6",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -303,8 +303,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
-    "heldversion": "9.02",
-    "helddate": "2024/12/6",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -314,8 +314,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-ITXD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M-ITXD4%20WiFi/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/1",
+    "heldversion": "10.04",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -358,8 +358,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/1",
+    "heldversion": "12.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -369,8 +369,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "6.02",
-    "helddate": "2024/12/11",
+    "heldversion": "7.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -380,8 +380,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html",
-    "heldversion": "12.02",
-    "helddate": "2024/12/11",
+    "heldversion": "13.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -391,8 +391,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2024/10/1",
+    "heldversion": "9.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -413,8 +413,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
-    "heldversion": "9.02",
-    "helddate": "2024/12/6",
+    "heldversion": "10.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -424,8 +424,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
-    "heldversion": "5.03",
-    "helddate": "2024/12/6",
+    "heldversion": "6.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -446,8 +446,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-H2M.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
-    "heldversion": "7.02",
-    "helddate": "2024/12/6",
+    "heldversion": "8.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -2244,6 +2244,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2ghaqb7",
+    "model": "Z790 Nova WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
+    "heldversion": "9.03",
+    "helddate": "2025/5/8",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2butk5y",
     "model": "Fatal1ty X370 Professional Gaming",
     "maker": "AMD",
@@ -2431,17 +2442,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ghaqb7",
-    "model": "Z790 Nova WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
-    "heldversion": "9.03",
-    "helddate": "2025/5/8",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2kjnqn4",
     "model": "B860M Lightning WiFi",
     "maker": "Intel",
@@ -2558,8 +2558,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/1",
+    "heldversion": "12.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -2745,8 +2745,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HM.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
-    "heldversion": "8.02",
-    "helddate": "2024/12/6",
+    "heldversion": "9.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
@@ -2943,8 +2943,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2024/10/1",
+    "heldversion": "9.03",
+    "helddate": "2025/5/9",
     "release": null
   },
   {
