@@ -352,17 +352,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv227ppov",
-    "model": "Z690 Extreme WiFi 6E",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/5/13",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2q8vyo6",
     "model": "B760M PG Riptide WiFi",
     "maker": "Intel",
@@ -495,6 +484,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2etjykq",
+    "model": "Z690M-ITX/ax",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690M-ITXax",
+    "biospage": "https://www.asrock.com/mb/intel/Z690M-ITXax/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2025/5/13",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2616ffx",
     "model": "Z690 PG Velocita",
     "maker": "Intel",
@@ -578,19 +578,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z690%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Pro%20RS/bios.html",
-    "heldversion": "20.01",
-    "helddate": "2024/10/4",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2etjykq",
-    "model": "Z690M-ITX/ax",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690M-ITXax",
-    "biospage": "https://www.asrock.com/mb/intel/Z690M-ITXax/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/5/13",
+    "heldversion": "20.03",
+    "helddate": "2025/5/14",
     "release": null
   },
   {
@@ -2937,17 +2926,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27m51qx",
-    "model": "Z690 Steel Legend WiFi 6E/D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/5/13",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2rxwovj",
     "model": "H610M-HDVP/D5",
     "maker": "Intel",
@@ -3099,6 +3077,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "9.03",
     "helddate": "2025/5/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv27m51qx",
+    "model": "Z690 Steel Legend WiFi 6E/D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2025/5/13",
     "release": null
   },
   {
@@ -3308,6 +3297,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html",
     "heldversion": "10.41[Beta]",
     "helddate": "2025/4/21",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv227ppov",
+    "model": "Z690 Extreme WiFi 6E",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2025/5/13",
     "release": null
   },
   {
