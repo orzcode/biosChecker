@@ -963,8 +963,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -985,8 +985,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -996,8 +996,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -1117,8 +1117,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/2/26",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -1205,8 +1205,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.20[Beta]",
-    "helddate": "2025/2/26",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -1216,8 +1216,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -2943,8 +2943,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
@@ -3438,8 +3438,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/2/24",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
     "release": null
   },
   {
