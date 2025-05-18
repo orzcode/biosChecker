@@ -3463,5 +3463,27 @@
     "heldversion": "1.19",
     "helddate": "2025/3/31",
     "release": null
+  },
+  {
+    "id": "mobo_mata7gtv1nnceg",
+    "model": "B850M Pro Plus WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro%20Plus%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20Plus%20WiFi/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/5/15",
+    "release": "2025/5/15"
+  },
+  {
+    "id": "mobo_mata7n8pzbmdwx",
+    "model": "B850M-A",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M-A",
+    "biospage": "https://www.asrock.com/mb/amd/B850M-A/bios.html",
+    "heldversion": "1.00",
+    "helddate": "2025/4/24",
+    "release": "2025/4/24"
   }
 ]
