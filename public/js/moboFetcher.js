@@ -252,7 +252,8 @@ export async function scrapeMotherboards(fromKoyeb) {
       summary.details = newOrUpdatedModels.map(model => ({
         Maker: model.maker,
         Model: model.model,
-        'BIOS Page': model.biospage ? `[Link](<${model.biospage}>)` : "Not found"
+        // 'BIOS Page': model.biospage ? `[Link](<${model.biospage}>)` : "Not found"
+        // temporarily disabled due to codeblock breaking it
     }));
       await sendToDiscord(summary, "moboFetcher");
 

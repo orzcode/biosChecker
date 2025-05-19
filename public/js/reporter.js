@@ -35,6 +35,7 @@ export async function sendToDiscord(data, scriptName = "default") {
     const emojiMap = {
       notifyUsers: "📨",
       versionChecker: "🔍",
+      moboFetcher: "🆕"
     };
     const emoji = emojiMap[scriptName] || "";
 
@@ -53,24 +54,46 @@ export async function sendToDiscord(data, scriptName = "default") {
     }
     message += `\`\`\`\n\n`;
 
-    // Add details
-    // In the 'Details' section of sendToDiscord:
+// Add details
+// New version to split into several Details blocks if too long
+// Also attempts to even them out. No more hyperlinks either due to codeblock breaking them
     if (data.details && data.details.length > 0) {
-      message += `**Details (${data.details.length}):**\n\`\`\`\n`;
-      if (data.details[0]) {
-        const keys = Object.keys(data.details[0]);
-        const padding = 25; // Adjust padding as needed for the new columns
+      const detailsHeader = `**Details (${data.details.length}):**\n\`\`\`\n`;
+      const keys = data.details[0] ? Object.keys(data.details[0]) : [];
+      const padding = 25;
+      let headerLine = "";
+      let separatorLine = "";
 
-        message += keys.map((key) => key.padEnd(padding)).join("") + "\n";
-        message += "-".repeat(keys.length * padding) + "\n";
-        data.details.forEach((item) => {
-          message +=
+      if (keys.length > 0) {
+        headerLine = keys.map((key) => key.padEnd(padding)).join("") + "\n";
+        separatorLine = "-".repeat(keys.length * padding) + "\n";
+      }
+
+      const maxCharsPerBlock = 1400 - (detailsHeader.length + headerLine.length + separatorLine.length + 3);
+      const itemsPerBlock = Math.ceil(data.details.length / Math.ceil(data.details.length * (keys.map(k => k.length + padding).reduce((a, b) => a + b, 0) + data.details.length * (keys.length * padding)) / maxCharsPerBlock || 1));
+      const numBlocks = Math.ceil(data.details.length / itemsPerBlock);
+
+      for (let i = 0; i < numBlocks; i++) {
+        const startIndex = i * itemsPerBlock;
+        const endIndex = Math.min((i + 1) * itemsPerBlock, data.details.length);
+        const chunk = data.details.slice(startIndex, endIndex);
+
+        let block = (i === 0 ? detailsHeader : `**Details (Cont.):**\n\`\`\`\n`);
+        if (keys.length > 0) {
+          block += headerLine + separatorLine;
+        }
+
+        block += chunk
+          .map(item =>
             keys
               .map((key) => String(item[key] || "N/A").padEnd(padding))
-              .join("") + "\n";
-        });
+              .join("") + "\n"
+          )
+          .join("");
+
+        block += "```\n\n";
+        message += block;
       }
-      message += `\`\`\`\n\n`;
     } else {
       message += "**No details required.**\n\n";
     }
@@ -136,6 +159,7 @@ export async function sendToDiscord(data, scriptName = "default") {
     }
 
     // Call sendAllChartsToDiscord only if scriptName is "moboFetcher"
+    // Note: doesn't USE that for moboFetcher, just calls it AT the same time for the charts
     if (scriptName === "moboFetcher") {
       await sendAllChartsToDiscord();
     }
