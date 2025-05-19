@@ -265,7 +265,7 @@ app.listen(PORT, () => {
   console.log(
     `App is live @ ${
       process.env.NODE_ENV !== "production"
-        ? "http://localhost:" + PORT
+        ? "https://localhost:" + PORT
         : "https://www.asrockbioschecker.link/"
     }`
   );
