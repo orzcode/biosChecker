@@ -39,11 +39,12 @@ export async function sendToDiscord(data, scriptName = "default") {
     const repository = process.env.GITHUB_REPOSITORY;
     const runId = process.env.GITHUB_RUN_ID;
     const ghRunUrl = (repository && runId)
-      ? `https://github.com/${repository}/actions/runs/${runId}`
+      ? `[Click to view GH run log](<https://github.com/${repository}/actions/runs/${runId}>)\n\n`
       : "";
 
     const summaryBlock = () => {
-      let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n\n`;
+      let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n`;
+      if (ghRunUrl) message += ghRunUrl;
 
       message += `**Summary:**\n\`\`\`\n`;
       message += `Base Total: ${data.summary.total}\n`;
@@ -53,9 +54,6 @@ export async function sendToDiscord(data, scriptName = "default") {
         for (const [key, value] of Object.entries(data.summary.additional)) {
           message += `${key}: ${value}\n`;
         }
-      }
-      if (ghRunUrl) {
-        message += `GitHub Run: ${ghRunUrl}\n`;
       }
       message += `\`\`\`\n\n`;
 
