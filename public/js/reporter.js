@@ -17,16 +17,13 @@ const DISCORD_WEBHOOKS = {
  * @param {string} [scriptName='default'] - Name of the script for determining which webhook to use
  */
 export async function sendToDiscord(data, scriptName = "default") {
-  // Completely wrap everything in try/catch to never interrupt parent script
   try {
     if (!data) {
       console.log("No data provided to Discord logger");
       return;
     }
 
-    // Determine which webhook URL to use based on scriptName
     const webhookUrl = DISCORD_WEBHOOKS[scriptName] || DISCORD_WEBHOOKS.default;
-
     if (!webhookUrl) {
       console.log(`No webhook URL found for script: ${scriptName}`);
       return;
@@ -39,137 +36,129 @@ export async function sendToDiscord(data, scriptName = "default") {
     };
     const emoji = emojiMap[scriptName] || "";
 
-    // Create the message based on the standardized data structure
-    let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n\n`;
+    const repository = process.env.GITHUB_REPOSITORY;
+    const runId = process.env.GITHUB_RUN_ID;
+    const ghRunUrl = (repository && runId)
+      ? `https://github.com/${repository}/actions/runs/${runId}`
+      : "";
 
-    // Add summary
-    message += `**Summary:**\n\`\`\`\n`;
-    message += `Base Total: ${data.summary.total}\n`;
-    message += `Updated: ${data.summary.success}\n`;
-    message += `Errors: ${data.summary.errors}\n`;
-    if (data.summary.additional) {
-      for (const [key, value] of Object.entries(data.summary.additional)) {
-        message += `${key}: ${value}\n`;
+    const summaryBlock = () => {
+      let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n\n`;
+
+      message += `**Summary:**\n\`\`\`\n`;
+      message += `Base Total: ${data.summary.total}\n`;
+      message += `Updated: ${data.summary.success}\n`;
+      message += `Errors: ${data.summary.errors}\n`;
+      if (data.summary.additional) {
+        for (const [key, value] of Object.entries(data.summary.additional)) {
+          message += `${key}: ${value}\n`;
+        }
       }
-    }
-    message += `\`\`\`\n\n`;
+      if (ghRunUrl) {
+        message += `GitHub Run: ${ghRunUrl}\n`;
+      }
+      message += `\`\`\`\n\n`;
 
-// Add details
-// New version to split into several Details blocks if too long
-// Also attempts to even them out. No more hyperlinks either due to codeblock breaking them
-    if (data.details && data.details.length > 0) {
-      const detailsHeader = `**Details (${data.details.length}):**\n\`\`\`\n`;
-      const keys = data.details[0] ? Object.keys(data.details[0]) : [];
+      return message;
+    };
+
+    const buildDetailsBlock = (items, isFirst = false) => {
+      const keys = items[0] ? Object.keys(items[0]) : [];
       const padding = 25;
-      let headerLine = "";
-      let separatorLine = "";
+      let block = isFirst
+        ? `**Details (${data.details.length}):**\n\`\`\`\n`
+        : `**Details (Cont.):**\n\`\`\`\n`;
 
       if (keys.length > 0) {
-        headerLine = keys.map((key) => key.padEnd(padding)).join("") + "\n";
-        separatorLine = "-".repeat(keys.length * padding) + "\n";
+        const headerLine = keys.map((key) => key.padEnd(padding)).join("") + "\n";
+        const separatorLine = "-".repeat(keys.length * padding) + "\n";
+        block += headerLine + separatorLine;
       }
 
-      const maxCharsPerBlock = 1400 - (detailsHeader.length + headerLine.length + separatorLine.length + 3);
-      const itemsPerBlock = Math.ceil(data.details.length / Math.ceil(data.details.length * (keys.map(k => k.length + padding).reduce((a, b) => a + b, 0) + data.details.length * (keys.length * padding)) / maxCharsPerBlock || 1));
-      const numBlocks = Math.ceil(data.details.length / itemsPerBlock);
+      block += items
+        .map(item =>
+          keys
+            .map((key) => String(item[key] || "N/A").padEnd(padding))
+            .join("") + "\n"
+        )
+        .join("");
 
-      for (let i = 0; i < numBlocks; i++) {
-        const startIndex = i * itemsPerBlock;
-        const endIndex = Math.min((i + 1) * itemsPerBlock, data.details.length);
-        const chunk = data.details.slice(startIndex, endIndex);
+      block += "```\n\n";
+      return block;
+    };
 
-        let block = (i === 0 ? detailsHeader : `**Details (Cont.):**\n\`\`\`\n`);
-        if (keys.length > 0) {
-          block += headerLine + separatorLine;
+    const sendMessage = async (content) => {
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Discord webhook timeout")), 5000)
+      );
+      const fetchPromise = fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ content }),
+      });
+
+      const response = await Promise.race([fetchPromise, timeoutPromise]).catch(
+        (error) => {
+          console.log(`Discord notification attempt failed: ${error.message}`);
+          return null;
         }
+      );
 
-        block += chunk
-          .map(item =>
-            keys
-              .map((key) => String(item[key] || "N/A").padEnd(padding))
-              .join("") + "\n"
-          )
-          .join("");
+      if (!response || !response.ok) {
+        console.log(`Discord notification not sent (${response ? response.status : "no response"})`);
+      }
+    };
 
-        block += "```\n\n";
-        message += block;
+    // Compose the main message (summary + first chunk of details if available)
+    let message = summaryBlock();
+
+    if (data.details && data.details.length > 0) {
+      const chunks = [];
+      for (let i = 0; i < data.details.length; i += 10) {
+        chunks.push(data.details.slice(i, i + 10));
+      }
+
+      message += buildDetailsBlock(chunks[0], true);
+      await sendMessage(message);
+
+      for (let i = 1; i < chunks.length; i++) {
+        await new Promise(res => setTimeout(res, 1000)); // 1s delay
+        await sendMessage(buildDetailsBlock(chunks[i], false));
       }
     } else {
       message += "**No details required.**\n\n";
+      await sendMessage(message);
     }
 
-    // Add errors
+    // Add errors if any (separate message if too long)
     if (data.errors && data.errors.length > 0) {
-      message += `**Errors (${data.errors.length}):**\n\`\`\`\n`;
+      let errorBlock = `**Errors (${data.errors.length}):**\n\`\`\`\n`;
       data.errors.forEach((error) => {
-        message += `${error.error}\n`;
+        errorBlock += `${error.error}\n`;
       });
-      message += `\`\`\`\n`;
-    }
+      errorBlock += `\`\`\`\n`;
 
-    /////////////////////////////////////////////////////////////
-    // Get GitHub Actions Run URL
-    const repository = process.env.GITHUB_REPOSITORY;
-    const runId = process.env.GITHUB_RUN_ID;
-    let ghRunUrl = "";
-    if (repository && runId) {
-      ghRunUrl = `[Click to view GH run log](<https://github.com/${repository}/actions/runs/${runId}>)`;
-    }
-
-    // Append GitHub Actions Run URL to the message
-    if (ghRunUrl) {
-      message += `${ghRunUrl}\n\n`;
-    }
-    /////////////////////////////////////////////////////////////
-
-    // If the message is too long for Discord, truncate it
-    if (message.length > 1900) {
-      message = message.substring(0, 1900) + "... (truncated)";
-    }
-
-    // Use a timeout to ensure this doesn't block the main thread
-    const timeoutPromise = new Promise((_, reject) =>
-      setTimeout(() => reject(new Error("Discord webhook timeout")), 5000)
-    );
-
-    // Create the fetch promise
-    const fetchPromise = fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ content: message }),
-    });
-
-    // Race between the fetch and the timeout
-    const response = await Promise.race([fetchPromise, timeoutPromise]).catch(
-      (error) => {
-        console.log(`Discord notification attempt failed: ${error.message}`);
-        return null;
+      if (errorBlock.length + message.length > 1900) {
+        await new Promise(res => setTimeout(res, 1000));
+        await sendMessage(errorBlock);
+      } else {
+        await sendMessage(message + errorBlock);
       }
-    );
-
-    if (!response || !response.ok) {
-      console.log(
-        `Discord notification not sent (${
-          response ? response.status : "no response"
-        })`
-      );
-      return;
     }
 
-    // Call sendAllChartsToDiscord only if scriptName is "moboFetcher"
-    // Note: doesn't USE that for moboFetcher, just calls it AT the same time for the charts
+    // Optional: send charts if script is moboFetcher
     if (scriptName === "moboFetcher") {
       await sendAllChartsToDiscord();
     }
 
     console.log(`Summary sent to Discord using ${scriptName} webhook`);
   } catch (error) {
-    // Silently log any errors without throwing
     console.log(`Discord logger encountered an error: ${error.message}`);
   }
 }
+
 
 //////////////////////////////////////////////////////////////////
 const prewarmCharts = async (chartUrls) => {
