@@ -1144,12 +1144,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2u9j6wi",
-    "model": "X670E Taichi",
+    "id": "mobo_m68rfcv2qeqoxf",
+    "model": "X670E Pro RS",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X670E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html",
+    "link": "https://asrock.com/mb/amd/X670E%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html",
     "heldversion": "3.25",
     "helddate": "2025/5/20",
     "release": null
@@ -1163,17 +1163,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Steel%20Legend/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/4",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2qeqoxf",
-    "model": "X670E Pro RS",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X670E%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html",
-    "heldversion": "3.25",
-    "helddate": "2025/5/20",
     "release": null
   },
   {
@@ -1207,6 +1196,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
     "heldversion": "3.26",
     "helddate": "2025/5/19",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2u9j6wi",
+    "model": "X670E Taichi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X670E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/5/20",
     "release": null
   },
   {
@@ -1254,12 +1254,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2x2gxmp",
-    "model": "B650M PG Riptide",
+    "id": "mobo_m68rfcv2c0u8ux",
+    "model": "B650E Taichi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
+    "link": "https://asrock.com/mb/amd/B650E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
     "heldversion": "3.25",
     "helddate": "2025/5/20",
     "release": null
@@ -1419,23 +1419,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2c0u8ux",
-    "model": "B650E Taichi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
-    "heldversion": "3.25",
-    "helddate": "2025/5/20",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv290tl59",
     "model": "X670E Taichi Carrara",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Taichi%20Carrara",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/5/20",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv28zviww",
+    "model": "B650M PG Riptide WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
     "heldversion": "3.25",
     "helddate": "2025/5/20",
     "release": null
@@ -1474,12 +1474,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28zviww",
-    "model": "B650M PG Riptide WiFi",
+    "id": "mobo_m68rfcv2qev4up",
+    "model": "B650M PG Riptide WiFi White",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
     "heldversion": "3.25",
     "helddate": "2025/5/20",
     "release": null
@@ -1493,17 +1493,6 @@
     "biospage": "https://pg.asrock.com/mb/amd/A620I%20Lightning%20WiFi/bios.html",
     "heldversion": "3.20",
     "helddate": "2025/3/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2qev4up",
-    "model": "B650M PG Riptide WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.25",
-    "helddate": "2025/5/20",
     "release": null
   },
   {
@@ -1537,6 +1526,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.25",
     "helddate": "2025/5/19",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2x2gxmp",
+    "model": "B650M PG Riptide",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/5/20",
     "release": null
   },
   {
@@ -1590,8 +1590,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
-    "heldversion": "3.20",
-    "helddate": "2025/3/4",
+    "heldversion": "3.25",
+    "helddate": "2025/5/20",
     "release": null
   },
   {
