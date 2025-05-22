@@ -32,15 +32,16 @@ export async function sendToDiscord(data, scriptName = "default") {
     const emojiMap = {
       notifyUsers: "📨",
       versionChecker: "🔍",
-      moboFetcher: "🆕"
+      moboFetcher: "🆕",
     };
     const emoji = emojiMap[scriptName] || "";
 
     const repository = process.env.GITHUB_REPOSITORY;
     const runId = process.env.GITHUB_RUN_ID;
-    const ghRunUrl = (repository && runId)
-      ? `[Click to view GH run log](<https://github.com/${repository}/actions/runs/${runId}>)\n\n`
-      : "";
+    const ghRunUrl =
+      repository && runId
+        ? `[Click to view GH run log](<https://github.com/${repository}/actions/runs/${runId}>)\n\n`
+        : "";
 
     const summaryBlock = () => {
       let message = `**${emoji} ${data.summary.title} Results ${emoji}**\n`;
@@ -61,23 +62,39 @@ export async function sendToDiscord(data, scriptName = "default") {
     };
 
     const buildDetailsBlock = (items, isFirst = false) => {
-      const keys = items[0] ? Object.keys(items[0]) : [];
-      const padding = 25;
+      if (!items || items.length === 0) return "";
+
+      const keys = Object.keys(items[0]);
+      const minPadding = 2;
+
+      // Calculate dynamic width for each column
+      const colWidths = {};
+      keys.forEach((key) => {
+        const maxItemLength = Math.max(
+          key.length,
+          ...items.map((item) => String(item[key] ?? "N/A").length)
+        );
+        colWidths[key] = maxItemLength + minPadding;
+      });
+
       let block = isFirst
         ? `**Details (${data.details.length}):**\n\`\`\`\n`
         : `**Details (Cont.):**\n\`\`\`\n`;
 
-      if (keys.length > 0) {
-        const headerLine = keys.map((key) => key.padEnd(padding)).join("") + "\n";
-        const separatorLine = "-".repeat(keys.length * padding) + "\n";
-        block += headerLine + separatorLine;
-      }
+      // Header
+      const headerLine =
+        keys.map((key) => key.padEnd(colWidths[key])).join("") + "\n";
+      const separatorLine =
+        keys.map((key) => "-".repeat(colWidths[key])).join("") + "\n";
+      block += headerLine + separatorLine;
 
+      // Rows
       block += items
-        .map(item =>
-          keys
-            .map((key) => String(item[key] || "N/A").padEnd(padding))
-            .join("") + "\n"
+        .map(
+          (item) =>
+            keys
+              .map((key) => String(item[key] ?? "N/A").padEnd(colWidths[key]))
+              .join("") + "\n"
         )
         .join("");
 
@@ -105,7 +122,11 @@ export async function sendToDiscord(data, scriptName = "default") {
       );
 
       if (!response || !response.ok) {
-        console.log(`Discord notification not sent (${response ? response.status : "no response"})`);
+        console.log(
+          `Discord notification not sent (${
+            response ? response.status : "no response"
+          })`
+        );
       }
     };
 
@@ -122,7 +143,7 @@ export async function sendToDiscord(data, scriptName = "default") {
       await sendMessage(message);
 
       for (let i = 1; i < chunks.length; i++) {
-        await new Promise(res => setTimeout(res, 1000)); // 1s delay
+        await new Promise((res) => setTimeout(res, 1000)); // 1s delay
         await sendMessage(buildDetailsBlock(chunks[i], false));
       }
     } else {
@@ -139,7 +160,7 @@ export async function sendToDiscord(data, scriptName = "default") {
       errorBlock += `\`\`\`\n`;
 
       if (errorBlock.length + message.length > 1900) {
-        await new Promise(res => setTimeout(res, 1000));
+        await new Promise((res) => setTimeout(res, 1000));
         await sendMessage(errorBlock);
       } else {
         await sendMessage(message + errorBlock);
@@ -156,7 +177,6 @@ export async function sendToDiscord(data, scriptName = "default") {
     console.log(`Discord logger encountered an error: ${error.message}`);
   }
 }
-
 
 //////////////////////////////////////////////////////////////////
 const prewarmCharts = async (chartUrls) => {
