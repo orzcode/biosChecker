@@ -92,15 +92,37 @@ html {
 #footer {
   width: 100%;
   padding: 1rem;
-  flex-wrap: wrap;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem 4rem;
   align-items: center;
   flex-grow: 0;
   flex-shrink: 0;
 }
+.hitmeup {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hitmeup a {
+  display: initial;
+}
+
+.frontPageComponentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  padding: 0 0 1rem 0;
+  gap: 1rem;
+}
+
 a,
 a:visited {
   text-decoration: none;
