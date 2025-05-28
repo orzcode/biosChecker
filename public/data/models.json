@@ -616,6 +616,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv28o1h8e",
+    "model": "B660M-HDVP/D5 R2.0",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M-HDVPD5%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html",
+    "heldversion": "14.03",
+    "helddate": "2025/5/27",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv29s1u3k",
     "model": "H670M-ITX/ax",
     "maker": "Intel",
@@ -655,8 +666,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html",
-    "heldversion": "14.01",
-    "helddate": "2024/10/4",
+    "heldversion": "14.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -666,8 +677,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B660%20Pro%20RS/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2024/10/4",
+    "heldversion": "19.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -677,8 +688,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Steel%20Legend/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2024/10/4",
+    "heldversion": "15.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -699,8 +710,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M%20Pro%20RSax",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RSax/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/4",
+    "heldversion": "11.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -710,8 +721,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M%20Pro%20RSD5",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RSD5/bios.html",
-    "heldversion": "12.01",
-    "helddate": "2024/10/4",
+    "heldversion": "12.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -721,8 +732,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RS/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2024/10/4",
+    "heldversion": "15.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -737,17 +748,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28o1h8e",
-    "model": "B660M-HDVP/D5 R2.0",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDVPD5%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "14.03",
-    "helddate": "2025/5/27",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2o9dxvb",
     "model": "B660M-HDVP/D5",
     "maker": "Intel",
@@ -759,17 +759,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2st63bz",
-    "model": "B660M-HDV",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDV",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2024/10/4",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2xsctw8",
     "model": "B660M-ITX/ac",
     "maker": "Intel",
@@ -778,6 +767,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXac/bios.html",
     "heldversion": "12.03",
     "helddate": "2025/5/27",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2st63bz",
+    "model": "B660M-HDV",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M-HDV",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
+    "heldversion": "19.03",
+    "helddate": "2025/5/28",
     "release": null
   },
   {
@@ -2717,17 +2717,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29ehcht",
-    "model": "Z690 Taichi Razer Edition",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition/bios.html",
-    "heldversion": "21.06",
-    "helddate": "2025/5/16",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2lqks4i",
     "model": "Z690 AQUA",
     "maker": "Intel",
@@ -2736,6 +2725,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20AQUA/bios.html",
     "heldversion": "22.01",
     "helddate": "2025/5/27",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv29ehcht",
+    "model": "Z690 Taichi Razer Edition",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition/bios.html",
+    "heldversion": "21.06",
+    "helddate": "2025/5/16",
     "release": null
   },
   {
