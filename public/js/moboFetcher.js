@@ -5,7 +5,7 @@ import { generateUniqueId } from "./uuid.js";
 import { scrapeBIOSInfo } from "./versionChecker.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { koyebToRepo } from "./koyebToGithub.js";
-import { sendToDiscord, sendAllChartsToDiscord } from "./reporter.js";
+import { sendToDiscord } from "./reporter.js";
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
