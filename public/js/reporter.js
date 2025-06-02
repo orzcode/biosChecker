@@ -1,6 +1,11 @@
 import { chartManager } from "./chartMan.js";
 //import { generateImageFromData } from "./textGraph.js";
 import { today } from "./dater.js";
+import fs from "fs";
+import fetch from "node-fetch";
+import https from "https";
+import path from "path";
+import FormData from "form-data";
 
 // Define webhook URLs for different scripts
 const DISCORD_WEBHOOKS = {
@@ -169,7 +174,7 @@ export async function sendToDiscord(data, scriptName = "default") {
 
     // Optional: send charts if script is moboFetcher
     if (scriptName === "moboFetcher") {
-      await sendAllChartsToDiscord();
+      await attachAllToDiscord();
     }
 
     console.log(`Summary sent to Discord using ${scriptName} webhook`);
@@ -191,36 +196,55 @@ const prewarmCharts = async (chartUrls) => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 };
 
-// export async function sendChartToDiscord(chartUrl) {
-//   //Re-usable, sends a single chosen chart to discord
-//   try {
-//     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
+async function downloadImage(url, destPath) {
+  // Single pure function for a single URL download
+  return new Promise((resolve, reject) => {
+    fs.mkdirSync(path.dirname(destPath), { recursive: true });
+    const file = fs.createWriteStream(destPath);
 
-//     if (!webhookUrl) {
-//       console.log(`Error! No webhook found for sending charts to Discord`);
-//       return;
-//     }
+    https
+      .get(url, (res) => {
+        if (res.statusCode !== 200) {
+          reject(
+            new Error(`Failed to download image: ${res.statusCode} for ${url}`)
+          );
+          return;
+        }
+        res.pipe(file);
+        file.on("finish", () => file.close(() => resolve(destPath)));
+      })
+      .on("error", reject);
+  });
+}
 
-//     await fetch(webhookUrl, {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ content: chartUrl }),
-//     });
+async function downloadAllCharts() {
+  // Downloads all charts to the local filesystem
 
-//     console.log(`QuickChart img URL sent to Discord`);
-//   } catch (error) {
-//     console.error(`Error sending QuickChart img URL to Discord: ${error}`);
-//   }
-// }
+  // Preps the charts
+    const chartUrlsObject = await chartManager();
 
-export async function sendAllChartsToDiscord(mode = "embed") {
-  // Embed bundles summary and charts together
-  // Direct sends summary and each chart as its own message(s) due to weird Discord resolve behavior
-  const chartUrlsObject = await chartManager();
+    const chartUrls = Object.values(chartUrlsObject);
 
-  const chartUrls = Object.values(chartUrlsObject);
+    await prewarmCharts(chartUrls);
+  //
 
-  await prewarmCharts(chartUrls);
+  const names = ["barDistrib", "pieDistrib"];
+
+  for (let i = 0; i < chartUrls.length; i++) {
+    const baseName = names[i] || `chart-${i}`;
+    const destPath = path.join("public", "images", "charts", `${baseName}.png`);
+
+    try {
+      await downloadImage(chartUrls[i], destPath);
+      console.log(`✅ Saved: ${destPath}`);
+    } catch (err) {
+      console.error(`❌ Failed to save ${chartUrls[i]}: ${err.message}`);
+    }
+  }
+}
+
+export async function attachAllToDiscord() {
+  await downloadAllCharts();
 
   try {
     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
@@ -229,47 +253,111 @@ export async function sendAllChartsToDiscord(mode = "embed") {
       return;
     }
 
-    const summaryContent = `Statistics as of ${await today(
-      "hyphen"
-    )} ${chartUrls.map((url) => `[URL](<${url}>)`).join(" | ")}`;
+    const summaryContent = `**📊 Statistics as of ${await today("hyphen")} 📊**`;
 
-    if (mode === "embed") {
-      // Embeds bundle summary and charts together
-      const embeds = chartUrls.map((chartUrl) => ({
-        image: { url: chartUrl },
-      }));
+    const chartPaths = [
+      path.resolve('public/images/charts/barDistrib.png'),
+      path.resolve('public/images/charts/pieDistrib.png'),
+    ];
 
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          content: summaryContent,
-          embeds: embeds,
-        }),
+    const form = new FormData();
+    const embeds = [];
+
+    chartPaths.forEach((chartPath, i) => {
+      const fileName = path.basename(chartPath);
+      const fileStream = fs.createReadStream(chartPath);
+      form.append(`file${i + 1}`, fileStream, fileName);
+
+      embeds.push({
+        image: { url: `attachment://${fileName}` },
       });
-    } else if (mode === "direct") {
-      // Summary
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: summaryContent }),
-      });
+    });
 
-      // Send each chart URL as its own message
-      for (const chartUrl of chartUrls) {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ content: `${chartUrl}` }),
-        });
-      }
-    } else {
-      console.warn(`Invalid mode "${mode}" passed to sendAllChartsToDiscord`);
-      return;
+    form.append('payload_json', JSON.stringify({
+      content: summaryContent,
+      embeds,
+    }));
+
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      body: form,
+      headers: form.getHeaders(),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Discord responded with status ${response.status}`);
     }
 
-    console.log(`QuickChart URLs sent to Discord (${mode} mode)`);
+    console.log(`✅ Chart images uploaded to Discord`);
   } catch (error) {
-    console.error(`Error sending QuickChart URLs to Discord: ${error}`);
+    console.error(`❌ Error sending chart images to Discord: ${error}`);
   }
 }
+
+
+
+// export async function sendAllChartsToDiscord(mode = "embed") {
+//   // Embed bundles summary and charts together
+//   // Direct sends summary and each chart as its own message(s) due to weird Discord resolve behavior
+//   const chartUrlsObject = await chartManager();
+
+//   const chartUrls = Object.values(chartUrlsObject);
+
+//   await prewarmCharts(chartUrls);
+
+//   try {
+//     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
+//     if (!webhookUrl) {
+//       console.log(`Error! No webhook found for sending charts to Discord`);
+//       return;
+//     }
+
+//     const summaryContent = `Statistics as of ${await today(
+//       "hyphen"
+//     )} ${chartUrls.map((url) => `[URL](<${url}>)`).join(" | ")}`;
+
+//     if (mode === "embed") {
+//       // Embeds bundle summary and charts together
+//       const embeds = chartUrls.map((chartUrl) => ({
+//         image: { url: chartUrl },
+//       }));
+
+//       await fetch(webhookUrl, {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({
+//           content: summaryContent,
+//           embeds: embeds,
+//         }),
+//       });
+//     } else if (mode === "direct") {
+//       // Summary
+//       await fetch(webhookUrl, {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ content: summaryContent }),
+//       });
+
+//       // Send each chart URL as its own message
+//       for (const chartUrl of chartUrls) {
+//         await fetch(webhookUrl, {
+//           method: "POST",
+//           headers: { "Content-Type": "application/json" },
+//           body: JSON.stringify({ content: `${chartUrl}` }),
+//         });
+//       }
+//     } else {
+//       console.warn(`Invalid mode "${mode}" passed to sendAllChartsToDiscord`);
+//       return;
+//     }
+
+//     console.log(`QuickChart URLs sent to Discord (${mode} mode)`);
+//   } catch (error) {
+//     console.error(`Error sending QuickChart URLs to Discord: ${error}`);
+//   }
+// }
+
+// attachAllToDiscord().catch((err) => {
+//   console.error(`Error attaching charts to Discord: ${err.message}`);
+// }
+// );

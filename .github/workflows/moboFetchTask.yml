@@ -62,12 +62,12 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Check for changes in the working directory and staging area
-          if git diff --quiet public/data/models.json && git diff --cached --quiet public/data/models.json; then
-          echo "No changes to models.json. Skipping commit and push."
+          if git diff --quiet public/data/models.json public/images/charts/*.png && git diff --cached --quiet public/data/models.json public/images/charts/*.png; then
+          echo "No changes to models.json or charts. Skipping commit and push."
 
           else
-            git add public/data/models.json
-            git commit -m "Update models.json via daily workflow"
+            git add public/data/models.json public/images/charts/*.png
+            git commit -m "Update models.json and charts via weekly workflow"
 
             # Stash any remaining unstaged changes before rebasing (prevents the error)
             git stash --include-untracked
