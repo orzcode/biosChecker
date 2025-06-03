@@ -344,11 +344,13 @@ export async function updateModels(fromKoyeb) {
 
   console.log("BIOS version checks complete - proceeding to notifycheck");
 
-  try {
-    Promise.resolve().then(() => sendToDiscord(summary, "versionChecker"));
-  } catch (e) {
-    // Silent error handling
-  }
+try {
+  await sendToDiscord(summary, "versionChecker");
+  await new Promise(r => setTimeout(r, 3000));
+  //Added a pause so it doesn't get mixed up with the next notifier
+} catch (e) {
+  // Silent error handling
+}
 
   return summary;
 }

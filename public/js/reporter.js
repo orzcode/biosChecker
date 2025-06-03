@@ -294,69 +294,6 @@ export async function attachAllToDiscord() {
   }
 }
 
-
-
-// export async function sendAllChartsToDiscord(mode = "embed") {
-//   // Embed bundles summary and charts together
-//   // Direct sends summary and each chart as its own message(s) due to weird Discord resolve behavior
-//   const chartUrlsObject = await chartManager();
-
-//   const chartUrls = Object.values(chartUrlsObject);
-
-//   await prewarmCharts(chartUrls);
-
-//   try {
-//     const webhookUrl = DISCORD_WEBHOOKS.statsCharts;
-//     if (!webhookUrl) {
-//       console.log(`Error! No webhook found for sending charts to Discord`);
-//       return;
-//     }
-
-//     const summaryContent = `Statistics as of ${await today(
-//       "hyphen"
-//     )} ${chartUrls.map((url) => `[URL](<${url}>)`).join(" | ")}`;
-
-//     if (mode === "embed") {
-//       // Embeds bundle summary and charts together
-//       const embeds = chartUrls.map((chartUrl) => ({
-//         image: { url: chartUrl },
-//       }));
-
-//       await fetch(webhookUrl, {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({
-//           content: summaryContent,
-//           embeds: embeds,
-//         }),
-//       });
-//     } else if (mode === "direct") {
-//       // Summary
-//       await fetch(webhookUrl, {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ content: summaryContent }),
-//       });
-
-//       // Send each chart URL as its own message
-//       for (const chartUrl of chartUrls) {
-//         await fetch(webhookUrl, {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify({ content: `${chartUrl}` }),
-//         });
-//       }
-//     } else {
-//       console.warn(`Invalid mode "${mode}" passed to sendAllChartsToDiscord`);
-//       return;
-//     }
-
-//     console.log(`QuickChart URLs sent to Discord (${mode} mode)`);
-//   } catch (error) {
-//     console.error(`Error sending QuickChart URLs to Discord: ${error}`);
-//   }
-// }
-
 // attachAllToDiscord().catch((err) => {
 //   console.error(`Error attaching charts to Discord: ${err.message}`);
 // }
