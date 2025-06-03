@@ -633,8 +633,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H670M-ITXax",
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2024/10/4",
+    "heldversion": "19.02",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -655,19 +655,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H670M-ITXax%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax%20R2.0/bios.html",
-    "heldversion": "1.00",
-    "helddate": "2024/9/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv293r4ao",
-    "model": "B660 Steel Legend",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html",
-    "heldversion": "14.03",
-    "helddate": "2025/5/28",
+    "heldversion": "2.01",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -693,17 +682,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2cbh3w5",
-    "model": "B660M PG Riptide",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M%20PG%20Riptide",
-    "biospage": "https://www.asrock.com/mb/intel/B660M%20PG%20Riptide/bios.html",
-    "heldversion": "6.02",
-    "helddate": "2022/11/29",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2a5984r",
     "model": "B660M Pro RS/ax",
     "maker": "Intel",
@@ -712,6 +690,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RSax/bios.html",
     "heldversion": "11.03",
     "helddate": "2025/5/28",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2cbh3w5",
+    "model": "B660M PG Riptide",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M%20PG%20Riptide",
+    "biospage": "https://www.asrock.com/mb/intel/B660M%20PG%20Riptide/bios.html",
+    "heldversion": "6.02",
+    "helddate": "2022/11/29",
     "release": null
   },
   {
@@ -733,6 +722,17 @@
     "link": "https://asrock.com/mb/intel/B660M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RS/bios.html",
     "heldversion": "15.03",
+    "helddate": "2025/5/28",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2st63bz",
+    "model": "B660M-HDV",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M-HDV",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
+    "heldversion": "19.03",
     "helddate": "2025/5/28",
     "release": null
   },
@@ -770,17 +770,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2st63bz",
-    "model": "B660M-HDV",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDV",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
-    "heldversion": "19.03",
-    "helddate": "2025/5/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2oi8233",
     "model": "B660M-ITX/eDP",
     "maker": "Intel",
@@ -809,8 +798,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-H2M.2%20D5",
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2%20D5/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/4",
+    "heldversion": "4.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -820,8 +809,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/4",
+    "heldversion": "9.04",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -831,8 +820,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2024/10/4",
+    "heldversion": "19.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -842,8 +831,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVPD5%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2024/10/4",
+    "heldversion": "15.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -853,8 +842,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-H2M.2",
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/4",
+    "heldversion": "4.02",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -864,8 +853,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDV",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html",
-    "heldversion": "17.01",
-    "helddate": "2024/10/4",
+    "heldversion": "17.02",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -875,8 +864,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2024/10/4",
+    "heldversion": "9.04",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -886,8 +875,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HVS",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVS/bios.html",
-    "heldversion": "17.01",
-    "helddate": "2024/10/4",
+    "heldversion": "17.02",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -897,8 +886,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610Mac",
     "biospage": "https://www.asrock.com/mb/intel/H610Mac/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2024/10/4",
+    "heldversion": "19.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -908,8 +897,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-ITXac",
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
-    "heldversion": "12.01",
-    "helddate": "2024/10/4",
+    "heldversion": "12.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -919,8 +908,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-ITXeDP",
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2024/10/4",
+    "heldversion": "11.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -941,8 +930,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-X%20D5",
     "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/4",
+    "heldversion": "4.02",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -1469,8 +1458,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVM.2+%20D5",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2+%20D5/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2024/10/4",
+    "heldversion": "4.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -2943,8 +2932,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVPD5",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2024/10/4",
+    "heldversion": "15.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -3331,6 +3320,17 @@
     "heldversion": "3.25",
     "helddate": "2025/5/22",
     "release": "2025/2/26"
+  },
+  {
+    "id": "mobo_m68rfcv293r4ao",
+    "model": "B660 Steel Legend",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html",
+    "heldversion": "14.03",
+    "helddate": "2025/5/28",
+    "release": null
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
