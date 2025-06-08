@@ -156,4 +156,8 @@ router.all("/unsubscribe", async (req, res) => {
   }
 });
 
+router.get("/charts", async (req, res) => {
+    res.render("layout", { page: "chartsComponent" });
+});
+
 export default router;

@@ -358,7 +358,8 @@ export async function chartManager(data) {
     {
       name: "socketPieChart",
       createChartFunction: createSocketPieChart,
-      ratio: 1.4,
+      ratio: 1.6,
+      // WAS 1.4, testing 1.6
     },
     // Add more chart configurations here...
   ];
