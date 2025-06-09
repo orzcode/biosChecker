@@ -146,6 +146,12 @@ function createMoboBarChart(data) {
   const minHeight = 420; // Minimum height to ensure readability.
   const calculatedHeight = Math.max(dynamicHeight, minHeight);
 
+  // Determine a suitable suggestedMax for the x-axis
+  // This can be a fixed value, or dynamically calculated
+  const maxCount = Math.max(...counts);
+  let suggestedXMax = Math.ceil(maxCount / 5) * 5; // Round up to the nearest 5, for example
+  if (suggestedXMax < 10) suggestedXMax = 10; // Ensure a minimum scale for smaller counts
+
   return {
     calculatedHeight: calculatedHeight,
     type: "horizontalBar",
@@ -173,6 +179,8 @@ function createMoboBarChart(data) {
           {
             ticks: {
               fontColor: "black", // v2: 'color' is 'fontColor'
+              beginAtZero: true, // Ensure the axis starts at zero
+              suggestedMax: suggestedXMax, // Add this line to extend the x-axis
             },
             gridLines: {
               // v2: 'grid' is 'gridLines'
