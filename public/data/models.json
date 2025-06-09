@@ -3485,5 +3485,27 @@
     "heldversion": "1.19",
     "helddate": "2025/3/31",
     "release": null
+  },
+  {
+    "id": "mobo_mbnahyriighg11",
+    "model": "B650M-HDV/M.2 White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M-HDVM.2%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2%20White/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/5/22",
+    "release": "2025/5/22"
+  },
+  {
+    "id": "mobo_mbnai5ckfqn100",
+    "model": "A620AI WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620AI%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620AI%20WiFi/bios.html",
+    "heldversion": "3.25",
+    "helddate": "2025/6/5",
+    "release": "2025/6/5"
   }
 ]
