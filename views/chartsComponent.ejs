@@ -5,47 +5,53 @@
   <p>Charts updated every Sunday at 6:30AM UTC</p>
   <em>Please do <strong>not</strong> hotlink or use without permission</em>
 <div class="chartImagesDiv">
-  <a href="#barDistrib_full">
-    <img
-      loading="eager"
-      class="chartImg"
-      src="/images/charts/barDistrib_thumb.webp"
-      alt="Bar Distribution Chart"
-    />
-  </a>
-
-  <a href="#pieDistrib_full">
-    <img
-      loading="eager"
-      class="chartImg"
-      src="/images/charts/pieDistrib_thumb.webp"
-      alt="Pie Distribution Chart"
-    />
-  </a>
+  <img
+    loading="eager"
+    class="chartImg"
+    src="/images/charts/barDistrib_thumb.webp"
+    alt="Bar Distribution Chart"
+    onclick="openLightbox('barDistrib')"
+  />
+  <img
+    loading="eager"
+    class="chartImg"
+    src="/images/charts/pieDistrib_thumb.webp"
+    alt="Pie Distribution Chart"
+    onclick="openLightbox('pieDistrib')"
+  />
 </div>
 
-<!-- Lightbox modals -->
-
-<div id="barDistrib_full" class="lightbox">
-  <a href="#" class="overlay"></a>
+<!-- Lightbox containers -->
+<div id="barDistrib_lightbox" class="lightbox" onclick="closeLightbox(event)">
   <div class="imageWrapper">
     <img src="/images/charts/barDistrib.png" alt="Bar Distribution Chart" oncontextmenu="return false;" />
     <div class="blocker"></div>
   </div>
 </div>
 
-<div id="pieDistrib_full" class="lightbox">
-  <a href="#" class="overlay"></a>
+<div id="pieDistrib_lightbox" class="lightbox" onclick="closeLightbox(event)">
   <div class="imageWrapper">
     <img src="/images/charts/pieDistrib.png" alt="Pie Distribution Chart" oncontextmenu="return false;" />
     <div class="blocker"></div>
   </div>
 </div>
-
-
-  <!-- Lightbox Targets -->
+<!-- Lightbox containers -->
 
   <button onclick="window.location.href='/'" class="button">
     Return to Main
   </button>
 </div>
+
+<!-- Lightbox script -->
+<script>
+  function openLightbox(id) {
+    document.getElementById(`${id}_lightbox`).style.display = 'flex';
+  }
+
+  function closeLightbox(event) {
+    if (event.target.classList.contains('lightbox')) {
+      event.currentTarget.style.display = 'none';
+    }
+  }
+</script>
+

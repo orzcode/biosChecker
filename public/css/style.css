@@ -319,46 +319,18 @@ fieldset {
   padding: 4rem 0rem;
   flex-wrap: wrap;
 }
+.chartImg{
+  cursor: pointer;
+}
 /* ----------------------------------------- */
 .lightbox {
+  display: none;
   position: fixed;
   inset: 0;
-  display: none;
   justify-content: center;
   align-items: center;
+  background: rgba(0,0,0,0.85);
   z-index: 1000;
-}
-
-.lightbox:target {
-  display: flex;
-  background: rgba(0, 0, 0, 0.85);
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  cursor: pointer;
-  background: transparent;
-  z-index: 1001;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
-  position: relative;
-  z-index: 1002;
-  cursor: default;
-
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: auto;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .imageWrapper {
@@ -367,9 +339,19 @@ fieldset {
   display: inline-block;
 }
 
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: default;
+}
+
 .blocker {
   position: absolute;
   inset: 0;
   z-index: 1003;
   background: transparent;
+  cursor: default;
 }
