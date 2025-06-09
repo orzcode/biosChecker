@@ -6,6 +6,7 @@ import fetch from "node-fetch";
 import https from "https";
 import path from "path";
 import FormData from "form-data";
+import sharp from "sharp";
 
 // Define webhook URLs for different scripts
 const DISCORD_WEBHOOKS = {
@@ -196,8 +197,22 @@ const prewarmCharts = async (chartUrls) => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 };
 
-async function downloadImage(url, destPath) {
-  // Single pure function for a single URL download
+async function sharpThumbnail(imagePath) {
+  const thumbPath = imagePath.replace(/\.[^.]+$/, "_thumb.webp");
+
+  try {
+    await sharp(imagePath)
+      .resize(340)
+      .webp({ quality: 95 })
+      .toFile(thumbPath);
+
+    console.log(`🖼️  Thumbnail saved: ${thumbPath}`);
+  } catch (err) {
+    console.error("❌ Error creating thumbnail:", err);
+  }
+}
+
+export async function downloadImage(url, destPath) {
   return new Promise((resolve, reject) => {
     fs.mkdirSync(path.dirname(destPath), { recursive: true });
     const file = fs.createWriteStream(destPath);
@@ -205,13 +220,22 @@ async function downloadImage(url, destPath) {
     https
       .get(url, (res) => {
         if (res.statusCode !== 200) {
-          reject(
-            new Error(`Failed to download image: ${res.statusCode} for ${url}`)
-          );
+          reject(new Error(`Failed to download image: ${res.statusCode} for ${url}`));
           return;
         }
+
         res.pipe(file);
-        file.on("finish", () => file.close(() => resolve(destPath)));
+        file.on("finish", async () => {
+          file.close(async () => {
+            console.log(`✅ Full-size image saved: ${destPath}`);
+
+            ////////////////////
+            await sharpThumbnail(destPath); // Thumbnail step
+            ////////////////////
+
+            resolve(destPath);
+          });
+        });
       })
       .on("error", reject);
   });
@@ -221,11 +245,11 @@ async function downloadAllCharts() {
   // Downloads all charts to the local filesystem
 
   // Preps the charts
-    const chartUrlsObject = await chartManager();
+  const chartUrlsObject = await chartManager();
 
-    const chartUrls = Object.values(chartUrlsObject);
+  const chartUrls = Object.values(chartUrlsObject);
 
-    await prewarmCharts(chartUrls);
+  await prewarmCharts(chartUrls);
   //
 
   const names = ["barDistrib", "pieDistrib"];
@@ -253,11 +277,13 @@ export async function attachAllToDiscord() {
       return;
     }
 
-    const summaryContent = `**📊 Statistics as of ${await today("hyphen")} 📊**`;
+    const summaryContent = `**📊 Statistics as of ${await today(
+      "hyphen"
+    )} 📊**`;
 
     const chartPaths = [
-      path.resolve('public/images/charts/barDistrib.png'),
-      path.resolve('public/images/charts/pieDistrib.png'),
+      path.resolve("public/images/charts/barDistrib.png"),
+      path.resolve("public/images/charts/pieDistrib.png"),
     ];
 
     const form = new FormData();
@@ -273,13 +299,16 @@ export async function attachAllToDiscord() {
       });
     });
 
-    form.append('payload_json', JSON.stringify({
-      content: summaryContent,
-      embeds,
-    }));
+    form.append(
+      "payload_json",
+      JSON.stringify({
+        content: summaryContent,
+        embeds,
+      })
+    );
 
     const response = await fetch(webhookUrl, {
-      method: 'POST',
+      method: "POST",
       body: form,
       headers: form.getHeaders(),
     });
@@ -298,3 +327,6 @@ export async function attachAllToDiscord() {
 //   console.error(`Error attaching charts to Discord: ${err.message}`);
 // }
 // );
+// downloadAllCharts().catch((err) => {
+//   console.error(`Error downloading charts: ${err.message}`);
+// });

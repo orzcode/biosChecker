@@ -11,7 +11,8 @@
     "html-minifier-terser": "^7.2.0",
     "node-fetch": "^3.3.2",
     "postgres": "^3.4.5",
-    "resend": "^4.1.1"
+    "resend": "^4.1.1",
+    "sharp": "^0.34.2"
   },
   "type": "module",
   "devDependencies": {
