@@ -149,7 +149,7 @@ function createMoboBarChart(data) {
   // Determine a suitable suggestedMax for the x-axis
   // This can be a fixed value, or dynamically calculated
   const maxCount = Math.max(...counts);
-  let suggestedXMax = Math.ceil(maxCount / 5) * 5; // Round up to the nearest 5, for example
+  const suggestedXMax = maxCount + (maxCount * 0.15); // Add 15% padding, or
   if (suggestedXMax < 10) suggestedXMax = 10; // Ensure a minimum scale for smaller counts
 
   return {
