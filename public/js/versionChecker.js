@@ -20,10 +20,20 @@ export async function parseDate(dateStr) {
 }
 // Checks if foundDate is newer than heldDate
 export async function isNewerDate(heldDate, foundDate) {
-  if (!heldDate) return true; // If no held date, consider found as newer
+  if (!heldDate) {
+    console.log(`[isNewerDate] heldDate is empty/null. foundDate = ${foundDate}`);
+    return true;
+  }
 
-  const heldDateTime = (await parseDate(heldDate)).getTime();
-  const foundDateTime = (await parseDate(foundDate)).getTime();
+  const heldDateObj = await parseDate(heldDate);
+  const foundDateObj = await parseDate(foundDate);
+  const heldDateTime = heldDateObj.getTime();
+  const foundDateTime = foundDateObj.getTime();
+
+  console.log(`[isNewerDate] Comparing:
+  heldDate: ${heldDate} => ${heldDateObj.toISOString()} (${heldDateTime})
+  foundDate: ${foundDate} => ${foundDateObj.toISOString()} (${foundDateTime})
+  isNewer: ${foundDateTime > heldDateTime}`);
 
   return foundDateTime > heldDateTime;
 }
