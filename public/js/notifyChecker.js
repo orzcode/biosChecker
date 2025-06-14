@@ -43,8 +43,7 @@ export async function notifyUsers() {
     const updatedUsers = [];
 
     for (const user of users) {
-
-        //Keeps update emails at 150, giving room for new signups.
+      //Keeps update emails at 150, giving room for new signups.
       if (emailsSent >= DAILY_EMAIL_CAP) {
         console.log(
           `Daily email cap of ${DAILY_EMAIL_CAP} reached. Ending early.`
@@ -96,6 +95,25 @@ export async function notifyUsers() {
       }
 
       if (await isNewerDate(user.givendate, mobo.helddate)) {
+        // Verbose version check logs
+        const heldDateObj = await parseDate(user.givendate);
+        const foundDateObj = await parseDate(mobo.helddate);
+        const heldDateTime = heldDateObj.getTime();
+        const foundDateTime = foundDateObj.getTime();
+
+        console.log(`[NOTIFY] Triggered for ${user.id} / ${user.mobo}`);
+        console.log(
+          `- User.givendate: ${
+            user.givendate
+          } => ${heldDateObj.toISOString()} (${heldDateTime})`
+        );
+        console.log(
+          `- Mobo.helddate: ${
+            mobo.helddate
+          } => ${foundDateObj.toISOString()} (${foundDateTime})`
+        );
+        // Verbose version check logs
+
         console.log(`Notifying ${user.id} about ${user.mobo} update.`);
         try {
           await mailer(user, mobo);
