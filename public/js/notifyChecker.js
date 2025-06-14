@@ -113,8 +113,7 @@ export async function notifyUsers() {
           } => ${foundDateObj.toISOString()} (${foundDateTime})`
         );
         // Verbose version check logs
-
-        console.log(`Notifying ${user.id} about ${user.mobo} update.`);
+        
         try {
           await mailer(user, mobo);
           emailsSent++; // increments daily email cap
