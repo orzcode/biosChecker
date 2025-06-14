@@ -64,8 +64,9 @@ export async function confirmationMail(userObject) {
         <a href="${projectLink}" style="color: #6b9b1d; text-decoration: underline;"><strong>ASRock BIOS Checker project page</strong></a>.
         </p>
         <p>
-        You must confirm your email in order to proceed. Unverified emails will be removed within 48 hours.
+        <strong>You must confirm your email in order to proceed.</strong> Unverified emails will be removed within 48 hours.
         </p>
+        <p><strong>Please note:</strong> checks are performed daily, but during large updates, your notification may be delayed by 24hr due to tier limits.</p>
 
       <hr style="border: 1px solid #444;">
 
