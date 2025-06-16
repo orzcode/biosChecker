@@ -40,10 +40,15 @@ export async function notifyUsers() {
 
     const moboMap = new Map(mobos.map((mobo) => [mobo.model, mobo]));
 
+    // Prioritize donators
+    const sortedUsers = [
+      ...users.filter((u) => u.donator),
+      ...users.filter((u) => !u.donator),
+    ];
+
     const updatedUsers = [];
 
-    for (const user of users) {
-      //Keeps update emails at 150, giving room for new signups.
+    for (const user of sortedUsers) {
       if (emailsSent >= DAILY_EMAIL_CAP) {
         console.log(
           `Daily email cap of ${DAILY_EMAIL_CAP} reached. Ending early.`
@@ -51,12 +56,9 @@ export async function notifyUsers() {
         break;
       }
 
+      if (user.id === "dummy") continue;
+
       const mobo = moboMap.get(user.mobo);
-
-      if (user.id === "dummy") {
-        continue;
-      }
-
       if (!mobo) {
         console.warn(
           `Mobo ${user.mobo} not found for user ${user.id}. Skipping.`
@@ -71,16 +73,11 @@ export async function notifyUsers() {
       }
 
       if (user.verified === false) {
-        const signupdate = user.signupdate; // Format: 'YYYY/M/D'
-
-        // Convert signupdate to Date object
+        const signupdate = user.signupdate;
         const [year, month, day] = signupdate.split("/");
-        const signupDateTime = new Date(year, month - 1, day); // month is 0-indexed in JS Date
-
-        // 50 hours ago
+        const signupDateTime = new Date(year, month - 1, day);
         const fiftyHoursAgo = new Date(Date.now() - 50 * 60 * 60 * 1000);
 
-        // Compare actual timestamps, not just date strings
         if (signupDateTime < fiftyHoursAgo) {
           console.log(`Deleting unverified user ${user.id})`);
           await deleteUser(user.email);
@@ -95,7 +92,6 @@ export async function notifyUsers() {
       }
 
       if (await isNewerDate(user.givendate, mobo.helddate)) {
-        // Verbose version check logs
         const heldDateObj = await parseDate(user.givendate);
         const foundDateObj = await parseDate(mobo.helddate);
         const heldDateTime = heldDateObj.getTime();
@@ -112,11 +108,10 @@ export async function notifyUsers() {
             mobo.helddate
           } => ${foundDateObj.toISOString()} (${foundDateTime})`
         );
-        // Verbose version check logs
-        
+
         try {
           await mailer(user, mobo);
-          emailsSent++; // increments daily email cap
+          emailsSent++;
           const updatedUser = {
             ...user,
             lastcontacted: await today(),
@@ -128,7 +123,7 @@ export async function notifyUsers() {
           summary.details.push({
             ID: user.id,
             Mobo: user.mobo,
-            "New Ver": mobo.heldversion, // POST-UPDATE version; DB's MODEL version, not the user's version (givenver)
+            "New Ver": mobo.heldversion,
             Status: "notified",
           });
         } catch (emailError) {
@@ -200,3 +195,4 @@ export async function notifyUsers() {
     return summary;
   }
 }
+

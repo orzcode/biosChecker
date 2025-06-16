@@ -60,10 +60,10 @@ export async function saveMobos(moboOrMobos) {
 export async function getUsers(identifier) {
   try {
     if (!identifier) {
-      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate FROM users`;
+      return await sql`SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate, donator FROM users`;
     }
     return await sql`
-      SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate FROM users
+      SELECT id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate, donator FROM users
       WHERE ${
         identifier.includes("@")
           ? sql`email = ${identifier}`
@@ -83,8 +83,8 @@ export async function saveUsers(userOrUsers) {
   try {
     for (const user of usersArray) {
       await sql`
-        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate)
-        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified}, ${user.signupdate})
+        INSERT INTO users (id, email, mobo, givenversion, givendate, lastcontacted, verified, signupdate, donator)
+        VALUES (${user.id}, ${user.email}, ${user.mobo}, ${user.givenversion}, ${user.givendate}, ${user.lastcontacted}, ${user.verified}, ${user.signupdate}, ${user.donator})
         ON CONFLICT (id) DO UPDATE SET
           email = EXCLUDED.email,
           mobo = EXCLUDED.mobo,
@@ -92,7 +92,8 @@ export async function saveUsers(userOrUsers) {
           givendate = EXCLUDED.givendate,
           lastcontacted = EXCLUDED.lastcontacted,
           verified = EXCLUDED.verified,
-          signupdate = EXCLUDED.signupdate;
+          signupdate = EXCLUDED.signupdate,
+          donator = EXCLUDED.donator;
       `;
     }
     console.log("Users saved or updated successfully.");
@@ -127,6 +128,7 @@ export async function addOrUpdateUser(email, mobo) {
         lastcontacted: null,
         verified: false,
         signupdate: await today(),
+        donator: false,
       };
       await saveUsers(newUser);
       //console.log(newUser);
@@ -164,5 +166,14 @@ export async function verifyUser(id) {
     console.log(`${id} verification processed via verifyUser()`);
   } catch (error) {
     console.error("Error verifying user:", error);
+  }
+}
+
+export async function makeDonator(id) {
+  try {
+    await sql`UPDATE users SET donator = true WHERE id = ${id}`;
+    console.log(`${id} marked as donator - true via makeDonator()`);
+  } catch (error) {
+    console.error("Error marking user as donator:", error);
   }
 }
