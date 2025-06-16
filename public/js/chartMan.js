@@ -148,9 +148,9 @@ function createMoboBarChart(data) {
 
   // Determine a suitable suggestedMax for the x-axis
   // This can be a fixed value, or dynamically calculated
-  const maxCount = Math.max(...counts);
-  const suggestedXMax = maxCount + (maxCount * 0.05); // Add 05% padding, or
-  if (suggestedXMax < 10) suggestedXMax = 10; // Ensure a minimum scale for smaller counts
+  // const maxCount = Math.max(...counts);
+  // const suggestedXMax = maxCount + (maxCount * 0.05); // Add 05% padding, or
+  // if (suggestedXMax < 10) suggestedXMax = 10; // Ensure a minimum scale for smaller counts
 
   return {
     calculatedHeight: calculatedHeight,
@@ -180,7 +180,7 @@ function createMoboBarChart(data) {
             ticks: {
               fontColor: "black", // v2: 'color' is 'fontColor'
               beginAtZero: true, // Ensure the axis starts at zero
-              suggestedMax: suggestedXMax, // Add this line to extend the x-axis
+              //suggestedMax: suggestedXMax, // Add this line to extend the x-axis
             },
             gridLines: {
               // v2: 'grid' is 'gridLines'
