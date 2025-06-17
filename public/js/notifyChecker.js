@@ -4,6 +4,10 @@ import { parseDate, isNewerDate } from "./versionChecker.js";
 import { sendToDiscord } from "./reporter.js";
 import { today } from "./dater.js";
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function notifyUsers() {
   const summary = {
     summary: {
@@ -111,6 +115,9 @@ export async function notifyUsers() {
 
         try {
           await mailer(user, mobo);
+          
+          await sleep(1000); // 1 second pause between emails
+
           emailsSent++;
           const updatedUser = {
             ...user,
