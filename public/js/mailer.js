@@ -36,7 +36,8 @@ export async function mailer(userObject, modelsObject) {
   });
 
   if (error) {
-    return console.error({ error });
+    console.error("MAILER.JS Error:", error);
+    return { error };
   }
   console.log(
     "MAILER.JS: Email sent to ",
@@ -89,7 +90,8 @@ export async function confirmationMail(userObject) {
   });
 
   if (error) {
-    return console.error({ error });
+    console.error("MAILER.JS Error:", error);
+    return { error };
   }
   console.log(
     "MAILER.JS: Confirmation sent to ",

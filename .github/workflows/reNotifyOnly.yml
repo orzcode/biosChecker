@@ -1,0 +1,63 @@
+name: re-run NotifyUsers only
+description: |
+  Only run the NotifyUsers task, to catch errors or overflows, or for manual use. Daily at 2pm NZT, post-allowance-reset.
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # (This will trigger at 2:00 PM NZT every day)
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  run-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with: 
+          fetch-depth: "0"
+          # pulls all commits
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Use the Node.js version your app requires
+
+      # Install dependencies
+      - name: Install dependencies
+        run:
+          npm install
+
+      # Run the tasks
+      - name: Run NotifyOnly task
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PGHOST: ${{ secrets.PGHOST }}
+          PGUSER: ${{ secrets.PGUSER }}
+          PGPASSWORD: ${{ secrets.PGPASSWORD }}
+          PGDATABASE: ${{ secrets.PGDATABASE }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_VERSIONCHECKER: ${{ secrets.DISCORD_WEBHOOK_VERSIONCHECKER }}
+          DISCORD_WEBHOOK_NOTIFYUSERS: ${{ secrets.DISCORD_WEBHOOK_NOTIFYUSERS }}
+          DISCORD_WEBHOOK_MOBOFETCHER: ${{ secrets.DISCORD_WEBHOOK_MOBOFETCHER }}
+          DISCORD_WEBHOOK_STATSCHARTS: ${{ secrets.DISCORD_WEBHOOK_STATSCHARTS }}
+        run:
+          node public/js/runNotify.js
+
+
+      # Optional: Notify on workflow success
+      - name: Notify success
+        if: success()
+        run: echo "Scheduled task ran successfully!"
+
+      # Optional: Notify on workflow failure
+      - name: Notify failure
+        if: failure()
+        run: echo "Scheduled task failed to complete."

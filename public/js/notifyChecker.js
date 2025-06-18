@@ -95,13 +95,15 @@ export async function notifyUsers() {
         }
       }
 
+      // Actual checking function - based on user's givendate and mobo's helddate
       if (await isNewerDate(user.givendate, mobo.helddate)) {
         const heldDateObj = await parseDate(user.givendate);
         const foundDateObj = await parseDate(mobo.helddate);
         const heldDateTime = heldDateObj.getTime();
         const foundDateTime = foundDateObj.getTime();
 
-        console.log(`[NOTIFY] Triggered for ${user.id} / ${user.mobo}`);
+        // Logging the comparison for debugging
+        console.log(`[CHECK] Considered ${user.id} / ${user.mobo}`);
         console.log(
           `- User.givendate: ${
             user.givendate
@@ -114,8 +116,21 @@ export async function notifyUsers() {
         );
 
         try {
-          await mailer(user, mobo);
-          
+          // For verbose Resend error handling
+          const mailResult = await mailer(user, mobo);
+
+          if (mailResult?.error) {
+            const { name, message } = mailResult.error;
+            throw new Error(`Resend Error [${name}]: ${message}`);
+          }
+          // For verbose Resend error handling
+          // If this errors, it gets caught below, without updating the user
+
+          // Log only after successful send
+          console.log(
+            `[NOTIFY] Successfully sent to ${user.id} / ${user.mobo}`
+          );
+
           await sleep(1000); // 1 second pause between emails
 
           emailsSent++;
@@ -135,7 +150,7 @@ export async function notifyUsers() {
           });
         } catch (emailError) {
           console.error(
-            `Failed to notify ${user.id} about ${user.mobo}: ${emailError}`
+            `❌ Failed to notify ${user.id} about ${user.mobo}: ${emailError}`
           );
           summary.errors.push({
             id: user.id,
@@ -202,4 +217,3 @@ export async function notifyUsers() {
     return summary;
   }
 }
-
