@@ -15,11 +15,3 @@ build/
 
 # Ignore IDE settings
 .vscode/
-
-#Ignore DButils - for private use
-DButils.js
-
-#Ignore other misc - for private use
-koyeb-pw-summary.txt
-testMailer.js
-chartTests.js
