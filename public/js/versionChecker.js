@@ -170,6 +170,7 @@ export async function updateModels(fromKoyeb) {
 
   const retryList = []; // List to store URLs that failed
   const errorModels = new Set(); // Set to track models with errors
+  const firstAttemptErrors = new Map(); // Map to store initial errors for retry logic. Apparently I missed this.
 
   for (const mobo of mobos) {
     const { model, biospage, heldversion, helddate } = mobo;
