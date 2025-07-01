@@ -224,7 +224,7 @@ export async function updateModels(fromKoyeb) {
     }
 
     console.log("\n\n");
-    //await delay(2000); // Keep original delay
+    await delay(2000); // Keep original delay
   }
 
   // Retry failed URLs
@@ -277,7 +277,7 @@ export async function updateModels(fromKoyeb) {
         summary.errors.push({ model: mobo.model, error: finalErrorMessage }); // Use the specific message
         summary.summary.errors++;
       }
-      //await delay(2000);
+      await delay(2000);
     }
   }
 
