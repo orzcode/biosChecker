@@ -147,6 +147,7 @@ export async function sendToDiscord(data, scriptName = "default") {
 
       message += buildDetailsBlock(chunks[0], true);
       await sendMessage(message);
+      message = ""; // Prevent duplicate summary if errors are sent later
 
       for (let i = 1; i < chunks.length; i++) {
         await new Promise((res) => setTimeout(res, 1000)); // 1s delay
