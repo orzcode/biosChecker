@@ -3507,5 +3507,82 @@
     "heldversion": "3.30",
     "helddate": "2025/6/18",
     "release": null
+  },
+  {
+    "id": "mobo_mdz6cgq09rk717",
+    "model": "X870 Taichi Creator",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/7/18",
+    "release": "2025/7/18"
+  },
+  {
+    "id": "mobo_mdz6cn0sz1eny4",
+    "model": "X870 Pro-A WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Pro-A%20WiFi/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/6/17",
+    "release": "2025/6/17"
+  },
+  {
+    "id": "mobo_mdz6ctahbo7hqz",
+    "model": "X870 LiveMixer WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2025/6/17",
+    "release": "2025/6/17"
+  },
+  {
+    "id": "mobo_mdz6d4pqjk9mtx",
+    "model": "X870 Nova WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/6/17",
+    "release": "2025/6/17"
+  },
+  {
+    "id": "mobo_mdz6dbb6iamzcp",
+    "model": "B850 Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/7/9",
+    "release": "2025/7/9"
+  },
+  {
+    "id": "mobo_mdz6dhlw2c2qii",
+    "model": "B850 Challenger WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Challenger%20WiFi/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/7/9",
+    "release": "2025/7/9"
+  },
+  {
+    "id": "mobo_mdz6dnwbosagxm",
+    "model": "A620M-C R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
+    "heldversion": "3.30",
+    "helddate": "2025/6/20",
+    "release": "2025/6/20"
   }
 ]
