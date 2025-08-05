@@ -174,6 +174,14 @@ export async function scrapeMotherboards(fromKoyeb) {
     });
 
     console.log(`Found ${newModels.length} new models out of ${allmodels.length} total models`);
+    if (newModels.length > 0) {
+      console.log("New models:");
+      newModels.forEach((model, idx) => {
+      console.log(`${idx + 1}. Model: ${model[0]}`);
+      });
+    } else {
+      console.log("No new models detected.");
+    }
 
     summary.summary.total = existingModelMap.size; // Change to existingModelMap.size
     summary.summary.success = newModels.length;
