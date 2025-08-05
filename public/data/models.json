@@ -50,8 +50,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.18[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.19",
+    "helddate": "2025/7/25",
     "release": null
   },
   {
@@ -325,8 +325,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.18[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.19",
+    "helddate": "2025/7/25",
     "release": null
   },
   {
@@ -426,17 +426,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
     "heldversion": "18.03",
     "helddate": "2025/5/6",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv294tlmh",
-    "model": "B760M PG Lightning/D4",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
-    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2025/7/16",
     "release": null
   },
   {
@@ -649,6 +638,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv294tlmh",
+    "model": "B760M PG Lightning/D4",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
+    "heldversion": "11.01",
+    "helddate": "2025/7/16",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv25ulbbb",
     "model": "B660 Pro RS",
     "maker": "Intel",
@@ -792,13 +792,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2c5hmsi",
-    "model": "H610M-HDV/M.2 R2.0",
+    "id": "mobo_m68rfcv2ka6t2o",
+    "model": "H610M-H2/M.2",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html",
-    "heldversion": "10.01",
+    "link": "https://asrock.com/mb/intel/H610M-H2M.2",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html",
+    "heldversion": "5.01",
     "helddate": "2025/7/16",
     "release": null
   },
@@ -814,13 +814,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ka6t2o",
-    "model": "H610M-H2/M.2",
+    "id": "mobo_m68rfcv2egct3a",
+    "model": "H610M-HVS/M.2 R2.0",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-H2M.2",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html",
-    "heldversion": "5.01",
+    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
+    "heldversion": "10.01",
     "helddate": "2025/7/16",
     "release": null
   },
@@ -833,17 +833,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html",
     "heldversion": "17.02",
     "helddate": "2025/6/2",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2egct3a",
-    "model": "H610M-HVS/M.2 R2.0",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2025/7/16",
     "release": null
   },
   {
@@ -1199,6 +1188,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2c5hmsi",
+    "model": "H610M-HDV/M.2 R2.0",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html",
+    "heldversion": "10.01",
+    "helddate": "2025/7/16",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2jcw5rh",
     "model": "Z790 Taichi",
     "maker": "Intel",
@@ -1447,8 +1447,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.18[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.19",
+    "helddate": "2025/7/25",
     "release": null
   },
   {
@@ -1804,6 +1804,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2uayk9c",
+    "model": "A520M-HVS",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-HVS",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
+    "heldversion": "3.63[Beta]",
+    "helddate": "2025/7/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv21jrdm8",
     "model": "B550M-HDV",
     "maker": "AMD",
@@ -1903,14 +1914,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2uayk9c",
-    "model": "A520M-HVS",
+    "id": "mobo_m68rfcv224q3kt",
+    "model": "A520M-HDV",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HVS",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
-    "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/14",
+    "link": "https://asrock.com/mb/amd/A520M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
+    "heldversion": "3.63[Beta]",
+    "helddate": "2025/7/24",
     "release": null
   },
   {
@@ -1925,14 +1936,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv224q3kt",
-    "model": "A520M-HDV",
+    "id": "mobo_m68rfcv2bfcov5",
+    "model": "A520M/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
-    "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/14",
+    "link": "https://asrock.com/mb/amd/A520Mac",
+    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
+    "heldversion": "3.63[Beta]",
+    "helddate": "2025/7/24",
     "release": null
   },
   {
@@ -1944,17 +1955,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro4/bios.html",
     "heldversion": "3.61[Beta]",
     "helddate": "2025/4/11",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2bfcov5",
-    "model": "A520M/ac",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520Mac",
-    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
-    "heldversion": "3.61[Beta]",
-    "helddate": "2025/4/14",
     "release": null
   },
   {
@@ -2910,8 +2910,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.18[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.19",
+    "helddate": "2025/7/25",
     "release": null
   },
   {
