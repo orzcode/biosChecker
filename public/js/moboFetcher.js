@@ -33,9 +33,10 @@ async function checkBiosPage(maker, modelName) {
 
   for (const subdomain of ["www", "pg"]) {
     for (const pageName of possiblePages) {
-      const testUrl = baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
+      const testUrl =
+        baseLink.replace("asrock.com", `${subdomain}.asrock.com`) + pageName;
       console.log(`Checking: ${testUrl}`);
-      
+
       if (subdomain === "pg") {
         // Use Playwright for 'pg' subdomain
         const result = await scrapeWithPlaywright(testUrl);
@@ -49,7 +50,9 @@ async function checkBiosPage(maker, modelName) {
         // Use fetch for 'www' subdomain
         try {
           const response = await fetch(testUrl, {
-            headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+            headers: {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+            },
           });
 
           if (response.ok) {
@@ -57,7 +60,8 @@ async function checkBiosPage(maker, modelName) {
             const $ = cheerio.load(html);
 
             // Check for key content on the page (e.g., BIOS table rows)
-            const biosTableExists = $("tbody tr:first-child td:first-child").length > 0;
+            const biosTableExists =
+              $("tbody tr:first-child td:first-child").length > 0;
 
             if (biosTableExists) {
               console.log(`Valid BIOS page found: ${testUrl}`);
@@ -80,9 +84,6 @@ async function checkBiosPage(maker, modelName) {
   console.warn(`No valid BIOS page found for ${modelName}`);
   return null; // Return null if no valid page is found
 }
-
-
-
 
 export async function scrapeMotherboards(fromKoyeb) {
   //Checks for newly released motherboards
@@ -115,7 +116,9 @@ export async function scrapeMotherboards(fromKoyeb) {
 
     if (!scriptContent) {
       console.error("Failed to find allmodels array in the page.");
-      summary.errors.push({ error: "Failed to find allmodels array in the page." });
+      summary.errors.push({
+        error: "Failed to find allmodels array in the page.",
+      });
       return summary;
     }
 
@@ -128,7 +131,9 @@ export async function scrapeMotherboards(fromKoyeb) {
       allmodels = JSON.parse(sanitizedJsonString);
     } catch (error) {
       console.error("Failed to parse allmodels JSON:", error);
-      summary.errors.push({ error: `Failed to parse allmodels JSON: ${error.message}` });
+      summary.errors.push({
+        error: `Failed to parse allmodels JSON: ${error.message}`,
+      });
       return summary;
     }
 
@@ -138,11 +143,17 @@ export async function scrapeMotherboards(fromKoyeb) {
     // Then, load the current models.json to prevent overwriting existing data
     let currentModelsJson = [];
     try {
-      const fileContent = await fs.readFile("./public/data/models.json", "utf8");
+      const fileContent = await fs.readFile(
+        "./public/data/models.json",
+        "utf8"
+      );
       currentModelsJson = JSON.parse(fileContent);
       console.log(`Loaded ${currentModelsJson.length} models from models.json`);
     } catch (error) {
-      console.warn("Could not load models.json, starting with empty list:", error);
+      console.warn(
+        "Could not load models.json, starting with empty list:",
+        error
+      );
     }
 
     // Create a combined map of existing models with models.json as the primary source
@@ -164,7 +175,7 @@ export async function scrapeMotherboards(fromKoyeb) {
     const relevantSockets = ["1700", "1851", "am4", "am5"];
 
     // Filter to only get new models with relevant sockets
-    const newModels = allmodels.filter(model => {
+    const newModels = allmodels.filter((model) => {
       // Check if it has a relevant socket
       if (!relevantSockets.includes(model[1].toLowerCase())) return false;
 
@@ -173,11 +184,13 @@ export async function scrapeMotherboards(fromKoyeb) {
       return !existingModelMap.has(modelName);
     });
 
-    console.log(`Found ${newModels.length} new models out of ${allmodels.length} total models`);
+    console.log(
+      `Found ${newModels.length} new models out of ${allmodels.length} total models`
+    );
     if (newModels.length > 0) {
       console.log("New models:");
       newModels.forEach((model, idx) => {
-      console.log(`${idx + 1}. Model: ${model[0]}`);
+        console.log(`${idx + 1}. Model: ${model[0]}`);
       });
     } else {
       console.log("No new models detected.");
@@ -190,42 +203,46 @@ export async function scrapeMotherboards(fromKoyeb) {
 
     // Process only the new models
     for (const model of newModels) {
-      const maker = model[2].toLowerCase().includes("intel") ? "Intel" : "AMD";
-      const modelName = model[0];
-      const socketType = model[1];
+      try {
+        const maker = model[2].toLowerCase().includes("intel")
+          ? "Intel"
+          : "AMD";
+        const modelName = model[0];
+        const socketType = model[1];
 
-      // Checks/figures out the subdomain for bios page
-      const biosPage = await checkBiosPage(maker, modelName);
-      await delay(3000);
-      const versionInfo = await scrapeBIOSInfo(biosPage);
+        const biosPage = await checkBiosPage(maker, modelName);
+        await delay(3000);
+        const versionInfo = await scrapeBIOSInfo(biosPage);
 
-      const newEntry = {
-        id: await generateUniqueId("mobo_"),
-        model: modelName,
-        maker: maker,
-        socket: socketType,
-        link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
-          .replace(/\s/g, "%20")
-          .replace(/\//g, "")}`,
-        biospage: biosPage || "Not found",
-        heldversion: versionInfo?.version,
-        helddate: versionInfo?.releaseDate,
-        release: versionInfo?.releaseDate,
-        //The logic here is that the bios it finds is likely the only one since release
-        //assuming the script runs regularly (eg weekly).
-        //And thefore, the bios date is the same as the release date. Or close enough.
-      };
+        const newEntry = {
+          id: await generateUniqueId("mobo_"),
+          model: modelName,
+          maker: maker,
+          socket: socketType,
+          link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
+            .replace(/\s/g, "%20")
+            .replace(/\//g, "")}`,
+          biospage: biosPage || "Not found",
+          heldversion: versionInfo?.version,
+          helddate: versionInfo?.releaseDate,
+          release: versionInfo?.releaseDate,
+        };
 
-      // Add to new models list
-      newOrUpdatedModels.push(newEntry);
+        newOrUpdatedModels.push(newEntry);
+        existingModelMap.set(modelName, newEntry);
 
-      // Add to the combined map
-      existingModelMap.set(modelName, newEntry);
+        console.log(
+          `Processed new model: ${modelName}, BIOS Page: ${
+            biosPage || "Not found"
+          }`
+        );
+        console.log("\n");
+      } catch (err) {
+        console.warn(`Error while processing model ${model[0]}:`, err.message);
+        summary.errors.push({ model: model[0], error: err.message });
+        summary.summary.errors++;
+      }
 
-      console.log(`Processed new model: ${modelName}, BIOS Page: ${biosPage || "Not found"}`);
-      console.log("\n");
-
-      // Add a delay between each motherboard check
       await delay(5000);
     }
 
@@ -238,11 +255,19 @@ export async function scrapeMotherboards(fromKoyeb) {
     // Save only if there are new models
     if (newOrUpdatedModels.length > 0) {
       await saveMobos(newOrUpdatedModels); // Save to database
-      console.log(`Saved ${newOrUpdatedModels.length} new models to the database.`);
+      console.log(
+        `Saved ${newOrUpdatedModels.length} new models to the database.`
+      );
 
       // Display table of added models
       console.log("New models added:");
-      console.table(newOrUpdatedModels, ["model", "socket", "maker", "heldversion", "helddate"]);
+      console.table(newOrUpdatedModels, [
+        "model",
+        "socket",
+        "maker",
+        "heldversion",
+        "helddate",
+      ]);
 
       // Save to models.json
       try {
@@ -253,16 +278,18 @@ export async function scrapeMotherboards(fromKoyeb) {
         console.log("Updated models.json with the latest motherboard data.");
       } catch (error) {
         console.error("Failed to save models.json:", error);
-        summary.errors.push({ error: `Failed to save models.json: ${error.message}` });
+        summary.errors.push({
+          error: `Failed to save models.json: ${error.message}`,
+        });
       }
 
       // Send report to Discord
-      summary.details = newOrUpdatedModels.map(model => ({
+      summary.details = newOrUpdatedModels.map((model) => ({
         Maker: model.maker,
         Model: model.model,
         // 'BIOS Page': model.biospage ? `[Link](<${model.biospage}>)` : "Not found"
         // temporarily disabled due to codeblock breaking it
-    }));
+      }));
       await sendToDiscord(summary, "moboFetcher");
 
       //ONLY USED IN KOYEB TASK!
@@ -271,7 +298,6 @@ export async function scrapeMotherboards(fromKoyeb) {
         console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
       }
       //ONLY USED IN KOYEB TASK!
-
     } else {
       console.log("No new models found. Database and JSON remain unchanged.");
 
