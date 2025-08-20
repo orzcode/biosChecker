@@ -12,6 +12,12 @@ import { koyebToRepo } from "./koyebToGithub.js";
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+// define the insecure agent
+const insecureAgent = new https.Agent({
+  rejectUnauthorized: false
+});
+
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
   // Split the date string and convert to a Date object

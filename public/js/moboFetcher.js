@@ -12,6 +12,11 @@ async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// define the insecure agent
+const insecureAgent = new https.Agent({
+  rejectUnauthorized: false
+});
+
 //script to fetch motherboard product info from ASRock website
 //run this casually, as it just checks for newly released models, not bios versions
 
