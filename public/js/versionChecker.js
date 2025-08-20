@@ -14,9 +14,7 @@ function delay(ms) {
 }
 
 // define the insecure agent
-const insecureAgent = new https.Agent({
-  rejectUnauthorized: false
-});
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
@@ -103,9 +101,7 @@ export async function scrapeBIOSInfo(url) {
         headers: {
           "User-Agent": getRandomUserAgent(), // Add random User-Agent
           //"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-        },
-        agent: insecureAgent,
-        // Use insecureAgent for failing HTTPS certs
+        }
       });
 
       if (!response.ok) {

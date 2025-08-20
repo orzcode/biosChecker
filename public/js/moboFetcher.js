@@ -13,9 +13,7 @@ async function delay(ms) {
 }
 
 // define the insecure agent
-const insecureAgent = new https.Agent({
-  rejectUnauthorized: false
-});
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 //script to fetch motherboard product info from ASRock website
 //run this casually, as it just checks for newly released models, not bios versions
@@ -57,9 +55,7 @@ async function checkBiosPage(maker, modelName) {
           const response = await fetch(testUrl, {
             headers: {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-            },
-            agent: insecureAgent,
-            // Use insecureAgent for failing HTTPS certs
+            }
           });
 
           if (response.ok) {
@@ -112,8 +108,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
   try {
     const url = "https://www.asrock.com/mb/";
-    const response = await fetch(url, {agent: insecureAgent});
-    // Use insecureAgent for failing HTTPS certs
+    const response = await fetch(url);
     const body = await response.text();
 
     const $ = cheerio.load(body);
