@@ -53,6 +53,8 @@ async function checkBiosPage(maker, modelName) {
             headers: {
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
             },
+            agent: insecureAgent,
+            // Use insecureAgent for failing HTTPS certs
           });
 
           if (response.ok) {
@@ -105,7 +107,8 @@ export async function scrapeMotherboards(fromKoyeb) {
 
   try {
     const url = "https://www.asrock.com/mb/";
-    const response = await fetch(url);
+    const response = await fetch(url, {agent: insecureAgent});
+    // Use insecureAgent for failing HTTPS certs
     const body = await response.text();
 
     const $ = cheerio.load(body);
