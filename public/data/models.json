@@ -3584,5 +3584,27 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_mfjbooaja1wrdd",
+    "model": "B860M-STX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-STX",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
+    "heldversion": "4.01",
+    "helddate": "2025/9/2",
+    "release": "2025/9/2"
+  },
+  {
+    "id": "mobo_mfjbqlbqm2cxg8",
+    "model": "X600M-STX R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X600M-STX%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/X600M-STX%20R2.0/bios.html",
+    "heldversion": "1.20",
+    "helddate": "2025/7/21",
+    "release": "2025/7/21"
   }
 ]
