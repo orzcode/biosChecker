@@ -1,11 +1,11 @@
 [
   {
-    "id": "mobo_m68rfcv2d66otn",
-    "model": "B860M-X",
+    "id": "mobo_m68rfcv2gnwvqv",
+    "model": "H810M-X",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
+    "link": "https://asrock.com/mb/intel/H810M-X",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
     "heldversion": "2.06",
     "helddate": "2025/9/12",
     "release": null
@@ -22,12 +22,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gnwvqv",
-    "model": "H810M-X",
+    "id": "mobo_m68rfcv2d66otn",
+    "model": "B860M-X",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "link": "https://asrock.com/mb/intel/B860M-X",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
+    "heldversion": "2.06",
+    "helddate": "2025/9/12",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2pbev3i",
+    "model": "H810M-X WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
     "heldversion": "2.06",
     "helddate": "2025/9/12",
     "release": null
@@ -44,12 +55,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2pbev3i",
-    "model": "H810M-X WiFi",
+    "id": "mobo_m68rfcv2q1pm0f",
+    "model": "B860M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
     "heldversion": "2.06",
     "helddate": "2025/9/12",
     "release": null
@@ -382,17 +393,6 @@
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html",
     "heldversion": "9.03",
     "helddate": "2025/5/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2q1pm0f",
-    "model": "B860M-X WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2025/9/12",
     "release": null
   },
   {
@@ -2327,8 +2327,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "3.01[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "3.10",
+    "helddate": "2025/9/15",
     "release": null
   },
   {
@@ -3256,17 +3256,6 @@
     "release": null
   },
   {
-    "id": "mobo_m9p9trppes5u51",
-    "model": "H810M-H",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-H",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
-    "heldversion": "2.04",
-    "helddate": "2025/9/12",
-    "release": "2025/3/28"
-  },
-  {
     "id": "mobo_mdz6dbb6iamzcp",
     "model": "B850 Challenger WiFi White",
     "maker": "AMD",
@@ -3410,6 +3399,17 @@
     "release": null
   },
   {
+    "id": "mobo_m9p9trppes5u51",
+    "model": "H810M-H",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-H",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
+    "heldversion": "2.04",
+    "helddate": "2025/9/12",
+    "release": "2025/3/28"
+  },
+  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3430,6 +3430,28 @@
     "heldversion": "3.40",
     "helddate": "2025/9/4",
     "release": "2025/6/20"
+  },
+  {
+    "id": "mobo_mfjbooaja1wrdd",
+    "model": "B860M-STX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-STX",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
+    "heldversion": "4.01",
+    "helddate": "2025/9/2",
+    "release": "2025/9/2"
+  },
+  {
+    "id": "mobo_mfjbqlbqm2cxg8",
+    "model": "X600M-STX R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X600M-STX%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/X600M-STX%20R2.0/bios.html",
+    "heldversion": "1.20",
+    "helddate": "2025/7/21",
+    "release": "2025/7/21"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
@@ -3584,27 +3606,5 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
-  },
-  {
-    "id": "mobo_mfjbooaja1wrdd",
-    "model": "B860M-STX",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-STX",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2025/9/2",
-    "release": "2025/9/2"
-  },
-  {
-    "id": "mobo_mfjbqlbqm2cxg8",
-    "model": "X600M-STX R2.0",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X600M-STX%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/X600M-STX%20R2.0/bios.html",
-    "heldversion": "1.20",
-    "helddate": "2025/7/21",
-    "release": "2025/7/21"
   }
 ]
