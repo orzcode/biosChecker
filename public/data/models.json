@@ -50,8 +50,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.19",
-    "helddate": "2025/7/25",
+    "heldversion": "1.21",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -270,8 +270,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.19",
-    "helddate": "2025/7/25",
+    "heldversion": "1.21",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -1502,8 +1502,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.19",
-    "helddate": "2025/7/25",
+    "heldversion": "1.21",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -2189,6 +2189,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2xbr8z8",
+    "model": "B860I WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
+    "heldversion": "3.10",
+    "helddate": "2025/9/15",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2butk5y",
     "model": "Fatal1ty X370 Professional Gaming",
     "maker": "AMD",
@@ -2321,17 +2332,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2xbr8z8",
-    "model": "B860I WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "3.10",
-    "helddate": "2025/9/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv26aa39e",
     "model": "Z790 Pro RS WiFi",
     "maker": "Intel",
@@ -2371,8 +2371,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
-    "heldversion": "1.21[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.22",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -2404,8 +2404,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
-    "heldversion": "1.16[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.17",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -2910,8 +2910,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.19",
-    "helddate": "2025/7/25",
+    "heldversion": "1.21",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -3251,8 +3251,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "1.13[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.14",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
@@ -3526,8 +3526,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "1.21[Beta]",
-    "helddate": "2025/6/17",
+    "heldversion": "1.22",
+    "helddate": "2025/9/17",
     "release": null
   },
   {
