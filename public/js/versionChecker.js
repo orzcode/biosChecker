@@ -13,8 +13,8 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// define the insecure agent
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+// Un-comment / use this when their SSL certs are broken (rare)
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
