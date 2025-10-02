@@ -6,8 +6,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2025/9/12",
+    "heldversion": "2.08",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -39,8 +39,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2025/9/12",
+    "heldversion": "2.08",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1463,17 +1463,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2f48962",
-    "model": "A620M-HDVP",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVP",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/1",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ur6y52",
     "model": "X570 AQUA",
     "maker": "AMD",
@@ -1570,6 +1559,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2f48962",
+    "model": "A620M-HDVP",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVP",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/1",
     "release": null
   },
   {
@@ -3372,8 +3372,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-H",
     "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
-    "heldversion": "2.04",
-    "helddate": "2025/9/12",
+    "heldversion": "2.06",
+    "helddate": "2025/10/2",
     "release": "2025/3/28"
   },
   {
