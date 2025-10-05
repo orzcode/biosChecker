@@ -3606,5 +3606,16 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_mgdbzysml7w2jq",
+    "model": "B760M-X Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-X%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-X%20Gen5/bios.html",
+    "heldversion": "2.01",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
   }
 ]
