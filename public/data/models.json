@@ -33,6 +33,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2uecthk",
+    "model": "B760M-HDV/M.2 D4",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-HDVM.2%20D4",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2%20D4/bios.html",
+    "heldversion": "11.01",
+    "helddate": "2025/10/3",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2dbj0td",
     "model": "B860M Pro-A",
     "maker": "Intel",
@@ -61,8 +72,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "10.03",
-    "helddate": "2025/5/9",
+    "heldversion": "11.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -94,8 +105,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/5/9",
+    "heldversion": "5.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -149,8 +160,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "5.03",
-    "helddate": "2025/5/9",
+    "heldversion": "6.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -160,8 +171,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -171,8 +182,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RS/bios.html",
-    "heldversion": "11.03",
-    "helddate": "2025/5/9",
+    "heldversion": "12.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -182,8 +193,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RSD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4%20WiFi/bios.html",
-    "heldversion": "10.03",
-    "helddate": "2025/5/9",
+    "heldversion": "11.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -193,8 +204,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro%20RSD4/bios.html",
-    "heldversion": "10.03",
-    "helddate": "2025/5/9",
+    "heldversion": "11.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -204,8 +215,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -215,8 +226,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-A/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -226,8 +237,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -237,8 +248,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -264,12 +275,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2uecthk",
-    "model": "B760M-HDV/M.2 D4",
+    "id": "mobo_m68rfcv24t3o9e",
+    "model": "B760M-HDV/M.2",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HDVM.2%20D4",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2%20D4/bios.html",
+    "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
     "heldversion": "11.01",
     "helddate": "2025/10/3",
     "release": null
@@ -283,17 +294,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
     "heldversion": "18.03",
     "helddate": "2025/5/6",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv24t3o9e",
-    "model": "B760M-HDV/M.2",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -380,8 +380,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning/bios.html",
-    "heldversion": "9.03",
-    "helddate": "2025/5/9",
+    "heldversion": "10.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -407,17 +407,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2et3i5p",
-    "model": "B760M-H2/M.2",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-H2M.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2025/10/3",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2iwem80",
     "model": "Z790 Taichi Carrara",
     "maker": "Intel",
@@ -426,6 +415,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
     "heldversion": "18.03",
     "helddate": "2025/5/6",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2et3i5p",
+    "model": "B760M-H2/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-H2M.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
+    "heldversion": "9.01",
+    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -820,8 +820,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2025/7/16",
+    "heldversion": "11.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -1067,6 +1067,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2u9j6wi",
+    "model": "X670E Taichi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X670E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/3",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2xp0dt8",
     "model": "B850M-X WiFi",
     "maker": "AMD",
@@ -1084,8 +1095,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2025/9/4",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1119,17 +1130,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2u9j6wi",
-    "model": "X670E Taichi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X670E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -1194,8 +1194,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2025/7/16",
+    "heldversion": "11.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -1320,12 +1320,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wbp3si",
-    "model": "A620M Pro RS WiFi",
+    "id": "mobo_m68rfcv290tl59",
+    "model": "X670E Taichi Carrara",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/X670E%20Taichi%20Carrara",
+    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/3",
     "release": null
@@ -1375,23 +1375,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv290tl59",
-    "model": "X670E Taichi Carrara",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X670E%20Taichi%20Carrara",
-    "biospage": "https://www.asrock.com/mb/amd/X670E%20Taichi%20Carrara/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2hzznhz",
     "model": "B650E Taichi Lite",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/3",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2c0u8ux",
+    "model": "B650E Taichi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/3",
     "release": null
@@ -1452,12 +1452,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2c0u8ux",
-    "model": "B650E Taichi",
+    "id": "mobo_m68rfcv29qdt1r",
+    "model": "A620M Pro RS",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
+    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/3",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2wbp3si",
+    "model": "A620M Pro RS WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/3",
     "release": null
@@ -1581,17 +1592,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
     "heldversion": "5.67[Beta]",
     "helddate": "2025/9/8",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv29qdt1r",
-    "model": "A620M Pro RS",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -1757,17 +1757,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Phantom%20Gaming-ITXax/bios.html",
     "heldversion": "2.40",
     "helddate": "2022/10/20",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2vbnd5m",
-    "model": "A620M-HDV/M.2",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -2010,6 +1999,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2vbnd5m",
+    "model": "A620M-HDV/M.2",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -2547,8 +2547,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RS/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/5/9",
+    "heldversion": "13.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -2640,17 +2640,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ask9ni",
-    "model": "B650E Steel Legend WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2wk7ehl",
     "model": "A320M-DGS",
     "maker": "AMD",
@@ -2714,6 +2703,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.11",
     "helddate": "2025/9/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ask9ni",
+    "model": "B650E Steel Legend WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/3",
     "release": null
   },
   {
@@ -2998,8 +2998,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "9.03",
-    "helddate": "2025/5/9",
+    "heldversion": "10.01",
+    "helddate": "2025/10/7",
     "release": null
   },
   {
@@ -3454,6 +3454,17 @@
     "release": "2025/7/21"
   },
   {
+    "id": "mobo_mgdbzysml7w2jq",
+    "model": "B760M-X Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-X%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-X%20Gen5/bios.html",
+    "heldversion": "2.01",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3606,16 +3617,5 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
-  },
-  {
-    "id": "mobo_mgdbzysml7w2jq",
-    "model": "B760M-X Gen5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-X%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-X%20Gen5/bios.html",
-    "heldversion": "2.01",
-    "helddate": "2025/9/30",
-    "release": "2025/9/30"
   }
 ]
