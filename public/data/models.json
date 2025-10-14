@@ -94,8 +94,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/5/7",
+    "heldversion": "21.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -149,8 +149,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/5/9",
+    "heldversion": "13.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -226,8 +226,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2025/10/7",
+    "heldversion": "8.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -237,8 +237,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2025/10/7",
+    "heldversion": "8.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -259,8 +259,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-ITXD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760M-ITXD4%20WiFi/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2025/10/8",
+    "heldversion": "11.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -314,8 +314,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/5/9",
+    "heldversion": "13.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -413,8 +413,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
-    "heldversion": "12.01",
-    "helddate": "2025/10/8",
+    "heldversion": "12.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -809,8 +809,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html",
-    "heldversion": "19.03",
-    "helddate": "2025/6/2",
+    "heldversion": "20.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -864,8 +864,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610Mac",
     "biospage": "https://www.asrock.com/mb/intel/H610Mac/bios.html",
-    "heldversion": "19.03",
-    "helddate": "2025/6/2",
+    "heldversion": "20.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -1023,6 +1023,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2ryqwyz",
+    "model": "H610M-H2/M.2 D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-H2M.2%20D5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2%20D5/bios.html",
+    "heldversion": "5.02",
+    "helddate": "2025/10/13",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv21xnr3n",
     "model": "X870 Riptide WiFi",
     "maker": "AMD",
@@ -1130,17 +1141,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
     "heldversion": "11.01",
     "helddate": "2025/10/7",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2ryqwyz",
-    "model": "H610M-H2/M.2 D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-H2M.2%20D5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2%20D5/bios.html",
-    "heldversion": "5.02",
-    "helddate": "2025/10/13",
     "release": null
   },
   {
@@ -1672,23 +1672,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2p8tmj5",
-    "model": "B550 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/B550%20Pro4/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/13",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2206o6r",
     "model": "B550M Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html",
+    "heldversion": "3.90",
+    "helddate": "2025/10/13",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv23gj3wn",
+    "model": "B550M WiFi SE",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20WiFi%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/13",
     "release": null
@@ -1779,17 +1779,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20PG%20Riptide/bios.html",
     "heldversion": "1.40",
     "helddate": "2022/10/20",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv23gj3wn",
-    "model": "B550M WiFi SE",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20WiFi%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/13",
     "release": null
   },
   {
@@ -1933,6 +1922,17 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M%20Phantom%20Gaming%204/bios.html",
     "heldversion": "1.80",
     "helddate": "2022/11/3",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2p8tmj5",
+    "model": "B550 Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Pro4/bios.html",
+    "heldversion": "3.90",
+    "helddate": "2025/10/13",
     "release": null
   },
   {
