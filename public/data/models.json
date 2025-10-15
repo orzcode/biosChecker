@@ -88,13 +88,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2hux6re",
-    "model": "Z790 Steel Legend WiFi",
+    "id": "mobo_m68rfcv2h95ukl",
+    "model": "B760M Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "21.02",
+    "link": "https://asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "13.02",
     "helddate": "2025/10/14",
     "release": null
   },
@@ -143,13 +143,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2h95ukl",
-    "model": "B760M Steel Legend WiFi",
+    "id": "mobo_m68rfcv2l2v2rz",
+    "model": "B760M Pro-A/D4 WiFi",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "13.02",
+    "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html",
+    "heldversion": "8.02",
     "helddate": "2025/10/14",
     "release": null
   },
@@ -220,17 +220,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2l2v2rz",
-    "model": "B760M Pro-A/D4 WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4%20WiFi/bios.html",
-    "heldversion": "8.02",
-    "helddate": "2025/10/14",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv25jkz8p",
     "model": "B760M Pro-A/D4",
     "maker": "Intel",
@@ -238,6 +227,17 @@
     "link": "https://asrock.com/mb/intel/B760M%20Pro-AD4",
     "biospage": "https://www.asrock.com/mb/intel/B760M%20Pro-AD4/bios.html",
     "heldversion": "8.02",
+    "helddate": "2025/10/14",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2xpsizi",
+    "model": "B760M-ITX/D4 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-ITXD4%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-ITXD4%20WiFi/bios.html",
+    "heldversion": "11.02",
     "helddate": "2025/10/14",
     "release": null
   },
@@ -253,13 +253,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2xpsizi",
-    "model": "B760M-ITX/D4 WiFi",
+    "id": "mobo_m68rfcv230c679",
+    "model": "B760M PG SONIC WiFi",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-ITXD4%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-ITXD4%20WiFi/bios.html",
-    "heldversion": "11.02",
+    "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html",
+    "heldversion": "13.02",
     "helddate": "2025/10/14",
     "release": null
   },
@@ -281,8 +281,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
-    "heldversion": "11.01",
-    "helddate": "2025/10/3",
+    "heldversion": "11.02",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -308,13 +308,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv230c679",
-    "model": "B760M PG SONIC WiFi",
+    "id": "mobo_m68rfcv2hux6re",
+    "model": "Z790 Steel Legend WiFi",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20SONIC%20WiFi/bios.html",
-    "heldversion": "13.02",
+    "link": "https://asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "21.02",
     "helddate": "2025/10/14",
     "release": null
   },
@@ -407,17 +407,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv294tlmh",
-    "model": "B760M PG Lightning/D4",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
-    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
-    "heldversion": "12.02",
-    "helddate": "2025/10/14",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2iwem80",
     "model": "Z790 Taichi Carrara",
     "maker": "Intel",
@@ -435,8 +424,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-H2M.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2025/10/3",
+    "heldversion": "9.02",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -649,6 +638,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv294tlmh",
+    "model": "B760M PG Lightning/D4",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
+    "heldversion": "12.02",
+    "helddate": "2025/10/14",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv25ulbbb",
     "model": "B660 Pro RS",
     "maker": "Intel",
@@ -803,12 +803,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2l18u13",
-    "model": "H610M-HDV/M.2",
+    "id": "mobo_m68rfcv2mq5378",
+    "model": "H610M/ac",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html",
+    "link": "https://asrock.com/mb/intel/H610Mac",
+    "biospage": "https://www.asrock.com/mb/intel/H610Mac/bios.html",
     "heldversion": "20.02",
     "helddate": "2025/10/14",
     "release": null
@@ -858,17 +858,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2mq5378",
-    "model": "H610M/ac",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610Mac",
-    "biospage": "https://www.asrock.com/mb/intel/H610Mac/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2025/10/14",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2wolb9o",
     "model": "H610M-ITX/ac",
     "maker": "Intel",
@@ -886,8 +875,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-ITXeDP",
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html",
-    "heldversion": "11.03",
-    "helddate": "2025/6/2",
+    "heldversion": "12.02",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1141,6 +1130,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20R2.0/bios.html",
     "heldversion": "11.01",
     "helddate": "2025/10/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2l18u13",
+    "model": "H610M-HDV/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2025/10/14",
     "release": null
   },
   {
@@ -1623,8 +1623,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1645,8 +1645,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Extreme4",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Extreme4/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1667,8 +1667,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Steel%20Legend/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1854,8 +1854,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1876,8 +1876,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1942,8 +1942,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1964,8 +1964,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -1986,8 +1986,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -2404,8 +2404,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -2503,8 +2503,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M-HM.2",
     "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
-    "heldversion": "9.03",
-    "helddate": "2025/5/9",
+    "heldversion": "10.01",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
