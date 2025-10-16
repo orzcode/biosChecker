@@ -275,17 +275,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv24t3o9e",
-    "model": "B760M-HDV/M.2",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
-    "heldversion": "11.02",
-    "helddate": "2025/10/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv27hucul",
     "model": "Z790M-ITX WiFi",
     "maker": "Intel",
@@ -316,6 +305,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "21.02",
     "helddate": "2025/10/14",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv24t3o9e",
+    "model": "B760M-HDV/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2/bios.html",
+    "heldversion": "11.02",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -407,17 +407,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2iwem80",
-    "model": "Z790 Taichi Carrara",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
-    "heldversion": "18.03",
-    "helddate": "2025/5/6",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2et3i5p",
     "model": "B760M-H2/M.2",
     "maker": "Intel",
@@ -426,6 +415,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
     "heldversion": "9.02",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2iwem80",
+    "model": "Z790 Taichi Carrara",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
+    "heldversion": "18.03",
+    "helddate": "2025/5/6",
     "release": null
   },
   {
@@ -858,17 +858,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wolb9o",
-    "model": "H610M-ITX/ac",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-ITXac",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/6/2",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2blxk4h",
     "model": "H610M-ITX/eDP",
     "maker": "Intel",
@@ -877,6 +866,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html",
     "heldversion": "12.02",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2wolb9o",
+    "model": "H610M-ITX/ac",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-ITXac",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
+    "heldversion": "12.03",
+    "helddate": "2025/6/2",
     "release": null
   },
   {
@@ -1617,12 +1617,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv20ym2bz",
-    "model": "B550 Taichi Razer Edition",
+    "id": "mobo_m68rfcv22u2c1v",
+    "model": "B550 Extreme4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition",
-    "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition/bios.html",
+    "link": "https://asrock.com/mb/amd/B550%20Extreme4",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Extreme4/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1634,17 +1634,17 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/16",
     "release": null
   },
   {
-    "id": "mobo_m68rfcv22u2c1v",
-    "model": "B550 Extreme4",
+    "id": "mobo_m68rfcv2r8l0ur",
+    "model": "B550 Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550%20Extreme4",
-    "biospage": "https://www.asrock.com/mb/amd/B550%20Extreme4/bios.html",
+    "link": "https://asrock.com/mb/amd/B550%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Steel%20Legend/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1661,12 +1661,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2r8l0ur",
-    "model": "B550 Steel Legend",
+    "id": "mobo_m68rfcv28qf2bq",
+    "model": "B550M-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/amd/B550%20Steel%20Legend/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M-ITXac",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1782,6 +1782,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv20ym2bz",
+    "model": "B550 Taichi Razer Edition",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi%20Razer%20Edition/bios.html",
+    "heldversion": "3.90",
+    "helddate": "2025/10/15",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2z8nb1m",
     "model": "A520M-HDVP/DASH",
     "maker": "AMD",
@@ -1843,17 +1854,17 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/16",
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28qf2bq",
-    "model": "B550M-ITX/ac",
+    "id": "mobo_m68rfcv20mu1tr",
+    "model": "A520M Pro4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M-ITXac",
-    "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1870,12 +1881,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv20mu1tr",
-    "model": "A520M Pro4",
+    "id": "mobo_m68rfcv2r8e007",
+    "model": "A520M-HDVP R2.0",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1936,12 +1947,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2r8e007",
-    "model": "A520M-HDVP R2.0",
+    "id": "mobo_m68rfcv2pcouxm",
+    "model": "A520M-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-ITXac",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1958,12 +1969,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2pcouxm",
-    "model": "A520M-ITX/ac",
+    "id": "mobo_m68rfcv2goe8x1",
+    "model": "A520M-HDVP",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-ITXac",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
     "release": null
@@ -1977,17 +1988,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html",
     "heldversion": "11.03",
     "helddate": "2025/5/6",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2goe8x1",
-    "model": "A520M-HDVP",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -2019,8 +2019,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
-    "heldversion": "3.62[Beta]",
-    "helddate": "2025/9/8",
+    "heldversion": "3.90",
+    "helddate": "2025/10/16",
     "release": null
   },
   {
@@ -2497,17 +2497,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29mv3fl",
-    "model": "B760M-H/M.2",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HM.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2025/10/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv24u2in8",
     "model": "Z790 Pro RS/D4",
     "maker": "Intel",
@@ -2538,6 +2527,17 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350%20Pro4/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv29mv3fl",
+    "model": "B760M-H/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-HM.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
+    "heldversion": "10.01",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
