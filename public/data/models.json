@@ -1370,8 +1370,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2025/9/5",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1403,8 +1403,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2025/9/5",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1414,8 +1414,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2025/9/5",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1546,8 +1546,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
     "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2025/9/5",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -1628,12 +1628,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2z5n6ce",
-    "model": "B550M Pro RS",
+    "id": "mobo_m68rfcv2m5nbsh",
+    "model": "B550M WiFi",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/16",
     "release": null
@@ -1848,12 +1848,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2m5nbsh",
-    "model": "B550M WiFi",
+    "id": "mobo_m68rfcv2gybrac",
+    "model": "B550M Pro SE",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/16",
     "release": null
@@ -1991,6 +1991,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2z5n6ce",
+    "model": "B550M Pro RS",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
+    "heldversion": "3.90",
+    "helddate": "2025/10/16",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2kj8ozr",
     "model": "X470 Taichi",
     "maker": "AMD",
@@ -2010,17 +2021,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2gybrac",
-    "model": "B550M Pro SE",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/16",
     "release": null
   },
   {
