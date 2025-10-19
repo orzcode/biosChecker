@@ -3617,5 +3617,49 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_mgxc7pivt9dh0r",
+    "model": "H610M-HDV/M.2 D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2025/10/13",
+    "release": "2025/10/13"
+  },
+  {
+    "id": "mobo_mgxc7vu0yb9yc7",
+    "model": "H610M-HVS/M.2 D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
+    "heldversion": "1.09",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
+  },
+  {
+    "id": "mobo_mgxc823lrmz8i3",
+    "model": "H610M-X D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5/bios.html",
+    "heldversion": "1.11",
+    "helddate": "2025/10/13",
+    "release": "2025/10/13"
+  },
+  {
+    "id": "mobo_mgxc88iyhktsoy",
+    "model": "H610M-X D5 Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
   }
 ]
