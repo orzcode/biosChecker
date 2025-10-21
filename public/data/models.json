@@ -281,8 +281,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790M-ITX%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
-    "heldversion": "18.03",
-    "helddate": "2025/5/6",
+    "heldversion": "19.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -787,8 +787,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "13.03",
-    "helddate": "2025/5/6",
+    "heldversion": "14.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -1364,12 +1364,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28zviww",
-    "model": "B650M PG Riptide WiFi",
+    "id": "mobo_m68rfcv2qev4up",
+    "model": "B650M PG Riptide WiFi White",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/2",
     "release": null
@@ -1397,23 +1397,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2qev4up",
-    "model": "B650M PG Riptide WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2x2gxmp",
     "model": "B650M PG Riptide",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ot347m",
+    "model": "B650 LiveMixer",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/2",
     "release": null
@@ -1540,17 +1540,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ot347m",
-    "model": "B650 LiveMixer",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2vb4mg3",
     "model": "B650M Pro RS WiFi",
     "maker": "AMD",
@@ -1603,6 +1592,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2+%20D5/bios.html",
     "heldversion": "5.02",
     "helddate": "2025/10/13",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv28zviww",
+    "model": "B650M PG Riptide WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
     "release": null
   },
   {
@@ -2349,8 +2349,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "15.03",
-    "helddate": "2025/5/7",
+    "heldversion": "16.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -2503,8 +2503,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RSD4/bios.html",
-    "heldversion": "15.04",
-    "helddate": "2025/5/7",
+    "heldversion": "16.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -2822,8 +2822,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html",
-    "heldversion": "17.03",
-    "helddate": "2025/5/7",
+    "heldversion": "18.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -3465,6 +3465,50 @@
     "release": "2025/9/30"
   },
   {
+    "id": "mobo_mgxc7pivt9dh0r",
+    "model": "H610M-HDV/M.2 D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2025/10/13",
+    "release": "2025/10/13"
+  },
+  {
+    "id": "mobo_mgxc7vu0yb9yc7",
+    "model": "H610M-HVS/M.2 D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
+    "heldversion": "1.09",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
+  },
+  {
+    "id": "mobo_mgxc823lrmz8i3",
+    "model": "H610M-X D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5/bios.html",
+    "heldversion": "1.11",
+    "helddate": "2025/10/13",
+    "release": "2025/10/13"
+  },
+  {
+    "id": "mobo_mgxc88iyhktsoy",
+    "model": "H610M-X D5 Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2025/9/30",
+    "release": "2025/9/30"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3617,49 +3661,5 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
-  },
-  {
-    "id": "mobo_mgxc7pivt9dh0r",
-    "model": "H610M-HDV/M.2 D5 Gen5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20D5%20Gen5/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2025/10/13",
-    "release": "2025/10/13"
-  },
-  {
-    "id": "mobo_mgxc7vu0yb9yc7",
-    "model": "H610M-HVS/M.2 D5 Gen5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
-    "heldversion": "1.09",
-    "helddate": "2025/9/30",
-    "release": "2025/9/30"
-  },
-  {
-    "id": "mobo_mgxc823lrmz8i3",
-    "model": "H610M-X D5 Gen5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5/bios.html",
-    "heldversion": "1.11",
-    "helddate": "2025/10/13",
-    "release": "2025/10/13"
-  },
-  {
-    "id": "mobo_mgxc88iyhktsoy",
-    "model": "H610M-X D5 Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2025/9/30",
-    "release": "2025/9/30"
   }
 ]
