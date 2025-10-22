@@ -28,8 +28,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2025/9/12",
+    "heldversion": "2.09",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -61,8 +61,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2025/9/12",
+    "heldversion": "2.09",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -325,8 +325,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-H2",
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
-    "heldversion": "2.05",
-    "helddate": "2025/9/11",
+    "heldversion": "2.08",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -358,8 +358,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "7.03",
-    "helddate": "2025/5/9",
+    "heldversion": "8.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -369,8 +369,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide/bios.html",
-    "heldversion": "13.03",
-    "helddate": "2025/5/9",
+    "heldversion": "14.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -402,8 +402,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
-    "heldversion": "6.03",
-    "helddate": "2025/5/9",
+    "heldversion": "7.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -426,6 +426,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
     "heldversion": "18.03",
     "helddate": "2025/5/6",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv25iuhy4",
+    "model": "Z790 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
+    "heldversion": "14.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -633,8 +644,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
-    "heldversion": "11.02",
-    "helddate": "2025/5/7",
+    "heldversion": "12.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -778,17 +789,6 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html",
     "heldversion": "12.03",
     "helddate": "2025/5/27",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv25iuhy4",
-    "model": "Z790 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "14.01",
-    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -1348,8 +1348,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20LiveMixer",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
-    "heldversion": "22.02",
-    "helddate": "2025/5/7",
+    "heldversion": "23.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -2343,17 +2343,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26aa39e",
-    "model": "Z790 Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "16.01",
-    "helddate": "2025/10/21",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2nu4nmv",
     "model": "Fatal1ty X470 Gaming-ITX/ac",
     "maker": "AMD",
@@ -2395,6 +2384,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv26aa39e",
+    "model": "Z790 Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "16.01",
+    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -2504,6 +2504,17 @@
     "link": "https://asrock.com/mb/intel/Z790%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RSD4/bios.html",
     "heldversion": "16.01",
+    "helddate": "2025/10/21",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv21ye4rp",
+    "model": "Z790 Pro RS",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html",
+    "heldversion": "18.01",
     "helddate": "2025/10/21",
     "release": null
   },
@@ -2813,17 +2824,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
     "heldversion": "3.10",
     "helddate": "2025/9/10",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv21ye4rp",
-    "model": "Z790 Pro RS",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Pro%20RS/bios.html",
-    "heldversion": "18.01",
-    "helddate": "2025/10/21",
     "release": null
   },
   {
@@ -3603,8 +3603,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
-    "heldversion": "9.02",
-    "helddate": "2025/5/7",
+    "heldversion": "10.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
