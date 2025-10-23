@@ -22,12 +22,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2d66otn",
-    "model": "B860M-X",
+    "id": "mobo_m68rfcv2q1pm0f",
+    "model": "B860M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
+    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
     "heldversion": "2.09",
     "helddate": "2025/10/22",
     "release": null
@@ -55,13 +55,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2q1pm0f",
-    "model": "B860M-X WiFi",
+    "id": "mobo_m68rfcv2pjubmf",
+    "model": "B860M-H2",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "2.09",
+    "link": "https://asrock.com/mb/intel/B860M-H2",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
+    "heldversion": "2.08",
     "helddate": "2025/10/22",
     "release": null
   },
@@ -116,8 +116,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html",
-    "heldversion": "8.04",
-    "helddate": "2025/5/9",
+    "heldversion": "9.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -127,8 +127,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi%20White/bios.html",
-    "heldversion": "5.04",
-    "helddate": "2025/5/9",
+    "heldversion": "6.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -138,8 +138,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4",
     "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4/bios.html",
-    "heldversion": "12.04",
-    "helddate": "2025/5/9",
+    "heldversion": "13.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -286,6 +286,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2d66otn",
+    "model": "B860M-X",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-X",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
+    "heldversion": "2.09",
+    "helddate": "2025/10/22",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2obgozc",
     "model": "B760 Pro RS WiFi",
     "maker": "Intel",
@@ -319,13 +330,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2pjubmf",
-    "model": "B860M-H2",
+    "id": "mobo_m68rfcv2q8vyo6",
+    "model": "B760M PG Riptide WiFi",
     "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-H2",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
-    "heldversion": "2.08",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html",
+    "heldversion": "8.01",
     "helddate": "2025/10/22",
     "release": null
   },
@@ -349,17 +360,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi/bios.html",
     "heldversion": "21.06",
     "helddate": "2025/5/16",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2q8vyo6",
-    "model": "B760M PG Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -396,13 +396,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27wsvci",
-    "model": "B760I Lightning WiFi",
+    "id": "mobo_m68rfcv243pgp9",
+    "model": "Z790 Lightning WiFi",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
-    "heldversion": "7.01",
+    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
+    "heldversion": "12.01",
     "helddate": "2025/10/22",
     "release": null
   },
@@ -424,8 +424,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
-    "heldversion": "18.03",
-    "helddate": "2025/5/6",
+    "heldversion": "19.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -638,17 +638,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv243pgp9",
-    "model": "Z790 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Lightning%20WiFi/bios.html",
-    "heldversion": "12.01",
-    "helddate": "2025/10/22",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv294tlmh",
     "model": "B760M PG Lightning/D4",
     "maker": "Intel",
@@ -789,6 +778,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html",
     "heldversion": "12.03",
     "helddate": "2025/5/27",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv27wsvci",
+    "model": "B760I Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B760I%20Lightning%20WiFi/bios.html",
+    "heldversion": "7.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -1205,8 +1205,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html",
-    "heldversion": "18.03",
-    "helddate": "2025/5/6",
+    "heldversion": "19.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -1339,17 +1339,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/30",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2tm6bvq",
-    "model": "Z790 LiveMixer",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20LiveMixer",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
-    "heldversion": "23.01",
-    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -1537,6 +1526,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2tm6bvq",
+    "model": "Z790 LiveMixer",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20LiveMixer",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20LiveMixer/bios.html",
+    "heldversion": "23.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
@@ -1986,8 +1986,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html",
-    "heldversion": "11.03",
-    "helddate": "2025/5/6",
+    "heldversion": "12.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -3597,17 +3597,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2uapm08",
-    "model": "Z790I Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
-    "heldversion": "10.01",
-    "helddate": "2025/10/22",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2fnno8h",
     "model": "B650I Lightning WiFi",
     "maker": "AMD",
@@ -3616,6 +3605,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/B650I%20Lightning%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2uapm08",
+    "model": "Z790I Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
+    "heldversion": "10.01",
+    "helddate": "2025/10/22",
     "release": null
   },
   {
