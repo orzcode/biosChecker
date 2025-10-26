@@ -3661,5 +3661,16 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_mh7cam9j5lawga",
+    "model": "X870E Taichi OCF",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "heldversion": "0.20",
+    "helddate": "2025/10/22",
+    "release": "2025/10/22"
   }
 ]
