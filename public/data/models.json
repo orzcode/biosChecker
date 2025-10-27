@@ -110,17 +110,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv21qggv5",
-    "model": "B760 Pro RS/D4 WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html",
-    "heldversion": "9.01",
-    "helddate": "2025/10/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2jse42i",
     "model": "B760 Pro RS/D4 WiFi White",
     "maker": "Intel",
@@ -374,6 +363,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv21qggv5",
+    "model": "B760 Pro RS/D4 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20WiFi/bios.html",
+    "heldversion": "9.01",
+    "helddate": "2025/10/23",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2tacbft",
     "model": "B760M-HDVP",
     "maker": "Intel",
@@ -415,17 +415,6 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
     "heldversion": "9.02",
     "helddate": "2025/10/15",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2iwem80",
-    "model": "Z790 Taichi Carrara",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -635,6 +624,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax%20R2.0/bios.html",
     "heldversion": "2.01",
     "helddate": "2025/6/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2iwem80",
+    "model": "Z790 Taichi Carrara",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Carrara",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Carrara/bios.html",
+    "heldversion": "19.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -877,6 +877,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
     "heldversion": "12.03",
     "helddate": "2025/6/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2jcw5rh",
+    "model": "Z790 Taichi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html",
+    "heldversion": "19.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -1196,17 +1207,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html",
     "heldversion": "6.01",
     "helddate": "2025/10/8",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2jcw5rh",
-    "model": "Z790 Taichi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -1980,17 +1980,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29zz48r",
-    "model": "Z790 Taichi Lite",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html",
-    "heldversion": "12.01",
-    "helddate": "2025/10/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2z5n6ce",
     "model": "B550M Pro RS",
     "maker": "AMD",
@@ -2021,6 +2010,17 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/3",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv29zz48r",
+    "model": "Z790 Taichi Lite",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi%20Lite/bios.html",
+    "heldversion": "12.01",
+    "helddate": "2025/10/23",
     "release": null
   },
   {
@@ -3509,6 +3509,17 @@
     "release": "2025/9/30"
   },
   {
+    "id": "mobo_mh7cam9j5lawga",
+    "model": "X870E Taichi OCF",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "heldversion": "1.02[Beta]",
+    "helddate": "2025/10/27",
+    "release": "2025/10/22"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3661,16 +3672,5 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
-  },
-  {
-    "id": "mobo_mh7cam9j5lawga",
-    "model": "X870E Taichi OCF",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "0.20",
-    "helddate": "2025/10/22",
-    "release": "2025/10/22"
   }
 ]
