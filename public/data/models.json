@@ -132,6 +132,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2l91wym",
+    "model": "Z690 Taichi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi/bios.html",
+    "heldversion": "22.01",
+    "helddate": "2025/10/28",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2l2v2rz",
     "model": "B760M Pro-A/D4 WiFi",
     "maker": "Intel",
@@ -341,17 +352,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2l91wym",
-    "model": "Z690 Taichi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi/bios.html",
-    "heldversion": "22.01",
-    "helddate": "2025/10/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2d2bopx",
     "model": "B760M PG Riptide",
     "maker": "Intel",
@@ -415,6 +415,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
     "heldversion": "9.02",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv27twpxt",
+    "model": "H670 Steel Legend",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H670%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/intel/H670%20Steel%20Legend/bios.html",
+    "heldversion": "18.01",
+    "helddate": "2025/10/28",
     "release": null
   },
   {
@@ -561,25 +572,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27twpxt",
-    "model": "H670 Steel Legend",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H670%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/intel/H670%20Steel%20Legend/bios.html",
-    "heldversion": "18.01",
-    "helddate": "2025/10/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv21y3xgh",
     "model": "Z690 Pro RS",
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z690%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Pro%20RS/bios.html",
-    "heldversion": "20.03",
-    "helddate": "2025/5/14",
+    "heldversion": "21.01",
+    "helddate": "2025/10/29",
     "release": null
   },
   {
@@ -913,17 +913,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2xgryhk",
-    "model": "H610TM-ITX",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610TM-ITX",
-    "biospage": "https://www.asrock.com/mb/intel/H610TM-ITX/bios.html",
-    "heldversion": "8.01",
-    "helddate": "2025/10/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ze3t5f",
     "model": "B850I Lightning WiFi",
     "maker": "AMD",
@@ -1207,6 +1196,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-H2M.2/bios.html",
     "heldversion": "6.01",
     "helddate": "2025/10/8",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2xgryhk",
+    "model": "H610TM-ITX",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610TM-ITX",
+    "biospage": "https://www.asrock.com/mb/intel/H610TM-ITX/bios.html",
+    "heldversion": "8.01",
+    "helddate": "2025/10/28",
     "release": null
   },
   {
@@ -2701,8 +2701,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition",
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Taichi%20Razer%20Edition/bios.html",
-    "heldversion": "21.06",
-    "helddate": "2025/5/16",
+    "heldversion": "22.01",
+    "helddate": "2025/10/29",
     "release": null
   },
   {
