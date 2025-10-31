@@ -440,17 +440,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv24fx62f",
-    "model": "Z690 Extreme",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Extreme",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme/bios.html",
-    "heldversion": "21.01",
-    "helddate": "2025/10/30",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2gewg0c",
     "model": "Z690 Steel Legend WiFi 6E",
     "maker": "Intel",
@@ -491,6 +480,17 @@
     "link": "https://asrock.com/mb/intel/Z690M-ITXax",
     "biospage": "https://www.asrock.com/mb/intel/Z690M-ITXax/bios.html",
     "heldversion": "21.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv214m6df",
+    "model": "H670M-ITX/ax R2.0",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H670M-ITXax%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax%20R2.0/bios.html",
+    "heldversion": "3.01",
     "helddate": "2025/10/30",
     "release": null
   },
@@ -583,6 +583,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv24fx62f",
+    "model": "Z690 Extreme",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Extreme",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme/bios.html",
+    "heldversion": "21.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2b18b1t",
     "model": "H670M Pro RS",
     "maker": "Intel",
@@ -616,13 +627,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv214m6df",
-    "model": "H670M-ITX/ax R2.0",
+    "id": "mobo_m68rfcv25ulbbb",
+    "model": "B660 Pro RS",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H670M-ITXax%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax%20R2.0/bios.html",
-    "heldversion": "3.01",
+    "link": "https://asrock.com/mb/intel/B660%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/B660%20Pro%20RS/bios.html",
+    "heldversion": "20.01",
     "helddate": "2025/10/30",
     "release": null
   },
@@ -649,17 +660,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv25ulbbb",
-    "model": "B660 Pro RS",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/B660%20Pro%20RS/bios.html",
-    "heldversion": "20.01",
-    "helddate": "2025/10/30",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv28lbfr1",
     "model": "B660M Steel Legend",
     "maker": "Intel",
@@ -682,17 +682,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2cbh3w5",
-    "model": "B660M PG Riptide",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M%20PG%20Riptide",
-    "biospage": "https://www.asrock.com/mb/intel/B660M%20PG%20Riptide/bios.html",
-    "heldversion": "6.02",
-    "helddate": "2022/11/29",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2f19io8",
     "model": "B660M Pro RS/D5",
     "maker": "Intel",
@@ -704,6 +693,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2cbh3w5",
+    "model": "B660M PG Riptide",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M%20PG%20Riptide",
+    "biospage": "https://www.asrock.com/mb/intel/B660M%20PG%20Riptide/bios.html",
+    "heldversion": "6.02",
+    "helddate": "2022/11/29",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv268x4l0",
     "model": "B660M Pro RS",
     "maker": "Intel",
@@ -711,6 +711,17 @@
     "link": "https://asrock.com/mb/intel/B660M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Pro%20RS/bios.html",
     "heldversion": "16.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2o9dxvb",
+    "model": "B660M-HDVP/D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M-HDVPD5",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5/bios.html",
+    "heldversion": "15.01",
     "helddate": "2025/10/30",
     "release": null
   },
@@ -734,17 +745,6 @@
     "biospage": "https://www.asrock.com/mb/intel/B660M%20Phantom%20Gaming%204/bios.html",
     "heldversion": "7.02",
     "helddate": "2022/11/28",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2o9dxvb",
-    "model": "B660M-HDVP/D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDVPD5",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2025/10/30",
     "release": null
   },
   {
@@ -825,12 +825,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2o5c5z8",
-    "model": "H610M-HDV",
+    "id": "mobo_m68rfcv2a3r18r",
+    "model": "H610M-HVS",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDV",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html",
+    "link": "https://asrock.com/mb/intel/H610M-HVS",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HVS/bios.html",
     "heldversion": "18.01",
     "helddate": "2025/10/30",
     "release": null
@@ -847,13 +847,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2a3r18r",
-    "model": "H610M-HVS",
+    "id": "mobo_m68rfcv2lbwni8",
+    "model": "H610M-X D5",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HVS",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HVS/bios.html",
-    "heldversion": "18.01",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html",
+    "heldversion": "5.01",
     "helddate": "2025/10/30",
     "release": null
   },
@@ -891,17 +891,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2lbwni8",
-    "model": "H610M-X D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-X%20D5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5/bios.html",
-    "heldversion": "5.01",
-    "helddate": "2025/10/30",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv228ywjr",
     "model": "B850M Steel Legend WiFi",
     "maker": "AMD",
@@ -910,6 +899,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2o5c5z8",
+    "model": "H610M-HDV",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDV",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDV/bios.html",
+    "heldversion": "18.01",
+    "helddate": "2025/10/30",
     "release": null
   },
   {
@@ -2838,17 +2838,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2rxwovj",
-    "model": "H610M-HDVP/D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDVPD5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5/bios.html",
-    "heldversion": "16.01",
-    "helddate": "2025/10/30",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2tjc3b0",
     "model": "B860 Steel Legend WiFi",
     "maker": "Intel",
@@ -2992,17 +2981,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27m51qx",
-    "model": "Z690 Steel Legend WiFi 6E/D5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html",
-    "heldversion": "21.01",
-    "helddate": "2025/10/30",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2s1nztq",
     "model": "Z890 Taichi",
     "maker": "Intel",
@@ -3047,6 +3025,28 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2rxwovj",
+    "model": "H610M-HDVP/D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVPD5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5/bios.html",
+    "heldversion": "16.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv27m51qx",
+    "model": "Z690 Steel Legend WiFi 6E/D5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html",
+    "heldversion": "21.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2n25xyb",
     "model": "Z890 Steel Legend WiFi",
     "maker": "Intel",
@@ -3088,17 +3088,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv227ppov",
-    "model": "Z690 Extreme WiFi 6E",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E",
-    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E/bios.html",
-    "heldversion": "21.01",
-    "helddate": "2025/10/30",
     "release": null
   },
   {
@@ -3221,17 +3210,6 @@
     "heldversion": "3.50",
     "helddate": "2025/9/26",
     "release": "2025/7/18"
-  },
-  {
-    "id": "mobo_m68rfcv293r4ao",
-    "model": "B660 Steel Legend",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html",
-    "heldversion": "15.01",
-    "helddate": "2025/10/30",
-    "release": null
   },
   {
     "id": "mobo_m68rfcv2wcsgy9",
@@ -3364,6 +3342,28 @@
     "heldversion": "3.50",
     "helddate": "2025/9/30",
     "release": "2025/5/22"
+  },
+  {
+    "id": "mobo_m68rfcv227ppov",
+    "model": "Z690 Extreme WiFi 6E",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E",
+    "biospage": "https://www.asrock.com/mb/intel/Z690%20Extreme%20WiFi%206E/bios.html",
+    "heldversion": "21.01",
+    "helddate": "2025/10/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv293r4ao",
+    "model": "B660 Steel Legend",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/intel/B660%20Steel%20Legend/bios.html",
+    "heldversion": "15.01",
+    "helddate": "2025/10/30",
+    "release": null
   },
   {
     "id": "mobo_mdz6cn0sz1eny4",
@@ -3515,8 +3515,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "1.02[Beta]",
-    "helddate": "2025/10/27",
+    "heldversion": "1.03",
+    "helddate": "2025/10/31",
     "release": "2025/10/22"
   },
   {
