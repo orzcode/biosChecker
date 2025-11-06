@@ -3449,8 +3449,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X600M-STX%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/X600M-STX%20R2.0/bios.html",
-    "heldversion": "1.20",
-    "helddate": "2025/7/21",
+    "heldversion": "1.23",
+    "helddate": "2025/11/6",
     "release": "2025/7/21"
   },
   {
@@ -3526,8 +3526,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X600TM-ITX",
     "biospage": "https://www.asrock.com/mb/amd/X600TM-ITX/bios.html",
-    "heldversion": "3.04",
-    "helddate": "2025/8/13",
+    "heldversion": "4.02",
+    "helddate": "2025/11/6",
     "release": null
   },
   {
