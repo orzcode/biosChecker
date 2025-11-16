@@ -3672,5 +3672,27 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_mi1cfwl9nip49m",
+    "model": "B860M-X Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-X%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5%20WiFi/bios.html",
+    "heldversion": "2.06",
+    "helddate": "2025/9/11",
+    "release": "2025/9/11"
+  },
+  {
+    "id": "mobo_mi1cg2xiie161l",
+    "model": "B860M-X Gen5",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-X%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5/bios.html",
+    "heldversion": "2.06",
+    "helddate": "2025/9/11",
+    "release": "2025/9/11"
   }
 ]
