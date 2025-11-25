@@ -7,7 +7,7 @@
     "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
     "heldversion": "2.08",
-    "helddate": "2025/10/2",
+    "helddate": "2025/10/15",
     "release": null
   },
   {
@@ -50,8 +50,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.21",
-    "helddate": "2025/9/17",
+    "heldversion": "1.22",
+    "helddate": "2025/11/25",
     "release": null
   },
   {
@@ -3410,17 +3410,6 @@
     "release": "2025/3/19"
   },
   {
-    "id": "mobo_mdz6dnwbosagxm",
-    "model": "A620M-C R2.0",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
-    "release": "2025/6/20"
-  },
-  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3430,6 +3419,17 @@
     "heldversion": "3.50",
     "helddate": "2025/9/26",
     "release": "2025/7/9"
+  },
+  {
+    "id": "mobo_mdz6dnwbosagxm",
+    "model": "A620M-C R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
+    "heldversion": "3.50",
+    "helddate": "2025/10/2",
+    "release": "2025/6/20"
   },
   {
     "id": "mobo_mfjbooaja1wrdd",
