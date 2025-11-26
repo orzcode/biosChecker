@@ -10,7 +10,7 @@ export async function scrapeWithPlaywright(url) {
   });
   const page = await browser.newPage();
 
-  console.log(`Playwrighting to ${url}...`);
+  console.log(`Playwrighting to ${url}`);
   try {
     await page.goto(url, { waitUntil: "domcontentloaded" });
   
