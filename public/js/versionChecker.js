@@ -41,10 +41,30 @@ export async function isNewerDate(heldDate, foundDate) {
 // return { version, releaseDate };
 
 export async function extractVersionInfo(extractor) {
-  // Get the first row from the first table
-  const firstRowSelector = "table:first-of-type tbody tr:first-child";
+  // Instead of assuming table:first-of-type, find the first table that
+  // actually contains BIOS release data based on its text content.
+  const findReleaseTableSelector = async () => {
+    // limit to first several tables to keep it cheap
+    for (let i = 0; i < 6; i++) {
+      const sel = `table:nth-of-type(${i + 1})`;
+      const txt = await extractor(sel);
+      if (!txt) continue;
+
+      // good indicators contained in ASRock BIOS tables
+      if (/Version\b/i.test(txt) && /\bDate\b/i.test(txt)) return sel;
+      if (/Global/i.test(txt) && /Download/i.test(txt)) return sel;
+    }
+
+    // fallback
+    return "table:first-of-type";
+  };
+
+  const tableSel = await findReleaseTableSelector();
+
+  const firstRowSelector = `${tableSel} tbody tr:first-child`;
   const versionSelector = `${firstRowSelector} td:first-child`;
   const dateSelector = `${firstRowSelector} td:nth-child(2)`;
+
 
   // Extract data using the provided extractor function
   const rawVersion = await extractor(versionSelector);
