@@ -8,10 +8,8 @@ import { sendToDiscord } from "./reporter.js";
 // Now relying on Playwright for all HTTP/DOM interactions
 import { chromium } from "playwright";
 
-
 // Un-comment / use this when their SSL certs are broken (rare)
 //process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
@@ -227,6 +225,7 @@ export async function scrapeMotherboards(fromKoyeb) {
     const newOrUpdatedModels = [];
 
     for (const model of newModels) {
+      // START: Logic moved inside TRY to ensure the entire process fails if the URL check fails
       try {
         const maker = model[2].toLowerCase().includes("intel")
           ? "Intel"
@@ -234,10 +233,29 @@ export async function scrapeMotherboards(fromKoyeb) {
         const modelName = model[0];
         const socketType = model[1];
 
+        // 1. Check for valid BIOS Page URL
         const biosPage = await checkBiosPage(maker, modelName);
         await delay(3000);
+
+        // 🛑 NEW CHECK: If no valid URL is found, we must throw an error
+        // to immediately jump to the CATCH block, skipping the newEntry creation.
+        if (!biosPage) {
+          throw new Error("No valid BIOS page URL found for this model.");
+        }
+
+        // 2. Scrape BIOS Version using the validated URL
+        // Because biosPage is guaranteed to be a non-null string here,
+        // the Playwright crash is avoided.
         const versionInfo = await scrapeBIOSInfo(biosPage);
 
+        // 🛑 NEW CHECK: If scrapeBIOSInfo returns an error object, skip the model.
+        if (versionInfo && versionInfo.error) {
+          throw new Error(
+            `BIOS scrape failed: ${versionInfo.error.message || versionInfo.error}`
+          );
+        }
+
+        // 3. IF ALL CHECKS PASS, create and push newEntry
         const newEntry = {
           id: await generateUniqueId("mobo_"),
           model: modelName,
@@ -246,7 +264,8 @@ export async function scrapeMotherboards(fromKoyeb) {
           link: `https://asrock.com/mb/${maker.toLowerCase()}/${modelName
             .replace(/\s/g, "%20")
             .replace(/\//g, "")}`,
-          biospage: biosPage || "Not found",
+          biospage: biosPage, // We know this is a valid string now
+          // Use ?. for safety, but since we successfully scraped, these should exist
           heldversion: versionInfo?.version,
           helddate: versionInfo?.releaseDate,
           release: versionInfo?.releaseDate,
@@ -256,12 +275,15 @@ export async function scrapeMotherboards(fromKoyeb) {
         existingModelMap.set(modelName, newEntry);
 
         console.log(
-          `Processed new model: ${modelName}, BIOS Page: ${
-            biosPage || "Not found"
-          }`
+          `Processed new model: ${modelName}, BIOS Page: ${biosPage}`
         );
         console.log("\n");
       } catch (err) {
+        // This CATCH block now handles:
+        // 1. Failure to find a BIOS Page (via the new 'if (!biosPage) throw' check)
+        // 2. Failure during scrapeBIOSInfo (via the new 'if (versionInfo.error) throw' check)
+        // 3. Other unexpected errors within the loop.
+
         console.warn(`Error while processing model ${model[0]}:`, err.message);
         summary.errors.push({ model: model[0], error: err.message });
         summary.summary.errors++;
