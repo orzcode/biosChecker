@@ -240,7 +240,7 @@ export async function scrapeMotherboards(fromKoyeb) {
         // 🛑 NEW CHECK: If no valid URL is found, we must throw an error
         // to immediately jump to the CATCH block, skipping the newEntry creation.
         if (!biosPage) {
-          throw new Error("No valid BIOS page URL found for this model.");
+          throw new Error(`No valid BIOS page URL found for ${modelName}`);
         }
 
         // 2. Scrape BIOS Version using the validated URL
