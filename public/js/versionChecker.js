@@ -1,21 +1,17 @@
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
-import { scrapeWithPlaywright } from "./playwright.js"; // This will now handle ALL scraping
+import { scrapeWithPlaywright } from "./playwright.js";
 import { sendToDiscord } from "./reporter.js";
 import { koyebToRepo } from "./koyebToGithub.js";
 
-// Removed: import fetch from "node-fetch";
-// Removed: import * as cheerio from "cheerio";
-// Removed: User-Agent list and getRandomUserAgent function
+// Un-comment / use this when their SSL certs are broken (rare)
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 /////////////////////////////////////////////
 // Helper function to add a delay
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-// Un-comment / use this when their SSL certs are broken (rare)
-//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Converts date strings like "2025/2/20" to Date objects for comparison
 export async function parseDate(dateStr) {
@@ -34,22 +30,6 @@ export async function isNewerDate(heldDate, foundDate) {
 }
 /////////////////////////////////////////////
 
-// The old extractVersionInfo is no longer needed as its logic is now contained
-// and executed within scrapeWithPlaywright (the Playwright file).
-// It is kept here as a comment to preserve the file's original structure context.
-
-/*
-// extractVersionInfo()
-// ...which then parses and cleans the relevant data (latest bios and date) and RETURNS these two:
-// console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
-// return { version, releaseDate };
-
-export async function extractVersionInfo(extractor) {
-  // ... (This function's logic is now executed within Playwright)
-}
-*/
-/////////////////////////////////////////////
-
 // scrapeBIOSInfo(url)
 // Now uses Playwright for ALL scraping, unifying the two previous paths.
 export async function scrapeBIOSInfo(url) {
@@ -66,7 +46,7 @@ export async function scrapeBIOSInfo(url) {
     console.error(
       `Playwright scraping error at ${url} : ${playwrightError.message}`
     );
-    return { error: playwrightError }; // Return the error object
+    return { error: playwrightError };
   }
 }
 
@@ -171,10 +151,8 @@ export async function updateModels(fromKoyeb) {
     }
 
     console.log("\n\n");
-    await delay(2000); // Keep original delay
+    await delay(2000);
   } // Retry failed URLs
-  // Note: These retries still use Playwright, which is now the default.
-  // If they failed once, they may fail again, but we maintain the retry logic.
 
   if (retryList.length > 0) {
     console.log("\n\n Retrying shortlist of failed URLs...");
@@ -196,7 +174,7 @@ export async function updateModels(fromKoyeb) {
         console.error(
           `Shortlist retry failed for ${mobo.model}: ${retryError.message}`
         );
-        retryScrapeError = retryError; // Store the specific retry error
+        retryScrapeError = retryError;
         retryScrapedInfo = null;
       }
 

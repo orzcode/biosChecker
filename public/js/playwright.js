@@ -5,7 +5,7 @@ export async function scrapeWithPlaywright(url) {
     try {
         console.log("Playwright initiated...");
         browser = await chromium.launch({
-            // Keeping settings optimized for headless environments
+            // Settings for headless environments
             channel: "chromium",
             headless: true,
             args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
@@ -15,20 +15,19 @@ export async function scrapeWithPlaywright(url) {
         console.log(`Playwrighting to ${url}`);
 
         // Increase timeout as Playwright is now handling bot protection challenges
-        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 }); 
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 }); 
 
-        // --- Start: Inlined extractVersionInfo Logic ---
+        // --- Inlined extractVersionInfo Logic ---
 
         // Selector for the version (first cell of the first row in the BIOS table)
         // This is used for waiting and extraction.
         const versionSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:first-child";
         
         // Selector for the date (second cell of the first row in the BIOS table)
-        // **CORRECTED:** Using pure CSS selector syntax.
         const dateSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:nth-child(2)"; 
 
         // Wait for the version cell to exist and be visible before attempting extraction
-        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 30000 });
+        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 20000 });
 
         // Extract data directly using Playwright's page.textContent()
         const rawVersion = await page.textContent(versionSelector);
@@ -42,10 +41,8 @@ export async function scrapeWithPlaywright(url) {
         const releaseDate = rawDate.trim();
 
         console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
-        
-        // --- End: Inlined extractVersionInfo Logic ---
 
-        return { version, releaseDate }; // Return the final object
+        return { version, releaseDate };
         
     } catch (err) {
         // If Playwright fails due to navigation issues, selector timeout, or extraction failure

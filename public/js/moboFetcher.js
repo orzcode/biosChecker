@@ -7,19 +7,16 @@ import { sendToDiscord } from "./reporter.js";
 
 // Now relying on Playwright for all HTTP/DOM interactions
 import { chromium } from "playwright";
-// Note: scrapeWithPlaywright is imported, but we are also using raw Playwright here
-// to efficiently get the list of models without opening a new browser for every check.
 
-// Removed: import fetch from "node-fetch";
-// Removed: import * as cheerio from "cheerio";
+
+// Un-comment / use this when their SSL certs are broken (rare)
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 
 // Delay function to pause execution for a specified time
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-// Un-comment / use this when their SSL certs are broken (rare)
-//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 //script to fetch motherboard product info from ASRock website
 //run this casually, as it just checks for newly released models, not bios versions
@@ -28,8 +25,6 @@ async function delay(ms) {
 //and very rare edge case of some bioses being "bios1.html" or "bios2.html",
 //I had to implement the checks below.
 //At the time of writing, this is only for B450M Steel Legend
-
-// Note: Removed redundant import of scrapeWithPlaywright as it is used directly in checkBiosPage.
 
 // Playwright instance outside the function for efficiency in sequential checks
 let browserInstance;
@@ -70,7 +65,7 @@ async function checkBiosPage(maker, modelName) {
           await page.goto(testUrl, {
             waitUntil: "domcontentloaded",
             timeout: 15000,
-          }); // Check for the BIOS table content using a robust selector
+          });
 
           const biosTableExists = await page
             .locator(
@@ -117,7 +112,7 @@ export async function scrapeMotherboards(fromKoyeb) {
     },
     details: [],
     errors: [],
-  }; // --- Playwright browser initialization for efficiency in model list fetching ---
+  };
 
   let browser;
   try {
@@ -127,26 +122,41 @@ export async function scrapeMotherboards(fromKoyeb) {
       args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
     });
     const page = await browser.newPage();
-    const url = "https://www.asrock.com/mb/"; // 1. Scrape the allmodels array using Playwright
+    const url = "https://www.asrock.com/mb/";
 
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 }); // We use page.evaluate to run JavaScript directly in the browser context
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
 
     const allmodels = await page.evaluate(() => {
-      // Find the script tag content containing 'allmodels='
+      // Check if the variable is defined globally after the script runs
+      // This is the simplest and most robust way if the script is loaded
+      if (typeof allmodels === "object" && Array.isArray(allmodels)) {
+        // We must sanitize the array data here because it contains single quotes,
+        // which JavaScript handles, but standard JSON.stringify/parse might struggle with
+        // if you were passing it outside the evaluation context incorrectly.
+        // Since it's a JS object here, we stringify it *cleanly* then parse it back,
+        // ensuring a clean return value that doesn't rely on string matching.
+        // However, the array elements themselves need to be clean.
+        // Simplest approach: Return the variable if it exists globally
+        return allmodels;
+      } // Fallback: If not global, try finding the script content again (less reliable)
+
       const scriptContent = Array.from(document.querySelectorAll("script"))
         .map((el) => el.textContent)
         .find((script) => script.includes("allmodels="));
 
-      if (!scriptContent) return null;
+      if (!scriptContent) return null; // Use the regex to extract the array string
 
-      const match = scriptContent.match(/allmodels=(\[[^\]]*\])/);
-      if (!match) return null; // The matched string still contains single quotes, which JSON.parse requires replacement for.
+      const match = scriptContent.match(/allmodels\s*=\s*(\[[^\]]*\])/i);
+      if (!match) return null; // The matched string still contains single quotes, replace them for JSON.parse
 
       const jsonString = match[1].trim().replace(/'/g, '"');
       try {
         return JSON.parse(jsonString);
       } catch (e) {
-        console.error("Failed to parse allmodels JSON in browser context:", e);
+        console.error(
+          "Failed to parse allmodels JSON in browser context (fallback):",
+          e
+        );
         return null;
       }
     });
@@ -156,12 +166,11 @@ export async function scrapeMotherboards(fromKoyeb) {
       console.error("Failed to find or parse allmodels array in the page.");
       summary.errors.push({
         error: "Failed to find allmodels array in the page.",
-      }); // The browser is closed in the final catch block if an error occurs below
+      });
       throw new Error("Initialization failed: allmodels not found.");
     } // 2. Continuation of logic after model list retrieval
-    // First, get existing models from the database
 
-    const existingModels = await getMobos(); // Then, load the current models.json to prevent overwriting existing data
+    const existingModels = await getMobos();
 
     let currentModelsJson = [];
     try {
@@ -176,14 +185,13 @@ export async function scrapeMotherboards(fromKoyeb) {
         "Could not load models.json, starting with empty list:",
         error
       );
-    } // Create a combined map of existing models with models.json as the primary source
-    // This ensures we don't overwrite any existing BIOS page values
+    }
 
-    const existingModelMap = new Map(); // First add all models from models.json
+    const existingModelMap = new Map();
 
     for (const model of currentModelsJson) {
       existingModelMap.set(model.model, model);
-    } // Then add any models from the database that aren't in models.json
+    }
 
     for (const model of existingModels) {
       if (!existingModelMap.has(model.model)) {
@@ -191,11 +199,11 @@ export async function scrapeMotherboards(fromKoyeb) {
       }
     }
 
-    const relevantSockets = ["1700", "1851", "am4", "am5"]; // Filter to only get new models with relevant sockets
+    const relevantSockets = ["1700", "1851", "am4", "am5"];
 
     const newModels = allmodels.filter((model) => {
       // Check if it has a relevant socket
-      if (!relevantSockets.includes(model[1].toLowerCase())) return false; // Check if it already exists in our combined map
+      if (!relevantSockets.includes(model[1].toLowerCase())) return false;
 
       const modelName = model[0];
       return !existingModelMap.has(modelName);
@@ -213,11 +221,10 @@ export async function scrapeMotherboards(fromKoyeb) {
       console.log("No new models detected.");
     }
 
-    summary.summary.total = existingModelMap.size; // Change to existingModelMap.size
+    summary.summary.total = existingModelMap.size;
     summary.summary.success = newModels.length;
 
-    const newOrUpdatedModels = []; // Only save these models
-    // Process only the new models
+    const newOrUpdatedModels = [];
 
     for (const model of newModels) {
       try {
@@ -225,10 +232,10 @@ export async function scrapeMotherboards(fromKoyeb) {
           ? "Intel"
           : "AMD";
         const modelName = model[0];
-        const socketType = model[1]; // Use the local checkBiosPage function
+        const socketType = model[1];
 
         const biosPage = await checkBiosPage(maker, modelName);
-        await delay(3000); // Use the main scraping function (which is now Playwright-only)
+        await delay(3000);
         const versionInfo = await scrapeBIOSInfo(biosPage);
 
         const newEntry = {
@@ -261,17 +268,14 @@ export async function scrapeMotherboards(fromKoyeb) {
       }
 
       await delay(5000);
-    } // Create the final allEntries array from the map values
+    }
 
-    const allEntries = Array.from(existingModelMap.values()); // Basically - maps out models.json & DB data with NEW models
-    // and removes any duplicates, to prevent over-writing existing data
-    // Useful where it bugs out and overwrites with 'biospage: not found'
-    // Save only if there are new models
+    const allEntries = Array.from(existingModelMap.values());
     if (newOrUpdatedModels.length > 0) {
-      await saveMobos(newOrUpdatedModels); // Save to database
+      await saveMobos(newOrUpdatedModels);
       console.log(
         `Saved ${newOrUpdatedModels.length} new models to the database.`
-      ); // Display table of added models
+      );
 
       console.log("New models added:");
       console.table(newOrUpdatedModels, [
@@ -280,7 +284,7 @@ export async function scrapeMotherboards(fromKoyeb) {
         "maker",
         "heldversion",
         "helddate",
-      ]); // Save to models.json
+      ]);
 
       try {
         await fs.writeFile(
@@ -293,21 +297,20 @@ export async function scrapeMotherboards(fromKoyeb) {
         summary.errors.push({
           error: `Failed to save models.json: ${error.message}`,
         });
-      } // Send report to Discord
+      }
 
       summary.details = newOrUpdatedModels.map((model) => ({
         Maker: model.maker,
-        Model: model.model, // 'BIOS Page': model.biospage ? `[Link](<${model.biospage}>)` : "Not found"
-        // temporarily disabled due to codeblock breaking it
+        Model: model.model,
       }));
-      await sendToDiscord(summary, "moboFetcher"); //ONLY USED IN KOYEB TASK!
+      await sendToDiscord(summary, "moboFetcher");
 
       if (fromKoyeb === "fromKoyeb") {
-        koyebToRepo(); // Push changes to GitHub
+        koyebToRepo();
         console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-      } //ONLY USED IN KOYEB TASK!
+      }
     } else {
-      console.log("No new models found. Database and JSON remain unchanged."); // Send empty report to Discord (optional)
+      console.log("No new models found. Database and JSON remain unchanged.");
 
       await sendToDiscord(summary, "moboFetcher");
     }
@@ -318,7 +321,7 @@ export async function scrapeMotherboards(fromKoyeb) {
   } catch (error) {
     console.error("Error scraping motherboards:", error);
     summary.errors.push({ error: error.message });
-    summary.summary.errors++; // Send error report to Discord
+    summary.summary.errors++;
 
     await sendToDiscord(summary, "moboFetcher");
 
