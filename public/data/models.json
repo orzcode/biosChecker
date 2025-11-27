@@ -3694,5 +3694,29 @@
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
     "release": null
+  },
+  {
+    "id": "mobo_migqiz6vgplq21",
+    "model": "Q870TM-ITX/TPM/TB4/DP",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Q870TM-ITXTPMTB4DP",
+    "biospage": "Not found"
+  },
+  {
+    "id": "mobo_migqj9lfnuqxbz",
+    "model": "B860TM-ITX/TPM/TB4/DP",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860TM-ITXTPMTB4DP",
+    "biospage": "Not found"
+  },
+  {
+    "id": "mobo_migqjjil0lgl6k",
+    "model": "H810TM-ITX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810TM-ITX",
+    "biospage": "Not found"
   }
 ]
