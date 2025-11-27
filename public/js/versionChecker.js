@@ -1,11 +1,12 @@
-import fetch from "node-fetch";
-import * as cheerio from "cheerio";
-
 import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
-import { scrapeWithPlaywright } from "./playwright.js";
+import { scrapeWithPlaywright } from "./playwright.js"; // This will now handle ALL scraping
 import { sendToDiscord } from "./reporter.js";
 import { koyebToRepo } from "./koyebToGithub.js";
+
+// Removed: import fetch from "node-fetch";
+// Removed: import * as cheerio from "cheerio";
+// Removed: User-Agent list and getRandomUserAgent function
 
 /////////////////////////////////////////////
 // Helper function to add a delay
@@ -32,100 +33,46 @@ export async function isNewerDate(heldDate, foundDate) {
   return foundDateTime > heldDateTime;
 }
 /////////////////////////////////////////////
-// scrapeBiosInfo(url)
-// takes a bios page url, decides whether to use Playwright or normal Fetch based on the URL (checks if it's PG subdomain or not), scrapes the text, and passes it to...
 
+// The old extractVersionInfo is no longer needed as its logic is now contained
+// and executed within scrapeWithPlaywright (the Playwright file).
+// It is kept here as a comment to preserve the file's original structure context.
+
+/*
 // extractVersionInfo()
 // ...which then parses and cleans the relevant data (latest bios and date) and RETURNS these two:
 // console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
 // return { version, releaseDate };
 
 export async function extractVersionInfo(extractor) {
-  // Get the first row from the first table
-  const firstRowSelector = "table:first-of-type tbody tr:first-child";
-  const versionSelector = `${firstRowSelector} td:first-child`;
-  const dateSelector = `${firstRowSelector} td:nth-child(2)`;
-
-  // Extract data using the provided extractor function
-  const rawVersion = await extractor(versionSelector);
-  const rawDate = await extractor(dateSelector);
-
-  if (!rawVersion || !rawDate) {
-    throw new Error("Version or date information not found.");
-  }
-
-  const version = rawVersion.trim();
-  const releaseDate = rawDate.trim();
-
-  console.log(`Version found: ${version}, Release date found: ${releaseDate}`);
-  return { version, releaseDate };
+  // ... (This function's logic is now executed within Playwright)
 }
+*/
 /////////////////////////////////////////////
 
-// User-Agent list and random selection function
-const userAgents = [
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15",
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
-  "Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
-  "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/120.0.2210.144 Safari/537.36",
-  // Add more User-Agent strings here...
-];
-
-function getRandomUserAgent() {
-  return userAgents[Math.floor(Math.random() * userAgents.length)];
-}
-
+// scrapeBIOSInfo(url)
+// Now uses Playwright for ALL scraping, unifying the two previous paths.
 export async function scrapeBIOSInfo(url) {
-  // Determine the subdomain (www or pg)
-  const isPGSubdomain = url.includes("pg.");
-
-  if (isPGSubdomain) {
-    // Use Playwright for pg subdomains
-    console.log(`Using Playwright to scrape: ${url}`);
-    try {
-      return await scrapeWithPlaywright(url);
-    } catch (playwrightError) {
-      // If playwright throws, catch it and return the error object
-      console.error(
-        `Playwright scraping error at ${url} : ${playwrightError.message}`
-      );
-      return { error: playwrightError }; // Return the error object
-    }
-  } else {
-    // Use Fetch and Cheerio for www subdomains
-    console.log(`Using Fetch to scrape: ${url}`);
-    try {
-      const response = await fetch(url, {
-        headers: {
-          "User-Agent": getRandomUserAgent(), // Add random User-Agent
-          //"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const html = await response.text();
-      const $ = cheerio.load(html);
-
-      // Create a Cheerio-specific extractor function
-      const cheerioExtractor = (selector) => $(selector).text();
-
-      return await extractVersionInfo(cheerioExtractor);
-    } catch (err) {
-      console.error(`Fetch scraping error at ${url} : ${err.message}`);
-      return { error: err }; // Return object containing the error
-    }
+  // Previously, this logic contained the choice between Fetch/Cheerio and Playwright.
+  // Now, we rely exclusively on the Playwright service.
+  console.log(`Using Playwright to scrape: ${url}`);
+  try {
+    // The scrapeWithPlaywright function is now responsible for navigating,
+    // waiting for content, scraping the version/date, and returning the result object:
+    // { version: string, releaseDate: string }
+    return await scrapeWithPlaywright(url);
+  } catch (playwrightError) {
+    // If playwright throws, catch it and return the error object
+    console.error(
+      `Playwright scraping error at ${url} : ${playwrightError.message}`
+    );
+    return { error: playwrightError }; // Return the error object
   }
 }
 
 // Re-usable function to handle the update logic
 // Created due to retry shortlist usage
-async function processUpdate(
-  //Note - these are UPDATED versions.
+async function processUpdate( //Note - these are UPDATED versions.
   mobo,
   version,
   releaseDate,
@@ -134,9 +81,7 @@ async function processUpdate(
 ) {
   if (await isNewerDate(mobo.helddate, releaseDate)) {
     const oldVersion = mobo.heldversion || "none";
-    const oldDate = mobo.helddate || "none";
-    //This was added to ensure it reports the update properly
-
+    const oldDate = mobo.helddate || "none"; //This was added to ensure it reports the update properly
     mobo.heldversion = version;
     mobo.helddate = releaseDate;
 
@@ -185,6 +130,7 @@ export async function updateModels(fromKoyeb) {
     let scrapeError = null; // Add a variable to store the specific error
 
     try {
+      // All pages now attempt to use Playwright first
       scrapedInfo = await scrapeBIOSInfo(biospage);
 
       if (scrapedInfo && scrapedInfo.error) {
@@ -198,19 +144,17 @@ export async function updateModels(fromKoyeb) {
     }
 
     if (!scrapedInfo) {
-      // Initial attempt failed
+      // Initial attempt failed (due to Playwright error, or a timeout in the Playwright function)
       const errorMessage = scrapeError
         ? scrapeError.message
         : "Unknown scraping failure";
 
       console.error(
         `Initial attempt failed for ${model}: ${errorMessage}. Adding to retry list.`
-      );
+      ); // Store the specific error message for potential final reporting
 
-      // Store the specific error message for potential final reporting
-      firstAttemptErrors.set(model, errorMessage);
+      firstAttemptErrors.set(model, errorMessage); // Add the whole mobo object to retry list
 
-      // Add the whole mobo object to retry list
       retryList.push(mobo);
     } else {
       // Initial attempt succeeded
@@ -220,18 +164,18 @@ export async function updateModels(fromKoyeb) {
         `Found version: ${version} (date: ${releaseDate}) | Current: ${
           heldversion || "none"
         } (date: ${helddate || "none"})`
-      );
-
-      // processUpdate modifies mobo object if needed and adds to updatedMobos
+      ); // processUpdate modifies mobo object if needed and adds to updatedMobos
       // It also increments summary.summary.success if an update occurs.
+
       await processUpdate(mobo, version, releaseDate, updatedMobos, summary);
     }
 
     console.log("\n\n");
     await delay(2000); // Keep original delay
-  }
+  } // Retry failed URLs
+  // Note: These retries still use Playwright, which is now the default.
+  // If they failed once, they may fail again, but we maintain the retry logic.
 
-  // Retry failed URLs
   if (retryList.length > 0) {
     console.log("\n\n Retrying shortlist of failed URLs...");
 
@@ -262,9 +206,8 @@ export async function updateModels(fromKoyeb) {
 
         const { version, releaseDate } = retryScrapedInfo;
 
-        await processUpdate(mobo, version, releaseDate, updatedMobos, summary);
+        await processUpdate(mobo, version, releaseDate, updatedMobos, summary); // If retry succeeded, remove it from the map of initial errors
 
-        // If retry succeeded, remove it from the map of initial errors
         firstAttemptErrors.delete(mobo.model);
       } else {
         // Retry FAILED
@@ -275,9 +218,8 @@ export async function updateModels(fromKoyeb) {
 
         console.error(
           `Retry also failed for ${mobo.model}: ${finalErrorMessage}. Logging final error.`
-        );
+        ); // *** Add to FINAL error summary ONLY if retry also fails ***
 
-        // *** Add to FINAL error summary ONLY if retry also fails ***
         summary.errors.push({ model: mobo.model, error: finalErrorMessage }); // Use the specific message
         summary.summary.errors++;
       }
@@ -349,13 +291,13 @@ export async function updateModels(fromKoyeb) {
 
   console.log("BIOS version checks complete - proceeding to notifycheck");
 
-try {
-  await sendToDiscord(summary, "versionChecker");
-  await new Promise(r => setTimeout(r, 3000));
-  //Added a pause so it doesn't get mixed up with the next notifier
-} catch (e) {
-  // Silent error handling
-}
+  try {
+    await sendToDiscord(summary, "versionChecker");
+    await new Promise((r) => setTimeout(r, 3000)); //Added a pause so it doesn't get mixed up with the next notifier
+  } catch (e) {
+    // Silent error handling
+  }
 
   return summary;
 }
+updateModels();
