@@ -1,5 +1,4 @@
-import { chromium } from "playwright";
-// Removed: import { extractVersionInfo } from "./versionChecker.js"; // Logic moved below
+import { chromium } from "playwright"; 
 
 export async function scrapeWithPlaywright(url) {
     let browser;
@@ -20,17 +19,16 @@ export async function scrapeWithPlaywright(url) {
 
         // --- Start: Inlined extractVersionInfo Logic ---
 
-        // Wait for the BIOS table to be visible (critical for dynamic content/bot challenges)
-        // We use a robust selector to wait for the first row's version cell
+        // Selector for the version (first cell of the first row in the BIOS table)
+        // This is used for waiting and extraction.
         const versionSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:first-child";
         
-        // Wait for the element to exist and be visible before attempting extraction
-        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 30000 });
+        // Selector for the date (second cell of the first row in the BIOS table)
+        // **CORRECTED:** Using pure CSS selector syntax.
+        const dateSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:nth-child(2)"; 
 
-        // Selectors for version and date
-        const dateSelector = `${versionSelector}/../td:nth-child(2)`; 
-        // Note: Using XPath relative to the version selector for robustness, or CSS if preferred:
-        // const dateSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:nth-child(2)";
+        // Wait for the version cell to exist and be visible before attempting extraction
+        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 30000 });
 
         // Extract data directly using Playwright's page.textContent()
         const rawVersion = await page.textContent(versionSelector);
