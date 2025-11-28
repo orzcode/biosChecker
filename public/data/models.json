@@ -11,6 +11,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2iumz8q",
+    "model": "B860M Pro-A WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
+    "heldversion": "1.22",
+    "helddate": "2025/11/25",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2q1pm0f",
     "model": "B860M-X WiFi",
     "maker": "Intel",
@@ -385,17 +396,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2iumz8q",
-    "model": "B860M Pro-A WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/11/25",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv243pgp9",
     "model": "Z790 Lightning WiFi",
     "maker": "Intel",
@@ -600,8 +600,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H670M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/H670M%20Pro%20RS/bios.html",
-    "heldversion": "16.04",
-    "helddate": "2025/5/16",
+    "heldversion": "18.01",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -732,8 +732,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M-HDV",
     "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
-    "heldversion": "19.03",
-    "helddate": "2025/5/28",
+    "heldversion": "20.01",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -875,8 +875,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-ITXac",
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/6/2",
+    "heldversion": "13.02",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -2189,17 +2189,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2xbr8z8",
-    "model": "B860I WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/11/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2butk5y",
     "model": "Fatal1ty X370 Professional Gaming",
     "maker": "AMD",
@@ -2217,8 +2206,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
-    "heldversion": "9.03",
-    "helddate": "2025/5/8",
+    "heldversion": "10.01",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -2420,6 +2409,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2xbr8z8",
+    "model": "B860I WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
+    "heldversion": "3.11",
+    "helddate": "2025/11/26",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv28w7oje",
     "model": "A320M Pro4 R2.0",
     "maker": "AMD",
@@ -2552,13 +2552,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv20vusni",
-    "model": "Z890 Taichi Lite",
+    "id": "mobo_m68rfcv2ove8a3",
+    "model": "Z890 Taichi OCF",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "3.12",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
+    "heldversion": "3.14",
     "helddate": "2025/11/26",
     "release": null
   },
@@ -2695,6 +2695,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv20vusni",
+    "model": "Z890 Taichi Lite",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
+    "heldversion": "3.12",
+    "helddate": "2025/11/26",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2ynbm5k",
     "model": "Z890 Pro RS WiFi",
     "maker": "Intel",
@@ -2805,17 +2816,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ove8a3",
-    "model": "Z890 Taichi OCF",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
-    "heldversion": "3.14",
-    "helddate": "2025/11/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv29ehcht",
     "model": "Z690 Taichi Razer Edition",
     "maker": "Intel",
@@ -2835,6 +2835,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
     "heldversion": "3.11",
     "helddate": "2025/9/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv282gxg6",
+    "model": "Z890 LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "3.09",
+    "helddate": "2025/11/26",
     "release": null
   },
   {
@@ -2926,17 +2937,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv282gxg6",
-    "model": "Z890 LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.09",
-    "helddate": "2025/11/26",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2stml1z",
     "model": "B860 LiveMixer WiFi",
     "maker": "Intel",
@@ -2944,6 +2944,17 @@
     "link": "https://asrock.com/mb/intel/B860%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html",
     "heldversion": "2.07",
+    "helddate": "2025/11/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2s1nztq",
+    "model": "Z890 Taichi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
+    "heldversion": "3.12",
     "helddate": "2025/11/26",
     "release": null
   },
@@ -2956,6 +2967,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "1.22",
     "helddate": "2025/9/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2n25xyb",
+    "model": "Z890 Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "3.11",
+    "helddate": "2025/11/26",
     "release": null
   },
   {
@@ -2978,17 +3000,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2s1nztq",
-    "model": "Z890 Taichi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/11/26",
     "release": null
   },
   {
@@ -3044,17 +3055,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20Steel%20Legend%20WiFi%206ED5/bios.html",
     "heldversion": "21.01",
     "helddate": "2025/10/30",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2n25xyb",
-    "model": "Z890 Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/11/26",
     "release": null
   },
   {
@@ -3520,23 +3520,23 @@
     "release": "2025/7/21"
   },
   {
-    "id": "mobo_mi1cfwl9nip49m",
-    "model": "B860M-X Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5%20WiFi/bios.html",
-    "heldversion": "2.09",
-    "helddate": "2025/11/25",
-    "release": "2025/9/11"
-  },
-  {
     "id": "mobo_mi1cg2xiie161l",
     "model": "B860M-X Gen5",
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20Gen5",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5/bios.html",
+    "heldversion": "2.09",
+    "helddate": "2025/11/25",
+    "release": "2025/9/11"
+  },
+  {
+    "id": "mobo_mi1cfwl9nip49m",
+    "model": "B860M-X Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-X%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5%20WiFi/bios.html",
     "heldversion": "2.09",
     "helddate": "2025/11/25",
     "release": "2025/9/11"
@@ -3561,28 +3561,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B450Mac/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2nin551",
-    "model": "B860M Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.04",
-    "helddate": "2025/11/26",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2mpeflj",
-    "model": "Z890 Taichi AQUA",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/11/26",
     "release": null
   },
   {
@@ -3648,6 +3626,28 @@
     "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
     "heldversion": "3.09",
+    "helddate": "2025/11/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2nin551",
+    "model": "B860M Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "2.04",
+    "helddate": "2025/11/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2mpeflj",
+    "model": "Z890 Taichi AQUA",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
+    "heldversion": "3.12",
     "helddate": "2025/11/26",
     "release": null
   },
