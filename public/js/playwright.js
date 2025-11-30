@@ -1,7 +1,5 @@
 import { chromium } from "playwright"; 
 
-import { chromium } from "playwright"; 
-
 const MAX_RETRIES = 3; // Define the maximum number of attempts
 
 export async function scrapeWithPlaywright(url) {
