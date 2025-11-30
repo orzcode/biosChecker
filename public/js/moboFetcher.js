@@ -83,7 +83,7 @@ async function checkBiosPage(maker, modelName) {
           // Page navigation or selector check failed (e.g., 404 or timeout)
           console.log(`Playwright failed for: ${testUrl} (${error.message})`);
         }
-        await delay(4000); // Shorter delay since we are using a single browser instance
+        await delay(3000); // Shorter delay since we are using a single browser instance
       }
     }
 
@@ -235,7 +235,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
         // 1. Check for valid BIOS Page URL
         const biosPage = await checkBiosPage(maker, modelName);
-        await delay(4000);
+        await delay(3000);
 
         // 🛑 NEW CHECK: If no valid URL is found, we must throw an error
         // to immediately jump to the CATCH block, skipping the newEntry creation.
@@ -289,7 +289,7 @@ export async function scrapeMotherboards(fromKoyeb) {
         summary.summary.errors++;
       }
 
-      await delay(4000);
+      await delay(3000);
     }
 
     const allEntries = Array.from(existingModelMap.values());

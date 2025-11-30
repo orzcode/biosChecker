@@ -151,7 +151,7 @@ export async function updateModels(fromKoyeb) {
     }
 
     console.log("\n\n");
-    await delay(4000);
+    await delay(3000);
   } // Retry failed URLs
 
   if (retryList.length > 0) {
@@ -187,21 +187,51 @@ export async function updateModels(fromKoyeb) {
         await processUpdate(mobo, version, releaseDate, updatedMobos, summary); // If retry succeeded, remove it from the map of initial errors
 
         firstAttemptErrors.delete(mobo.model);
-      } else {
+} else {
         // Retry FAILED
         // Get the specific error message, or fallback to the initial attempt's error
         const finalErrorMessage = retryScrapeError
           ? retryScrapeError.message
           : firstAttemptErrors.get(mobo.model) || "Unknown failure on retry";
 
+        // This console.error uses the full error for the GitHub run log
         console.error(
           `Retry also failed for ${mobo.model}: ${finalErrorMessage}. Logging final error.`
-        ); // *** Add to FINAL error summary ONLY if retry also fails ***
+        ); 
 
-        summary.errors.push({ model: mobo.model, error: finalErrorMessage }); // Use the specific message
+        // --- 🛑 ENHANCED DISCORD ERROR FORMATTING 🛑 ---
+        let discordErrorMessage;
+        
+        // 1. Check for specific known errors and provide concise message
+        if (finalErrorMessage.includes('Timeout') && finalErrorMessage.includes('exceeded')) {
+            discordErrorMessage = `timeout exceeded`;
+        } else if (finalErrorMessage.includes('ERR_TOO_MANY_REDIRECTS')) {
+            discordErrorMessage = `too many redirects`;
+        } else if (finalErrorMessage.includes('net::ERR_NAME_NOT_RESOLVED')) {
+            discordErrorMessage = `DNS error/link dead`;
+        } else if (finalErrorMessage.includes('Version or date information not found')) {
+            // This is the error we throw internally when selectors are empty
+            discordErrorMessage = `table data missing`;
+        } else if (finalErrorMessage.includes('page.waitForSelector')) {
+             // Generic failure during selector wait (could be rendering issue or unexpected content)
+             discordErrorMessage = `content check failed`;
+        } else {
+            // 2. Generic fallback for unknown errors (Agnostic approach)
+            // We use the start of the message, as the full Playwright error is often a huge wad of text.
+            const shortMessage = finalErrorMessage.split('\n')[0].trim();
+            discordErrorMessage = `unexpected error: ${shortMessage.substring(0, 50)}...`;
+        }
+        
+        // 3. Push the abbreviated error to the summary (Discord)
+        summary.errors.push({ 
+            model: mobo.model, 
+            error: discordErrorMessage 
+        }); 
+        // --- 🛑 END ENHANCED DISCORD ERROR FORMATTING 🛑 ---
+        
         summary.summary.errors++;
       }
-      await delay(4000);
+      await delay(3000);
     }
   }
 
