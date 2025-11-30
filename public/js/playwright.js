@@ -15,7 +15,7 @@ export async function scrapeWithPlaywright(url) {
         console.log(`Playwrighting to ${url}`);
 
         // Increase timeout as Playwright is now handling bot protection challenges
-        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 }); 
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 }); 
 
         // --- Inlined extractVersionInfo Logic ---
 
@@ -27,7 +27,7 @@ export async function scrapeWithPlaywright(url) {
         const dateSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:nth-child(2)"; 
 
         // Wait for the version cell to exist and be visible before attempting extraction
-        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 20000 });
+        await page.waitForSelector(versionSelector, { state: 'visible', timeout: 30000 });
 
         // Extract data directly using Playwright's page.textContent()
         const rawVersion = await page.textContent(versionSelector);

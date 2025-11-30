@@ -151,7 +151,7 @@ export async function updateModels(fromKoyeb) {
     }
 
     console.log("\n\n");
-    await delay(2000);
+    await delay(4000);
   } // Retry failed URLs
 
   if (retryList.length > 0) {
@@ -201,7 +201,7 @@ export async function updateModels(fromKoyeb) {
         summary.errors.push({ model: mobo.model, error: finalErrorMessage }); // Use the specific message
         summary.summary.errors++;
       }
-      await delay(2000);
+      await delay(4000);
     }
   }
 

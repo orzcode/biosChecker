@@ -62,14 +62,14 @@ async function checkBiosPage(maker, modelName) {
           // Use Playwright for ALL checks now
           await page.goto(testUrl, {
             waitUntil: "domcontentloaded",
-            timeout: 15000,
+            timeout: 30000,
           });
 
           const biosTableExists = await page
             .locator(
               "table:has(th:text-is('Version')) tbody tr:first-child td:first-child"
             )
-            .isVisible({ timeout: 5000 });
+            .isVisible({ timeout: 30000 });
 
           if (biosTableExists) {
             console.log(`Valid BIOS page found with Playwright: ${testUrl}`);
@@ -83,7 +83,7 @@ async function checkBiosPage(maker, modelName) {
           // Page navigation or selector check failed (e.g., 404 or timeout)
           console.log(`Playwright failed for: ${testUrl} (${error.message})`);
         }
-        await delay(1000); // Shorter delay since we are using a single browser instance
+        await delay(4000); // Shorter delay since we are using a single browser instance
       }
     }
 
@@ -122,7 +122,7 @@ export async function scrapeMotherboards(fromKoyeb) {
     const page = await browser.newPage();
     const url = "https://www.asrock.com/mb/";
 
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
 
     const allmodels = await page.evaluate(() => {
       // Check if the variable is defined globally after the script runs
@@ -235,7 +235,7 @@ export async function scrapeMotherboards(fromKoyeb) {
 
         // 1. Check for valid BIOS Page URL
         const biosPage = await checkBiosPage(maker, modelName);
-        await delay(3000);
+        await delay(4000);
 
         // 🛑 NEW CHECK: If no valid URL is found, we must throw an error
         // to immediately jump to the CATCH block, skipping the newEntry creation.
@@ -289,7 +289,7 @@ export async function scrapeMotherboards(fromKoyeb) {
         summary.summary.errors++;
       }
 
-      await delay(5000);
+      await delay(4000);
     }
 
     const allEntries = Array.from(existingModelMap.values());
