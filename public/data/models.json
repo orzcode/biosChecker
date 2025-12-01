@@ -594,13 +594,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2b18b1t",
-    "model": "H670M Pro RS",
+    "id": "mobo_m68rfcv2st63bz",
+    "model": "B660M-HDV",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H670M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/H670M%20Pro%20RS/bios.html",
-    "heldversion": "18.01",
+    "link": "https://asrock.com/mb/intel/B660M-HDV",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
+    "heldversion": "20.01",
     "helddate": "2025/11/28",
     "release": null
   },
@@ -726,17 +726,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2st63bz",
-    "model": "B660M-HDV",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDV",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDV/bios.html",
-    "heldversion": "20.01",
-    "helddate": "2025/11/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ijf0qj",
     "model": "B660M Phantom Gaming 4",
     "maker": "Intel",
@@ -767,6 +756,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M-ITXax/bios.html",
     "heldversion": "20.01",
     "helddate": "2025/10/30",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2b18b1t",
+    "model": "H670M Pro RS",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H670M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/H670M%20Pro%20RS/bios.html",
+    "heldversion": "18.01",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -869,17 +869,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wolb9o",
-    "model": "H610M-ITX/ac",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-ITXac",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
-    "heldversion": "13.02",
-    "helddate": "2025/11/28",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2jcw5rh",
     "model": "Z790 Taichi",
     "maker": "Intel",
@@ -888,6 +877,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Taichi/bios.html",
     "heldversion": "19.01",
     "helddate": "2025/10/23",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2wolb9o",
+    "model": "H610M-ITX/ac",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-ITXac",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-ITXac/bios.html",
+    "heldversion": "13.02",
+    "helddate": "2025/11/28",
     "release": null
   },
   {
@@ -2189,17 +2189,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2butk5y",
-    "model": "Fatal1ty X370 Professional Gaming",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming",
-    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming/bios.html",
-    "heldversion": "10.43[Beta]",
-    "helddate": "2025/9/9",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ghaqb7",
     "model": "Z790 Nova WiFi",
     "maker": "Intel",
@@ -2208,6 +2197,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Nova%20WiFi/bios.html",
     "heldversion": "10.01",
     "helddate": "2025/11/28",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2butk5y",
+    "model": "Fatal1ty X370 Professional Gaming",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming",
+    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming/bios.html",
+    "heldversion": "10.43[Beta]",
+    "helddate": "2025/9/9",
     "release": null
   },
   {
@@ -2481,8 +2481,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X300M-STX",
     "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
-    "heldversion": "2.10",
-    "helddate": "2024/12/5",
+    "heldversion": "2.20",
+    "helddate": "2025/12/1",
     "release": null
   },
   {
