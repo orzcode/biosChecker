@@ -842,8 +842,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -1051,8 +1051,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -2475,17 +2475,6 @@
     "release": null
   },
   {
-    "id": "mobo_m6sosxsf4nhgkj",
-    "model": "X300M-STX",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X300M-STX",
-    "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
-    "heldversion": "2.20",
-    "helddate": "2025/12/1",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2es5ee2",
     "model": "A320M",
     "maker": "AMD",
@@ -2816,6 +2805,17 @@
     "release": null
   },
   {
+    "id": "mobo_m6sosxsf4nhgkj",
+    "model": "X300M-STX",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X300M-STX",
+    "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
+    "heldversion": "2.20",
+    "helddate": "2025/12/1",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv29ehcht",
     "model": "Z690 Taichi Razer Edition",
     "maker": "Intel",
@@ -2954,8 +2954,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/11/26",
+    "heldversion": "3.13[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -3207,8 +3207,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/2",
     "release": "2025/7/18"
   },
   {
@@ -3647,8 +3647,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/11/26",
+    "heldversion": "3.13[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
