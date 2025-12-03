@@ -836,12 +836,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv22lddrk",
-    "model": "X870E Taichi",
+    "id": "mobo_m68rfcv270q1ko",
+    "model": "X870E Taichi Lite",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
     "heldversion": "4.03.AS02[Beta]",
     "helddate": "2025/12/2",
     "release": null
@@ -866,6 +866,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html",
     "heldversion": "12.02",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv22lddrk",
+    "model": "X870E Taichi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -1042,17 +1053,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M-X/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv270q1ko",
-    "model": "X870E Taichi Lite",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
-    "heldversion": "4.03.AS02[Beta]",
-    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -2948,17 +2948,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2s1nztq",
-    "model": "Z890 Taichi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "3.13[Beta]",
-    "helddate": "2025/12/2",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2gncb5d",
     "model": "B860M Pro RS WiFi",
     "maker": "Intel",
@@ -2978,6 +2967,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "3.11",
     "helddate": "2025/11/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2s1nztq",
+    "model": "Z890 Taichi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
+    "heldversion": "3.13[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
@@ -3174,8 +3174,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/3",
     "release": "2025/6/17"
   },
   {
@@ -3199,17 +3199,6 @@
     "heldversion": "3.50",
     "helddate": "2025/9/26",
     "release": null
-  },
-  {
-    "id": "mobo_mdz6cgq09rk717",
-    "model": "X870 Taichi Creator",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
-    "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
-    "heldversion": "4.03.AS02[Beta]",
-    "helddate": "2025/12/2",
-    "release": "2025/7/18"
   },
   {
     "id": "mobo_m68rfcv2wcsgy9",
@@ -3410,6 +3399,17 @@
     "release": "2025/3/19"
   },
   {
+    "id": "mobo_mdz6cgq09rk717",
+    "model": "X870 Taichi Creator",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/2",
+    "release": "2025/7/18"
+  },
+  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3570,8 +3570,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/3",
     "release": null
   },
   {
@@ -3641,17 +3641,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2mpeflj",
-    "model": "Z890 Taichi AQUA",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.13[Beta]",
-    "helddate": "2025/12/2",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv20mzaum",
     "model": "Q670M vPro",
     "maker": "Intel",
@@ -3660,6 +3649,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Q670M%20vPro/bios.html",
     "heldversion": "2.05",
     "helddate": "2025/2/25",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2mpeflj",
+    "model": "Z890 Taichi AQUA",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
+    "heldversion": "3.13[Beta]",
+    "helddate": "2025/12/2",
     "release": null
   },
   {
