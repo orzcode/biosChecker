@@ -622,8 +622,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M-HDVPD5%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "14.03",
-    "helddate": "2025/5/27",
+    "heldversion": "15.01",
+    "helddate": "2025/12/9",
     "release": null
   },
   {
@@ -776,8 +776,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/B660M-ITXeDP",
     "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html",
-    "heldversion": "12.03",
-    "helddate": "2025/5/27",
+    "heldversion": "13.01",
+    "helddate": "2025/12/9",
     "release": null
   },
   {
@@ -3168,17 +3168,6 @@
     "release": "2025/2/26"
   },
   {
-    "id": "mobo_mdz6d4pqjk9mtx",
-    "model": "X870 Nova WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
-    "heldversion": "4.03.AS02[Beta]",
-    "helddate": "2025/12/3",
-    "release": "2025/6/17"
-  },
-  {
     "id": "mobo_mdz6dbb6iamzcp",
     "model": "B850 Challenger WiFi White",
     "maker": "AMD",
@@ -3201,14 +3190,25 @@
     "release": null
   },
   {
+    "id": "mobo_mdz6d4pqjk9mtx",
+    "model": "X870 Nova WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/3",
+    "release": "2025/6/17"
+  },
+  {
     "id": "mobo_m68rfcv2wcsgy9",
     "model": "H610M-HDVP/D5 R2.0",
     "maker": "Intel",
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HDVPD5%20R2.0",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "15.03",
-    "helddate": "2025/6/2",
+    "heldversion": "16.01",
+    "helddate": "2025/12/9",
     "release": null
   },
   {
@@ -3471,8 +3471,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
     "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
-    "heldversion": "1.09",
-    "helddate": "2025/9/30",
+    "heldversion": "1.10",
+    "helddate": "2025/12/9",
     "release": "2025/9/30"
   },
   {
@@ -3493,8 +3493,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2025/9/30",
+    "heldversion": "1.11",
+    "helddate": "2025/12/9",
     "release": "2025/9/30"
   },
   {
@@ -3561,17 +3561,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B450Mac/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2i6bhsi",
-    "model": "X870E Nova WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
-    "heldversion": "4.03.AS02[Beta]",
-    "helddate": "2025/12/3",
     "release": null
   },
   {
@@ -3660,6 +3649,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
     "heldversion": "3.13[Beta]",
     "helddate": "2025/12/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2i6bhsi",
+    "model": "X870E Nova WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
+    "heldversion": "4.03.AS02[Beta]",
+    "helddate": "2025/12/3",
     "release": null
   },
   {
