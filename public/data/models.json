@@ -616,13 +616,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28o1h8e",
-    "model": "B660M-HDVP/D5 R2.0",
+    "id": "mobo_m68rfcv2oi8233",
+    "model": "B660M-ITX/eDP",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-HDVPD5%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "15.01",
+    "link": "https://asrock.com/mb/intel/B660M-ITXeDP",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html",
+    "heldversion": "13.01",
     "helddate": "2025/12/9",
     "release": null
   },
@@ -726,6 +726,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv28o1h8e",
+    "model": "B660M-HDVP/D5 R2.0",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B660M-HDVPD5%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/B660M-HDVPD5%20R2.0/bios.html",
+    "heldversion": "15.01",
+    "helddate": "2025/12/9",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2ijf0qj",
     "model": "B660M Phantom Gaming 4",
     "maker": "Intel",
@@ -767,17 +778,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H670M%20Pro%20RS/bios.html",
     "heldversion": "18.01",
     "helddate": "2025/11/28",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2oi8233",
-    "model": "B660M-ITX/eDP",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B660M-ITXeDP",
-    "biospage": "https://www.asrock.com/mb/intel/B660M-ITXeDP/bios.html",
-    "heldversion": "13.01",
-    "helddate": "2025/12/9",
     "release": null
   },
   {
@@ -963,8 +963,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS03[Beta]",
+    "helddate": "2025/12/10",
     "release": null
   },
   {
@@ -3201,17 +3201,6 @@
     "release": "2025/6/17"
   },
   {
-    "id": "mobo_m68rfcv2wcsgy9",
-    "model": "H610M-HDVP/D5 R2.0",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HDVPD5%20R2.0",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5%20R2.0/bios.html",
-    "heldversion": "16.01",
-    "helddate": "2025/12/9",
-    "release": null
-  },
-  {
     "id": "mobo_m9p9uapwhn7umo",
     "model": "A620AM Pro RS WiFi",
     "maker": "AMD",
@@ -3377,6 +3366,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2wcsgy9",
+    "model": "H610M-HDVP/D5 R2.0",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HDVPD5%20R2.0",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HDVPD5%20R2.0/bios.html",
+    "heldversion": "16.01",
+    "helddate": "2025/12/9",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2vhr5qi",
     "model": "Z890 Pro RS WiFi White",
     "maker": "Intel",
@@ -3465,17 +3465,6 @@
     "release": "2025/10/13"
   },
   {
-    "id": "mobo_mgxc7vu0yb9yc7",
-    "model": "H610M-HVS/M.2 D5 Gen5",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2025/12/9",
-    "release": "2025/9/30"
-  },
-  {
     "id": "mobo_mgxc823lrmz8i3",
     "model": "H610M-X D5 Gen5",
     "maker": "Intel",
@@ -3485,17 +3474,6 @@
     "heldversion": "1.11",
     "helddate": "2025/10/13",
     "release": "2025/10/13"
-  },
-  {
-    "id": "mobo_mgxc88iyhktsoy",
-    "model": "H610M-X D5 Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
-    "heldversion": "1.11",
-    "helddate": "2025/12/9",
-    "release": "2025/9/30"
   },
   {
     "id": "mobo_mh7cam9j5lawga",
@@ -3540,6 +3518,28 @@
     "heldversion": "2.09",
     "helddate": "2025/11/25",
     "release": "2025/9/11"
+  },
+  {
+    "id": "mobo_mgxc7vu0yb9yc7",
+    "model": "H610M-HVS/M.2 D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-HVSM.2%20D5%20Gen5/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2025/12/9",
+    "release": "2025/9/30"
+  },
+  {
+    "id": "mobo_mgxc88iyhktsoy",
+    "model": "H610M-X D5 Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H610M-X%20D5%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.11",
+    "helddate": "2025/12/9",
+    "release": "2025/9/30"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
