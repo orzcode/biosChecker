@@ -930,8 +930,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03.AS04[Beta]",
+    "helddate": "2025/12/11",
     "release": null
   },
   {
@@ -954,17 +954,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2vyygh2",
-    "model": "B850 Steel Legend WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.03.AS03[Beta]",
-    "helddate": "2025/12/10",
     "release": null
   },
   {
@@ -1053,6 +1042,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B850M-X/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/9/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2vyygh2",
+    "model": "B850 Steel Legend WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "4.03.AS03[Beta]",
+    "helddate": "2025/12/10",
     "release": null
   },
   {
