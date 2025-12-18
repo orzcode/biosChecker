@@ -836,12 +836,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv270q1ko",
-    "model": "X870E Taichi Lite",
+    "id": "mobo_m68rfcv22lddrk",
+    "model": "X870E Taichi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
     "heldversion": "4.03",
     "helddate": "2025/12/17",
     "release": null
@@ -866,17 +866,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-ITXeDP/bios.html",
     "heldversion": "12.02",
     "helddate": "2025/10/15",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv22lddrk",
-    "model": "X870E Taichi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
     "release": null
   },
   {
@@ -1007,8 +996,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Pro%20RS/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
@@ -1106,8 +1095,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
@@ -1188,6 +1177,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv270q1ko",
+    "model": "X870E Taichi Lite",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
+    "heldversion": "4.03",
+    "helddate": "2025/12/17",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2ka6t2o",
     "model": "H610M-H2/M.2",
     "maker": "Intel",
@@ -1216,8 +1216,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/30",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
@@ -1485,17 +1485,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26z3vfh",
-    "model": "B650M PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ex4uqa",
     "model": "B650M-HDV/M.2",
     "maker": "AMD",
@@ -1551,6 +1540,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv26z3vfh",
+    "model": "B650M PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "4.03",
+    "helddate": "2025/12/17",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2s0jjen",
     "model": "B650M-H/M.2+ WiFi",
     "maker": "AMD",
@@ -1568,8 +1568,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/1",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
@@ -1980,6 +1980,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2vbnd5m",
+    "model": "A620M-HDV/M.2",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
+    "heldversion": "4.03",
+    "helddate": "2025/12/17",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2z5n6ce",
     "model": "B550M Pro RS",
     "maker": "AMD",
@@ -1999,17 +2010,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2vbnd5m",
-    "model": "A620M-HDV/M.2",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
     "release": null
   },
   {
@@ -2844,8 +2844,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.09",
-    "helddate": "2025/11/26",
+    "heldversion": "3.12",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
@@ -3108,8 +3108,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M%20Pro%20Plus%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20Plus%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/30",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": "2025/5/15"
   },
   {
@@ -3135,15 +3135,15 @@
     "release": null
   },
   {
-    "id": "mobo_mdz6ctahbo7hqz",
-    "model": "X870 LiveMixer WiFi",
+    "id": "mobo_m8bhibtmk2h5mj",
+    "model": "B650 PG Lightning WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/X870%20LiveMixer%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "4.03",
     "helddate": "2025/12/17",
-    "release": "2025/6/17"
+    "release": null
   },
   {
     "id": "mobo_m8sa68wxklj100",
@@ -3188,17 +3188,6 @@
     "heldversion": "4.03",
     "helddate": "2025/12/12",
     "release": "2025/3/19"
-  },
-  {
-    "id": "mobo_m8bhibtmk2h5mj",
-    "model": "B650 PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
-    "release": null
   },
   {
     "id": "mobo_mdz6d4pqjk9mtx",
@@ -3254,6 +3243,17 @@
     "heldversion": "4.03",
     "helddate": "2025/12/16",
     "release": "2025/3/3"
+  },
+  {
+    "id": "mobo_mdz6ctahbo7hqz",
+    "model": "X870 LiveMixer WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "4.03",
+    "helddate": "2025/12/17",
+    "release": "2025/6/17"
   },
   {
     "id": "mobo_m9p9uh5dxqwxwu",
@@ -3328,8 +3328,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Pro-A%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/9/26",
+    "heldversion": "4.03",
+    "helddate": "2025/12/18",
     "release": "2025/6/17"
   },
   {
@@ -3339,8 +3339,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "2.01",
-    "helddate": "2025/11/26",
+    "heldversion": "2.03",
+    "helddate": "2025/12/18",
     "release": null
   },
   {
