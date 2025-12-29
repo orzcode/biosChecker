@@ -1562,6 +1562,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2nt8rv5",
+    "model": "A620M-HDV/M.2+",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2+",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html",
+    "heldversion": "4.03",
+    "helddate": "2025/12/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2cfn8nx",
     "model": "B650 Pro RS WiFi",
     "maker": "AMD",
@@ -1603,17 +1614,6 @@
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
     "heldversion": "3.50",
     "helddate": "2025/10/2",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2nt8rv5",
-    "model": "A620M-HDV/M.2+",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2+",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/24",
     "release": null
   },
   {
@@ -2635,8 +2635,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
-    "heldversion": "2.10[Beta]",
-    "helddate": "2025/12/16",
+    "heldversion": "2.11",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2690,8 +2690,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/11/26",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2701,8 +2701,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/9/24",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2833,8 +2833,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/9/24",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2844,8 +2844,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.07",
-    "helddate": "2025/9/25",
+    "heldversion": "2.11",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2866,8 +2866,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/9/26",
+    "heldversion": "1.27",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2877,8 +2877,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/9/26",
+    "heldversion": "1.27",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2888,8 +2888,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro-A/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/9/26",
+    "heldversion": "1.27",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2932,8 +2932,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "3.13[Beta]",
-    "helddate": "2025/12/2",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -2976,8 +2976,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.26[Beta]",
-    "helddate": "2025/12/16",
+    "heldversion": "1.27",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -3009,8 +3009,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/9/24",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -3020,8 +3020,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/9/24",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
@@ -3372,8 +3372,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/9/24",
+    "heldversion": "3.15",
+    "helddate": "2025/12/29",
     "release": null
   },
   {
