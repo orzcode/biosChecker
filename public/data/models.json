@@ -6,8 +6,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/11/25",
+    "heldversion": "1.25",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -17,8 +17,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/11/25",
+    "heldversion": "1.25",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -61,8 +61,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-H2",
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
-    "heldversion": "2.08",
-    "helddate": "2025/10/22",
+    "heldversion": "2.11",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -1524,8 +1524,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/9/26",
+    "heldversion": "1.25",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -2415,8 +2415,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860I%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "3.11",
-    "helddate": "2025/11/26",
+    "heldversion": "3.12",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -2860,17 +2860,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wndyez",
-    "model": "Z890M Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/12/31",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2nwz4xe",
     "model": "Z890 Pro-A WiFi",
     "maker": "Intel",
@@ -2904,14 +2893,25 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2wndyez",
+    "model": "Z890M Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.12",
+    "helddate": "2025/12/31",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2stml1z",
     "model": "B860 LiveMixer WiFi",
     "maker": "Intel",
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "2.07",
-    "helddate": "2025/11/26",
+    "heldversion": "2.11",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -2921,8 +2921,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "1.22",
-    "helddate": "2025/9/26",
+    "heldversion": "1.25",
+    "helddate": "2026/1/5",
     "release": null
   },
   {
@@ -3311,17 +3311,6 @@
     "release": null
   },
   {
-    "id": "mobo_m9p9trppes5u51",
-    "model": "H810M-H",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-H",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
-    "heldversion": "2.09",
-    "helddate": "2025/12/31",
-    "release": "2025/3/28"
-  },
-  {
     "id": "mobo_m68rfcv2vhr5qi",
     "model": "Z890 Pro RS WiFi White",
     "maker": "Intel",
@@ -3364,6 +3353,17 @@
     "heldversion": "4.03",
     "helddate": "2025/12/22",
     "release": "2025/4/24"
+  },
+  {
+    "id": "mobo_m9p9trppes5u51",
+    "model": "H810M-H",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-H",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
+    "heldversion": "2.09",
+    "helddate": "2025/12/31",
+    "release": "2025/3/28"
   },
   {
     "id": "mobo_m68rfcv2wcsgy9",
@@ -3482,8 +3482,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "1.03",
-    "helddate": "2025/10/31",
+    "heldversion": "2.01.AS03[Beta]",
+    "helddate": "2026/1/5",
     "release": "2025/10/22"
   },
   {
@@ -3575,28 +3575,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2sb4f96",
-    "model": "Z890 Nova WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
-    "heldversion": "3.15",
-    "helddate": "2025/12/31",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2ljza5k",
-    "model": "Z890 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.12",
-    "helddate": "2025/12/31",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2nin551",
     "model": "B860M Steel Legend WiFi",
     "maker": "Intel",
@@ -3663,6 +3641,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2sb4f96",
+    "model": "Z890 Nova WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
+    "heldversion": "3.15",
+    "helddate": "2025/12/31",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2p10rv8",
     "model": "A320M-HDV R4.0",
     "maker": "AMD",
@@ -3693,6 +3682,17 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
     "heldversion": "10.43[Beta]",
     "helddate": "2025/9/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ljza5k",
+    "model": "Z890 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.12",
+    "helddate": "2025/12/31",
     "release": null
   }
 ]
