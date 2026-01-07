@@ -2349,8 +2349,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
-    "heldversion": "2.04",
-    "helddate": "2025/11/26",
+    "heldversion": "2.06",
+    "helddate": "2026/1/7",
     "release": null
   },
   {
@@ -2552,17 +2552,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ove8a3",
-    "model": "Z890 Taichi OCF",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
-    "heldversion": "3.17",
-    "helddate": "2026/1/6",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ivawbl",
     "model": "Z790 PG Riptide",
     "maker": "Intel",
@@ -2703,6 +2692,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.15",
     "helddate": "2025/12/29",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ove8a3",
+    "model": "Z890 Taichi OCF",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
+    "heldversion": "3.17",
+    "helddate": "2026/1/6",
     "release": null
   },
   {
@@ -3581,8 +3581,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.04",
-    "helddate": "2025/11/26",
+    "heldversion": "2.06",
+    "helddate": "2026/1/7",
     "release": null
   },
   {
