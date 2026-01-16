@@ -842,8 +842,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
+    "heldversion": "4.04",
+    "helddate": "2026/1/16",
     "release": null
   },
   {
@@ -1183,8 +1183,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20Lite/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
+    "heldversion": "4.04",
+    "helddate": "2026/1/16",
     "release": null
   },
   {
@@ -2343,17 +2343,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2kjnqn4",
-    "model": "B860M Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2026/1/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2nu4nmv",
     "model": "Fatal1ty X470 Gaming-ITX/ac",
     "maker": "AMD",
@@ -2417,6 +2406,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2kjnqn4",
+    "model": "B860M Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
+    "heldversion": "2.06",
+    "helddate": "2026/1/7",
     "release": null
   },
   {
@@ -2812,7 +2812,7 @@
     "link": "https://asrock.com/mb/amd/X300M-STX",
     "biospage": "https://www.asrock.com/mb/amd/X300M-STX/bios.html",
     "heldversion": "2.20",
-    "helddate": "2025/12/1",
+    "helddate": "2026/1/16",
     "release": null
   },
   {
@@ -3575,17 +3575,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2nin551",
-    "model": "B860M Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "2.06",
-    "helddate": "2026/1/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv20mzaum",
     "model": "Q670M vPro",
     "maker": "Intel",
@@ -3625,8 +3614,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/22",
+    "heldversion": "4.04",
+    "helddate": "2026/1/16",
     "release": null
   },
   {
@@ -3693,6 +3682,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
     "heldversion": "3.12",
     "helddate": "2025/12/31",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2nin551",
+    "model": "B860M Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "2.06",
+    "helddate": "2026/1/7",
     "release": null
   }
 ]
