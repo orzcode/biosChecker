@@ -3694,5 +3694,60 @@
     "heldversion": "2.06",
     "helddate": "2026/1/7",
     "release": null
+  },
+  {
+    "id": "mobo_mkjdc5qmh2p0f7",
+    "model": "B860 Rock WiFi 7",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Rock%20WiFi%207/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/1/5",
+    "release": "2026/1/5"
+  },
+  {
+    "id": "mobo_mkjdcax6y8yg4l",
+    "model": "B860M Rock WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Rock%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Rock%20WiFi/bios.html",
+    "heldversion": "1.08",
+    "helddate": "2026/1/15",
+    "release": "2026/1/15"
+  },
+  {
+    "id": "mobo_mkjdcg39krys17",
+    "model": "H810M-HDVP",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-HDVP",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-HDVP/bios.html",
+    "heldversion": "1.21",
+    "helddate": "2025/12/31",
+    "release": "2025/12/31"
+  },
+  {
+    "id": "mobo_mkjddsvq1zs7tb",
+    "model": "B850 Rock WiFi 7",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Rock%20WiFi%207/bios.html",
+    "heldversion": "1.01",
+    "helddate": "2026/1/15",
+    "release": "2026/1/15"
+  },
+  {
+    "id": "mobo_mkjddy1eez64ww",
+    "model": "B850M Rock WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Rock%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Rock%20WiFi/bios.html",
+    "heldversion": "4.04",
+    "helddate": "2026/1/15",
+    "release": "2026/1/15"
   }
 ]
