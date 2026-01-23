@@ -22,13 +22,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2q1pm0f",
-    "model": "B860M-X WiFi",
+    "id": "mobo_m68rfcv2gnwvqv",
+    "model": "H810M-X",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "2.13",
+    "link": "https://asrock.com/mb/intel/H810M-X",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "heldversion": "2.11",
     "helddate": "2026/1/22",
     "release": null
   },
@@ -41,6 +41,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B760M-HDVM.2%20D4/bios.html",
     "heldversion": "11.01",
     "helddate": "2025/10/3",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2q1pm0f",
+    "model": "B860M-X WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
+    "heldversion": "2.13",
+    "helddate": "2026/1/22",
     "release": null
   },
   {
@@ -253,13 +264,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gnwvqv",
-    "model": "H810M-X",
+    "id": "mobo_m68rfcv2d66otn",
+    "model": "B860M-X",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
-    "heldversion": "2.11",
+    "link": "https://asrock.com/mb/intel/B860M-X",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
+    "heldversion": "2.13",
     "helddate": "2026/1/22",
     "release": null
   },
@@ -275,13 +286,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2d66otn",
-    "model": "B860M-X",
+    "id": "mobo_m68rfcv2pbev3i",
+    "model": "H810M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-X",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
-    "heldversion": "2.13",
+    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
+    "heldversion": "2.11",
     "helddate": "2026/1/22",
     "release": null
   },
@@ -338,17 +349,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z690%20AQUA%20OC/bios.html",
     "heldversion": "22.01",
     "helddate": "2025/5/27",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2pbev3i",
-    "model": "H810M-X WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
-    "heldversion": "2.11",
-    "helddate": "2026/1/22",
     "release": null
   },
   {
@@ -3438,8 +3438,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-STX",
     "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "4.01",
-    "helddate": "2025/9/2",
+    "heldversion": "5.01",
+    "helddate": "2026/1/5",
     "release": "2025/9/2"
   },
   {
