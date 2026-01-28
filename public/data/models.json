@@ -3432,17 +3432,6 @@
     "release": "2025/6/20"
   },
   {
-    "id": "mobo_mfjbooaja1wrdd",
-    "model": "B860M-STX",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-STX",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "5.01",
-    "helddate": "2026/1/5",
-    "release": "2025/9/2"
-  },
-  {
     "id": "mobo_mgdbzysml7w2jq",
     "model": "B760M-X Gen5",
     "maker": "Intel",
@@ -3537,8 +3526,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "2.01.AS03[Beta]",
-    "helddate": "2026/1/5",
+    "heldversion": "2.03",
+    "helddate": "2026/1/28",
     "release": "2025/10/22"
   },
   {
@@ -3593,6 +3582,50 @@
     "link": "https://asrock.com/mb/amd/B850M%20Rock%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850M%20Rock%20WiFi/bios.html",
     "heldversion": "4.04",
+    "helddate": "2026/1/15",
+    "release": "2026/1/15"
+  },
+  {
+    "id": "mobo_mfjbooaja1wrdd",
+    "model": "B860M-STX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-STX",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
+    "heldversion": "5.01",
+    "helddate": "2026/1/5",
+    "release": "2025/9/2"
+  },
+  {
+    "id": "mobo_mktdg7k3o5cp8g",
+    "model": "H810M-X Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.04",
+    "helddate": "2026/1/22",
+    "release": "2026/1/22"
+  },
+  {
+    "id": "mobo_mktdgcnbgweq1c",
+    "model": "H810M-X Gen5",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5/bios.html",
+    "heldversion": "1.04",
+    "helddate": "2026/1/22",
+    "release": "2026/1/22"
+  },
+  {
+    "id": "mobo_mktdhpcdfiwaf0",
+    "model": "B760M-ITX Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-ITX%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-ITX%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.08",
     "helddate": "2026/1/15",
     "release": "2026/1/15"
   },
@@ -3749,38 +3782,5 @@
     "heldversion": "4.04",
     "helddate": "2026/1/16",
     "release": null
-  },
-  {
-    "id": "mobo_mktdg7k3o5cp8g",
-    "model": "H810M-X Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5%20WiFi/bios.html",
-    "heldversion": "1.04",
-    "helddate": "2026/1/22",
-    "release": "2026/1/22"
-  },
-  {
-    "id": "mobo_mktdgcnbgweq1c",
-    "model": "H810M-X Gen5",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5/bios.html",
-    "heldversion": "1.04",
-    "helddate": "2026/1/22",
-    "release": "2026/1/22"
-  },
-  {
-    "id": "mobo_mktdhpcdfiwaf0",
-    "model": "B760M-ITX Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-ITX%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-ITX%20Gen5%20WiFi/bios.html",
-    "heldversion": "1.08",
-    "helddate": "2026/1/15",
-    "release": "2026/1/15"
   }
 ]
