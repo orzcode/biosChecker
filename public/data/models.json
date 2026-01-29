@@ -61,8 +61,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
-    "heldversion": "3.14",
-    "helddate": "2026/1/6",
+    "heldversion": "3.20",
+    "helddate": "2026/1/29",
     "release": null
   },
   {
@@ -3520,17 +3520,6 @@
     "release": "2025/9/11"
   },
   {
-    "id": "mobo_mh7cam9j5lawga",
-    "model": "X870E Taichi OCF",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "2.03",
-    "helddate": "2026/1/28",
-    "release": "2025/10/22"
-  },
-  {
     "id": "mobo_mkjdc5qmh2p0f7",
     "model": "B860 Rock WiFi 7",
     "maker": "Intel",
@@ -3630,6 +3619,17 @@
     "release": "2026/1/15"
   },
   {
+    "id": "mobo_mh7cam9j5lawga",
+    "model": "X870E Taichi OCF",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "heldversion": "2.03",
+    "helddate": "2026/1/28",
+    "release": "2025/10/22"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3680,8 +3680,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.13[Beta]",
-    "helddate": "2025/12/2",
+    "heldversion": "3.23",
+    "helddate": "2026/1/29",
     "release": null
   },
   {
