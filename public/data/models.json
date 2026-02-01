@@ -3782,5 +3782,38 @@
     "heldversion": "4.04",
     "helddate": "2026/1/16",
     "release": null
+  },
+  {
+    "id": "mobo_ml3e6e4344fhan",
+    "model": "B860 Challenger WiFi White",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/1/5",
+    "release": "2026/1/5"
+  },
+  {
+    "id": "mobo_ml3e6j7v3amfhp",
+    "model": "B860 Challenger WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/1/5",
+    "release": "2026/1/5"
+  },
+  {
+    "id": "mobo_ml3e72rnvnkmna",
+    "model": "H810M-P Gen5",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-P%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-P%20Gen5/bios.html",
+    "heldversion": "1.03",
+    "helddate": "2026/1/16",
+    "release": "2026/1/16"
   }
 ]
