@@ -3815,5 +3815,27 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mldeay2l4ryjpb",
+    "model": "B850M Challenger WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi/bios.html",
+    "heldversion": "4.04",
+    "helddate": "2025/12/29",
+    "release": "2025/12/29"
+  },
+  {
+    "id": "mobo_mldeb369f9qmja",
+    "model": "B850M Challenger",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger/bios.html",
+    "heldversion": "4.04",
+    "helddate": "2025/12/29",
+    "release": "2025/12/29"
   }
 ]
