@@ -1056,17 +1056,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2vx4db9",
-    "model": "B850 LiveMixer WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/25",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2iljqwv",
     "model": "X670E Steel Legend",
     "maker": "AMD",
@@ -1097,6 +1086,17 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2%20R2.0/bios.html",
     "heldversion": "11.01",
     "helddate": "2025/10/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2vx4db9",
+    "model": "B850 LiveMixer WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/25",
     "release": null
   },
   {
@@ -1359,8 +1359,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -1392,19 +1392,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2ot347m",
-    "model": "B650 LiveMixer",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
     "heldversion": "4.10",
-    "helddate": "2026/3/4",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -1447,8 +1436,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -1458,8 +1447,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -1471,6 +1460,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
     "heldversion": "5.69[Beta]",
     "helddate": "2026/2/26",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ot347m",
+    "model": "B650 LiveMixer",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/3/4",
     "release": null
   },
   {
@@ -1590,8 +1590,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/2",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -1975,8 +1975,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/17",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": null
   },
   {
@@ -2712,8 +2712,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.50",
-    "helddate": "2025/10/3",
+    "heldversion": "4.10",
+    "helddate": "2026/3/4",
     "release": null
   },
   {
@@ -3069,6 +3069,17 @@
     "release": null
   },
   {
+    "id": "mobo_m8bhibtmk2h5mj",
+    "model": "B650 PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/25",
+    "release": null
+  },
+  {
     "id": "mobo_m9p9ty1jsek7p4",
     "model": "B850M Pro RS WiFi White",
     "maker": "AMD",
@@ -3102,15 +3113,15 @@
     "release": null
   },
   {
-    "id": "mobo_m8bhibtmk2h5mj",
-    "model": "B650 PG Lightning WiFi",
+    "id": "mobo_mdz6d4pqjk9mtx",
+    "model": "X870 Nova WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/2/25",
-    "release": null
+    "release": "2025/6/17"
   },
   {
     "id": "mobo_m9p9utw2j0k8s1",
@@ -3207,8 +3218,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M-HDVM.2%20White",
     "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2%20White/bios.html",
-    "heldversion": "4.03",
-    "helddate": "2025/12/24",
+    "heldversion": "4.10",
+    "helddate": "2026/3/5",
     "release": "2025/5/22"
   },
   {
@@ -3254,17 +3265,6 @@
     "heldversion": "4.10",
     "helddate": "2026/2/26",
     "release": "2025/4/24"
-  },
-  {
-    "id": "mobo_mdz6d4pqjk9mtx",
-    "model": "X870 Nova WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/X870%20Nova%20WiFi/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/25",
-    "release": "2025/6/17"
   },
   {
     "id": "mobo_mdz6cgq09rk717",
