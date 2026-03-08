@@ -3848,5 +3848,16 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mmhefybc0jpln0",
+    "model": "B850M Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/13",
+    "release": "2026/2/13"
   }
 ]
