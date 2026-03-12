@@ -2332,17 +2332,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv22uz6bk",
-    "model": "B860I Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/3/10",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2mrrai8",
     "model": "B450 Steel Legend",
     "maker": "AMD",
@@ -2406,6 +2395,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550%20Taichi/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv22uz6bk",
+    "model": "B860I Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.21",
+    "helddate": "2026/3/10",
     "release": null
   },
   {
@@ -3163,8 +3163,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M-X%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B850M-X%20R2.0/bios.html",
-    "heldversion": "4.07.AS01[Beta]",
-    "helddate": "2026/2/8",
+    "heldversion": "4.10",
+    "helddate": "2026/3/12",
     "release": null
   },
   {
@@ -3177,17 +3177,6 @@
     "heldversion": "4.10",
     "helddate": "2026/2/11",
     "release": "2025/2/26"
-  },
-  {
-    "id": "mobo_m68rfcv2iafmq0",
-    "model": "B860M LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/3/10",
-    "release": null
   },
   {
     "id": "mobo_m68rfcv2f1h11f",
@@ -3265,6 +3254,17 @@
     "heldversion": "4.10",
     "helddate": "2026/2/26",
     "release": "2025/4/24"
+  },
+  {
+    "id": "mobo_m68rfcv2iafmq0",
+    "model": "B860M LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "3.21",
+    "helddate": "2026/3/10",
+    "release": null
   },
   {
     "id": "mobo_mdz6cgq09rk717",
