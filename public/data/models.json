@@ -3859,5 +3859,38 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mmrezl7dxdd9lz",
+    "model": "B860M-HDVP",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-HDVP",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-HDVP/bios.html",
+    "heldversion": "1.31",
+    "helddate": "2026/2/5",
+    "release": "2026/2/5"
+  },
+  {
+    "id": "mobo_mmrf0xa8myqj08",
+    "model": "H610M COMBO II",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M%20COMBO%20II",
+    "biospage": "https://www.asrock.com/mb/intel/H610M%20COMBO%20II/bios.html",
+    "heldversion": "1.08",
+    "helddate": "2026/3/5",
+    "release": "2026/3/5"
+  },
+  {
+    "id": "mobo_mmrf12dp242kv4",
+    "model": "B550M Pro-A",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A/bios.html",
+    "heldversion": "1.00",
+    "helddate": "2026/3/9",
+    "release": "2026/3/9"
   }
 ]
