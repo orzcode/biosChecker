@@ -3892,5 +3892,49 @@
     "heldversion": "1.00",
     "helddate": "2026/3/9",
     "release": "2026/3/9"
+  },
+  {
+    "id": "mobo_mn1etexijbdruq",
+    "model": "X870E Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/26",
+    "release": "2026/2/26"
+  },
+  {
+    "id": "mobo_mn1etk2psgxifl",
+    "model": "X870E Challenger WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/26",
+    "release": "2026/2/26"
+  },
+  {
+    "id": "mobo_mn1etp917rsg2g",
+    "model": "X870 Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/24",
+    "release": "2026/2/24"
+  },
+  {
+    "id": "mobo_mn1etue99kb2mm",
+    "model": "X870 Challenger WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Challenger%20WiFi/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/24",
+    "release": "2026/2/24"
   }
 ]
