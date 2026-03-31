@@ -1293,8 +1293,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570S%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/X570S%20PG%20Riptide/bios.html",
-    "heldversion": "5.71[Beta]",
-    "helddate": "2026/2/26",
+    "heldversion": "5.80",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -1469,8 +1469,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
-    "heldversion": "5.69[Beta]",
-    "helddate": "2026/2/26",
+    "heldversion": "5.80",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -1810,8 +1810,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "5.69[Beta]",
-    "helddate": "2026/2/26",
+    "heldversion": "5.80",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -2024,23 +2024,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2jqew8p",
-    "model": "B450 Pro4 R2.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450%20Pro4%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv219qy75",
     "model": "B450M Pro4 R2.0",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4%20R2.0/bios.html",
+    "heldversion": "10.50",
+    "helddate": "2026/3/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ibsx3d",
+    "model": "B450M-HDV R4.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450M-HDV%20R4.0",
+    "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/3/24",
     "release": null
@@ -2090,12 +2090,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ibsx3d",
-    "model": "B450M-HDV R4.0",
+    "id": "mobo_m68rfcv255dmdm",
+    "model": "B450 Pro4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450M-HDV%20R4.0",
-    "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html",
+    "link": "https://asrock.com/mb/amd/B450%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/3/24",
     "release": null
@@ -2332,25 +2332,25 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2jqew8p",
+    "model": "B450 Pro4 R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450%20Pro4%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4%20R2.0/bios.html",
+    "heldversion": "10.50",
+    "helddate": "2026/3/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2mrrai8",
     "model": "B450 Steel Legend",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv255dmdm",
-    "model": "B450 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
     "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -2470,8 +2470,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/2/26",
+    "heldversion": "10.50",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -3064,8 +3064,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
-    "heldversion": "5.69[Beta]",
-    "helddate": "2026/2/26",
+    "heldversion": "5.80",
+    "helddate": "2026/3/31",
     "release": null
   },
   {
@@ -3212,17 +3212,6 @@
     "release": "2025/3/3"
   },
   {
-    "id": "mobo_mdz6cn0sz1eny4",
-    "model": "X870 Pro-A WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/X870%20Pro-A%20WiFi/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/24",
-    "release": "2025/6/17"
-  },
-  {
     "id": "mobo_m68rfcv26mj62w",
     "model": "Fatal1ty B450 Gaming K4",
     "maker": "AMD",
@@ -3232,6 +3221,17 @@
     "heldversion": "10.50",
     "helddate": "2026/3/24",
     "release": null
+  },
+  {
+    "id": "mobo_mdz6cn0sz1eny4",
+    "model": "X870 Pro-A WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Pro-A%20WiFi/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/2/24",
+    "release": "2025/6/17"
   },
   {
     "id": "mobo_mdz6dbb6iamzcp",
