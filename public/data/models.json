@@ -1276,17 +1276,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27cuimx",
-    "model": "X570M Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570M%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/X570M%20Pro4/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2cozitb",
     "model": "X570 Pro4",
     "maker": "AMD",
@@ -1295,6 +1284,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
     "heldversion": "5.80",
     "helddate": "2026/3/31",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv27cuimx",
+    "model": "X570M Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570M%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/X570M%20Pro4/bios.html",
+    "heldversion": "5.80",
+    "helddate": "2026/4/7",
     "release": null
   },
   {
@@ -1859,17 +1859,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2w6rc8a",
-    "model": "X570 Phantom Gaming-ITX/TB3",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3",
-    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2r8e007",
     "model": "A520M-HDVP R2.0",
     "maker": "AMD",
@@ -2002,6 +1991,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2w6rc8a",
+    "model": "X570 Phantom Gaming-ITX/TB3",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3",
+    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html",
+    "heldversion": "5.80",
+    "helddate": "2026/4/7",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv29zz48r",
     "model": "Z790 Taichi Lite",
     "maker": "Intel",
@@ -2057,12 +2057,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26qkriu",
-    "model": "A320M-HDV",
+    "id": "mobo_m68rfcv25r26ym",
+    "model": "X370M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV/bios.html",
+    "link": "https://asrock.com/mb/amd/X370M-HDV%20R4.0",
+    "biospage": "https://www.asrock.com/mb/amd/X370M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
     "release": null
@@ -2129,8 +2129,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370%20Killer%20SLIac",
     "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLIac/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2140,8 +2140,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370%20Killer%20SLI",
     "biospage": "https://www.asrock.com/mb/amd/X370%20Killer%20SLI/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2151,8 +2151,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/X370%20Pro4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2206,8 +2206,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20K4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2217,8 +2217,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20X",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming%20X/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2228,8 +2228,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Gaming-ITXac/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2239,8 +2239,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4-F/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2261,17 +2261,17 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/X370M%20Pro4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
-    "id": "mobo_m68rfcv25r26ym",
-    "model": "X370M-HDV R4.0",
+    "id": "mobo_m68rfcv26qkriu",
+    "model": "A320M-HDV",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X370M-HDV%20R4.0",
-    "biospage": "https://www.asrock.com/mb/amd/X370M-HDV%20R4.0/bios.html",
+    "link": "https://asrock.com/mb/amd/A320M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
     "release": null
@@ -2283,8 +2283,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370M",
     "biospage": "https://www.asrock.com/mb/amd/X370M/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2294,8 +2294,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-ITX",
     "biospage": "https://www.asrock.com/mb/amd/A320M-ITX/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2305,8 +2305,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2371,8 +2371,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming/bios.html",
-    "heldversion": "10.45[Beta]",
-    "helddate": "2026/3/9",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2382,8 +2382,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X370%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X370%20Taichi/bios.html",
-    "heldversion": "10.45[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2415,8 +2415,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4-F/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2437,8 +2437,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/A320M%20Pro4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2459,8 +2459,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M",
     "biospage": "https://www.asrock.com/mb/amd/A320M/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2470,6 +2470,17 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A320M-DVS%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R4.0/bios.html",
+    "heldversion": "10.50",
+    "helddate": "2026/4/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv297mswh",
+    "model": "A320M-DVS R3.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A320M-DVS%20R3.0",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R3.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
     "release": null
@@ -2503,17 +2514,17 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/AB350%20Pro4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
-    "id": "mobo_m68rfcv297mswh",
-    "model": "A320M-DVS R3.0",
+    "id": "mobo_m68rfcv2wk7ehl",
+    "model": "A320M-DGS",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-DVS%20R3.0",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R3.0/bios.html",
+    "link": "https://asrock.com/mb/amd/A320M-DGS",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-DGS/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
     "release": null
@@ -2596,12 +2607,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wk7ehl",
-    "model": "A320M-DGS",
+    "id": "mobo_m68rfcv2141zp1",
+    "model": "AB350M-HDV R4.0",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-DGS",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-DGS/bios.html",
+    "link": "https://asrock.com/mb/amd/AB350M-HDV%20R4.0",
+    "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
     "release": null
@@ -2635,8 +2646,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4-F/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2712,8 +2723,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2723,8 +2734,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M%20Pro4DASH",
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4DASH/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2734,19 +2745,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/AB350M",
     "biospage": "https://www.asrock.com/mb/amd/AB350M/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2141zp1",
-    "model": "AB350M-HDV R4.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/AB350M-HDV%20R4.0",
-    "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
-    "helddate": "2026/4/7",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -2778,8 +2778,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
+    "heldversion": "10.50",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -3872,36 +3872,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2p10rv8",
-    "model": "A320M-HDV R4.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-HDV%20R4.0",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R4.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/7",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2fjg1eg",
     "model": "Fatal1ty AB350 Gaming K4",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html",
-    "heldversion": "10.44[Beta]",
-    "helddate": "2026/3/3",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv265jfj1",
-    "model": "A320M-HDV R3.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A320M-HDV%20R3.0",
-    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
     "heldversion": "10.50",
-    "helddate": "2026/4/7",
+    "helddate": "2026/4/8",
     "release": null
   },
   {
@@ -3913,6 +3891,28 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "3.21",
     "helddate": "2026/3/9",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2p10rv8",
+    "model": "A320M-HDV R4.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A320M-HDV%20R4.0",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R4.0/bios.html",
+    "heldversion": "10.50",
+    "helddate": "2026/4/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv265jfj1",
+    "model": "A320M-HDV R3.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A320M-HDV%20R3.0",
+    "biospage": "https://www.asrock.com/mb/amd/A320M-HDV%20R3.0/bios.html",
+    "heldversion": "10.50",
+    "helddate": "2026/4/7",
     "release": null
   },
   {
