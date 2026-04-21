@@ -3405,8 +3405,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/11",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
     "release": "2025/6/20"
   },
   {
@@ -3564,15 +3564,15 @@
     "release": "2025/12/29"
   },
   {
-    "id": "mobo_mfjbooaja1wrdd",
-    "model": "B860M-STX",
+    "id": "mobo_mmrf0xa8myqj08",
+    "model": "H610M COMBO II",
     "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-STX",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "5.01.TS01[Beta]",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/H610M%20COMBO%20II",
+    "biospage": "https://www.asrock.com/mb/intel/H610M%20COMBO%20II/bios.html",
+    "heldversion": "1.08.TS06[Beta]",
     "helddate": "2026/4/17",
-    "release": "2025/9/2"
+    "release": "2026/3/5"
   },
   {
     "id": "mobo_mktdhpcdfiwaf0",
@@ -3639,17 +3639,6 @@
     "heldversion": "1.31",
     "helddate": "2026/2/5",
     "release": "2026/2/5"
-  },
-  {
-    "id": "mobo_mmrf0xa8myqj08",
-    "model": "H610M COMBO II",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/H610M%20COMBO%20II",
-    "biospage": "https://www.asrock.com/mb/intel/H610M%20COMBO%20II/bios.html",
-    "heldversion": "1.08.TS06[Beta]",
-    "helddate": "2026/4/17",
-    "release": "2026/3/5"
   },
   {
     "id": "mobo_mmrf12dp242kv4",
@@ -3746,8 +3735,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/26",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
     "release": "2026/2/26"
   },
   {
@@ -3757,8 +3746,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/2/26",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
     "release": "2026/2/26"
   },
   {
@@ -3782,6 +3771,17 @@
     "heldversion": "4.10",
     "helddate": "2026/2/24",
     "release": "2026/2/24"
+  },
+  {
+    "id": "mobo_mfjbooaja1wrdd",
+    "model": "B860M-STX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-STX",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
+    "heldversion": "5.01.TS01[Beta]",
+    "helddate": "2026/4/17",
+    "release": "2025/9/2"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
