@@ -2019,8 +2019,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2030,8 +2030,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2041,8 +2041,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M-HDV%20R4.0",
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV%20R4.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2096,8 +2096,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2327,8 +2327,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Pro4%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Pro4%20R2.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2349,8 +2349,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450%20Steel%20Legend/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/31",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -2701,8 +2701,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/31",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -3207,8 +3207,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20B450%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming%20K4/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/3/24",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
     "release": null
   },
   {
@@ -3399,17 +3399,6 @@
     "release": "2025/5/15"
   },
   {
-    "id": "mobo_mdz6dnwbosagxm",
-    "model": "A620M-C R2.0",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/21",
-    "release": "2025/6/20"
-  },
-  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3419,6 +3408,17 @@
     "heldversion": "4.10",
     "helddate": "2026/2/24",
     "release": "2025/7/9"
+  },
+  {
+    "id": "mobo_mdz6dnwbosagxm",
+    "model": "A620M-C R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
+    "release": "2025/6/20"
   },
   {
     "id": "mobo_mgdbzysml7w2jq",
@@ -3729,28 +3729,6 @@
     "release": "2026/1/5"
   },
   {
-    "id": "mobo_mn1etexijbdruq",
-    "model": "X870E Challenger WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/21",
-    "release": "2026/2/26"
-  },
-  {
-    "id": "mobo_mn1etk2psgxifl",
-    "model": "X870E Challenger WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/21",
-    "release": "2026/2/26"
-  },
-  {
     "id": "mobo_mn1etp917rsg2g",
     "model": "X870 Challenger WiFi White",
     "maker": "AMD",
@@ -3782,6 +3760,28 @@
     "heldversion": "5.01.TS01[Beta]",
     "helddate": "2026/4/17",
     "release": "2025/9/2"
+  },
+  {
+    "id": "mobo_mn1etexijbdruq",
+    "model": "X870E Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
+    "release": "2026/2/26"
+  },
+  {
+    "id": "mobo_mn1etk2psgxifl",
+    "model": "X870E Challenger WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Challenger%20WiFi/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/4/21",
+    "release": "2026/2/26"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
