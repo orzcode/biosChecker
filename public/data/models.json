@@ -3936,5 +3936,16 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mophro74an07c6",
+    "model": "X870E Taichi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20White/bios.html",
+    "heldversion": "1.00",
+    "helddate": "2026/4/30",
+    "release": "2026/4/30"
   }
 ]
