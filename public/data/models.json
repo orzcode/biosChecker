@@ -1386,12 +1386,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29qdt1r",
-    "model": "A620M Pro RS",
+    "id": "mobo_m68rfcv2wbp3si",
+    "model": "A620M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
+    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "4.20",
     "helddate": "2026/5/6",
     "release": null
@@ -1441,17 +1441,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2wbp3si",
-    "model": "A620M Pro RS WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/5/6",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ot347m",
     "model": "B650 LiveMixer",
     "maker": "AMD",
@@ -1471,6 +1460,17 @@
     "biospage": "https://www.asrock.com/mb/amd/X570%20Creator/bios.html",
     "heldversion": "5.80",
     "helddate": "2026/4/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv29qdt1r",
+    "model": "A620M Pro RS",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/5/6",
     "release": null
   },
   {
@@ -1947,6 +1947,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2vbnd5m",
+    "model": "A620M-HDV/M.2",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
+    "heldversion": "4.21",
+    "helddate": "2026/5/6",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2goe8x1",
     "model": "A520M-HDVP",
     "maker": "AMD",
@@ -1977,17 +1988,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/16",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2vbnd5m",
-    "model": "A620M-HDV/M.2",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/5/6",
     "release": null
   },
   {
@@ -2052,8 +2052,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450Mac%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/B450Mac%20R2.0/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2074,8 +2074,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Pro4-F",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2085,8 +2085,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M-HDV",
     "biospage": "https://www.asrock.com/mb/amd/B450M-HDV/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2745,8 +2745,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/8",
+    "heldversion": "10.50A[Beta]",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -3124,17 +3124,6 @@
     "release": "2025/6/17"
   },
   {
-    "id": "mobo_mbnahyriighg11",
-    "model": "B650M-HDV/M.2 White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M-HDVM.2%20White",
-    "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2%20White/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/5/6",
-    "release": "2025/5/22"
-  },
-  {
     "id": "mobo_mdz6cn0sz1eny4",
     "model": "X870 Pro-A WiFi",
     "maker": "AMD",
@@ -3342,6 +3331,17 @@
     "heldversion": "15.01",
     "helddate": "2025/10/30",
     "release": null
+  },
+  {
+    "id": "mobo_mbnahyriighg11",
+    "model": "B650M-HDV/M.2 White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M-HDVM.2%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2%20White/bios.html",
+    "heldversion": "4.21",
+    "helddate": "2026/5/6",
+    "release": "2025/5/22"
   },
   {
     "id": "mobo_m68rfcv2wcsgy9",
@@ -3696,17 +3696,6 @@
     "release": "2026/2/13"
   },
   {
-    "id": "mobo_mh7cam9j5lawga",
-    "model": "X870E Taichi OCF",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/5/6",
-    "release": "2025/10/22"
-  },
-  {
     "id": "mobo_mkjdc5qmh2p0f7",
     "model": "B860 Rock WiFi 7",
     "maker": "Intel",
@@ -3795,6 +3784,17 @@
     "release": "2026/4/30"
   },
   {
+    "id": "mobo_mh7cam9j5lawga",
+    "model": "X870E Taichi OCF",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/5/6",
+    "release": "2025/10/22"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3812,8 +3812,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450Mac",
     "biospage": "https://www.asrock.com/mb/amd/B450Mac/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
