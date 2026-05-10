@@ -3947,5 +3947,16 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mozi7danv15uez",
+    "model": "B650 Rock WiFi 7",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20Rock%20WiFi%207/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/4/23",
+    "release": "2026/4/23"
   }
 ]
