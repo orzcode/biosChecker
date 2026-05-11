@@ -1865,8 +1865,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X470%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/10",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -1909,8 +1909,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X470%20Taichi%20Ultimate",
     "biospage": "https://www.asrock.com/mb/amd/X470%20Taichi%20Ultimate/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/10",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -2046,12 +2046,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2knbdlq",
-    "model": "B450M/ac R2.0",
+    "id": "mobo_m68rfcv2fkplfo",
+    "model": "B450M Pro4-F",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450Mac%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/B450Mac%20R2.0/bios.html",
+    "link": "https://asrock.com/mb/amd/B450M%20Pro4-F",
+    "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F/bios.html",
     "heldversion": "10.60",
     "helddate": "2026/5/8",
     "release": null
@@ -2065,17 +2065,6 @@
     "biospage": "https://www.asrock.com/mb/amd/X370M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2fkplfo",
-    "model": "B450M Pro4-F",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450M%20Pro4-F",
-    "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F/bios.html",
-    "heldversion": "10.60",
-    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2305,8 +2294,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming-ITXac/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/8",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -2349,8 +2338,19 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20B450%20Gaming-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20B450%20Gaming-ITXac/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/1",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2knbdlq",
+    "model": "B450M/ac R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450Mac%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B450Mac%20R2.0/bios.html",
+    "heldversion": "10.60",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2382,8 +2382,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4",
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X470%20Gaming%20K4/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/10",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -2739,17 +2739,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2241wso",
-    "model": "Fatal1ty AB350 Gaming-ITX/ac",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac",
-    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
-    "heldversion": "10.50A[Beta]",
-    "helddate": "2026/5/8",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv22tpc8k",
     "model": "AB350M-HDV R3.0",
     "maker": "AMD",
@@ -2791,6 +2780,17 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4%20R2.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/10",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2241wso",
+    "model": "Fatal1ty AB350 Gaming-ITX/ac",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac",
+    "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming-ITXac/bios.html",
+    "heldversion": "10.50A[Beta]",
+    "helddate": "2026/5/8",
     "release": null
   },
   {
@@ -2965,8 +2965,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X470%20Master%20SLI",
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/10",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -3064,8 +3064,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X470%20Master%20SLIac",
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLIac/bios.html",
-    "heldversion": "10.50",
-    "helddate": "2026/4/10",
+    "heldversion": "10.60",
+    "helddate": "2026/5/11",
     "release": null
   },
   {
@@ -3696,6 +3696,17 @@
     "release": "2026/2/13"
   },
   {
+    "id": "mobo_mozi7danv15uez",
+    "model": "B650 Rock WiFi 7",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20Rock%20WiFi%207/bios.html",
+    "heldversion": "4.20",
+    "helddate": "2026/4/23",
+    "release": "2026/4/23"
+  },
+  {
     "id": "mobo_mkjdc5qmh2p0f7",
     "model": "B860 Rock WiFi 7",
     "maker": "Intel",
@@ -3768,8 +3779,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Rock%20WiFi%207",
     "biospage": "https://www.asrock.com/mb/amd/B850%20Rock%20WiFi%207/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/24",
+    "heldversion": "4.21",
+    "helddate": "2026/5/8",
     "release": "2026/1/15"
   },
   {
@@ -3947,16 +3958,5 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
-  },
-  {
-    "id": "mobo_mozi7danv15uez",
-    "model": "B650 Rock WiFi 7",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20Rock%20WiFi%207",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20Rock%20WiFi%207/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/23",
-    "release": "2026/4/23"
   }
 ]
