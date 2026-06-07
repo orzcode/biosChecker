@@ -3969,5 +3969,16 @@
     "heldversion": "3.23",
     "helddate": "2026/1/29",
     "release": null
+  },
+  {
+    "id": "mobo_mq3ky7wb1rziv2",
+    "model": "H810TM-ITX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810TM-ITX",
+    "biospage": "https://www.asrock.com/mb/intel/H810TM-ITX/bios.html",
+    "heldversion": "1.00",
+    "helddate": "2026/6/1",
+    "release": "2026/6/1"
   }
 ]
