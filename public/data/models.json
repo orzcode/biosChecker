@@ -3980,5 +3980,27 @@
     "heldversion": "1.00",
     "helddate": "2026/6/1",
     "release": "2026/6/1"
+  },
+  {
+    "id": "mobo_mqdltki6uxko2c",
+    "model": "B550 Rock WiFi",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550%20Rock%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Rock%20WiFi/bios.html",
+    "heldversion": "1.30",
+    "helddate": "2026/6/10",
+    "release": "2026/6/10"
+  },
+  {
+    "id": "mobo_mqdltpjarh0meh",
+    "model": "B550M-P",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M-P",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-P/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/6/10",
+    "release": "2026/6/10"
   }
 ]
