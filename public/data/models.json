@@ -281,8 +281,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790M-ITX%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
-    "heldversion": "19.01",
-    "helddate": "2025/10/21",
+    "heldversion": "20.02",
+    "helddate": "2026/6/24",
     "release": null
   },
   {
@@ -435,8 +435,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "14.01",
-    "helddate": "2025/10/21",
+    "heldversion": "15.02",
+    "helddate": "2026/6/24",
     "release": null
   },
   {
@@ -1276,12 +1276,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ex4uqa",
-    "model": "B650M-HDV/M.2",
+    "id": "mobo_m68rfcv2d1t9ha",
+    "model": "B650 Pro RS",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M-HDVM.2",
-    "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2/bios.html",
+    "link": "https://asrock.com/mb/amd/B650%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -1320,23 +1320,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2d1t9ha",
-    "model": "B650 Pro RS",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2cfn8nx",
     "model": "B650 Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv26z3vfh",
+    "model": "B650M PG Lightning WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -1408,17 +1408,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv26z3vfh",
-    "model": "B650M PG Lightning WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2s0jjen",
     "model": "B650M-H/M.2+ WiFi",
     "maker": "AMD",
@@ -1430,14 +1419,25 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2rpj9cl",
+    "model": "B650M PG Lightning",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2nt8rv5",
     "model": "A620M-HDV/M.2+",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVM.2+",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/24",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
     "release": null
   },
   {
@@ -1496,6 +1496,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2ex4uqa",
+    "model": "B650M-HDV/M.2",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M-HDVM.2",
+    "biospage": "https://www.asrock.com/mb/amd/B650M-HDVM.2/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2f48962",
     "model": "A620M-HDVP",
     "maker": "AMD",
@@ -1507,12 +1518,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2rpj9cl",
-    "model": "B650M PG Lightning",
+    "id": "mobo_m68rfcv2so0wf5",
+    "model": "B650M-H/M.2+",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Lightning",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Lightning/bios.html",
+    "link": "https://asrock.com/mb/amd/B650M-HM.2+",
+    "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -1529,12 +1540,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2so0wf5",
-    "model": "B650M-H/M.2+",
+    "id": "mobo_m68rfcv2vb4mg3",
+    "model": "B650M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M-HM.2+",
-    "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+/bios.html",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -1548,17 +1559,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
     "heldversion": "4.20",
     "helddate": "2026/5/5",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2vb4mg3",
-    "model": "B650M Pro RS WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
     "release": null
   },
   {
@@ -2497,6 +2497,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2cei1ug",
+    "model": "B650M Pro RS",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2fnlg8y",
     "model": "AB350M Pro4-F",
     "maker": "AMD",
@@ -2692,17 +2703,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20OCF/bios.html",
     "heldversion": "3.23",
     "helddate": "2026/2/11",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2cei1ug",
-    "model": "B650M Pro RS",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
     "release": null
   },
   {
@@ -3091,12 +3091,12 @@
     "release": "2025/2/26"
   },
   {
-    "id": "mobo_m8sa6f81674xyp",
-    "model": "B850M-X R2.0",
+    "id": "mobo_m8sa68wxklj100",
+    "model": "B850M-X WiFi R2.0",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M-X%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20R2.0/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M-X%20WiFi%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20WiFi%20R2.0/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -3146,15 +3146,15 @@
     "release": "2025/7/18"
   },
   {
-    "id": "mobo_m8cei4v6ycmn7j",
-    "model": "B650M Pro X3D WiFi",
+    "id": "mobo_m9p9v6qnvnduu8",
+    "model": "A620AM-X WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/A620AM-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-X%20WiFi/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
-    "release": null
+    "release": "2025/2/26"
   },
   {
     "id": "mobo_m68rfcv24fax9j",
@@ -3168,17 +3168,6 @@
     "release": null
   },
   {
-    "id": "mobo_m9p9vd2ntwi395",
-    "model": "A620AM-X",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AM-X",
-    "biospage": "https://www.asrock.com/mb/amd/A620AM-X/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": "2025/2/26"
-  },
-  {
     "id": "mobo_mdz6d4pqjk9mtx",
     "model": "X870 Nova WiFi",
     "maker": "AMD",
@@ -3190,12 +3179,12 @@
     "release": "2025/6/17"
   },
   {
-    "id": "mobo_m8sa68wxklj100",
-    "model": "B850M-X WiFi R2.0",
+    "id": "mobo_m8sa6f81674xyp",
+    "model": "B850M-X R2.0",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M-X%20WiFi%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20WiFi%20R2.0/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M-X%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B850M-X%20R2.0/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -3253,6 +3242,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "4.20",
     "helddate": "2026/4/29",
+    "release": null
+  },
+  {
+    "id": "mobo_m8cei4v6ycmn7j",
+    "model": "B650M Pro X3D WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
     "release": null
   },
   {
@@ -3388,12 +3388,12 @@
     "release": "2025/3/3"
   },
   {
-    "id": "mobo_m9p9v6qnvnduu8",
-    "model": "A620AM-X WiFi",
+    "id": "mobo_m9p9vd2ntwi395",
+    "model": "A620AM-X",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AM-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620AM-X%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/A620AM-X",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-X/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": "2025/2/26"
@@ -3740,17 +3740,6 @@
     "release": "2026/4/30"
   },
   {
-    "id": "mobo_mkjddsvq1zs7tb",
-    "model": "B850 Rock WiFi 7",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850%20Rock%20WiFi%207",
-    "biospage": "https://www.asrock.com/mb/amd/B850%20Rock%20WiFi%207/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/17",
-    "release": "2026/1/15"
-  },
-  {
     "id": "mobo_mptkfnwfmgqw35",
     "model": "B650M Pro-A Gen5",
     "maker": "AMD",
@@ -3762,15 +3751,15 @@
     "release": "2026/4/23"
   },
   {
-    "id": "mobo_mh7cam9j5lawga",
-    "model": "X870E Taichi OCF",
+    "id": "mobo_mkjddsvq1zs7tb",
+    "model": "B850 Rock WiFi 7",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
-    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "link": "https://asrock.com/mb/amd/B850%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/amd/B850%20Rock%20WiFi%207/bios.html",
     "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": "2025/10/22"
+    "helddate": "2026/6/17",
+    "release": "2026/1/15"
   },
   {
     "id": "mobo_mn1etp917rsg2g",
@@ -3815,6 +3804,17 @@
     "heldversion": "4.41",
     "helddate": "2026/6/17",
     "release": "2026/2/26"
+  },
+  {
+    "id": "mobo_mh7cam9j5lawga",
+    "model": "X870E Taichi OCF",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870E%20Taichi%20OCF",
+    "biospage": "https://www.asrock.com/mb/amd/X870E%20Taichi%20OCF/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": "2025/10/22"
   },
   {
     "id": "mobo_m68rfcv2zwi2i0",
@@ -3949,17 +3949,6 @@
     "release": null
   },
   {
-    "id": "mobo_m72rp3iptfll8m",
-    "model": "B650M Pro X3D",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D",
-    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv20mzaum",
     "model": "Q670M vPro",
     "maker": "Intel",
@@ -3990,6 +3979,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/X870E%20Nova%20WiFi/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/17",
+    "release": null
+  },
+  {
+    "id": "mobo_m72rp3iptfll8m",
+    "model": "B650M Pro X3D",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
     "release": null
   },
   {
