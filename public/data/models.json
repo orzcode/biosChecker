@@ -275,17 +275,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv27hucul",
-    "model": "Z790M-ITX WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790M-ITX%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
-    "heldversion": "20.02",
-    "helddate": "2026/6/24",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2iumz8q",
     "model": "B860M Pro-A WiFi",
     "maker": "Intel",
@@ -396,6 +385,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv27hucul",
+    "model": "Z790M-ITX WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790M-ITX%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z790M-ITX%20WiFi/bios.html",
+    "heldversion": "20.02",
+    "helddate": "2026/6/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv243pgp9",
     "model": "Z790 Lightning WiFi",
     "maker": "Intel",
@@ -426,17 +426,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H670%20Steel%20Legend/bios.html",
     "heldversion": "18.01",
     "helddate": "2025/10/28",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv25iuhy4",
-    "model": "Z790 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
-    "heldversion": "15.02",
-    "helddate": "2026/6/24",
     "release": null
   },
   {
@@ -781,6 +770,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv25iuhy4",
+    "model": "Z790 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Z790%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
+    "heldversion": "15.02",
+    "helddate": "2026/6/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv27wsvci",
     "model": "B760I Lightning WiFi",
     "maker": "Intel",
@@ -996,8 +996,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850I%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850I%20Lightning%20WiFi/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/28",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": null
   },
   {
@@ -1430,17 +1430,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2nt8rv5",
-    "model": "A620M-HDV/M.2+",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-HDVM.2+",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2jxjmaw",
     "model": "B850M Riptide WiFi",
     "maker": "AMD",
@@ -1568,6 +1557,17 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "4.41",
+    "helddate": "2026/6/23",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2nt8rv5",
+    "model": "A620M-HDV/M.2+",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-HDVM.2+",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2+/bios.html",
     "heldversion": "4.41",
     "helddate": "2026/6/23",
     "release": null
@@ -3053,8 +3053,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AM%20Pro-A",
     "biospage": "https://www.asrock.com/mb/amd/A620AM%20Pro-A/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/28",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/3/3"
   },
   {
@@ -3075,8 +3075,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M-A",
     "biospage": "https://www.asrock.com/mb/amd/B850M-A/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/29",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/4/24"
   },
   {
@@ -3086,8 +3086,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B840M-HVS",
     "biospage": "https://www.asrock.com/mb/amd/B840M-HVS/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/23",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/2/26"
   },
   {
@@ -3207,8 +3207,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AM-HVS",
     "biospage": "https://www.asrock.com/mb/amd/A620AM-HVS/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/23",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/2/26"
   },
   {
@@ -3218,8 +3218,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AM%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/A620AM%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/28",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/3/3"
   },
   {
@@ -3295,8 +3295,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AI%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/A620AI%20WiFi/bios.html",
-    "heldversion": "4.21",
-    "helddate": "2026/4/29",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/6/5"
   },
   {
@@ -3372,8 +3372,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AM%20Pro-A%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/A620AM%20Pro-A%20WiFi/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/28",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/3/3"
   },
   {
@@ -3383,8 +3383,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620AM%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/A620AM%20Pro%20RS/bios.html",
-    "heldversion": "4.20",
-    "helddate": "2026/4/28",
+    "heldversion": "4.41",
+    "helddate": "2026/6/25",
     "release": "2025/3/3"
   },
   {
