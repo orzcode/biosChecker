@@ -4002,5 +4002,27 @@
     "heldversion": "4.43",
     "helddate": "2026/7/1",
     "release": null
+  },
+  {
+    "id": "mobo_mrhj72936vv3iz",
+    "model": "B860M Challenger WiFi White",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "3.21",
+    "helddate": "2026/7/8",
+    "release": "2026/7/8"
+  },
+  {
+    "id": "mobo_mrhj783g8swjgq",
+    "model": "B860M Challenger WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Challenger%20WiFi/bios.html",
+    "heldversion": "3.21",
+    "helddate": "2026/7/8",
+    "release": "2026/7/8"
   }
 ]
