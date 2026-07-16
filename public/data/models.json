@@ -231,6 +231,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2rylnqg",
+    "model": "Z890I Nova WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2q8vyo6",
     "model": "B760M PG Riptide WiFi",
     "maker": "Intel",
@@ -341,13 +352,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2rylnqg",
-    "model": "Z890I Nova WiFi",
+    "id": "mobo_m68rfcv2tacbft",
+    "model": "B760M-HDVP",
     "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890I%20Nova%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890I%20Nova%20WiFi/bios.html",
-    "heldversion": "3.31",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-HDVP",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html",
+    "heldversion": "14.02",
     "helddate": "2026/7/15",
     "release": null
   },
@@ -374,17 +385,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2tacbft",
-    "model": "B760M-HDVP",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HDVP",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HDVP/bios.html",
-    "heldversion": "14.02",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv27hucul",
     "model": "Z790M-ITX WiFi",
     "maker": "Intel",
@@ -407,13 +407,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2et3i5p",
-    "model": "B760M-H2/M.2",
+    "id": "mobo_m68rfcv294tlmh",
+    "model": "B760M PG Lightning/D4",
     "maker": "Intel",
     "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-H2M.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
-    "heldversion": "10.02",
+    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
+    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
+    "heldversion": "13.02",
     "helddate": "2026/7/15",
     "release": null
   },
@@ -649,17 +649,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv294tlmh",
-    "model": "B760M PG Lightning/D4",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M%20PG%20LightningD4",
-    "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20LightningD4/bios.html",
-    "heldversion": "13.02",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv28lbfr1",
     "model": "B660M Steel Legend",
     "maker": "Intel",
@@ -789,6 +778,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z790%20Riptide%20WiFi/bios.html",
     "heldversion": "15.02",
     "helddate": "2026/6/24",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2et3i5p",
+    "model": "B760M-H2/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-H2M.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-H2M.2/bios.html",
+    "heldversion": "10.02",
+    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -968,25 +968,14 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2iljqwv",
-    "model": "X670E Steel Legend",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X670E%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/amd/X670E%20Steel%20Legend/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2qeqoxf",
     "model": "X670E Pro RS",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X670E%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/X670E%20Pro%20RS/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -1119,6 +1108,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/X870%20Riptide%20WiFi/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/2",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2iljqwv",
+    "model": "X670E Steel Legend",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X670E%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/amd/X670E%20Steel%20Legend/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -1359,8 +1359,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -1392,8 +1392,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -1403,8 +1403,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
     "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -1502,8 +1502,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
     "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -2189,17 +2189,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2xbr8z8",
-    "model": "B860I WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2omu94m",
     "model": "Fatal1ty X370 Gaming X",
     "maker": "AMD",
@@ -2318,6 +2307,17 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20X370%20Professional%20Gaming/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/8",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2xbr8z8",
+    "model": "B860I WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860I%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860I%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -2530,13 +2530,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv29mv3fl",
-    "model": "B760M-H/M.2",
+    "id": "mobo_m68rfcv2k6vc1c",
+    "model": "B860 Lightning WiFi",
     "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/B760M-HM.2",
-    "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
-    "heldversion": "11.02",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.31",
     "helddate": "2026/7/15",
     "release": null
   },
@@ -2615,17 +2615,6 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2k6vc1c",
-    "model": "B860 Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -2805,6 +2794,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv29mv3fl",
+    "model": "B760M-H/M.2",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-HM.2",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-HM.2/bios.html",
+    "heldversion": "11.02",
+    "helddate": "2026/7/15",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv29ehcht",
     "model": "Z690 Taichi Razer Edition",
     "maker": "Intel",
@@ -2827,17 +2827,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2stml1z",
-    "model": "B860 LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2if8oot",
     "model": "B860 Pro-A",
     "maker": "Intel",
@@ -2857,17 +2846,6 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "3.22",
     "helddate": "2026/2/12",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2tjc3b0",
-    "model": "B860 Steel Legend WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -2912,17 +2890,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro-A%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2wndyez",
-    "model": "Z890M Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -3003,6 +2970,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2stml1z",
+    "model": "B860 LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2zm362h",
     "model": "X470 Master SLI",
     "maker": "AMD",
@@ -3011,6 +2989,28 @@
     "biospage": "https://www.asrock.com/mb/amd/X470%20Master%20SLI/bios.html",
     "heldversion": "10.60",
     "helddate": "2026/5/11",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2tjc3b0",
+    "model": "B860 Steel Legend WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2wndyez",
+    "model": "Z890M Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890M%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
     "release": null
   },
   {
@@ -3619,17 +3619,6 @@
     "release": "2025/12/31"
   },
   {
-    "id": "mobo_mmrezl7dxdd9lz",
-    "model": "B860M-HDVP",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-HDVP",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-HDVP/bios.html",
-    "heldversion": "1.42",
-    "helddate": "2026/7/15",
-    "release": "2026/2/5"
-  },
-  {
     "id": "mobo_mmrf12dp242kv4",
     "model": "B550M Pro-A",
     "maker": "AMD",
@@ -3817,6 +3806,17 @@
     "release": "2026/1/15"
   },
   {
+    "id": "mobo_mmrezl7dxdd9lz",
+    "model": "B860M-HDVP",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-HDVP",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-HDVP/bios.html",
+    "heldversion": "1.42",
+    "helddate": "2026/7/15",
+    "release": "2026/2/5"
+  },
+  {
     "id": "mobo_m68rfcv2zwi2i0",
     "model": "X600TM-ITX",
     "maker": "AMD",
@@ -3894,17 +3894,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ljza5k",
-    "model": "Z890 Riptide WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/15",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2sb4f96",
     "model": "Z890 Nova WiFi",
     "maker": "Intel",
@@ -3913,6 +3902,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/13",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ljza5k",
+    "model": "Z890 Riptide WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/Z890%20Riptide%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/15",
     "release": null
   },
   {
