@@ -28,8 +28,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20WiFi/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/4",
+    "heldversion": "3.31",
+    "helddate": "2026/7/17",
     "release": null
   },
   {
@@ -50,8 +50,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/4",
+    "heldversion": "3.31",
+    "helddate": "2026/7/17",
     "release": null
   },
   {
@@ -61,8 +61,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-H2",
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/2",
+    "heldversion": "3.32",
+    "helddate": "2026/7/17",
     "release": null
   },
   {
@@ -1353,12 +1353,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2qev4up",
-    "model": "B650M PG Riptide WiFi White",
+    "id": "mobo_m68rfcv28zviww",
+    "model": "B650M PG Riptide WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/16",
     "release": null
@@ -1386,23 +1386,23 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28zviww",
-    "model": "B650M PG Riptide WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/16",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2ot347m",
     "model": "B650 LiveMixer",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20LiveMixer",
     "biospage": "https://www.asrock.com/mb/amd/B650%20LiveMixer/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2x2gxmp",
+    "model": "B650M PG Riptide",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/16",
     "release": null
@@ -1427,6 +1427,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M-HM.2+/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/8",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2qev4up",
+    "model": "B650M PG Riptide WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White",
+    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide%20WiFi%20White/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -1493,17 +1504,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/9",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2x2gxmp",
-    "model": "B650M PG Riptide",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650M%20PG%20Riptide",
-    "biospage": "https://pg.asrock.com/mb/amd/B650M%20PG%20Riptide/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/16",
     "release": null
   },
   {
@@ -3295,8 +3295,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B650%20PG%20Lightning%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/17",
     "release": null
   },
   {
@@ -3460,8 +3460,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20Gen5%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5%20WiFi/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/17",
     "release": "2025/9/11"
   },
   {
@@ -3471,8 +3471,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M%20Rock%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/B860M%20Rock%20WiFi/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/17",
     "release": "2026/1/15"
   },
   {
@@ -3592,8 +3592,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-X%20Gen5",
     "biospage": "https://www.asrock.com/mb/intel/B860M-X%20Gen5/bios.html",
-    "heldversion": "3.22",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/17",
     "release": "2025/9/11"
   },
   {
