@@ -4024,5 +4024,16 @@
     "heldversion": "4.43",
     "helddate": "2026/7/1",
     "release": null
+  },
+  {
+    "id": "mobo_mrrjcek2xtvsdl",
+    "model": "A620AM-P",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620AM-P",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-P/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/1",
+    "release": "2026/7/1"
   }
 ]
