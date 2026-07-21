@@ -1,11 +1,11 @@
 [
   {
-    "id": "mobo_m68rfcv2dbj0td",
-    "model": "B860M Pro-A",
+    "id": "mobo_m68rfcv2iumz8q",
+    "model": "B860M Pro-A WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/20",
     "release": null
@@ -17,8 +17,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/4",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": null
   },
   {
@@ -52,6 +52,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B860M-H2/bios.html",
     "heldversion": "3.32",
     "helddate": "2026/7/17",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2dbj0td",
+    "model": "B860M Pro-A",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -259,8 +270,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/4",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": null
   },
   {
@@ -272,17 +283,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "22.02",
     "helddate": "2026/6/29",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2iumz8q",
-    "model": "B860M Pro-A WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -1507,6 +1507,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2q504kn",
+    "model": "B860M Pro RS",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2nt8rv5",
     "model": "A620M-HDV/M.2+",
     "maker": "AMD",
@@ -1581,17 +1592,6 @@
     "biospage": "https://www.asrock.com/mb/intel/H610M-HDVM.2+%20D5/bios.html",
     "heldversion": "5.02",
     "helddate": "2025/10/13",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2q504kn",
-    "model": "B860M Pro RS",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -2156,12 +2156,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2kjnqn4",
-    "model": "B860M Lightning WiFi",
+    "id": "mobo_m68rfcv22uz6bk",
+    "model": "B860I Lightning WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/20",
     "release": null
@@ -2186,6 +2186,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/13",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2kjnqn4",
+    "model": "B860M Lightning WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Lightning%20WiFi",
+    "biospage": "https://pg.asrock.com/mb/intel/B860M%20Lightning%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -2398,17 +2409,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv22uz6bk",
-    "model": "B860I Lightning WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860I%20Lightning%20WiFi",
-    "biospage": "https://pg.asrock.com/mb/intel/B860I%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2f7o355",
     "model": "A320M Pro4",
     "maker": "AMD",
@@ -2483,17 +2483,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A320M-DVS%20R3.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2ask9ni",
-    "model": "B650E Steel Legend WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -2615,6 +2604,17 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M-HDV%20R4.0/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ask9ni",
+    "model": "B650E Steel Legend WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650E%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -2849,6 +2849,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2gncb5d",
+    "model": "B860M Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2agn1tt",
     "model": "X870 Steel Legend WiFi",
     "maker": "AMD",
@@ -2868,6 +2879,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "11.01",
     "helddate": "2026/7/6",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2di01rc",
+    "model": "B860 Pro RS",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS/bios.html",
+    "heldversion": "3.32",
+    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -2923,17 +2945,6 @@
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/13",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2gncb5d",
-    "model": "B860M Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -3011,17 +3022,6 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z890M%20Riptide%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/15",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2di01rc",
-    "model": "B860 Pro RS",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS/bios.html",
-    "heldversion": "3.32",
-    "helddate": "2026/7/20",
     "release": null
   },
   {
@@ -3295,8 +3295,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-H",
     "biospage": "https://www.asrock.com/mb/intel/H810M-H/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": "2025/3/28"
   },
   {
@@ -3493,8 +3493,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X%20Gen5%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5%20WiFi/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": "2026/1/22"
   },
   {
@@ -3504,8 +3504,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-X%20Gen5",
     "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": "2026/1/22"
   },
   {
@@ -3537,17 +3537,17 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-P%20Gen5",
     "biospage": "https://www.asrock.com/mb/intel/H810M-P%20Gen5/bios.html",
-    "heldversion": "3.21",
-    "helddate": "2026/2/2",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": "2026/1/16"
   },
   {
-    "id": "mobo_ml3e6e4344fhan",
-    "model": "B860 Challenger WiFi White",
+    "id": "mobo_ml3e6j7v3amfhp",
+    "model": "B860 Challenger WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi%20White/bios.html",
+    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/20",
     "release": "2026/1/5"
@@ -3586,12 +3586,23 @@
     "release": "2026/2/24"
   },
   {
-    "id": "mobo_ml3e6j7v3amfhp",
-    "model": "B860 Challenger WiFi",
+    "id": "mobo_ml3e6e4344fhan",
+    "model": "B860 Challenger WiFi White",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/intel/B860%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
+    "release": "2026/1/5"
+  },
+  {
+    "id": "mobo_mkjdc5qmh2p0f7",
+    "model": "B860 Rock WiFi 7",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860%20Rock%20WiFi%207",
+    "biospage": "https://www.asrock.com/mb/intel/B860%20Rock%20WiFi%207/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/20",
     "release": "2026/1/5"
@@ -3661,17 +3672,6 @@
     "heldversion": "4.43",
     "helddate": "2026/7/3",
     "release": "2026/1/15"
-  },
-  {
-    "id": "mobo_mkjdc5qmh2p0f7",
-    "model": "B860 Rock WiFi 7",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860%20Rock%20WiFi%207",
-    "biospage": "https://www.asrock.com/mb/intel/B860%20Rock%20WiFi%207/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
-    "release": "2026/1/5"
   },
   {
     "id": "mobo_mfjbooaja1wrdd",
@@ -3861,6 +3861,17 @@
     "release": "2026/4/23"
   },
   {
+    "id": "mobo_mrrjcek2xtvsdl",
+    "model": "A620AM-P",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620AM-P",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-P/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/1",
+    "release": "2026/7/1"
+  },
+  {
     "id": "mobo_mrhj72936vv3iz",
     "model": "B860M Challenger WiFi White",
     "maker": "Intel",
@@ -3881,17 +3892,6 @@
     "heldversion": "3.31",
     "helddate": "2026/7/20",
     "release": "2026/7/8"
-  },
-  {
-    "id": "mobo_mrrjcek2xtvsdl",
-    "model": "A620AM-P",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AM-P",
-    "biospage": "https://www.asrock.com/mb/amd/A620AM-P/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/1",
-    "release": "2026/7/1"
   },
   {
     "id": "mobo_m68rfcv2uhettz",
