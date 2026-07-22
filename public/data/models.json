@@ -11,12 +11,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gnwvqv",
-    "model": "H810M-X",
+    "id": "mobo_m68rfcv2pbev3i",
+    "model": "H810M-X WiFi",
     "maker": "Intel",
     "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/21",
     "release": null
@@ -264,17 +264,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2pbev3i",
-    "model": "H810M-X WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/21",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2hux6re",
     "model": "Z790 Steel Legend WiFi",
     "maker": "Intel",
@@ -283,6 +272,17 @@
     "biospage": "https://www.asrock.com/mb/intel/Z790%20Steel%20Legend%20WiFi/bios.html",
     "heldversion": "22.02",
     "helddate": "2026/6/29",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2gnwvqv",
+    "model": "H810M-X",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-X",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
     "release": null
   },
   {
@@ -1315,8 +1315,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/22",
     "release": null
   },
   {
@@ -1381,8 +1381,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/29",
+    "heldversion": "4.43",
+    "helddate": "2026/7/22",
     "release": null
   },
   {
@@ -1458,8 +1458,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/A620M%20Pro%20RS/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/29",
+    "heldversion": "4.43",
+    "helddate": "2026/7/22",
     "release": null
   },
   {
@@ -1535,8 +1535,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650E%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/amd/B650E%20Taichi%20Lite/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/30",
+    "heldversion": "4.43",
+    "helddate": "2026/7/22",
     "release": null
   },
   {
@@ -3278,17 +3278,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2iafmq0",
-    "model": "B860M LiveMixer WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/20",
-    "release": null
-  },
-  {
     "id": "mobo_m9p9trppes5u51",
     "model": "H810M-H",
     "maker": "Intel",
@@ -3298,6 +3287,17 @@
     "heldversion": "3.31",
     "helddate": "2026/7/21",
     "release": "2025/3/28"
+  },
+  {
+    "id": "mobo_m68rfcv2iafmq0",
+    "model": "B860M LiveMixer WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M%20LiveMixer%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B860M%20LiveMixer%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/20",
+    "release": null
   },
   {
     "id": "mobo_m68rfcv227ppov",
@@ -3487,17 +3487,6 @@
     "release": "2025/7/21"
   },
   {
-    "id": "mobo_mktdg7k3o5cp8g",
-    "model": "H810M-X Gen5 WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/21",
-    "release": "2026/1/22"
-  },
-  {
     "id": "mobo_mktdgcnbgweq1c",
     "model": "H810M-X Gen5",
     "maker": "Intel",
@@ -3507,6 +3496,17 @@
     "heldversion": "3.31",
     "helddate": "2026/7/21",
     "release": "2026/1/22"
+  },
+  {
+    "id": "mobo_ml3e72rnvnkmna",
+    "model": "H810M-P Gen5",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-P%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-P%20Gen5/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
+    "release": "2026/1/16"
   },
   {
     "id": "mobo_mgxc7vu0yb9yc7",
@@ -3529,17 +3529,6 @@
     "heldversion": "1.11",
     "helddate": "2025/12/9",
     "release": "2025/9/30"
-  },
-  {
-    "id": "mobo_ml3e72rnvnkmna",
-    "model": "H810M-P Gen5",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/H810M-P%20Gen5",
-    "biospage": "https://www.asrock.com/mb/intel/H810M-P%20Gen5/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/21",
-    "release": "2026/1/16"
   },
   {
     "id": "mobo_ml3e6j7v3amfhp",
@@ -3614,8 +3603,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/H810M-HDVP",
     "biospage": "https://www.asrock.com/mb/intel/H810M-HDVP/bios.html",
-    "heldversion": "1.31",
-    "helddate": "2026/2/5",
+    "heldversion": "1.42",
+    "helddate": "2026/7/21",
     "release": "2025/12/31"
   },
   {
@@ -3672,6 +3661,17 @@
     "heldversion": "4.43",
     "helddate": "2026/7/3",
     "release": "2026/1/15"
+  },
+  {
+    "id": "mobo_mktdg7k3o5cp8g",
+    "model": "H810M-X Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/H810M-X%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/H810M-X%20Gen5%20WiFi/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/21",
+    "release": "2026/1/22"
   },
   {
     "id": "mobo_mfjbooaja1wrdd",
