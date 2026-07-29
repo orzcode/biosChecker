@@ -3405,8 +3405,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/29",
+    "heldversion": "4.43",
+    "helddate": "2026/7/29",
     "release": "2025/6/20"
   },
   {
@@ -3949,6 +3949,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2mpeflj",
+    "model": "Z890 Taichi AQUA",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
+    "heldversion": "3.31",
+    "helddate": "2026/7/24",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2p10rv8",
     "model": "A320M-HDV R4.0",
     "maker": "AMD",
@@ -4012,17 +4023,6 @@
     "biospage": "https://pg.asrock.com/mb/intel/Z790I%20Lightning%20WiFi/bios.html",
     "heldversion": "11.02",
     "helddate": "2026/6/29",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2mpeflj",
-    "model": "Z890 Taichi AQUA",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/24",
     "release": null
   },
   {
