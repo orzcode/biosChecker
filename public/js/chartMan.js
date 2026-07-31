@@ -131,10 +131,15 @@ function createChartString(chartObject) {
 
 // Function to create a bar chart based on mobo counts
 function createMoboBarChart(data) {
-  const moboNames = Object.keys(data.userMobos);
-  const counts = moboNames.map((mobo) => data.userMobos[mobo].count);
-  const barColors = moboNames.map(
-    (mobo) => chartConfig.socketColors[data.userMobos[mobo].socket] || "#999999"
+const minCount = 2; // only show mobos with count >= 2
+
+const filteredMobos = Object.entries(data.userMobos)
+  .filter(([, info]) => info.count >= minCount);
+
+  const moboNames = filteredMobos.map(([name]) => name);
+  const counts = filteredMobos.map(([, info]) => info.count);
+  const barColors = filteredMobos.map(
+    ([, info]) => chartConfig.socketColors[info.socket] || "#999999"
   );
 
   const title = "Motherboard Distribution";
