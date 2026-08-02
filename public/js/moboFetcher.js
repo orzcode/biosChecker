@@ -2,7 +2,6 @@ import fs from "fs/promises";
 import { generateUniqueId } from "./uuid.js";
 import { scrapeBIOSInfo } from "./versionChecker.js";
 import { getMobos, saveMobos } from "./sqlServices.js";
-import { koyebToRepo } from "./koyebToGithub.js";
 import { sendToDiscord } from "./reporter.js";
 
 // Now relying on Playwright for all HTTP/DOM interactions
@@ -94,7 +93,7 @@ async function checkBiosPage(maker, modelName) {
   }
 }
 
-export async function scrapeMotherboards(fromKoyeb) {
+export async function scrapeMotherboards() {
   //Checks for newly released motherboards
   //Skips existing models in the database
   //Maps and compares against DB and JSON to prevent overwriting
@@ -246,7 +245,7 @@ export async function scrapeMotherboards(fromKoyeb) {
         // 2. Scrape BIOS Version using the validated URL
         // Because biosPage is guaranteed to be a non-null string here,
         // the Playwright crash is avoided.
-        const versionInfo = await scrapeBIOSInfo(biosPage);
+        const versionInfo = await scrapeBIOSInfo(browserInstance, biosPage);
 
         // 🛑 NEW CHECK: If scrapeBIOSInfo returns an error object, skip the model.
         if (versionInfo && versionInfo.error) {
@@ -326,11 +325,6 @@ export async function scrapeMotherboards(fromKoyeb) {
         Model: model.model,
       }));
       await sendToDiscord(summary, "moboFetcher");
-
-      if (fromKoyeb === "fromKoyeb") {
-        koyebToRepo();
-        console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-      }
     } else {
       console.log("No new models found. Database and JSON remain unchanged.");
 

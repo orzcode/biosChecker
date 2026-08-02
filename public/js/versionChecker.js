@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import { getMobos, saveMobos } from "./sqlServices.js";
 import { scrapeWithPlaywright } from "./playwright.js";
 import { sendToDiscord } from "./reporter.js";
-import { koyebToRepo } from "./koyebToGithub.js";
+import { chromium } from "playwright";
 
 // Un-comment / use this when their SSL certs are broken (rare)
 //process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
@@ -30,9 +30,10 @@ export async function isNewerDate(heldDate, foundDate) {
 }
 /////////////////////////////////////////////
 
-// scrapeBIOSInfo(url)
+// scrapeBIOSInfo(browser, url)
 // Now uses Playwright for ALL scraping, unifying the two previous paths.
-export async function scrapeBIOSInfo(url) {
+// Takes an already-launched browser so callers can reuse one instance across many URLs.
+export async function scrapeBIOSInfo(browser, url) {
   // Previously, this logic contained the choice between Fetch/Cheerio and Playwright.
   // Now, we rely exclusively on the Playwright service.
   console.log(`Using Playwright to scrape: ${url}`);
@@ -40,7 +41,7 @@ export async function scrapeBIOSInfo(url) {
     // The scrapeWithPlaywright function is now responsible for navigating,
     // waiting for content, scraping the version/date, and returning the result object:
     // { version: string, releaseDate: string }
-    return await scrapeWithPlaywright(url);
+    return await scrapeWithPlaywright(browser, url);
   } catch (playwrightError) {
     // If playwright throws, catch it and return the error object
     console.error(
@@ -81,7 +82,7 @@ async function processUpdate( //Note - these are UPDATED versions.
   }
 }
 
-export async function updateModels(fromKoyeb) {
+export async function updateModels() {
   const mobos = await getMobos();
   const updatedMobos = [];
 
@@ -101,6 +102,15 @@ export async function updateModels(fromKoyeb) {
   const errorModels = new Set(); // Set to track models with errors
   const firstAttemptErrors = new Map(); // Map to store initial errors for retry logic. Apparently I missed this.
 
+  // One browser for the entire run - each scrape just opens/closes its own page.
+  // Avoids paying Chromium's launch cost ~367+ times per day.
+  const browser = await chromium.launch({
+    channel: "chromium",
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  });
+
+  try {
   for (const mobo of mobos) {
     const { model, biospage, heldversion, helddate } = mobo;
 
@@ -111,7 +121,7 @@ export async function updateModels(fromKoyeb) {
 
     try {
       // All pages now attempt to use Playwright first
-      scrapedInfo = await scrapeBIOSInfo(biospage);
+      scrapedInfo = await scrapeBIOSInfo(browser, biospage);
 
       if (scrapedInfo && scrapedInfo.error) {
         scrapeError = scrapedInfo.error; // Store the specific error object
@@ -164,7 +174,7 @@ export async function updateModels(fromKoyeb) {
       let retryScrapeError = null;
 
       try {
-        retryScrapedInfo = await scrapeBIOSInfo(mobo.biospage);
+        retryScrapedInfo = await scrapeBIOSInfo(browser, mobo.biospage);
 
         if (retryScrapedInfo && retryScrapedInfo.error) {
           retryScrapeError = retryScrapedInfo.error;
@@ -234,6 +244,9 @@ export async function updateModels(fromKoyeb) {
       await delay(3000);
     }
   }
+  } finally {
+    await browser.close();
+  }
 
   try {
     // Only save to DB if there were actual changes
@@ -290,11 +303,6 @@ export async function updateModels(fromKoyeb) {
   if (summary.summary.errors > 0) {
     console.log("\n==== Error Details ====");
     console.table(summary.errors);
-  }
-
-  if (fromKoyeb === "fromKoyeb") {
-    console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
-    koyebToRepo();
   }
 
   console.log("BIOS version checks complete - proceeding to notifycheck");

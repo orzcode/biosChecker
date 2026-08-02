@@ -2,6 +2,7 @@ import { mailer } from "./mailer.js";
 import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
 import { parseDate, isNewerDate } from "./versionChecker.js";
 import { sendToDiscord } from "./reporter.js";
+import { getDailyUsageSummary } from "./usageChecker.js";
 import { today } from "./dater.js";
 
 function sleep(ms) {
@@ -194,6 +195,11 @@ export async function notifyUsers() {
     if (summary.summary.errors > 0) {
       console.log("\n==== Errors ====");
       console.table(summary.errors);
+    }
+
+    const usageSummary = await getDailyUsageSummary();
+    if (usageSummary) {
+      summary.summary.additional["Resend usage"] = usageSummary;
     }
 
     await sendToDiscord(summary, "notifyUsers");

@@ -1,5 +1,4 @@
 import { chartManager } from "./chartMan.js";
-//import { generateImageFromData } from "./textGraph.js";
 import { today } from "./dater.js";
 import fs from "fs";
 import fetch from "node-fetch";
