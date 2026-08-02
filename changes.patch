@@ -1,0 +1,852 @@
+diff -ruN '--exclude=public/data/models.json' project_original/.github/workflows/moboFetchTask.yml project/.github/workflows/moboFetchTask.yml
+--- project_original/.github/workflows/moboFetchTask.yml	2026-08-02 03:52:56.169490611 +0000
++++ project/.github/workflows/moboFetchTask.yml	2026-08-02 03:52:25.469479358 +0000
+@@ -39,11 +39,6 @@
+       - name: Run mobofetcher task
+         env:
+           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+-          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+-          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+-          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+-          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+           PGHOST: ${{ secrets.PGHOST }}
+           PGUSER: ${{ secrets.PGUSER }}
+           PGPASSWORD: ${{ secrets.PGPASSWORD }}
+diff -ruN '--exclude=public/data/models.json' project_original/.github/workflows/reNotifyOnly.yml project/.github/workflows/reNotifyOnly.yml
+--- project_original/.github/workflows/reNotifyOnly.yml	2026-08-02 03:52:56.169642946 +0000
++++ project/.github/workflows/reNotifyOnly.yml	2026-08-02 03:52:25.491751127 +0000
+@@ -35,11 +35,6 @@
+       - name: Run NotifyOnly task
+         env:
+           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+-          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+-          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+-          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+-          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+           PGHOST: ${{ secrets.PGHOST }}
+           PGUSER: ${{ secrets.PGUSER }}
+           PGPASSWORD: ${{ secrets.PGPASSWORD }}
+diff -ruN '--exclude=public/data/models.json' project_original/.github/workflows/runTasks.yml project/.github/workflows/runTasks.yml
+--- project_original/.github/workflows/runTasks.yml	2026-08-02 03:52:56.169815882 +0000
++++ project/.github/workflows/runTasks.yml	2026-08-02 03:52:25.510326874 +0000
+@@ -38,11 +38,6 @@
+       - name: Run checker tasks
+         env:
+           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+-          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+-          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+-          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+-          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+           PGHOST: ${{ secrets.PGHOST }}
+           PGUSER: ${{ secrets.PGUSER }}
+           PGPASSWORD: ${{ secrets.PGPASSWORD }}
+diff -ruN '--exclude=public/data/models.json' project_original/app.js project/app.js
+--- project_original/app.js	2026-08-02 03:52:56.176241727 +0000
++++ project/app.js	2026-08-02 03:51:57.817337036 +0000
+@@ -259,7 +259,7 @@
+ //   });
+ // }
+ 
+-// For local development, or for Koyeb
++// For local development
+ // Vercel doesn't use 'listen' but seems to run regardless
+ app.listen(PORT, () => {
+   console.log(
+diff -ruN '--exclude=public/data/models.json' project_original/package.json project/package.json
+--- project_original/package.json	2026-08-02 03:52:56.176308807 +0000
++++ project/package.json	2026-08-02 09:59:29.380600620 +0000
+@@ -1,7 +1,6 @@
+ {
+   "dependencies": {
+     "@vercel/analytics": "^1.5.0",
+-    "cheerio": "^1.0.0",
+     "compression": "^1.8.0",
+     "ejs": "^3.1.10",
+     "express": "^4.21.2",
+@@ -17,15 +16,11 @@
+   "type": "module",
+   "devDependencies": {
+     "eslint": "^9.18.0",
+-    "playwright": "^1.50.1"
++    "playwright": "^1.50.1",
++    "resend-usage": "npm:resend@6.19.0-preview-usage.0"
+   },
+   "scripts": {
+     "dev": "node --env-file=.env --watch app.js",
+-    "start": "node app.js",
+-    "minifystart": "npm install && npm run minify && NODE_ENV=production node app.js",
+-    "minify": "npm run minify-css && npm run minify-js && npm run minify-ejs",
+-    "minify-css": "cleancss -o public/css/styles.min.css public/css/styles.css",
+-    "minify-js": "terser public/js/script.js -o public/js/script.min.js --compress --mangle",
+-    "minify-ejs": "ejs-cli views/index.ejs -o views/index.min.ejs"
++    "start": "node app.js"
+   }
+ }
+\ No newline at end of file
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/db.js project/public/js/db.js
+--- project_original/public/js/db.js	2026-08-02 03:52:56.172435584 +0000
++++ project/public/js/db.js	2026-08-02 03:50:16.321131973 +0000
+@@ -1,31 +1,16 @@
+ import postgres from "postgres";
+ 
+-// Toggle between "koyeb" and "neon"
+-const DB_PROVIDER = "neon";
+-
+-const sql = DB_PROVIDER === "koyeb"
+-  ? postgres({
+-      host: process.env.DATABASE_HOST,
+-      database: process.env.DATABASE_NAME,
+-      username: process.env.DATABASE_USER,
+-      password: process.env.DATABASE_PASSWORD,
+-      ssl: "require",
+-      // Connection pooling settings
+-      max: 10, // Maximum number of connections in pool
+-      idle_timeout: 10, // Close idle connections after 10 seconds
+-      connect_timeout: 10, // Connection timeout after 10 seconds
+-    })
+-  : postgres({
+-      host: process.env.PGHOST,
+-      database: process.env.PGDATABASE,
+-      username: process.env.PGUSER,
+-      password: process.env.PGPASSWORD,
+-      port: 5432,
+-      ssl: "require",
+-      // Connection pooling settings
+-      max: 10, // Maximum number of connections in pool
+-      idle_timeout: 10, // Close idle connections after 10 seconds
+-      connect_timeout: 10, // Connection timeout after 10 seconds
+-    });
++const sql = postgres({
++  host: process.env.PGHOST,
++  database: process.env.PGDATABASE,
++  username: process.env.PGUSER,
++  password: process.env.PGPASSWORD,
++  port: 5432,
++  ssl: "require",
++  // Connection pooling settings
++  max: 10, // Maximum number of connections in pool
++  idle_timeout: 10, // Close idle connections after 10 seconds
++  connect_timeout: 10, // Connection timeout after 10 seconds
++});
+ 
+ export default sql;
+\ No newline at end of file
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/koyebToGithub.js project/public/js/koyebToGithub.js
+--- project_original/public/js/koyebToGithub.js	2026-08-02 03:52:56.172511979 +0000
++++ project/public/js/koyebToGithub.js	1970-01-01 00:00:00.000000000 +0000
+@@ -1,43 +0,0 @@
+-import { exec } from "child_process";
+-import util from "util";
+-
+-// allows koyeb to re-push to the GH repo
+-// was going to be used when running scripts on koyeb
+-// called at end of moboFetcher and versionChecker
+-// essentially the same as the GH action
+-
+-const execAsync = util.promisify(exec);
+-
+-export async function koyebToRepo() {
+-  try {
+-    // Configure Git with user details
+-    await execAsync(`git config --global user.name "koyeb-bot"`);
+-    await execAsync(`git config --global user.email "koyeb-bot@example.com"`);
+-
+-    // Check for changes in models.json
+-    const hasChanges = await execAsync(
+-      `git diff --quiet public/data/models.json || echo "CHANGES to models.json detected"`
+-    );
+-
+-    if (!hasChanges.stdout.includes("CHANGES")) {
+-      console.log("No changes to models.json. Skipping commit and push.");
+-      return;
+-    }
+-
+-    // Add and commit changes
+-    await execAsync(`git add public/data/models.json`);
+-    await execAsync(`git commit -m "Update models.json from Koyeb task"`);
+-
+-    // Push changes to GitHub using the token
+-    const GITHUB_TOKEN = process.env.KOYEB_REPOPUSHKEY;
+-    if (!GITHUB_TOKEN) {
+-      throw new Error("Github access token not set");
+-    }
+-
+-    const remoteRepo = `https://${GITHUB_TOKEN}@github.com/orzcode/biosChecker.git`;
+-    await execAsync(`git push ${remoteRepo} main`);
+-    console.log("models.json pushed from Koyeb to GitHub successfully!");
+-  } catch (err) {
+-    console.error("Error pushing changes to GitHub:", err.message);
+-  }
+-}
+\ No newline at end of file
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/moboFetcher.js project/public/js/moboFetcher.js
+--- project_original/public/js/moboFetcher.js	2026-08-02 03:52:56.172994861 +0000
++++ project/public/js/moboFetcher.js	2026-08-02 03:51:50.893255580 +0000
+@@ -2,7 +2,6 @@
+ import { generateUniqueId } from "./uuid.js";
+ import { scrapeBIOSInfo } from "./versionChecker.js";
+ import { getMobos, saveMobos } from "./sqlServices.js";
+-import { koyebToRepo } from "./koyebToGithub.js";
+ import { sendToDiscord } from "./reporter.js";
+ 
+ // Now relying on Playwright for all HTTP/DOM interactions
+@@ -94,7 +93,7 @@
+   }
+ }
+ 
+-export async function scrapeMotherboards(fromKoyeb) {
++export async function scrapeMotherboards() {
+   //Checks for newly released motherboards
+   //Skips existing models in the database
+   //Maps and compares against DB and JSON to prevent overwriting
+@@ -246,7 +245,7 @@
+         // 2. Scrape BIOS Version using the validated URL
+         // Because biosPage is guaranteed to be a non-null string here,
+         // the Playwright crash is avoided.
+-        const versionInfo = await scrapeBIOSInfo(biosPage);
++        const versionInfo = await scrapeBIOSInfo(browserInstance, biosPage);
+ 
+         // 🛑 NEW CHECK: If scrapeBIOSInfo returns an error object, skip the model.
+         if (versionInfo && versionInfo.error) {
+@@ -326,11 +325,6 @@
+         Model: model.model,
+       }));
+       await sendToDiscord(summary, "moboFetcher");
+-
+-      if (fromKoyeb === "fromKoyeb") {
+-        koyebToRepo();
+-        console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+-      }
+     } else {
+       console.log("No new models found. Database and JSON remain unchanged.");
+ 
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/notifyChecker.js project/public/js/notifyChecker.js
+--- project_original/public/js/notifyChecker.js	2026-08-02 03:52:56.173170395 +0000
++++ project/public/js/notifyChecker.js	2026-08-02 09:59:49.971166985 +0000
+@@ -2,6 +2,7 @@
+ import { getMobos, getUsers, saveUsers, deleteUser } from "./sqlServices.js";
+ import { parseDate, isNewerDate } from "./versionChecker.js";
+ import { sendToDiscord } from "./reporter.js";
++import { getDailyUsageSummary } from "./usageChecker.js";
+ import { today } from "./dater.js";
+ 
+ function sleep(ms) {
+@@ -196,6 +197,11 @@
+       console.table(summary.errors);
+     }
+ 
++    const usageSummary = await getDailyUsageSummary();
++    if (usageSummary) {
++      summary.summary.additional["Resend usage"] = usageSummary;
++    }
++
+     await sendToDiscord(summary, "notifyUsers");
+ 
+     return summary;
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/playwright.js project/public/js/playwright.js
+--- project_original/public/js/playwright.js	2026-08-02 03:52:56.173296396 +0000
++++ project/public/js/playwright.js	2026-08-02 03:50:31.840123191 +0000
+@@ -1,9 +1,8 @@
+-import { chromium } from "playwright"; 
+-
+ const MAX_RETRIES = 3; // Define the maximum number of attempts
+ 
+-export async function scrapeWithPlaywright(url) {
+-    let browser;
++// Accepts a shared, already-launched browser instance so callers can scrape
++// many URLs without paying browser-launch cost on every single one.
++export async function scrapeWithPlaywright(browser, url) {
+     let lastError = null; // Store the last error encountered
+     
+     const versionSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:first-child";
+@@ -13,17 +12,11 @@
+ 
+     // --- START RETRY LOOP ---
+     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
++        let page;
+         try {
+             console.log(`Playwright initiated (Attempt ${attempt}/${MAX_RETRIES})...`);
+-            
+-            // Launch browser for this attempt
+-            browser = await chromium.launch({
+-                // Settings for headless environments
+-                channel: "chromium",
+-                headless: true,
+-                args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+-            });
+-            const page = await browser.newPage();
++
++            page = await browser.newPage();
+ 
+             console.log(`Playwrighting to ${url}`);
+ 
+@@ -66,11 +59,9 @@
+             await new Promise(resolve => setTimeout(resolve, 5000));
+             
+         } finally {
+-            // 🛑 CRITICAL BROWSER CLEANUP 🛑
+-            // This runs after every attempt (success or failure)
+-            if (browser) {
+-                await browser.close();
+-                browser = null; // Clear the reference for the next attempt
++            // Close just the page - the browser is shared across calls and stays open
++            if (page) {
++                await page.close();
+             }
+         }
+     }
+@@ -83,4 +74,4 @@
+ }
+ 
+ // Call the function with the BIOS page URL
+-//scrapeWithPlaywright('https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/bios.html');
+\ No newline at end of file
++//scrapeWithPlaywright('https://pg.asrock.com/mb/Intel/Z790%20Lightning%20WiFi/bios.html');
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/reporter.js project/public/js/reporter.js
+--- project_original/public/js/reporter.js	2026-08-02 03:52:56.173433415 +0000
++++ project/public/js/reporter.js	2026-08-02 03:52:42.718639101 +0000
+@@ -1,5 +1,4 @@
+ import { chartManager } from "./chartMan.js";
+-//import { generateImageFromData } from "./textGraph.js";
+ import { today } from "./dater.js";
+ import fs from "fs";
+ import fetch from "node-fetch";
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/runTasks.js project/public/js/runTasks.js
+--- project_original/public/js/runTasks.js	2026-08-02 03:52:56.173637710 +0000
++++ project/public/js/runTasks.js	2026-08-02 03:51:54.928308689 +0000
+@@ -1,15 +1,11 @@
+ import { updateModels } from "./versionChecker.js";
+ import { notifyUsers } from "./notifyChecker.js";
+ 
+-export async function runTasks(fromKoyeb) {
++export async function runTasks() {
+   console.log("---runTasks (daily) - version + notify checks---");
+   try {
+     console.log("---Starting daily versionChecker...");
+-    if (fromKoyeb === "fromKoyeb") {
+-      await updateModels("fromKoyeb");
+-    } else {
+-      await updateModels();
+-    }
++    await updateModels();
+     console.log("---Finished daily versionChecker.");
+ 
+     console.log("---Starting daily notifyChecker...");
+@@ -21,4 +17,4 @@
+   }
+ }
+ 
+-runTasks();
+\ No newline at end of file
++runTasks();
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/textGraph.js project/public/js/textGraph.js
+--- project_original/public/js/textGraph.js	2026-08-02 03:52:56.173786549 +0000
++++ project/public/js/textGraph.js	1970-01-01 00:00:00.000000000 +0000
+@@ -1,311 +0,0 @@
+-//import nodeHtmlToImage from 'node-html-to-image';
+-import { getChartData } from './chartDataGrabber.js';
+-/**
+- * Generates an HTML string suitable for node-html-to-image, displaying
+- * motherboard updates, new boards, and user activity based on input data,
+- * using standard fonts, a background image, and a logo.
+- *
+- * @param {object} data The input data object. Expected structure:
+- * {
+- * userMobos?: { [boardName: string]: { signups?: number } },
+- * weeklyUpdates?: {
+- * [boardName: string]: { heldversion?: string, notified?: number },
+- * newBoards?: { [boardName: string]: any }
+- * }
+- * }
+- * @returns {string} The generated HTML string.
+- */
+-function generateHtml(data) {
+-    // --- Configuration ---
+-    const width = 1036;
+-    const height = 740;
+-    const bgColor = '#efe7db'; // Fallback background color
+-    const textColor = '#000000';
+-    const fontFamily = 'Arial, sans-serif';
+-    const backgroundImageUrl = 'https://www.asrockbioschecker.link/images/tilestone2.jpg';
+-    const logoImageUrl = 'https://www.asrockbioschecker.link/images/watermark.png';
+-    const logoWidth = '120px'; // Adjust desired logo width
+-
+-    // --- Data Processing ---
+-    let updateList = [];
+-    let newBoardList = [];
+-    let totalNotified = 0;
+-    let totalSignups = 0;
+-    let outputTextLines = [];
+-
+-    const weeklyUpdates = data?.weeklyUpdates;
+-    if (weeklyUpdates) {
+-        for (const [key, value] of Object.entries(weeklyUpdates)) {
+-            if (key === 'newBoards') continue;
+-            if (typeof value === 'object' && value !== null && value.hasOwnProperty('heldversion')) {
+-                updateList.push(`&nbsp;&nbsp;-&nbsp;${escapeHtml(key)} ${escapeHtml(value.heldversion)}`);
+-                totalNotified += Number(value.notified) || 0;
+-            }
+-        }
+-    }
+-
+-    const newBoards = weeklyUpdates?.newBoards;
+-    if (typeof newBoards === 'object' && newBoards !== null) {
+-        for (const key of Object.keys(newBoards)) {
+-            newBoardList.push(`&nbsp;&nbsp;-&nbsp;${escapeHtml(key)}`);
+-        }
+-    }
+-
+-    const userMobos = data?.userMobos;
+-    if (userMobos) {
+-        for (const moboData of Object.values(userMobos)) {
+-            if (typeof moboData === 'object' && moboData !== null && moboData.hasOwnProperty('signups')) {
+-                totalSignups += Number(moboData.signups) || 0;
+-            }
+-        }
+-    }
+-
+-    // --- Assemble Output Text Lines ---
+-    let addedSection = false;
+-    if (updateList.length > 0) {
+-        outputTextLines.push(`Updates this week: ${updateList.length}`);
+-        outputTextLines.push(...updateList);
+-        addedSection = true;
+-    }
+-    if (newBoardList.length > 0) {
+-        if (addedSection) outputTextLines.push('');
+-        outputTextLines.push('New boards this week:');
+-        outputTextLines.push(...newBoardList);
+-        addedSection = true;
+-    }
+-    if (addedSection) outputTextLines.push('');
+-    outputTextLines.push('User activity this week:');
+-    outputTextLines.push(`Users notified: ${totalNotified}`);
+-    outputTextLines.push(`New signups: ${totalSignups}`);
+-
+-    const htmlContent = outputTextLines.join('<br>\n');
+-
+-    // --- Construct Final HTML String ---
+-    const htmlString = `
+-<!DOCTYPE html>
+-<html>
+-<head>
+-    <meta charset="UTF-8">
+-    <style>
+-        body {
+-            /* --- Dimensions & Base Styling --- */
+-            width: ${width}px;
+-            height: ${height}px;
+-            color: ${textColor};
+-            font-family: ${fontFamily};
+-            font-size: 16px;
+-            line-height: 1.5;
+-            margin: 0;
+-            padding: 20px;
+-            box-sizing: border-box;
+-            position: relative;
+-            overflow: hidden;
+-
+-            /* --- Background Image --- */
+-            background-color: ${bgColor};
+-            background-image: url('${backgroundImageUrl}');
+-            background-size: cover;
+-            background-position: center center;
+-            background-repeat: no-repeat;
+-
+-            /* --- Centering for the text block --- */
+-            display: flex;
+-            justify-content: center;
+-            align-items: center;
+-        }
+-
+-        .content {
+-            text-align: left;
+-            white-space: normal;
+-            font-weight: normal; /* Or 'bold' if you want the text bolder like the example image title */
+-             /* Optional: Add a semi-transparent background to text for readability over complex backgrounds */
+-             /* background-color: rgba(255, 255, 255, 0.8); */
+-             /* padding: 15px; */
+-             /* border-radius: 5px; */
+-             /* max-width: 90%; */
+-        }
+-
+-        /* --- Logo Styling --- */
+-        .logo {
+-            position: absolute;
+-            bottom: 20px;
+-            right: 20px;
+-            width: ${logoWidth};
+-            height: auto;
+-            z-index: 10;
+-        }
+-    </style>
+-</head>
+-<body>
+-    <div class="content">
+-        ${htmlContent}
+-    </div>
+-
+-    <img src="${logoImageUrl}" class="logo" alt="Logo">
+-
+-</body>
+-</html>`;
+-
+-    return htmlString;
+-}
+-
+-// --- Helper function to escape HTML characters (unchanged) ---
+-function escapeHtml(unsafe) {
+-    if (typeof unsafe !== 'string') return unsafe;
+-    return unsafe
+-         .replace(/&/g, "&amp;")
+-         .replace(/</g, "&lt;")
+-         .replace(/>/g, "&gt;")
+-         .replace(/"/g, "&quot;")
+-         .replace(/'/g, "&#039;");
+- }
+-
+-
+-// --- Example Usage ---
+-
+-// Example Data (using the full data example)
+-const exampleData = {
+-    "snapshotDate": "2025/04/16", // Updated date
+-    "userMobos": {
+-        "X870E Taichi Lite": { "socket": "AM5", "maker": "AMD", "count": 1, "signups": 0 },
+-        "Z790 PG Lightning": { "socket": "1700", "maker": "Intel", "count": 3, "signups": 1 },
+-        "B650 Aorus Pro": { "socket": "AM5", "maker": "AMD", "count": 5, "signups": 2 }
+-    },
+-    "weeklyUpdates": {
+-        "X870E Taichi Lite": { "helddate": "2025/04/15", "heldversion": "1.0.0", "notified": 1 },
+-        "Z790 PG Lightning": { "helddate": "2025/04/14", "heldversion": "F10a", "notified": 3 },
+-        "newBoards": {
+-            "X990 <New> Mobo": { "socket": "AM5", "maker": "AMD", "release": "2024/12/3" },
+-            "Z890 & Dark Hero": { "socket": "18XX", "maker": "Intel", "release": "2025/01/15" }
+-        }
+-    }
+-};
+-
+-const data = await getChartData();
+-// const data = exampleData; // Use example data for testing
+-
+-// Generate HTML String
+-const htmlString = generateHtml(data);
+-
+-
+-function generateImage(data) {
+-	const image = nodeHtmlToImage({
+-		html: data,
+-		puppeteerArgs: {
+-			args: ['--no-sandbox', '--disable-setuid-sandbox']
+-		}
+-	});
+-	return image;
+-}
+-export async function generateImageFromData() {
+-    return await generateImage(htmlString);
+-}
+-
+-// await generateImageFromData();
+-console.log(htmlString);
+-
+-// Example HTML Output
+-
+-// <!DOCTYPE html>
+-// <html>
+-// <head>
+-//     <meta charset="UTF-8">
+-//     <style>
+-//         body {
+-//             /* --- Dimensions & Base Styling --- */
+-//             width: 1036px;
+-//             height: 740px;
+-//             color: #000000;
+-//             font-family: Arial, sans-serif;
+-//             font-size: 16px;
+-//             line-height: 1.5;
+-//             margin: 0;
+-//             padding: 20px;
+-//             box-sizing: border-box;
+-//             position: relative;
+-//             overflow: hidden;
+-
+-//             /* --- Background Image --- */
+-//             background-color: #efe7db;
+-//             background-image: url('https://www.asrockbioschecker.link/images/tilestone2.jpg');
+-//             background-size: cover;
+-//             background-position: center center;
+-//             background-repeat: no-repeat;
+-
+-//             /* --- Centering for the text block --- */
+-//             display: flex;
+-//             justify-content: center;
+-//             align-items: center;
+-//         }
+-
+-//         .content {
+-//             text-align: left;
+-//             white-space: normal;
+-//             font-weight: normal; /* Or 'bold' if you want the text bolder like the example image title */
+-//              /* Optional: Add a semi-transparent background to text for readability over complex backgrounds */
+-//              /* background-color: rgba(255, 255, 255, 0.8); */
+-//              /* padding: 15px; */
+-//              /* border-radius: 5px; */
+-//              /* max-width: 90%; */
+-//         }
+-
+-//         /* --- Logo Styling --- */
+-//         .logo {
+-//             position: absolute;
+-//             bottom: 20px;
+-//             right: 20px;
+-//             width: 120px;
+-//             height: auto;
+-//             z-index: 10;
+-//         }
+-//     </style>
+-// </head>
+-// <body>
+-//     <div class="content">
+-//         Updates this week: 36<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Creator 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Taichi Razer Edition 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Taichi 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Extreme4 WiFi ax 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Extreme4 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Steel Legend 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 AQUA 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming-ITX/TB3 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550 Taichi Razer Edition 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M Pro RS 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M Pro SE 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550 Extreme4 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550 Steel Legend 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550 Pro4 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M Steel Legend 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M/ac 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M WiFi SE 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4S 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M Phantom Gaming 4 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M WiFi 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M-ITX/ac 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M-HVS SE 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;A520M Pro4 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;A520M-HVS 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;A520M-HDV 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B550M Pro4 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;A520M/ac 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;A520M-ITX/ac 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X470 Taichi Ultimate 10.41[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X470 Taichi 10.41[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;B860I Lightning WiFi 1.14<br>
+-// &nbsp;&nbsp;-&nbsp;B550 Taichi 3.61[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming X 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Steel Legend WiFi ax 5.65[Beta]<br>
+-// &nbsp;&nbsp;-&nbsp;X570 Phantom Gaming 4 WiFi ax 5.65[Beta]<br>
+-// <br>
+-// User activity this week:<br>
+-// Users notified: 2<br>
+-// New signups: 0
+-//     </div>
+-
+-//     <img src="https://www.asrockbioschecker.link/images/watermark.png" class="logo" alt="Logo">
+-
+-// </body>
+-// </html>
+\ No newline at end of file
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/usageChecker.js project/public/js/usageChecker.js
+--- project_original/public/js/usageChecker.js	1970-01-01 00:00:00.000000000 +0000
++++ project/public/js/usageChecker.js	2026-08-02 09:59:38.621561688 +0000
+@@ -0,0 +1,56 @@
++// Uses Resend's preview usage API (resend@6.19.0-preview-usage.0, installed
++// under the alias "resend-usage" so it doesn't collide with the "resend"
++// dependency used everywhere else for actually sending mail).
++//
++// This endpoint isn't in Resend's public docs yet - it's an early preview.
++// Loaded via a dynamic import inside a try/catch so that if the package is
++// ever missing, fails to install, or the API shape changes, this just skips
++// the usage line instead of taking down the rest of the notify run.
++
++async function getResendUsageClient() {
++  const { Resend } = await import("resend-usage");
++  return new Resend(process.env.RESEND_API_KEY);
++}
++
++// "2026-07-29T00:00:00.000Z" -> "in 3h 12m" / "in 45m" / "any moment now"
++function formatResetIn(resetsAtIso) {
++  const resetsAt = new Date(resetsAtIso);
++  const diffMs = resetsAt.getTime() - Date.now();
++
++  if (Number.isNaN(diffMs)) return "at an unknown time";
++  if (diffMs <= 0) return "any moment now";
++
++  const totalMinutes = Math.round(diffMs / 60000);
++  const hours = Math.floor(totalMinutes / 60);
++  const minutes = totalMinutes % 60;
++
++  if (hours === 0) return `in ${minutes}m`;
++  if (minutes === 0) return `in ${hours}h`;
++  return `in ${hours}h ${minutes}m`;
++}
++
++// Returns a short one-line summary of daily Resend email usage, e.g.
++// "42/100 daily emails used (resets in 3h 12m)" - or null if the check
++// can't be completed, so callers can just omit the line rather than fail.
++export async function getDailyUsageSummary() {
++  try {
++    const resend = await getResendUsageClient();
++    const { data, error } = await resend.usage.get();
++
++    if (error || !data) {
++      console.warn(`Resend usage check failed: ${error?.message || "no data returned"}`);
++      return null;
++    }
++
++    const daily = data.emails?.daily;
++    if (!daily) {
++      console.warn("Resend usage response missing emails.daily");
++      return null;
++    }
++
++    return `${daily.used}/${daily.limit} daily emails used (resets ${formatResetIn(daily.resets_at)})`;
++  } catch (err) {
++    console.warn(`Resend usage check errored: ${err.message}`);
++    return null;
++  }
++}
+diff -ruN '--exclude=public/data/models.json' project_original/public/js/versionChecker.js project/public/js/versionChecker.js
+--- project_original/public/js/versionChecker.js	2026-08-02 03:52:56.174128828 +0000
++++ project/public/js/versionChecker.js	2026-08-02 03:51:21.113224424 +0000
+@@ -2,7 +2,7 @@
+ import { getMobos, saveMobos } from "./sqlServices.js";
+ import { scrapeWithPlaywright } from "./playwright.js";
+ import { sendToDiscord } from "./reporter.js";
+-import { koyebToRepo } from "./koyebToGithub.js";
++import { chromium } from "playwright";
+ 
+ // Un-comment / use this when their SSL certs are broken (rare)
+ //process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+@@ -30,9 +30,10 @@
+ }
+ /////////////////////////////////////////////
+ 
+-// scrapeBIOSInfo(url)
++// scrapeBIOSInfo(browser, url)
+ // Now uses Playwright for ALL scraping, unifying the two previous paths.
+-export async function scrapeBIOSInfo(url) {
++// Takes an already-launched browser so callers can reuse one instance across many URLs.
++export async function scrapeBIOSInfo(browser, url) {
+   // Previously, this logic contained the choice between Fetch/Cheerio and Playwright.
+   // Now, we rely exclusively on the Playwright service.
+   console.log(`Using Playwright to scrape: ${url}`);
+@@ -40,7 +41,7 @@
+     // The scrapeWithPlaywright function is now responsible for navigating,
+     // waiting for content, scraping the version/date, and returning the result object:
+     // { version: string, releaseDate: string }
+-    return await scrapeWithPlaywright(url);
++    return await scrapeWithPlaywright(browser, url);
+   } catch (playwrightError) {
+     // If playwright throws, catch it and return the error object
+     console.error(
+@@ -81,7 +82,7 @@
+   }
+ }
+ 
+-export async function updateModels(fromKoyeb) {
++export async function updateModels() {
+   const mobos = await getMobos();
+   const updatedMobos = [];
+ 
+@@ -101,6 +102,15 @@
+   const errorModels = new Set(); // Set to track models with errors
+   const firstAttemptErrors = new Map(); // Map to store initial errors for retry logic. Apparently I missed this.
+ 
++  // One browser for the entire run - each scrape just opens/closes its own page.
++  // Avoids paying Chromium's launch cost ~367+ times per day.
++  const browser = await chromium.launch({
++    channel: "chromium",
++    headless: true,
++    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
++  });
++
++  try {
+   for (const mobo of mobos) {
+     const { model, biospage, heldversion, helddate } = mobo;
+ 
+@@ -111,7 +121,7 @@
+ 
+     try {
+       // All pages now attempt to use Playwright first
+-      scrapedInfo = await scrapeBIOSInfo(biospage);
++      scrapedInfo = await scrapeBIOSInfo(browser, biospage);
+ 
+       if (scrapedInfo && scrapedInfo.error) {
+         scrapeError = scrapedInfo.error; // Store the specific error object
+@@ -164,7 +174,7 @@
+       let retryScrapeError = null;
+ 
+       try {
+-        retryScrapedInfo = await scrapeBIOSInfo(mobo.biospage);
++        retryScrapedInfo = await scrapeBIOSInfo(browser, mobo.biospage);
+ 
+         if (retryScrapedInfo && retryScrapedInfo.error) {
+           retryScrapeError = retryScrapedInfo.error;
+@@ -234,6 +244,9 @@
+       await delay(3000);
+     }
+   }
++  } finally {
++    await browser.close();
++  }
+ 
+   try {
+     // Only save to DB if there were actual changes
+@@ -292,11 +305,6 @@
+     console.table(summary.errors);
+   }
+ 
+-  if (fromKoyeb === "fromKoyeb") {
+-    console.log("'fromKoyeb' flag detected - calling koyebToRepo()");
+-    koyebToRepo();
+-  }
+-
+   console.log("BIOS version checks complete - proceeding to notifycheck");
+ 
+   try {
+diff -ruN '--exclude=public/data/models.json' project_original/routes/router.js project/routes/router.js
+--- project_original/routes/router.js	2026-08-02 03:52:56.174297257 +0000
++++ project/routes/router.js	2026-08-02 03:52:14.284750353 +0000
+@@ -15,10 +15,28 @@
+ router.use(["/submit", "/unsubscribe", "/confirm/:id"], noCache);
+ 
+ 
++// The homepage is identical for every visitor until the next deploy (models.json
++// only changes via a redeploy, which restarts the process and clears this).
++// Cache the rendered + minified HTML once instead of re-rendering/re-minifying
++// the full motherboard table on every request.
++let cachedHomepageHtml = null;
++
+ router.get("/", async (req, res) => {
+   try {
++    if (cachedHomepageHtml) {
++      return res.send(cachedHomepageHtml);
++    }
++
+     const motherboards = await sqlServices.loadMotherboards();
+-    res.render("layout", { motherboards, page: "mainPageComponent" });
++    res.render("layout", { motherboards, page: "mainPageComponent" }, (err, html) => {
++      if (err) {
++        console.error("Error rendering homepage:", err);
++        return res.status(500).send("Failed to fetch models.");
++      }
++      // app.js's render override already minifies `html` before this callback runs
++      cachedHomepageHtml = html;
++      res.send(html);
++    });
+   } catch (err) {
+     console.error("Error reading models.json:", err);
+     res.status(500).send("Failed to fetch models.");
