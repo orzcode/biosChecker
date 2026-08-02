@@ -259,7 +259,7 @@ const PORT = process.env.PORT || 8000;
 //   });
 // }
 
-// For local development, or for Koyeb
+// For local development
 // Vercel doesn't use 'listen' but seems to run regardless
 app.listen(PORT, () => {
   console.log(

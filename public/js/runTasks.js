@@ -1,15 +1,11 @@
 import { updateModels } from "./versionChecker.js";
 import { notifyUsers } from "./notifyChecker.js";
 
-export async function runTasks(fromKoyeb) {
+export async function runTasks() {
   console.log("---runTasks (daily) - version + notify checks---");
   try {
     console.log("---Starting daily versionChecker...");
-    if (fromKoyeb === "fromKoyeb") {
-      await updateModels("fromKoyeb");
-    } else {
-      await updateModels();
-    }
+    await updateModels();
     console.log("---Finished daily versionChecker.");
 
     console.log("---Starting daily notifyChecker...");

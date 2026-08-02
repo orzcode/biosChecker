@@ -15,10 +15,28 @@ const noCache = (req, res, next) => {
 router.use(["/submit", "/unsubscribe", "/confirm/:id"], noCache);
 
 
+// The homepage is identical for every visitor until the next deploy (models.json
+// only changes via a redeploy, which restarts the process and clears this).
+// Cache the rendered + minified HTML once instead of re-rendering/re-minifying
+// the full motherboard table on every request.
+let cachedHomepageHtml = null;
+
 router.get("/", async (req, res) => {
   try {
+    if (cachedHomepageHtml) {
+      return res.send(cachedHomepageHtml);
+    }
+
     const motherboards = await sqlServices.loadMotherboards();
-    res.render("layout", { motherboards, page: "mainPageComponent" });
+    res.render("layout", { motherboards, page: "mainPageComponent" }, (err, html) => {
+      if (err) {
+        console.error("Error rendering homepage:", err);
+        return res.status(500).send("Failed to fetch models.");
+      }
+      // app.js's render override already minifies `html` before this callback runs
+      cachedHomepageHtml = html;
+      res.send(html);
+    });
   } catch (err) {
     console.error("Error reading models.json:", err);
     res.status(500).send("Failed to fetch models.");

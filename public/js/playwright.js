@@ -1,9 +1,8 @@
-import { chromium } from "playwright"; 
-
 const MAX_RETRIES = 3; // Define the maximum number of attempts
 
-export async function scrapeWithPlaywright(url) {
-    let browser;
+// Accepts a shared, already-launched browser instance so callers can scrape
+// many URLs without paying browser-launch cost on every single one.
+export async function scrapeWithPlaywright(browser, url) {
     let lastError = null; // Store the last error encountered
     
     const versionSelector = "table:has(th:text-is('Version')) tbody tr:first-child td:first-child";
@@ -13,17 +12,11 @@ export async function scrapeWithPlaywright(url) {
 
     // --- START RETRY LOOP ---
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        let page;
         try {
             console.log(`Playwright initiated (Attempt ${attempt}/${MAX_RETRIES})...`);
-            
-            // Launch browser for this attempt
-            browser = await chromium.launch({
-                // Settings for headless environments
-                channel: "chromium",
-                headless: true,
-                args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
-            });
-            const page = await browser.newPage();
+
+            page = await browser.newPage();
 
             console.log(`Playwrighting to ${url}`);
 
@@ -66,11 +59,9 @@ export async function scrapeWithPlaywright(url) {
             await new Promise(resolve => setTimeout(resolve, 5000));
             
         } finally {
-            // 🛑 CRITICAL BROWSER CLEANUP 🛑
-            // This runs after every attempt (success or failure)
-            if (browser) {
-                await browser.close();
-                browser = null; // Clear the reference for the next attempt
+            // Close just the page - the browser is shared across calls and stays open
+            if (page) {
+                await page.close();
             }
         }
     }
