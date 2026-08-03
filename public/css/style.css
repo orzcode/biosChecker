@@ -209,8 +209,7 @@ th {
   width: 4ch;
 }
 [data-cell="link"] {
-  width: 10ch;
-  white-space: nowrap;
+  width: 8ch;
 }
 [data-cell="linkAHREF"] {
   display: flex;
