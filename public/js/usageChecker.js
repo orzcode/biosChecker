@@ -29,8 +29,13 @@ function formatResetIn(resetsAtIso) {
   return `in ${hours}h ${minutes}m`;
 }
 
+// Resend's API currently reports a daily limit of 100, but support has
+// confirmed the account's actual cap is 200 - so the real limit is hardcoded
+// here rather than trusted from the response. Update this if the plan changes.
+const ACTUAL_DAILY_LIMIT = 200;
+
 // Returns a short one-line summary of daily Resend email usage, e.g.
-// "42/100 daily emails used (resets in 3h 12m)" - or null if the check
+// "42/200 daily emails used (resets in 3h 12m)" - or null if the check
 // can't be completed, so callers can just omit the line rather than fail.
 export async function getDailyUsageSummary() {
   try {
@@ -48,7 +53,7 @@ export async function getDailyUsageSummary() {
       return null;
     }
 
-    return `${daily.used}/${daily.limit} daily emails used (resets ${formatResetIn(daily.resets_at)})`;
+    return `${daily.used}/${ACTUAL_DAILY_LIMIT} daily emails used (resets ${formatResetIn(daily.resets_at)})`;
   } catch (err) {
     console.warn(`Resend usage check errored: ${err.message}`);
     return null;
