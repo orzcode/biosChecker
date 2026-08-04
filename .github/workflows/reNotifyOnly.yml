@@ -4,7 +4,7 @@ description: |
 
 on:
   schedule:
-    - cron: "0 2 * * *" # (This will trigger at 2:00 PM NZT every day)
+    - cron: "15 0 * * *"   # (This will trigger at 12:15 PM NZT every day, or 1:15 in DST)
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
