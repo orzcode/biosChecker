@@ -4,7 +4,7 @@ description: |
 
 on:
   schedule:
-    - cron: "15 21 * * *"  # (due to laggy GHA, should run at 12:15pm or 1:15pm in DST)
+    - cron: "15 23 * * *"  # (due to laggy GHA, should run at 12:15pm or 1:15pm in DST)
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
