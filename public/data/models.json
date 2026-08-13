@@ -1557,8 +1557,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
+    "heldversion": "4.43",
+    "helddate": "2026/7/7",
     "release": null
   },
   {
@@ -3399,17 +3399,6 @@
     "release": "2025/2/26"
   },
   {
-    "id": "mobo_mdz6dnwbosagxm",
-    "model": "A620M-C R2.0",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/29",
-    "release": "2025/6/20"
-  },
-  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3419,6 +3408,17 @@
     "heldversion": "4.43",
     "helddate": "2026/7/2",
     "release": "2025/7/9"
+  },
+  {
+    "id": "mobo_mdz6dnwbosagxm",
+    "model": "A620M-C R2.0",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/29",
+    "release": "2025/6/20"
   },
   {
     "id": "mobo_mktdhpcdfiwaf0",
