@@ -1474,6 +1474,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv29simxo",
+    "model": "B650 Steel Legend WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/7/7",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2tm6bvq",
     "model": "Z790 LiveMixer",
     "maker": "Intel",
@@ -1548,17 +1559,6 @@
     "biospage": "https://pg.asrock.com/mb/amd/B850M%20Riptide%20WiFi/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/6",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv29simxo",
-    "model": "B650 Steel Legend WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/7",
     "release": null
   },
   {
@@ -3416,8 +3416,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-C%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A620M-C%20R2.0/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/29",
+    "heldversion": "4.45",
+    "helddate": "2026/8/19",
     "release": "2025/6/20"
   },
   {
@@ -3680,8 +3680,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/B860M-STX",
     "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "5.01.TS01[Beta]",
-    "helddate": "2026/4/17",
+    "heldversion": "6.01",
+    "helddate": "2026/8/19",
     "release": "2025/9/2"
   },
   {
