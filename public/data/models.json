@@ -1755,8 +1755,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HVS",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.10",
+    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -1832,8 +1832,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDV",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.10",
+    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -1887,8 +1887,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520Mac",
     "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.10",
+    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -1898,8 +1898,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro4/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.00",
+    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -3608,6 +3608,17 @@
     "release": "2026/1/5"
   },
   {
+    "id": "mobo_mfjbooaja1wrdd",
+    "model": "B860M-STX",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/B860M-STX",
+    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
+    "heldversion": "6.01",
+    "helddate": "2026/8/19",
+    "release": "2025/9/2"
+  },
+  {
     "id": "mobo_mmrf12dp242kv4",
     "model": "B550M Pro-A",
     "maker": "AMD",
@@ -3672,17 +3683,6 @@
     "heldversion": "3.31",
     "helddate": "2026/7/21",
     "release": "2026/1/22"
-  },
-  {
-    "id": "mobo_mfjbooaja1wrdd",
-    "model": "B860M-STX",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/B860M-STX",
-    "biospage": "https://www.asrock.com/mb/intel/B860M-STX/bios.html",
-    "heldversion": "6.01",
-    "helddate": "2026/8/19",
-    "release": "2025/9/2"
   },
   {
     "id": "mobo_mophro74an07c6",
