@@ -1623,8 +1623,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/16",
+    "heldversion": "4.00",
+    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -1645,8 +1645,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550Mac",
     "biospage": "https://www.asrock.com/mb/amd/B550Mac/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.00",
+    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -1749,12 +1749,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2uayk9c",
-    "model": "A520M-HVS",
+    "id": "mobo_m68rfcv224q3kt",
+    "model": "A520M-HDV",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HVS",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/8/20",
     "release": null
@@ -1799,8 +1799,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M-HVS%20SE",
     "biospage": "https://www.asrock.com/mb/amd/B550M-HVS%20SE/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.10",
+    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -1826,12 +1826,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv224q3kt",
-    "model": "A520M-HDV",
+    "id": "mobo_m68rfcv2bfcov5",
+    "model": "A520M/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDV/bios.html",
+    "link": "https://asrock.com/mb/amd/A520Mac",
+    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/8/20",
     "release": null
@@ -1878,17 +1878,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
     "heldversion": "3.90",
     "helddate": "2025/10/15",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2bfcov5",
-    "model": "A520M/ac",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520Mac",
-    "biospage": "https://www.asrock.com/mb/amd/A520Mac/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -2010,6 +1999,17 @@
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming-ITXTB3/bios.html",
     "heldversion": "5.80",
     "helddate": "2026/4/7",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2uayk9c",
+    "model": "A520M-HVS",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-HVS",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HVS/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/8/20",
     "release": null
   },
   {
@@ -2646,8 +2646,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
-    "heldversion": "10.60",
-    "helddate": "2026/4/22",
+    "heldversion": "10.70",
+    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -3894,6 +3894,17 @@
     "release": "2026/7/8"
   },
   {
+    "id": "mobo_mt5gbe9i6k35tk",
+    "model": "B450M Pro4-F R2.0",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450M%20Pro4-F%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F%20R2.0/bios.html",
+    "heldversion": "10.60",
+    "helddate": "2026/4/22",
+    "release": "2026/4/22"
+  },
+  {
     "id": "mobo_m68rfcv2uhettz",
     "model": "B450M/ac",
     "maker": "AMD",
@@ -4035,16 +4046,5 @@
     "heldversion": "4.43",
     "helddate": "2026/7/1",
     "release": null
-  },
-  {
-    "id": "mobo_mt5gbe9i6k35tk",
-    "model": "B450M Pro4-F R2.0",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450M%20Pro4-F%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/B450M%20Pro4-F%20R2.0/bios.html",
-    "heldversion": "10.60",
-    "helddate": "2026/4/22",
-    "release": "2026/4/22"
   }
 ]
