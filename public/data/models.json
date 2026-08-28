@@ -1617,12 +1617,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2m5nbsh",
-    "model": "B550M WiFi",
+    "id": "mobo_m68rfcv2qrbaay",
+    "model": "B550M/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B550Mac",
+    "biospage": "https://www.asrock.com/mb/amd/B550Mac/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/8/25",
     "release": null
@@ -1639,13 +1639,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2qrbaay",
-    "model": "B550M/ac",
+    "id": "mobo_m68rfcv20n3i78",
+    "model": "B550M-HVS SE",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550Mac",
-    "biospage": "https://www.asrock.com/mb/amd/B550Mac/bios.html",
-    "heldversion": "4.00",
+    "link": "https://asrock.com/mb/amd/B550M-HVS%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-HVS%20SE/bios.html",
+    "heldversion": "4.10",
     "helddate": "2026/8/25",
     "release": null
   },
@@ -1793,17 +1793,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv20n3i78",
-    "model": "B550M-HVS SE",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M-HVS%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M-HVS%20SE/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/8/25",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2izez8m",
     "model": "X570 Phantom Gaming 4S",
     "maker": "AMD",
@@ -1889,6 +1878,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro4/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/8/20",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2m5nbsh",
+    "model": "B550M WiFi",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi/bios.html",
+    "heldversion": "4.00",
+    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -2486,6 +2486,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2ighnta",
+    "model": "B450M Steel Legend",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
+    "heldversion": "10.70",
+    "helddate": "2026/8/25",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2ynbm5k",
     "model": "Z890 Pro RS WiFi",
     "maker": "Intel",
@@ -2637,17 +2648,6 @@
     "biospage": "https://www.asrock.com/mb/amd/AB350M%20Pro4/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/8",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2ighnta",
-    "model": "B450M Steel Legend",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B450M%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/amd/B450M%20Steel%20Legend/bios1.html",
-    "heldversion": "10.70",
-    "helddate": "2026/8/25",
     "release": null
   },
   {
@@ -3064,8 +3064,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/2",
+    "heldversion": "4.50",
+    "helddate": "2026/8/27",
     "release": "2025/7/18"
   },
   {
@@ -3625,8 +3625,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro-A",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A/bios.html",
-    "heldversion": "1.00",
-    "helddate": "2026/3/9",
+    "heldversion": "1.10",
+    "helddate": "2026/8/27",
     "release": "2026/3/9"
   },
   {
@@ -3845,8 +3845,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M-P",
     "biospage": "https://www.asrock.com/mb/amd/B550M-P/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2026/6/10",
+    "heldversion": "1.20",
+    "helddate": "2026/8/27",
     "release": "2026/6/10"
   },
   {
