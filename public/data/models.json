@@ -1656,8 +1656,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
-    "heldversion": "4.00",
-    "helddate": "2026/6/1",
+    "heldversion": "4.10",
+    "helddate": "2026/8/28",
     "release": null
   },
   {
@@ -1865,8 +1865,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/15",
+    "heldversion": "4.10",
+    "helddate": "2026/8/28",
     "release": null
   },
   {
@@ -1898,8 +1898,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M-ITXac",
     "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
-    "heldversion": "4.00",
-    "helddate": "2026/6/1",
+    "heldversion": "4.10",
+    "helddate": "2026/8/28",
     "release": null
   },
   {
@@ -1953,8 +1953,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/15",
+    "heldversion": "4.10",
+    "helddate": "2026/8/28",
     "release": null
   },
   {
@@ -3058,17 +3058,6 @@
     "release": "2025/2/26"
   },
   {
-    "id": "mobo_mdz6cgq09rk717",
-    "model": "X870 Taichi Creator",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
-    "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
-    "heldversion": "4.50",
-    "helddate": "2026/8/27",
-    "release": "2025/7/18"
-  },
-  {
     "id": "mobo_m9p9unkm21jwrf",
     "model": "A620AM Pro-A WiFi",
     "maker": "AMD",
@@ -3399,6 +3388,17 @@
     "release": "2025/2/26"
   },
   {
+    "id": "mobo_mdz6cgq09rk717",
+    "model": "X870 Taichi Creator",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/X870%20Taichi%20Creator",
+    "biospage": "https://www.asrock.com/mb/amd/X870%20Taichi%20Creator/bios.html",
+    "heldversion": "4.50",
+    "helddate": "2026/8/27",
+    "release": "2025/7/18"
+  },
+  {
     "id": "mobo_mdz6dhlw2c2qii",
     "model": "B850 Challenger WiFi",
     "maker": "AMD",
@@ -3619,17 +3619,6 @@
     "release": "2025/9/2"
   },
   {
-    "id": "mobo_mmrf12dp242kv4",
-    "model": "B550M Pro-A",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2026/8/27",
-    "release": "2026/3/9"
-  },
-  {
     "id": "mobo_mptkfnwfmgqw35",
     "model": "B650M Pro-A Gen5",
     "maker": "AMD",
@@ -3683,6 +3672,17 @@
     "heldversion": "3.31",
     "helddate": "2026/7/21",
     "release": "2026/1/22"
+  },
+  {
+    "id": "mobo_mmrf12dp242kv4",
+    "model": "B550M Pro-A",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/8/27",
+    "release": "2026/3/9"
   },
   {
     "id": "mobo_mophro74an07c6",
@@ -3834,8 +3834,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Rock%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Rock%20WiFi/bios.html",
-    "heldversion": "1.30",
-    "helddate": "2026/6/10",
+    "heldversion": "1.40",
+    "helddate": "2026/8/28",
     "release": "2026/6/10"
   },
   {
