@@ -4046,5 +4046,27 @@
     "heldversion": "4.43",
     "helddate": "2026/7/1",
     "release": null
+  },
+  {
+    "id": "mobo_mtfquflf5tmawq",
+    "model": "A620AM-P WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620AM-P%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-P%20WiFi/bios.html",
+    "heldversion": "4.44",
+    "helddate": "2026/7/20",
+    "release": "2026/7/20"
+  },
+  {
+    "id": "mobo_mtfqukm23dd7i7",
+    "model": "B550M Pro-A WiFi 6E",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/8/27",
+    "release": "2026/8/27"
   }
 ]
