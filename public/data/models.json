@@ -1650,12 +1650,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2pcouxm",
-    "model": "A520M-ITX/ac",
+    "id": "mobo_m68rfcv2r8e007",
+    "model": "A520M-HDVP R2.0",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-ITXac",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/8/28",
     "release": null
@@ -1793,6 +1793,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2pcouxm",
+    "model": "A520M-ITX/ac",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/A520M-ITXac",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-ITXac/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/8/28",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2izez8m",
     "model": "X570 Phantom Gaming 4S",
     "maker": "AMD",
@@ -1859,12 +1870,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2r8e007",
-    "model": "A520M-HDVP R2.0",
+    "id": "mobo_m68rfcv28qf2bq",
+    "model": "B550M-ITX/ac",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP%20R2.0",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP%20R2.0/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M-ITXac",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/8/28",
     "release": null
@@ -1892,12 +1903,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv28qf2bq",
-    "model": "B550M-ITX/ac",
+    "id": "mobo_m68rfcv2goe8x1",
+    "model": "A520M-HDVP",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M-ITXac",
-    "biospage": "https://www.asrock.com/mb/amd/B550M-ITXac/bios.html",
+    "link": "https://asrock.com/mb/amd/A520M-HDVP",
+    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
     "heldversion": "4.10",
     "helddate": "2026/8/28",
     "release": null
@@ -1944,17 +1955,6 @@
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVM.2/bios.html",
     "heldversion": "4.43",
     "helddate": "2026/7/23",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2goe8x1",
-    "model": "A520M-HDVP",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M-HDVP",
-    "biospage": "https://www.asrock.com/mb/amd/A520M-HDVP/bios.html",
-    "heldversion": "4.10",
-    "helddate": "2026/8/28",
     "release": null
   },
   {
@@ -3828,17 +3828,6 @@
     "release": null
   },
   {
-    "id": "mobo_mqdltki6uxko2c",
-    "model": "B550 Rock WiFi",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550%20Rock%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B550%20Rock%20WiFi/bios.html",
-    "heldversion": "1.40",
-    "helddate": "2026/8/28",
-    "release": "2026/6/10"
-  },
-  {
     "id": "mobo_mqdltpjarh0meh",
     "model": "B550M-P",
     "maker": "AMD",
@@ -3847,6 +3836,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M-P/bios.html",
     "heldversion": "1.20",
     "helddate": "2026/8/27",
+    "release": "2026/6/10"
+  },
+  {
+    "id": "mobo_mqdltki6uxko2c",
+    "model": "B550 Rock WiFi",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550%20Rock%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B550%20Rock%20WiFi/bios.html",
+    "heldversion": "1.40",
+    "helddate": "2026/8/28",
     "release": "2026/6/10"
   },
   {
@@ -3903,6 +3903,28 @@
     "heldversion": "10.60",
     "helddate": "2026/4/22",
     "release": "2026/4/22"
+  },
+  {
+    "id": "mobo_mtfquflf5tmawq",
+    "model": "A620AM-P WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/A620AM-P%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-P%20WiFi/bios.html",
+    "heldversion": "4.44",
+    "helddate": "2026/7/20",
+    "release": "2026/7/20"
+  },
+  {
+    "id": "mobo_mtfqukm23dd7i7",
+    "model": "B550M Pro-A WiFi 6E",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/8/27",
+    "release": "2026/8/27"
   },
   {
     "id": "mobo_m68rfcv2uhettz",
@@ -4010,8 +4032,8 @@
     "socket": "1700",
     "link": "https://asrock.com/mb/intel/Q670M%20vPro",
     "biospage": "https://www.asrock.com/mb/intel/Q670M%20vPro/bios.html",
-    "heldversion": "2.05",
-    "helddate": "2025/2/25",
+    "heldversion": "2.07",
+    "helddate": "2026/8/31",
     "release": null
   },
   {
@@ -4046,27 +4068,5 @@
     "heldversion": "4.43",
     "helddate": "2026/7/1",
     "release": null
-  },
-  {
-    "id": "mobo_mtfquflf5tmawq",
-    "model": "A620AM-P WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AM-P%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620AM-P%20WiFi/bios.html",
-    "heldversion": "4.44",
-    "helddate": "2026/7/20",
-    "release": "2026/7/20"
-  },
-  {
-    "id": "mobo_mtfqukm23dd7i7",
-    "model": "B550M Pro-A WiFi 6E",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro-A%20WiFi%206E/bios.html",
-    "heldversion": "1.10",
-    "helddate": "2026/8/27",
-    "release": "2026/8/27"
   }
 ]
