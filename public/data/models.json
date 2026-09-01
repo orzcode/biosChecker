@@ -1667,8 +1667,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Steel%20Legend",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/13",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
     "release": null
   },
   {
@@ -1678,8 +1678,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20WiFi%20SE",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20WiFi%20SE/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/13",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
     "release": null
   },
   {
@@ -1843,8 +1843,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/16",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
     "release": null
   },
   {
@@ -1975,8 +1975,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/16",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
     "release": null
   },
   {
@@ -3993,6 +3993,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv20mzaum",
+    "model": "Q670M vPro",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/Q670M%20vPro",
+    "biospage": "https://www.asrock.com/mb/intel/Q670M%20vPro/bios.html",
+    "heldversion": "2.07",
+    "helddate": "2026/8/31",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2p10rv8",
     "model": "A320M-HDV R4.0",
     "maker": "AMD",
@@ -4023,17 +4034,6 @@
     "biospage": "https://www.asrock.com/mb/amd/Fatal1ty%20AB350%20Gaming%20K4/bios.html",
     "heldversion": "10.50",
     "helddate": "2026/4/8",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv20mzaum",
-    "model": "Q670M vPro",
-    "maker": "Intel",
-    "socket": "1700",
-    "link": "https://asrock.com/mb/intel/Q670M%20vPro",
-    "biospage": "https://www.asrock.com/mb/intel/Q670M%20vPro/bios.html",
-    "heldversion": "2.07",
-    "helddate": "2026/8/31",
     "release": null
   },
   {
