@@ -1,6 +1,6 @@
-// Uses Resend's preview usage API (resend@6.19.0-preview-usage.0, installed
-// under the alias "resend-usage" so it doesn't collide with the "resend"
-// dependency used everywhere else for actually sending mail).
+// Uses Resend's preview usage API (resend@6.19.0-preview-headless-dashboard.7,
+// installed under the alias "resend-usage" so it doesn't collide with the
+// "resend" dependency used everywhere else for actually sending mail).
 //
 // This endpoint isn't in Resend's public docs yet - it's an early preview.
 // Loaded via a dynamic import inside a try/catch so that if the package is
