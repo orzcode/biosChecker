@@ -1661,17 +1661,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2206o6r",
-    "model": "B550M Steel Legend",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Steel%20Legend",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html",
-    "heldversion": "4.00",
-    "helddate": "2026/9/1",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv23gj3wn",
     "model": "B550M WiFi SE",
     "maker": "AMD",
@@ -1683,14 +1672,25 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2gybrac",
+    "model": "B550M Pro SE",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv21jrdm8",
     "model": "B550M-HDV",
     "maker": "AMD",
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550M-HDV",
     "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/9",
+    "heldversion": "4.10",
+    "helddate": "2026/9/3",
     "release": null
   },
   {
@@ -1837,12 +1837,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2gybrac",
-    "model": "B550M Pro SE",
+    "id": "mobo_m68rfcv2z5n6ce",
+    "model": "B550M Pro RS",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro%20SE",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20SE/bios.html",
+    "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/9/1",
     "release": null
@@ -1854,8 +1854,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/A520M%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/15",
+    "heldversion": "4.00",
+    "helddate": "2026/9/3",
     "release": null
   },
   {
@@ -1958,6 +1958,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2206o6r",
+    "model": "B550M Steel Legend",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M%20Steel%20Legend",
+    "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html",
+    "heldversion": "4.00",
+    "helddate": "2026/9/1",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2bp00y3",
     "model": "X570 Phantom Gaming 4",
     "maker": "AMD",
@@ -1966,17 +1977,6 @@
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
     "heldversion": "5.80",
     "helddate": "2026/3/31",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2z5n6ce",
-    "model": "B550M Pro RS",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
-    "heldversion": "4.00",
-    "helddate": "2026/9/1",
     "release": null
   },
   {
