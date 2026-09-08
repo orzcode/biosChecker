@@ -1293,8 +1293,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/3/31",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
     "release": null
   },
   {
@@ -1683,13 +1683,13 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv21jrdm8",
-    "model": "B550M-HDV",
+    "id": "mobo_m68rfcv20mu1tr",
+    "model": "A520M Pro4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/B550M-HDV",
-    "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html",
-    "heldversion": "4.10",
+    "link": "https://asrock.com/mb/amd/A520M%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
+    "heldversion": "4.00",
     "helddate": "2026/9/3",
     "release": null
   },
@@ -1810,8 +1810,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204S",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/4/2",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
     "release": null
   },
   {
@@ -1845,17 +1845,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/9/1",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv20mu1tr",
-    "model": "A520M Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/A520M%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/A520M%20Pro4/bios.html",
-    "heldversion": "4.00",
-    "helddate": "2026/9/3",
     "release": null
   },
   {
@@ -1975,8 +1964,19 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/3/31",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv21jrdm8",
+    "model": "B550M-HDV",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/B550M-HDV",
+    "biospage": "https://www.asrock.com/mb/amd/B550M-HDV/bios.html",
+    "heldversion": "4.10",
+    "helddate": "2026/9/3",
     "release": null
   },
   {
@@ -3152,8 +3152,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
     "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
-    "heldversion": "5.80",
-    "helddate": "2026/3/31",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
     "release": null
   },
   {
