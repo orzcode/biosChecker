@@ -1287,17 +1287,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2cozitb",
-    "model": "X570 Pro4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Pro4",
-    "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
-    "heldversion": "5.90",
-    "helddate": "2026/9/8",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv27cuimx",
     "model": "X570M Pro4",
     "maker": "AMD",
@@ -1562,6 +1551,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2cozitb",
+    "model": "X570 Pro4",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Pro4",
+    "biospage": "https://www.asrock.com/mb/amd/X570%20Pro4/bios.html",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2ex4uqa",
     "model": "B650M-HDV/M.2",
     "maker": "AMD",
@@ -1804,12 +1804,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2izez8m",
-    "model": "X570 Phantom Gaming 4S",
+    "id": "mobo_m68rfcv2bp00y3",
+    "model": "X570 Phantom Gaming 4",
     "maker": "AMD",
     "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204S",
-    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html",
+    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
+    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
     "heldversion": "5.90",
     "helddate": "2026/9/8",
     "release": null
@@ -1845,6 +1845,17 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Pro%20RS/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/9/1",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2izez8m",
+    "model": "X570 Phantom Gaming 4S",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204S",
+    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204S/bios.html",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
     "release": null
   },
   {
@@ -1920,8 +1931,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/B550%20Pro4",
     "biospage": "https://www.asrock.com/mb/amd/B550%20Pro4/bios.html",
-    "heldversion": "3.90",
-    "helddate": "2025/10/13",
+    "heldversion": "4.00",
+    "helddate": "2026/9/10",
     "release": null
   },
   {
@@ -1955,17 +1966,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B550M%20Steel%20Legend/bios.html",
     "heldversion": "4.00",
     "helddate": "2026/9/1",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv2bp00y3",
-    "model": "X570 Phantom Gaming 4",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204",
-    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204/bios.html",
-    "heldversion": "5.90",
-    "helddate": "2026/9/8",
     "release": null
   },
   {
@@ -2426,8 +2426,8 @@
     "socket": "AM4",
     "link": "https://asrock.com/mb/amd/X300TM-ITX",
     "biospage": "https://www.asrock.com/mb/amd/X300TM-ITX/bios.html",
-    "heldversion": "1.20",
-    "helddate": "2021/8/10",
+    "heldversion": "1.40",
+    "helddate": "2026/9/10",
     "release": null
   },
   {
@@ -3058,6 +3058,17 @@
     "release": "2025/2/26"
   },
   {
+    "id": "mobo_m68rfcv24fax9j",
+    "model": "X570 Phantom Gaming 4 WiFi ax",
+    "maker": "AMD",
+    "socket": "AM4",
+    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
+    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
+    "heldversion": "5.90",
+    "helddate": "2026/9/8",
+    "release": null
+  },
+  {
     "id": "mobo_m9p9unkm21jwrf",
     "model": "A620AM Pro-A WiFi",
     "maker": "AMD",
@@ -3144,17 +3155,6 @@
     "heldversion": "4.43",
     "helddate": "2026/7/9",
     "release": "2025/3/3"
-  },
-  {
-    "id": "mobo_m68rfcv24fax9j",
-    "model": "X570 Phantom Gaming 4 WiFi ax",
-    "maker": "AMD",
-    "socket": "AM4",
-    "link": "https://asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax",
-    "biospage": "https://pg.asrock.com/mb/amd/X570%20Phantom%20Gaming%204%20WiFi%20ax/bios.html",
-    "heldversion": "5.90",
-    "helddate": "2026/9/8",
-    "release": null
   },
   {
     "id": "mobo_m68rfcv2vhr5qi",
