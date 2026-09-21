@@ -2184,8 +2184,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Lightning%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Lightning%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/13",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
@@ -2497,17 +2497,6 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2ynbm5k",
-    "model": "Z890 Pro RS WiFi",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2026/9/17",
-    "release": null
-  },
-  {
     "id": "mobo_m68rfcv2fnlg8y",
     "model": "AB350M Pro4-F",
     "maker": "AMD",
@@ -2538,6 +2527,17 @@
     "biospage": "https://pg.asrock.com/mb/intel/B860%20Lightning%20WiFi/bios.html",
     "heldversion": "3.31",
     "helddate": "2026/7/15",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv2ynbm5k",
+    "model": "Z890 Pro RS WiFi",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi/bios.html",
+    "heldversion": "3.40",
+    "helddate": "2026/9/17",
     "release": null
   },
   {
@@ -2690,8 +2690,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20Lite",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20Lite/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/14",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
@@ -2943,8 +2943,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/13",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
@@ -2976,8 +2976,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/14",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
@@ -3102,6 +3102,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2vhr5qi",
+    "model": "Z890 Pro RS WiFi White",
+    "maker": "Intel",
+    "socket": "1851",
+    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
+    "heldversion": "3.40",
+    "helddate": "2026/9/17",
+    "release": null
+  },
+  {
     "id": "mobo_mdz6d4pqjk9mtx",
     "model": "X870 Nova WiFi",
     "maker": "AMD",
@@ -3144,17 +3155,6 @@
     "heldversion": "4.43",
     "helddate": "2026/7/9",
     "release": "2025/3/3"
-  },
-  {
-    "id": "mobo_m68rfcv2vhr5qi",
-    "model": "Z890 Pro RS WiFi White",
-    "maker": "Intel",
-    "socket": "1851",
-    "link": "https://asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/intel/Z890%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "3.40",
-    "helddate": "2026/9/17",
-    "release": null
   },
   {
     "id": "mobo_m8sa68wxklj100",
@@ -3944,8 +3944,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Nova%20WiFi",
     "biospage": "https://pg.asrock.com/mb/intel/Z890%20Nova%20WiFi/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/13",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
@@ -3988,8 +3988,8 @@
     "socket": "1851",
     "link": "https://asrock.com/mb/intel/Z890%20Taichi%20AQUA",
     "biospage": "https://www.asrock.com/mb/intel/Z890%20Taichi%20AQUA/bios.html",
-    "heldversion": "3.31",
-    "helddate": "2026/7/24",
+    "heldversion": "3.40",
+    "helddate": "2026/9/21",
     "release": null
   },
   {
