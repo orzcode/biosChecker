@@ -4068,5 +4068,16 @@
     "heldversion": "11.02",
     "helddate": "2026/6/29",
     "release": null
+  },
+  {
+    "id": "mobo_mv3t6ky2lfdec3",
+    "model": "B760M-X D4 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-X%20D4%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-X%20D4%20Gen5/bios.html",
+    "heldversion": "1.08",
+    "helddate": "2026/10/5",
+    "release": "2026/10/5"
   }
 ]
