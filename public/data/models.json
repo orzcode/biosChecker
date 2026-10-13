@@ -798,8 +798,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850%20Riptide%20WiFi",
     "biospage": "https://pg.asrock.com/mb/amd/B850%20Riptide%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/3",
+    "heldversion": "4.60",
+    "helddate": "2026/10/7",
     "release": null
   },
   {
@@ -1034,12 +1034,12 @@
     "release": null
   },
   {
-    "id": "mobo_m68rfcv2p6sy0y",
-    "model": "B850M Pro-A",
+    "id": "mobo_m68rfcv233s35k",
+    "model": "B850M Pro RS",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Pro-A",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/12",
     "release": null
@@ -1056,6 +1056,17 @@
     "release": null
   },
   {
+    "id": "mobo_m68rfcv2p6sy0y",
+    "model": "B850M Pro-A",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro-A",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A/bios.html",
+    "heldversion": "4.60",
+    "helddate": "2026/10/12",
+    "release": null
+  },
+  {
     "id": "mobo_m68rfcv2tt4dnn",
     "model": "B850 Pro-A WiFi",
     "maker": "AMD",
@@ -1064,17 +1075,6 @@
     "biospage": "https://www.asrock.com/mb/amd/B850%20Pro-A%20WiFi/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/5",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv233s35k",
-    "model": "B850M Pro RS",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS/bios.html",
-    "heldversion": "4.60",
-    "helddate": "2026/10/12",
     "release": null
   },
   {
@@ -1480,8 +1480,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/7",
+    "heldversion": "4.60",
+    "helddate": "2026/10/13",
     "release": null
   },
   {
@@ -2855,8 +2855,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Steel%20Legend%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/2",
+    "heldversion": "4.60",
+    "helddate": "2026/10/7",
     "release": null
   },
   {
@@ -2868,17 +2868,6 @@
     "biospage": "https://pg.asrock.com/mb/intel/B760M%20PG%20Lightning%20WiFi/bios.html",
     "heldversion": "11.01",
     "helddate": "2026/7/6",
-    "release": null
-  },
-  {
-    "id": "mobo_m68rfcv20rj7f1",
-    "model": "B850M Pro-A WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Pro-A%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A%20WiFi/bios.html",
-    "heldversion": "4.60",
-    "helddate": "2026/10/12",
     "release": null
   },
   {
@@ -2978,6 +2967,17 @@
     "biospage": "https://www.asrock.com/mb/intel/B860%20Pro%20RS/bios.html",
     "heldversion": "3.40",
     "helddate": "2026/10/5",
+    "release": null
+  },
+  {
+    "id": "mobo_m68rfcv20rj7f1",
+    "model": "B850M Pro-A WiFi",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro-A%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro-A%20WiFi/bios.html",
+    "heldversion": "4.60",
+    "helddate": "2026/10/12",
     "release": null
   },
   {
@@ -3141,8 +3141,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20LiveMixer%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20LiveMixer%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/2",
+    "heldversion": "4.60",
+    "helddate": "2026/10/7",
     "release": "2025/6/17"
   },
   {
@@ -3273,8 +3273,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro%20X3D%20WiFi/bios.html",
-    "heldversion": "4.41",
-    "helddate": "2026/6/23",
+    "heldversion": "4.60",
+    "helddate": "2026/10/13",
     "release": null
   },
   {
@@ -3344,17 +3344,6 @@
     "release": null
   },
   {
-    "id": "mobo_m9p9ty1jsek7p4",
-    "model": "B850M Pro RS WiFi White",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi%20White/bios.html",
-    "heldversion": "4.60",
-    "helddate": "2026/10/12",
-    "release": "2025/3/19"
-  },
-  {
     "id": "mobo_mdz6dbb6iamzcp",
     "model": "B850 Challenger WiFi White",
     "maker": "AMD",
@@ -3386,6 +3375,17 @@
     "heldversion": "4.43",
     "helddate": "2026/7/13",
     "release": "2025/6/5"
+  },
+  {
+    "id": "mobo_m9p9ty1jsek7p4",
+    "model": "B850M Pro RS WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi%20White/bios.html",
+    "heldversion": "4.60",
+    "helddate": "2026/10/12",
+    "release": "2025/3/19"
   },
   {
     "id": "mobo_m9p9v0a202dlc3",
@@ -3553,15 +3553,15 @@
     "release": "2026/1/5"
   },
   {
-    "id": "mobo_mmhefybc0jpln0",
-    "model": "B850M Challenger WiFi White",
+    "id": "mobo_mldeay2l4ryjpb",
+    "model": "B850M Challenger WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/12",
-    "release": "2026/2/13"
+    "release": "2025/12/29"
   },
   {
     "id": "mobo_mmrf0xa8myqj08",
@@ -3581,8 +3581,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Challenger%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Challenger%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/1",
+    "heldversion": "4.60",
+    "helddate": "2026/10/7",
     "release": "2026/2/24"
   },
   {
@@ -3630,15 +3630,15 @@
     "release": "2026/4/23"
   },
   {
-    "id": "mobo_mldeay2l4ryjpb",
-    "model": "B850M Challenger WiFi",
+    "id": "mobo_m68rfcv2sd7gzi",
+    "model": "B850M Pro RS WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/12",
-    "release": "2025/12/29"
+    "release": null
   },
   {
     "id": "mobo_mlned60z0lfqng",
@@ -3650,6 +3650,17 @@
     "heldversion": "2.08",
     "helddate": "2025/12/12",
     "release": "2025/12/12"
+  },
+  {
+    "id": "mobo_mmhefybc0jpln0",
+    "model": "B850M Challenger WiFi White",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger%20WiFi%20White/bios.html",
+    "heldversion": "4.60",
+    "helddate": "2026/10/12",
+    "release": "2026/2/13"
   },
   {
     "id": "mobo_mophro74an07c6",
@@ -3691,8 +3702,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/X870%20Challenger%20WiFi%20White",
     "biospage": "https://www.asrock.com/mb/amd/X870%20Challenger%20WiFi%20White/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/1",
+    "heldversion": "4.60",
+    "helddate": "2026/10/7",
     "release": "2026/2/24"
   },
   {
@@ -3740,15 +3751,15 @@
     "release": "2026/2/5"
   },
   {
-    "id": "mobo_m68rfcv2sd7gzi",
-    "model": "B850M Pro RS WiFi",
+    "id": "mobo_mldeb369f9qmja",
+    "model": "B850M Challenger",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Pro%20RS%20WiFi/bios.html",
+    "link": "https://asrock.com/mb/amd/B850M%20Challenger",
+    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/12",
-    "release": null
+    "release": "2025/12/29"
   },
   {
     "id": "mobo_mq3ky7wb1rziv2",
@@ -3760,17 +3771,6 @@
     "heldversion": "1.00",
     "helddate": "2026/6/1",
     "release": "2026/6/1"
-  },
-  {
-    "id": "mobo_mldeb369f9qmja",
-    "model": "B850M Challenger",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B850M%20Challenger",
-    "biospage": "https://www.asrock.com/mb/amd/B850M%20Challenger/bios.html",
-    "heldversion": "4.60",
-    "helddate": "2026/10/12",
-    "release": "2025/12/29"
   },
   {
     "id": "mobo_mkjddy1eez64ww",
