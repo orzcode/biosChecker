@@ -4079,5 +4079,27 @@
     "heldversion": "11.02",
     "helddate": "2026/6/29",
     "release": null
+  },
+  {
+    "id": "mobo_mvdphnq9lcp6pe",
+    "model": "B760M-X D5 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760M-X%20D5%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B760M-X%20D5%20Gen5/bios.html",
+    "heldversion": "1.09",
+    "helddate": "2026/8/26",
+    "release": "2026/8/26"
+  },
+  {
+    "id": "mobo_mvdphsrj51rau6",
+    "model": "B650M Pro-A Gen5 WiFi 6E",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B650M%20Pro-A%20Gen5%20WiFi%206E",
+    "biospage": "https://www.asrock.com/mb/amd/B650M%20Pro-A%20Gen5%20WiFi%206E/bios.html",
+    "heldversion": "4.43",
+    "helddate": "2026/10/7",
+    "release": "2026/10/7"
   }
 ]
