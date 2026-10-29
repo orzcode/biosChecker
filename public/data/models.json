@@ -886,8 +886,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M-X%20WiFi",
     "biospage": "https://www.asrock.com/mb/amd/B850M-X%20WiFi/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/23",
+    "heldversion": "4.60",
+    "helddate": "2026/10/29",
     "release": null
   },
   {
@@ -985,8 +985,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M-X",
     "biospage": "https://www.asrock.com/mb/amd/B850M-X/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/23",
+    "heldversion": "4.60",
+    "helddate": "2026/10/29",
     "release": null
   },
   {
@@ -1535,8 +1535,8 @@
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/A620M-HDVP",
     "biospage": "https://www.asrock.com/mb/amd/A620M-HDVP/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/13",
+    "heldversion": "4.60",
+    "helddate": "2026/10/29",
     "release": null
   },
   {
@@ -3047,12 +3047,12 @@
     "release": null
   },
   {
-    "id": "mobo_m9p9u4d9icg3wc",
-    "model": "B840M-HVS",
+    "id": "mobo_m9p9v0a202dlc3",
+    "model": "A620AM-HVS",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/B840M-HVS",
-    "biospage": "https://www.asrock.com/mb/amd/B840M-HVS/bios.html",
+    "link": "https://asrock.com/mb/amd/A620AM-HVS",
+    "biospage": "https://www.asrock.com/mb/amd/A620AM-HVS/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/21",
     "release": "2025/2/26"
@@ -3212,14 +3212,25 @@
     "release": null
   },
   {
+    "id": "mobo_m9p9u4d9icg3wc",
+    "model": "B840M-HVS",
+    "maker": "AMD",
+    "socket": "AM5",
+    "link": "https://asrock.com/mb/amd/B840M-HVS",
+    "biospage": "https://www.asrock.com/mb/amd/B840M-HVS/bios.html",
+    "heldversion": "4.60",
+    "helddate": "2026/10/21",
+    "release": "2025/2/26"
+  },
+  {
     "id": "mobo_mata7n8pzbmdwx",
     "model": "B850M-A",
     "maker": "AMD",
     "socket": "AM5",
     "link": "https://asrock.com/mb/amd/B850M-A",
     "biospage": "https://www.asrock.com/mb/amd/B850M-A/bios.html",
-    "heldversion": "4.43",
-    "helddate": "2026/7/13",
+    "heldversion": "4.60",
+    "helddate": "2026/10/29",
     "release": "2025/4/24"
   },
   {
@@ -3355,17 +3366,6 @@
     "release": null
   },
   {
-    "id": "mobo_mbnai5ckfqn100",
-    "model": "A620AI WiFi",
-    "maker": "AMD",
-    "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AI%20WiFi",
-    "biospage": "https://www.asrock.com/mb/amd/A620AI%20WiFi/bios.html",
-    "heldversion": "4.60",
-    "helddate": "2026/10/21",
-    "release": "2025/6/5"
-  },
-  {
     "id": "mobo_m9p9ty1jsek7p4",
     "model": "B850M Pro RS WiFi White",
     "maker": "AMD",
@@ -3388,15 +3388,15 @@
     "release": "2025/6/17"
   },
   {
-    "id": "mobo_m9p9v0a202dlc3",
-    "model": "A620AM-HVS",
+    "id": "mobo_mbnai5ckfqn100",
+    "model": "A620AI WiFi",
     "maker": "AMD",
     "socket": "AM5",
-    "link": "https://asrock.com/mb/amd/A620AM-HVS",
-    "biospage": "https://www.asrock.com/mb/amd/A620AM-HVS/bios.html",
+    "link": "https://asrock.com/mb/amd/A620AI%20WiFi",
+    "biospage": "https://www.asrock.com/mb/amd/A620AI%20WiFi/bios.html",
     "heldversion": "4.60",
     "helddate": "2026/10/21",
-    "release": "2025/2/26"
+    "release": "2025/6/5"
   },
   {
     "id": "mobo_mdz6dnwbosagxm",
