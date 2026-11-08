@@ -4101,5 +4101,27 @@
     "heldversion": "11.02",
     "helddate": "2026/6/29",
     "release": null
+  },
+  {
+    "id": "mobo_mw7up0dpgzjv59",
+    "model": "B760 Pro RS/D4 Gen5 WiFi",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20Gen5%20WiFi",
+    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20Gen5%20WiFi/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/10/6",
+    "release": "2026/10/6"
+  },
+  {
+    "id": "mobo_mw7up5h34d0n8b",
+    "model": "B760 Pro RS/D4 Gen5",
+    "maker": "Intel",
+    "socket": "1700",
+    "link": "https://asrock.com/mb/intel/B760%20Pro%20RSD4%20Gen5",
+    "biospage": "https://www.asrock.com/mb/intel/B760%20Pro%20RSD4%20Gen5/bios.html",
+    "heldversion": "1.10",
+    "helddate": "2026/10/6",
+    "release": "2026/10/6"
   }
 ]
